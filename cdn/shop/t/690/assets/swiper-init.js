@@ -16,17 +16,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Announcement bar swipers
+  // Announcement bar - STATIC, no animation, show first slide only
   document.querySelectorAll('.swiper-wrapper-announcement').forEach(function(wrapper) {
-    var container = wrapper.closest('.swiper');
-    if (container) {
-      new Swiper(container, {
-        slidesPerView: 1,
-        loop: true,
-        autoplay: { delay: 4000, disableOnInteraction: false },
-        speed: 500,
-      });
-    }
+    var slides = wrapper.querySelectorAll('.swiper-slide');
+    // Show only the first slide, hide others
+    slides.forEach(function(s, i) {
+      if (i > 0) s.style.display = 'none';
+    });
   });
 
   // Logo/press carousels
@@ -47,10 +43,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Generic swipers with navigation that aren't initialized
   document.querySelectorAll('.swiper:not(.swiper-initialized)').forEach(function(el) {
-    // Skip if it has no slides
     if (!el.querySelector('.swiper-slide')) return;
-    // Skip virtual mirror swipers
     if (el.closest('[class*="virtual-mirror"]')) return;
+    if (el.closest('[class*="announcement"]')) return; // skip announcement bars
     
     var section = el.closest('section, .shopify-section, .spaced-section');
     var nextBtn = section?.querySelector('.swiper-button-next');
