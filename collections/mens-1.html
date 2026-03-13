@@ -1265,35 +1265,26 @@ details[open] > .header__submenu.list-menu {
 
 
 
-/* Fix swatches display - match readers.html style */
-.product-option .label--swatch {
-  display: inline-block !important;
-  width: 3.2rem !important;
-  height: 3.2rem !important;
-  min-width: 3.2rem !important;
-  min-height: 3.2rem !important;
+
+</style>
+<style id="lookoptic-swatch-fix">
+/* Swatches 28x28 */
+.product-option .label--swatch,
+.lo-swatch {
+  width: 28px !important;
+  height: 28px !important;
+  min-width: 28px !important;
+  min-height: 28px !important;
   border-radius: 100px !important;
   background-size: 120% !important;
   background-position: center !important;
-  border: 2px solid rgb(var(--color-background, 255 255 255)) !important;
-  cursor: pointer !important;
-  vertical-align: middle !important;
-  box-sizing: border-box !important;
+  display: inline-block !important;
   overflow: hidden !important;
-  margin: .1rem .5rem .1rem 0 !important;
+  cursor: pointer !important;
+  box-sizing: border-box !important;
+  border: 2px solid #fff !important;
+  margin: .1rem .3rem .1rem 0 !important;
   flex-shrink: 0 !important;
-}
-@media screen and (max-width: 749px) {
-  .product-option .label--swatch {
-    width: 3rem !important;
-    height: 3rem !important;
-    min-width: 3rem !important;
-    min-height: 3rem !important;
-  }
-}
-.product-option .radio--swatch:checked + .label--swatch {
-  outline: 1.5px solid currentColor !important;
-  outline-offset: 2px !important;
 }
 </style>
 </head>
