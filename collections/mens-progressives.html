@@ -1206,6 +1206,23 @@ details[open] > .header__submenu.list-menu {
 }
 </style>
 
+<style>
+/* Fix swatches display */
+.product-option .label--swatch {
+  display: inline-block !important;
+  width: 2rem !important;
+  height: 2rem !important;
+  border-radius: 100px !important;
+  background-size: cover !important;
+  background-position: center !important;
+  border: 2px solid rgb(var(--color-background)) !important;
+  cursor: pointer !important;
+  vertical-align: middle !important;
+}
+.product-option .radio--swatch:checked + .label--swatch {
+  box-shadow: 0 0 0 1px rgb(16,16,16) !important;
+}
+</style>
 </head>
   <body class="gradient wnw_loaded fp_product_grid_images" data-page-type="collection">
       <svg id="junipStarSymbols" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -2241,7 +2258,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colortortoise-6770134974523" name="Color-6770134974523" value="Tortoise" tabindex="0" aria-label="Tortoise" data-product-option="option2" data-swatch-input="">
-                    <label for="colortortoise-6770134974523" title="Tortoise" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo_tortoise.png" style="background-color: tortoise; background-image: url(../cdn/shop/files/swatch-tortoise.jpg;">
+                    <label for="colortortoise-6770134974523" title="Tortoise" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo_tortoise.png" style="background-color: tortoise; background-image: url(&quot;../cdn/shop/files/swatch-tortoise.jpg&quot;);">
                       Tortoise
                     </label>
                   
@@ -2255,7 +2272,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorchampagne-6770134974523" name="Color-6770134974523" value="Champagne" tabindex="0" aria-label="Champagne" data-product-option="option2" data-swatch-input="">
-                    <label for="colorchampagne-6770134974523" title="Champagne" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo_champagne.png" style="background-color: champagne; background-image: url(../cdn/shop/files/swatch-champagne.jpg;">
+                    <label for="colorchampagne-6770134974523" title="Champagne" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo_champagne.png" style="background-color: champagne; background-image: url(&quot;../cdn/shop/files/swatch-champagne.jpg&quot;);">
                       Champagne
                     </label>
                   
@@ -2269,7 +2286,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorblack-6770134974523" name="Color-6770134974523" value="Black" tabindex="0" aria-label="Black" data-product-option="option2" data-swatch-input="">
-                    <label for="colorblack-6770134974523" title="Black" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo_black.png" style="background-color: black; background-image: url(../cdn/shop/files/swatch-black.jpg;">
+                    <label for="colorblack-6770134974523" title="Black" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo_black.png" style="background-color: black; background-image: url(&quot;../cdn/shop/files/swatch-black.jpg&quot;);">
                       Black
                     </label>
                   
@@ -2283,7 +2300,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorlake-blue-6770134974523" name="Color-6770134974523" value="Lake Blue" tabindex="0" aria-label="Lake Blue" data-product-option="option2" checked="" data-swatch-input="">
-                    <label for="colorlake-blue-6770134974523" title="Lake Blue" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo_lake-blue.png" style="background-color: lake-blue; background-image: url(../cdn/shop/files/swatch-lake-blue.jpg;">
+                    <label for="colorlake-blue-6770134974523" title="Lake Blue" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo_lake-blue.png" style="background-color: lake-blue; background-image: url(&quot;../cdn/shop/files/swatch-lake-blue.jpg&quot;);">
                       Lake Blue
                     </label>
                   
@@ -2297,7 +2314,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colortaupe-6770134974523" name="Color-6770134974523" value="Taupe" tabindex="0" aria-label="Taupe" data-product-option="option2" data-swatch-input="">
-                    <label for="colortaupe-6770134974523" title="Taupe" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo_taupe.png" style="background-color: taupe; background-image: url(../cdn/shop/files/swatch-taupe.jpg;">
+                    <label for="colortaupe-6770134974523" title="Taupe" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo_taupe.png" style="background-color: taupe; background-image: url(&quot;../cdn/shop/files/swatch-taupe.jpg&quot;);">
                       Taupe
                     </label>
                   
@@ -2311,7 +2328,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-navy-6770134974523" name="Color-6770134974523" value="Shiny Navy" tabindex="0" aria-label="Shiny Navy" data-product-option="option2" data-swatch-input="">
-                    <label for="colorshiny-navy-6770134974523" title="Shiny Navy" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo_shiny-navy.png" style="background-color: shiny-navy; background-image: url(../cdn/shop/files/swatch-shiny-navy.jpg;">
+                    <label for="colorshiny-navy-6770134974523" title="Shiny Navy" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo_shiny-navy.png" style="background-color: shiny-navy; background-image: url(&quot;../cdn/shop/files/swatch-shiny-navy.jpg&quot;);">
                       Shiny Navy
                     </label>
                   
@@ -2325,7 +2342,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-cinnamon-6770134974523" name="Color-6770134974523" value="Shiny Cinnamon" tabindex="0" aria-label="Shiny Cinnamon" data-product-option="option2" data-swatch-input="">
-                    <label for="colorshiny-cinnamon-6770134974523" title="Shiny Cinnamon" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo_shiny-cinnamon.png" style="background-color: shiny-cinnamon; background-image: url(../cdn/shop/files/swatch-shiny-cinnamon.jpg;">
+                    <label for="colorshiny-cinnamon-6770134974523" title="Shiny Cinnamon" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo_shiny-cinnamon.png" style="background-color: shiny-cinnamon; background-image: url(&quot;../cdn/shop/files/swatch-shiny-cinnamon.jpg&quot;);">
                       Shiny Cinnamon
                     </label>
                   
@@ -2339,7 +2356,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-grey-blue-6770134974523" name="Color-6770134974523" value="Shiny Grey Blue" tabindex="0" aria-label="Shiny Grey Blue" data-product-option="option2" data-swatch-input="">
-                    <label for="colorshiny-grey-blue-6770134974523" title="Shiny Grey Blue" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo_shiny-grey-blue.png" style="background-color: shiny-grey-blue; background-image: url(../cdn/shop/files/swatch-shiny-grey-blue.jpg;">
+                    <label for="colorshiny-grey-blue-6770134974523" title="Shiny Grey Blue" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo_shiny-grey-blue.png" style="background-color: shiny-grey-blue; background-image: url(&quot;../cdn/shop/files/swatch-shiny-grey-blue.jpg&quot;);">
                       Shiny Grey Blue
                     </label>
                   
@@ -2594,7 +2611,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorchampagne-6770063769659" name="Color-6770063769659" value="Champagne" tabindex="0" aria-label="Champagne" data-product-option="option2" checked="" data-swatch-input="">
-                    <label for="colorchampagne-6770063769659" title="Champagne" class="label--swatch" data-img1="../cdn/shop/files/layflat__laurel_champagne.png" style="background-color: champagne; background-image: url(../cdn/shop/files/swatch-champagne.jpg;">
+                    <label for="colorchampagne-6770063769659" title="Champagne" class="label--swatch" data-img1="../cdn/shop/files/layflat__laurel_champagne.png" style="background-color: champagne; background-image: url(&quot;../cdn/shop/files/swatch-champagne.jpg&quot;);">
                       Champagne
                     </label>
                   
@@ -2608,7 +2625,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colortaupe-6770063769659" name="Color-6770063769659" value="Taupe" tabindex="0" aria-label="Taupe" data-product-option="option2" data-swatch-input="">
-                    <label for="colortaupe-6770063769659" title="Taupe" class="label--swatch" data-img1="../cdn/shop/files/layflat__laurel_taupe.png" style="background-color: taupe; background-image: url(../cdn/shop/files/swatch-taupe.jpg;">
+                    <label for="colortaupe-6770063769659" title="Taupe" class="label--swatch" data-img1="../cdn/shop/files/layflat__laurel_taupe.png" style="background-color: taupe; background-image: url(&quot;../cdn/shop/files/swatch-taupe.jpg&quot;);">
                       Taupe
                     </label>
                   
@@ -2622,7 +2639,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colornavy-6770063769659" name="Color-6770063769659" value="Navy" tabindex="0" aria-label="Navy" data-product-option="option2" data-swatch-input="">
-                    <label for="colornavy-6770063769659" title="Navy" class="label--swatch" data-img1="../cdn/shop/files/layflat__laurel_navy.png" style="background-color: navy; background-image: url(../cdn/shop/files/swatch-navy.jpg;">
+                    <label for="colornavy-6770063769659" title="Navy" class="label--swatch" data-img1="../cdn/shop/files/layflat__laurel_navy.png" style="background-color: navy; background-image: url(&quot;../cdn/shop/files/swatch-navy.jpg&quot;);">
                       Navy
                     </label>
                   
@@ -2636,7 +2653,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colortortoise-6770063769659" name="Color-6770063769659" value="Tortoise" tabindex="0" aria-label="Tortoise" data-product-option="option2" data-swatch-input="">
-                    <label for="colortortoise-6770063769659" title="Tortoise" class="label--swatch" data-img1="../cdn/shop/files/layflat__laurel_tortoise.png" style="background-color: tortoise; background-image: url(../cdn/shop/files/swatch-tortoise.jpg;">
+                    <label for="colortortoise-6770063769659" title="Tortoise" class="label--swatch" data-img1="../cdn/shop/files/layflat__laurel_tortoise.png" style="background-color: tortoise; background-image: url(&quot;../cdn/shop/files/swatch-tortoise.jpg&quot;);">
                       Tortoise
                     </label>
                   
@@ -2650,7 +2667,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorblack-6770063769659" name="Color-6770063769659" value="Black" tabindex="0" aria-label="Black" data-product-option="option2" data-swatch-input="">
-                    <label for="colorblack-6770063769659" title="Black" class="label--swatch" data-img1="../cdn/shop/files/layflat__laurel_black.png" style="background-color: black; background-image: url(../cdn/shop/files/swatch-black.jpg;">
+                    <label for="colorblack-6770063769659" title="Black" class="label--swatch" data-img1="../cdn/shop/files/layflat__laurel_black.png" style="background-color: black; background-image: url(&quot;../cdn/shop/files/swatch-black.jpg&quot;);">
                       Black
                     </label>
                   
@@ -2664,7 +2681,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-cinnamon-6770063769659" name="Color-6770063769659" value="Shiny Cinnamon" tabindex="0" aria-label="Shiny Cinnamon" data-product-option="option2" data-swatch-input="">
-                    <label for="colorshiny-cinnamon-6770063769659" title="Shiny Cinnamon" class="label--swatch" data-img1="../cdn/shop/files/layflat__laurel_shiny-cinnamon.png" style="background-color: shiny-cinnamon; background-image: url(../cdn/shop/files/swatch-shiny-cinnamon.jpg;">
+                    <label for="colorshiny-cinnamon-6770063769659" title="Shiny Cinnamon" class="label--swatch" data-img1="../cdn/shop/files/layflat__laurel_shiny-cinnamon.png" style="background-color: shiny-cinnamon; background-image: url(&quot;../cdn/shop/files/swatch-shiny-cinnamon.jpg&quot;);">
                       Shiny Cinnamon
                     </label>
                   
@@ -2684,7 +2701,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-espresso-6770063769659" name="Color-6770063769659" value="Shiny Espresso" tabindex="0" aria-label="Shiny Espresso" data-product-option="option2" data-swatch-input="">
-                    <label for="colorshiny-espresso-6770063769659" title="Shiny Espresso" class="label--swatch" data-img1="../cdn/shop/files/layflat__laurel_shiny-espresso.png" style="background-color: shiny-espresso; background-image: url(../cdn/shop/files/swatch-shiny-espresso.jpg;">
+                    <label for="colorshiny-espresso-6770063769659" title="Shiny Espresso" class="label--swatch" data-img1="../cdn/shop/files/layflat__laurel_shiny-espresso.png" style="background-color: shiny-espresso; background-image: url(&quot;../cdn/shop/files/swatch-shiny-espresso.jpg&quot;);">
                       Shiny Espresso
                     </label>
                   
@@ -2915,7 +2932,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorgold-6930359484475" name="Color-6930359484475" value="Gold" tabindex="0" aria-label="Gold" data-product-option="option2" data-swatch-input="">
-                    <label for="colorgold-6930359484475" title="Gold" class="label--swatch" data-img1="../cdn/shop/files/layflat__muse_gold.png" style="background-color: gold; background-image: url(../cdn/shop/files/swatch-gold.jpg;">
+                    <label for="colorgold-6930359484475" title="Gold" class="label--swatch" data-img1="../cdn/shop/files/layflat__muse_gold.png" style="background-color: gold; background-image: url(&quot;../cdn/shop/files/swatch-gold.jpg&quot;);">
                       Gold
                     </label>
                   
@@ -2929,7 +2946,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorgold-pink-tint-6930359484475" name="Color-6930359484475" value="Gold Pink Tint" tabindex="0" aria-label="Gold Pink Tint" data-product-option="option2" checked="" data-swatch-input="">
-                    <label for="colorgold-pink-tint-6930359484475" title="Gold Pink Tint" class="label--swatch" data-img1="../cdn/shop/files/layflat__muse_gold-pink-tint.png" style="background-color: gold-pink-tint; background-image: url(../cdn/shop/files/swatch-gold-pink-tint.jpg;">
+                    <label for="colorgold-pink-tint-6930359484475" title="Gold Pink Tint" class="label--swatch" data-img1="../cdn/shop/files/layflat__muse_gold-pink-tint.png" style="background-color: gold-pink-tint; background-image: url(&quot;../cdn/shop/files/swatch-gold-pink-tint.jpg&quot;);">
                       Gold Pink Tint
                     </label>
                   
@@ -2949,7 +2966,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorsilver-6930359484475" name="Color-6930359484475" value="Silver" tabindex="0" aria-label="Silver" data-product-option="option2" data-swatch-input="">
-                    <label for="colorsilver-6930359484475" title="Silver" class="label--swatch" data-img1="../cdn/shop/files/layflat__muse_silver.png" style="background-color: silver; background-image: url(../cdn/shop/files/swatch-silver.jpg;">
+                    <label for="colorsilver-6930359484475" title="Silver" class="label--swatch" data-img1="../cdn/shop/files/layflat__muse_silver.png" style="background-color: silver; background-image: url(&quot;../cdn/shop/files/swatch-silver.jpg&quot;);">
                       Silver
                     </label>
                   
@@ -2969,7 +2986,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-rose-gold-6930359484475" name="Color-6930359484475" value="Shiny Rose Gold" tabindex="0" aria-label="Shiny Rose Gold" data-product-option="option2" data-swatch-input="">
-                    <label for="colorshiny-rose-gold-6930359484475" title="Shiny Rose Gold" class="label--swatch" data-img1="../cdn/shop/files/layflat__muse_shiny-rose-gold.png" style="background-color: shiny-rose-gold; background-image: url(../cdn/shop/files/swatch-shiny-rose-gold.jpg;">
+                    <label for="colorshiny-rose-gold-6930359484475" title="Shiny Rose Gold" class="label--swatch" data-img1="../cdn/shop/files/layflat__muse_shiny-rose-gold.png" style="background-color: shiny-rose-gold; background-image: url(&quot;../cdn/shop/files/swatch-shiny-rose-gold.jpg&quot;);">
                       Shiny Rose Gold
                     </label>
                   
@@ -2983,7 +3000,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-rose-gold-brown-gradient-tint-6930359484475" name="Color-6930359484475" value="Shiny Rose Gold Brown Gradient Tint" tabindex="0" aria-label="Shiny Rose Gold Brown Gradient Tint" data-product-option="option2" data-swatch-input="">
-                    <label for="colorshiny-rose-gold-brown-gradient-tint-6930359484475" title="Shiny Rose Gold Brown Gradient Tint" class="label--swatch" data-img1="../cdn/shop/files/layflat__muse_shiny-rose-gold-brown-gradient-tint.png" style="background-color: shiny-rose-gold-brown-gradient-tint; background-image: url(../cdn/shop/files/swatch-shiny-rose-gold-brown-gradient-tint.jpg;">
+                    <label for="colorshiny-rose-gold-brown-gradient-tint-6930359484475" title="Shiny Rose Gold Brown Gradient Tint" class="label--swatch" data-img1="../cdn/shop/files/layflat__muse_shiny-rose-gold-brown-gradient-tint.png" style="background-color: shiny-rose-gold-brown-gradient-tint; background-image: url(&quot;../cdn/shop/files/swatch-shiny-rose-gold-brown-gradient-tint.jpg&quot;);">
                       Shiny Rose Gold Brown Gradient Tint
                     </label>
                   
@@ -3197,7 +3214,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-black-7521348780091" name="Color-7521348780091" value="Shiny Black" tabindex="0" aria-label="Shiny Black" data-product-option="option2" data-swatch-input="">
-                    <label for="colorshiny-black-7521348780091" title="Shiny Black" class="label--swatch" data-img1="../cdn/shop/files/layflat__davis_shiny-black.png" style="background-color: shiny-black; background-image: url(../cdn/shop/files/swatch-shiny-black.jpg;">
+                    <label for="colorshiny-black-7521348780091" title="Shiny Black" class="label--swatch" data-img1="../cdn/shop/files/layflat__davis_shiny-black.png" style="background-color: shiny-black; background-image: url(&quot;../cdn/shop/files/swatch-shiny-black.jpg&quot;);">
                       Shiny Black
                     </label>
                   
@@ -3211,7 +3228,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-black-yellow-tint-7521348780091" name="Color-7521348780091" value="Shiny Black Yellow Tint" tabindex="0" aria-label="Shiny Black Yellow Tint" data-product-option="option2" data-swatch-input="">
-                    <label for="colorshiny-black-yellow-tint-7521348780091" title="Shiny Black Yellow Tint" class="label--swatch" data-img1="../cdn/shop/files/layflat__davis_shiny-black-yellow-tint.png" style="background-color: shiny-black-yellow-tint; background-image: url(../cdn/shop/files/swatch-shiny-black-yellow-tint.jpg;">
+                    <label for="colorshiny-black-yellow-tint-7521348780091" title="Shiny Black Yellow Tint" class="label--swatch" data-img1="../cdn/shop/files/layflat__davis_shiny-black-yellow-tint.png" style="background-color: shiny-black-yellow-tint; background-image: url(&quot;../cdn/shop/files/swatch-shiny-black-yellow-tint.jpg&quot;);">
                       Shiny Black Yellow Tint
                     </label>
                   
@@ -3225,7 +3242,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-espresso-7521348780091" name="Color-7521348780091" value="Shiny Espresso" tabindex="0" aria-label="Shiny Espresso" data-product-option="option2" checked="" data-swatch-input="">
-                    <label for="colorshiny-espresso-7521348780091" title="Shiny Espresso" class="label--swatch" data-img1="../cdn/shop/files/layflat__davis_shiny-espresso.png" style="background-color: shiny-espresso; background-image: url(../cdn/shop/files/swatch-shiny-espresso.jpg;">
+                    <label for="colorshiny-espresso-7521348780091" title="Shiny Espresso" class="label--swatch" data-img1="../cdn/shop/files/layflat__davis_shiny-espresso.png" style="background-color: shiny-espresso; background-image: url(&quot;../cdn/shop/files/swatch-shiny-espresso.jpg&quot;);">
                       Shiny Espresso
                     </label>
                   
@@ -3239,7 +3256,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-espresso-orange-tint-7521348780091" name="Color-7521348780091" value="Shiny Espresso Orange Tint" tabindex="0" aria-label="Shiny Espresso Orange Tint" data-product-option="option2" data-swatch-input="">
-                    <label for="colorshiny-espresso-orange-tint-7521348780091" title="Shiny Espresso Orange Tint" class="label--swatch" data-img1="../cdn/shop/files/layflat__davis_shiny-espresso-orange-tint.png" style="background-color: shiny-espresso-orange-tint; background-image: url(../cdn/shop/files/swatch-shiny-espresso-orange-tint.jpg;">
+                    <label for="colorshiny-espresso-orange-tint-7521348780091" title="Shiny Espresso Orange Tint" class="label--swatch" data-img1="../cdn/shop/files/layflat__davis_shiny-espresso-orange-tint.png" style="background-color: shiny-espresso-orange-tint; background-image: url(&quot;../cdn/shop/files/swatch-shiny-espresso-orange-tint.jpg&quot;);">
                       Shiny Espresso Orange Tint
                     </label>
                   
@@ -3253,7 +3270,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorchampagne-7521348780091" name="Color-7521348780091" value="Champagne" tabindex="0" aria-label="Champagne" data-product-option="option2" data-swatch-input="">
-                    <label for="colorchampagne-7521348780091" title="Champagne" class="label--swatch" data-img1="../cdn/shop/files/layflat__davis_champagne.png" style="background-color: champagne; background-image: url(../cdn/shop/files/swatch-champagne.jpg;">
+                    <label for="colorchampagne-7521348780091" title="Champagne" class="label--swatch" data-img1="../cdn/shop/files/layflat__davis_champagne.png" style="background-color: champagne; background-image: url(&quot;../cdn/shop/files/swatch-champagne.jpg&quot;);">
                       Champagne
                     </label>
                   
@@ -3476,7 +3493,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorblack-7272482537531" name="Color-7272482537531" value="Black" tabindex="0" aria-label="Black" data-product-option="option2" checked="" data-swatch-input="">
-                    <label for="colorblack-7272482537531" title="Black" class="label--swatch" data-img1="../cdn/shop/files/layflat__liam_black.png" style="background-color: black; background-image: url(../cdn/shop/files/swatch-black.jpg;">
+                    <label for="colorblack-7272482537531" title="Black" class="label--swatch" data-img1="../cdn/shop/files/layflat__liam_black.png" style="background-color: black; background-image: url(&quot;../cdn/shop/files/swatch-black.jpg&quot;);">
                       Black
                     </label>
                   
@@ -3490,7 +3507,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colortortoise-7272482537531" name="Color-7272482537531" value="Tortoise" tabindex="0" aria-label="Tortoise" data-product-option="option2" data-swatch-input="">
-                    <label for="colortortoise-7272482537531" title="Tortoise" class="label--swatch" data-img1="../cdn/shop/files/layflat__liam_tortoise.png" style="background-color: tortoise; background-image: url(../cdn/shop/files/swatch-tortoise.jpg;">
+                    <label for="colortortoise-7272482537531" title="Tortoise" class="label--swatch" data-img1="../cdn/shop/files/layflat__liam_tortoise.png" style="background-color: tortoise; background-image: url(&quot;../cdn/shop/files/swatch-tortoise.jpg&quot;);">
                       Tortoise
                     </label>
                   
@@ -3504,7 +3521,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-navy-7272482537531" name="Color-7272482537531" value="Shiny Navy" tabindex="0" aria-label="Shiny Navy" data-product-option="option2" data-swatch-input="">
-                    <label for="colorshiny-navy-7272482537531" title="Shiny Navy" class="label--swatch" data-img1="../cdn/shop/files/layflat__liam_shiny-navy.png" style="background-color: shiny-navy; background-image: url(../cdn/shop/files/swatch-shiny-navy.jpg;">
+                    <label for="colorshiny-navy-7272482537531" title="Shiny Navy" class="label--swatch" data-img1="../cdn/shop/files/layflat__liam_shiny-navy.png" style="background-color: shiny-navy; background-image: url(&quot;../cdn/shop/files/swatch-shiny-navy.jpg&quot;);">
                       Shiny Navy
                     </label>
                   
@@ -3518,7 +3535,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-aqua-7272482537531" name="Color-7272482537531" value="Shiny Aqua" tabindex="0" aria-label="Shiny Aqua" data-product-option="option2" data-swatch-input="">
-                    <label for="colorshiny-aqua-7272482537531" title="Shiny Aqua" class="label--swatch" data-img1="../cdn/shop/files/layflat__liam_shiny-aqua.png" style="background-color: shiny-aqua; background-image: url(../cdn/shop/files/swatch-shiny-aqua.jpg;">
+                    <label for="colorshiny-aqua-7272482537531" title="Shiny Aqua" class="label--swatch" data-img1="../cdn/shop/files/layflat__liam_shiny-aqua.png" style="background-color: shiny-aqua; background-image: url(&quot;../cdn/shop/files/swatch-shiny-aqua.jpg&quot;);">
                       Shiny Aqua
                     </label>
                   
@@ -3532,7 +3549,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-bottle-green-7272482537531" name="Color-7272482537531" value="Shiny Bottle Green" tabindex="0" aria-label="Shiny Bottle Green" data-product-option="option2" data-swatch-input="">
-                    <label for="colorshiny-bottle-green-7272482537531" title="Shiny Bottle Green" class="label--swatch" data-img1="../cdn/shop/files/layflat__liam_shiny-bottle-green.png" style="background-color: shiny-bottle-green; background-image: url(../cdn/shop/files/swatch-shiny-bottle-green.jpg;">
+                    <label for="colorshiny-bottle-green-7272482537531" title="Shiny Bottle Green" class="label--swatch" data-img1="../cdn/shop/files/layflat__liam_shiny-bottle-green.png" style="background-color: shiny-bottle-green; background-image: url(&quot;../cdn/shop/files/swatch-shiny-bottle-green.jpg&quot;);">
                       Shiny Bottle Green
                     </label>
                   
@@ -3750,7 +3767,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorgold-pink-tint-7148497076283" name="Color-7148497076283" value="Gold Pink Tint" tabindex="0" aria-label="Gold Pink Tint" data-product-option="option2" data-swatch-input="">
-                    <label for="colorgold-pink-tint-7148497076283" title="Gold Pink Tint" class="label--swatch" data-img1="../cdn/shop/files/layflat__cooper_gold-pink-tint.png" style="background-color: gold-pink-tint; background-image: url(../cdn/shop/files/swatch-gold-pink-tint.jpg;">
+                    <label for="colorgold-pink-tint-7148497076283" title="Gold Pink Tint" class="label--swatch" data-img1="../cdn/shop/files/layflat__cooper_gold-pink-tint.png" style="background-color: gold-pink-tint; background-image: url(&quot;../cdn/shop/files/swatch-gold-pink-tint.jpg&quot;);">
                       Gold Pink Tint
                     </label>
                   
@@ -3764,7 +3781,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorgold-7148497076283" name="Color-7148497076283" value="Gold" tabindex="0" aria-label="Gold" data-product-option="option2" checked="" data-swatch-input="">
-                    <label for="colorgold-7148497076283" title="Gold" class="label--swatch" data-img1="../cdn/shop/files/layflat__cooper_gold.png" style="background-color: gold; background-image: url(../cdn/shop/files/swatch-gold.jpg;">
+                    <label for="colorgold-7148497076283" title="Gold" class="label--swatch" data-img1="../cdn/shop/files/layflat__cooper_gold.png" style="background-color: gold; background-image: url(&quot;../cdn/shop/files/swatch-gold.jpg&quot;);">
                       Gold
                     </label>
                   
@@ -3778,7 +3795,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorsilver-7148497076283" name="Color-7148497076283" value="Silver" tabindex="0" aria-label="Silver" data-product-option="option2" data-swatch-input="">
-                    <label for="colorsilver-7148497076283" title="Silver" class="label--swatch" data-img1="../cdn/shop/files/layflat__cooper_silver.png" style="background-color: silver; background-image: url(../cdn/shop/files/swatch-silver.jpg;">
+                    <label for="colorsilver-7148497076283" title="Silver" class="label--swatch" data-img1="../cdn/shop/files/layflat__cooper_silver.png" style="background-color: silver; background-image: url(&quot;../cdn/shop/files/swatch-silver.jpg&quot;);">
                       Silver
                     </label>
                   
@@ -4001,7 +4018,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colortortoise-7112689254459" name="Color-7112689254459" value="Tortoise" tabindex="0" aria-label="Tortoise" data-product-option="option2" checked="" data-swatch-input="">
-                    <label for="colortortoise-7112689254459" title="Tortoise" class="label--swatch" data-img1="../cdn/shop/files/layflat__abbey_tortoise.png" style="background-color: tortoise; background-image: url(../cdn/shop/files/swatch-tortoise.jpg;">
+                    <label for="colortortoise-7112689254459" title="Tortoise" class="label--swatch" data-img1="../cdn/shop/files/layflat__abbey_tortoise.png" style="background-color: tortoise; background-image: url(&quot;../cdn/shop/files/swatch-tortoise.jpg&quot;);">
                       Tortoise
                     </label>
                   
@@ -4015,7 +4032,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colornavy-7112689254459" name="Color-7112689254459" value="Navy" tabindex="0" aria-label="Navy" data-product-option="option2" data-swatch-input="">
-                    <label for="colornavy-7112689254459" title="Navy" class="label--swatch" data-img1="../cdn/shop/files/layflat__abbey_navy.png" style="background-color: navy; background-image: url(../cdn/shop/files/swatch-navy.jpg;">
+                    <label for="colornavy-7112689254459" title="Navy" class="label--swatch" data-img1="../cdn/shop/files/layflat__abbey_navy.png" style="background-color: navy; background-image: url(&quot;../cdn/shop/files/swatch-navy.jpg&quot;);">
                       Navy
                     </label>
                   
@@ -4029,7 +4046,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorblack-7112689254459" name="Color-7112689254459" value="Black" tabindex="0" aria-label="Black" data-product-option="option2" data-swatch-input="">
-                    <label for="colorblack-7112689254459" title="Black" class="label--swatch" data-img1="../cdn/shop/files/layflat__abbey_black.png" style="background-color: black; background-image: url(../cdn/shop/files/swatch-black.jpg;">
+                    <label for="colorblack-7112689254459" title="Black" class="label--swatch" data-img1="../cdn/shop/files/layflat__abbey_black.png" style="background-color: black; background-image: url(&quot;../cdn/shop/files/swatch-black.jpg&quot;);">
                       Black
                     </label>
                   
@@ -4264,7 +4281,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colortortoise-7112692465723" name="Color-7112692465723" value="Tortoise" tabindex="0" aria-label="Tortoise" data-product-option="option2" data-swatch-input="">
-                    <label for="colortortoise-7112692465723" title="Tortoise" class="label--swatch" data-img1="../cdn/shop/files/layflat__sullivan_tortoise.png" style="background-color: tortoise; background-image: url(../cdn/shop/files/swatch-tortoise.jpg;">
+                    <label for="colortortoise-7112692465723" title="Tortoise" class="label--swatch" data-img1="../cdn/shop/files/layflat__sullivan_tortoise.png" style="background-color: tortoise; background-image: url(&quot;../cdn/shop/files/swatch-tortoise.jpg&quot;);">
                       Tortoise
                     </label>
                   
@@ -4278,7 +4295,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colornavy-7112692465723" name="Color-7112692465723" value="Navy" tabindex="0" aria-label="Navy" data-product-option="option2" checked="" data-swatch-input="">
-                    <label for="colornavy-7112692465723" title="Navy" class="label--swatch" data-img1="../cdn/shop/files/layflat__sullivan_navy.png" style="background-color: navy; background-image: url(../cdn/shop/files/swatch-navy.jpg;">
+                    <label for="colornavy-7112692465723" title="Navy" class="label--swatch" data-img1="../cdn/shop/files/layflat__sullivan_navy.png" style="background-color: navy; background-image: url(&quot;../cdn/shop/files/swatch-navy.jpg&quot;);">
                       Navy
                     </label>
                   
@@ -4292,7 +4309,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colortaupe-7112692465723" name="Color-7112692465723" value="Taupe" tabindex="0" aria-label="Taupe" data-product-option="option2" data-swatch-input="">
-                    <label for="colortaupe-7112692465723" title="Taupe" class="label--swatch" data-img1="../cdn/shop/files/layflat__sullivan_taupe.png" style="background-color: taupe; background-image: url(../cdn/shop/files/swatch-taupe.jpg;">
+                    <label for="colortaupe-7112692465723" title="Taupe" class="label--swatch" data-img1="../cdn/shop/files/layflat__sullivan_taupe.png" style="background-color: taupe; background-image: url(&quot;../cdn/shop/files/swatch-taupe.jpg&quot;);">
                       Taupe
                     </label>
                   
@@ -4306,7 +4323,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorblack-7112692465723" name="Color-7112692465723" value="Black" tabindex="0" aria-label="Black" data-product-option="option2" data-swatch-input="">
-                    <label for="colorblack-7112692465723" title="Black" class="label--swatch" data-img1="../cdn/shop/files/layflat__sullivan_black.png" style="background-color: black; background-image: url(../cdn/shop/files/swatch-black.jpg;">
+                    <label for="colorblack-7112692465723" title="Black" class="label--swatch" data-img1="../cdn/shop/files/layflat__sullivan_black.png" style="background-color: black; background-image: url(&quot;../cdn/shop/files/swatch-black.jpg&quot;);">
                       Black
                     </label>
                   
@@ -4529,7 +4546,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colortortoise-7364111204411" name="Color-7364111204411" value="Tortoise" tabindex="0" aria-label="Tortoise" data-product-option="option2" data-swatch-input="">
-                    <label for="colortortoise-7364111204411" title="Tortoise" class="label--swatch" data-img1="../cdn/shop/files/layflat__kaine_tortoise.png" style="background-color: tortoise; background-image: url(../cdn/shop/files/swatch-tortoise.jpg;">
+                    <label for="colortortoise-7364111204411" title="Tortoise" class="label--swatch" data-img1="../cdn/shop/files/layflat__kaine_tortoise.png" style="background-color: tortoise; background-image: url(&quot;../cdn/shop/files/swatch-tortoise.jpg&quot;);">
                       Tortoise
                     </label>
                   
@@ -4543,7 +4560,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colortaupe-7364111204411" name="Color-7364111204411" value="Taupe" tabindex="0" aria-label="Taupe" data-product-option="option2" data-swatch-input="">
-                    <label for="colortaupe-7364111204411" title="Taupe" class="label--swatch" data-img1="../cdn/shop/files/layflat__kaine_taupe.png" style="background-color: taupe; background-image: url(../cdn/shop/files/swatch-taupe.jpg;">
+                    <label for="colortaupe-7364111204411" title="Taupe" class="label--swatch" data-img1="../cdn/shop/files/layflat__kaine_taupe.png" style="background-color: taupe; background-image: url(&quot;../cdn/shop/files/swatch-taupe.jpg&quot;);">
                       Taupe
                     </label>
                   
@@ -4557,7 +4574,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-espresso-7364111204411" name="Color-7364111204411" value="Shiny Espresso" tabindex="0" aria-label="Shiny Espresso" data-product-option="option2" data-swatch-input="">
-                    <label for="colorshiny-espresso-7364111204411" title="Shiny Espresso" class="label--swatch" data-img1="../cdn/shop/files/layflat__kaine_shiny-espresso.png" style="background-color: shiny-espresso; background-image: url(../cdn/shop/files/swatch-shiny-espresso.jpg;">
+                    <label for="colorshiny-espresso-7364111204411" title="Shiny Espresso" class="label--swatch" data-img1="../cdn/shop/files/layflat__kaine_shiny-espresso.png" style="background-color: shiny-espresso; background-image: url(&quot;../cdn/shop/files/swatch-shiny-espresso.jpg&quot;);">
                       Shiny Espresso
                     </label>
                   
@@ -4571,7 +4588,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-navy-7364111204411" name="Color-7364111204411" value="Shiny Navy" tabindex="0" aria-label="Shiny Navy" data-product-option="option2" checked="" data-swatch-input="">
-                    <label for="colorshiny-navy-7364111204411" title="Shiny Navy" class="label--swatch" data-img1="../cdn/shop/files/layflat__kaine_shiny-navy.png" style="background-color: shiny-navy; background-image: url(../cdn/shop/files/swatch-shiny-navy.jpg;">
+                    <label for="colorshiny-navy-7364111204411" title="Shiny Navy" class="label--swatch" data-img1="../cdn/shop/files/layflat__kaine_shiny-navy.png" style="background-color: shiny-navy; background-image: url(&quot;../cdn/shop/files/swatch-shiny-navy.jpg&quot;);">
                       Shiny Navy
                     </label>
                   
@@ -4786,7 +4803,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorblack-6770161549371" name="Color-6770161549371" value="Black" tabindex="0" aria-label="Black" data-product-option="option2" data-swatch-input="">
-                    <label for="colorblack-6770161549371" title="Black" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo-sun_black.png" style="background-color: black; background-image: url(../cdn/shop/files/swatch-black.jpg;">
+                    <label for="colorblack-6770161549371" title="Black" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo-sun_black.png" style="background-color: black; background-image: url(&quot;../cdn/shop/files/swatch-black.jpg&quot;);">
                       Black
                     </label>
                   
@@ -4800,7 +4817,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colortaupe-6770161549371" name="Color-6770161549371" value="Taupe" tabindex="0" aria-label="Taupe" data-product-option="option2" data-swatch-input="">
-                    <label for="colortaupe-6770161549371" title="Taupe" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo-sun_taupe.png" style="background-color: taupe; background-image: url(../cdn/shop/files/swatch-taupe.jpg;">
+                    <label for="colortaupe-6770161549371" title="Taupe" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo-sun_taupe.png" style="background-color: taupe; background-image: url(&quot;../cdn/shop/files/swatch-taupe.jpg&quot;);">
                       Taupe
                     </label>
                   
@@ -4814,7 +4831,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colortortoise-6770161549371" name="Color-6770161549371" value="Tortoise" tabindex="0" aria-label="Tortoise" data-product-option="option2" checked="" data-swatch-input="">
-                    <label for="colortortoise-6770161549371" title="Tortoise" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo-sun_tortoise.png" style="background-color: tortoise; background-image: url(../cdn/shop/files/swatch-tortoise.jpg;">
+                    <label for="colortortoise-6770161549371" title="Tortoise" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo-sun_tortoise.png" style="background-color: tortoise; background-image: url(&quot;../cdn/shop/files/swatch-tortoise.jpg&quot;);">
                       Tortoise
                     </label>
                   
@@ -5029,7 +5046,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorchampagne-6770620203067" name="Color-6770620203067" value="Champagne" tabindex="0" aria-label="Champagne" data-product-option="option2" checked="" data-swatch-input="">
-                    <label for="colorchampagne-6770620203067" title="Champagne" class="label--swatch" data-img1="../cdn/shop/files/layflat__laurel-sun_champagne.png" style="background-color: champagne; background-image: url(../cdn/shop/files/swatch-champagne.jpg;">
+                    <label for="colorchampagne-6770620203067" title="Champagne" class="label--swatch" data-img1="../cdn/shop/files/layflat__laurel-sun_champagne.png" style="background-color: champagne; background-image: url(&quot;../cdn/shop/files/swatch-champagne.jpg&quot;);">
                       Champagne
                     </label>
                   
@@ -5043,7 +5060,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colortortoise-6770620203067" name="Color-6770620203067" value="Tortoise" tabindex="0" aria-label="Tortoise" data-product-option="option2" data-swatch-input="">
-                    <label for="colortortoise-6770620203067" title="Tortoise" class="label--swatch" data-img1="../cdn/shop/files/layflat__laurel-sun_tortoise.png" style="background-color: tortoise; background-image: url(../cdn/shop/files/swatch-tortoise.jpg;">
+                    <label for="colortortoise-6770620203067" title="Tortoise" class="label--swatch" data-img1="../cdn/shop/files/layflat__laurel-sun_tortoise.png" style="background-color: tortoise; background-image: url(&quot;../cdn/shop/files/swatch-tortoise.jpg&quot;);">
                       Tortoise
                     </label>
                   
@@ -5057,7 +5074,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colornavy-6770620203067" name="Color-6770620203067" value="Navy" tabindex="0" aria-label="Navy" data-product-option="option2" data-swatch-input="">
-                    <label for="colornavy-6770620203067" title="Navy" class="label--swatch" data-img1="../cdn/shop/files/layflat__laurel-sun_navy.png" style="background-color: navy; background-image: url(../cdn/shop/files/swatch-navy.jpg;">
+                    <label for="colornavy-6770620203067" title="Navy" class="label--swatch" data-img1="../cdn/shop/files/layflat__laurel-sun_navy.png" style="background-color: navy; background-image: url(&quot;../cdn/shop/files/swatch-navy.jpg&quot;);">
                       Navy
                     </label>
                   
@@ -5274,7 +5291,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorsilver-7306862395451" name="Color-7306862395451" value="Silver" tabindex="0" aria-label="Silver" data-product-option="option2" checked="" data-swatch-input="">
-                    <label for="colorsilver-7306862395451" title="Silver" class="label--swatch" data-img1="../cdn/shop/files/layflat__muse-sun_silver.png" style="background-color: silver; background-image: url(../cdn/shop/files/swatch-silver.jpg;">
+                    <label for="colorsilver-7306862395451" title="Silver" class="label--swatch" data-img1="../cdn/shop/files/layflat__muse-sun_silver.png" style="background-color: silver; background-image: url(&quot;../cdn/shop/files/swatch-silver.jpg&quot;);">
                       Silver
                     </label>
                   
@@ -5288,7 +5305,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorgold-7306862395451" name="Color-7306862395451" value="Gold" tabindex="0" aria-label="Gold" data-product-option="option2" data-swatch-input="">
-                    <label for="colorgold-7306862395451" title="Gold" class="label--swatch" data-img1="../cdn/shop/files/layflat__muse-sun_gold.png" style="background-color: gold; background-image: url(../cdn/shop/files/swatch-gold.jpg;">
+                    <label for="colorgold-7306862395451" title="Gold" class="label--swatch" data-img1="../cdn/shop/files/layflat__muse-sun_gold.png" style="background-color: gold; background-image: url(&quot;../cdn/shop/files/swatch-gold.jpg&quot;);">
                       Gold
                     </label>
                   
@@ -5505,7 +5522,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colortortoise-7362171633723" name="Color-7362171633723" value="Tortoise" tabindex="0" aria-label="Tortoise" data-product-option="option2" checked="" data-swatch-input="">
-                    <label for="colortortoise-7362171633723" title="Tortoise" class="label--swatch" data-img1="../cdn/shop/files/layflat__kaine-sun_tortoise.png" style="background-color: tortoise; background-image: url(../cdn/shop/files/swatch-tortoise.jpg;">
+                    <label for="colortortoise-7362171633723" title="Tortoise" class="label--swatch" data-img1="../cdn/shop/files/layflat__kaine-sun_tortoise.png" style="background-color: tortoise; background-image: url(&quot;../cdn/shop/files/swatch-tortoise.jpg&quot;);">
                       Tortoise
                     </label>
                   
@@ -5519,7 +5536,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-navy-7362171633723" name="Color-7362171633723" value="Shiny Navy" tabindex="0" aria-label="Shiny Navy" data-product-option="option2" data-swatch-input="">
-                    <label for="colorshiny-navy-7362171633723" title="Shiny Navy" class="label--swatch" data-img1="../cdn/shop/files/layflat__kaine-sun_shiny-navy.png" style="background-color: shiny-navy; background-image: url(../cdn/shop/files/swatch-shiny-navy.jpg;">
+                    <label for="colorshiny-navy-7362171633723" title="Shiny Navy" class="label--swatch" data-img1="../cdn/shop/files/layflat__kaine-sun_shiny-navy.png" style="background-color: shiny-navy; background-image: url(&quot;../cdn/shop/files/swatch-shiny-navy.jpg&quot;);">
                       Shiny Navy
                     </label>
                   
@@ -5533,7 +5550,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-bone-7362171633723" name="Color-7362171633723" value="Shiny Bone" tabindex="0" aria-label="Shiny Bone" data-product-option="option2" data-swatch-input="">
-                    <label for="colorshiny-bone-7362171633723" title="Shiny Bone" class="label--swatch" data-img1="../cdn/shop/files/layflat__kaine-sun_shiny-bone.png" style="background-color: shiny-bone; background-image: url(../cdn/shop/files/swatch-shiny-bone.jpg;">
+                    <label for="colorshiny-bone-7362171633723" title="Shiny Bone" class="label--swatch" data-img1="../cdn/shop/files/layflat__kaine-sun_shiny-bone.png" style="background-color: shiny-bone; background-image: url(&quot;../cdn/shop/files/swatch-shiny-bone.jpg&quot;);">
                       Shiny Bone
                     </label>
                   
@@ -5748,7 +5765,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colortortoise-7285698723899" name="Color-7285698723899" value="Tortoise" tabindex="0" aria-label="Tortoise" data-product-option="option2" checked="" data-swatch-input="">
-                    <label for="colortortoise-7285698723899" title="Tortoise" class="label--swatch" data-img1="../cdn/shop/files/layflat__liam-sun_tortoise.png" style="background-color: tortoise; background-image: url(../cdn/shop/files/swatch-tortoise.jpg;">
+                    <label for="colortortoise-7285698723899" title="Tortoise" class="label--swatch" data-img1="../cdn/shop/files/layflat__liam-sun_tortoise.png" style="background-color: tortoise; background-image: url(&quot;../cdn/shop/files/swatch-tortoise.jpg&quot;);">
                       Tortoise
                     </label>
                   
@@ -5762,7 +5779,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorblack-7285698723899" name="Color-7285698723899" value="Black" tabindex="0" aria-label="Black" data-product-option="option2" data-swatch-input="">
-                    <label for="colorblack-7285698723899" title="Black" class="label--swatch" data-img1="../cdn/shop/files/layflat__liam-sun_black.png" style="background-color: black; background-image: url(../cdn/shop/files/swatch-black.jpg;">
+                    <label for="colorblack-7285698723899" title="Black" class="label--swatch" data-img1="../cdn/shop/files/layflat__liam-sun_black.png" style="background-color: black; background-image: url(&quot;../cdn/shop/files/swatch-black.jpg&quot;);">
                       Black
                     </label>
                   
@@ -5776,7 +5793,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-aqua-7285698723899" name="Color-7285698723899" value="Shiny Aqua" tabindex="0" aria-label="Shiny Aqua" data-product-option="option2" data-swatch-input="">
-                    <label for="colorshiny-aqua-7285698723899" title="Shiny Aqua" class="label--swatch" data-img1="../cdn/shop/files/layflat__liam-sun_shiny-aqua.png" style="background-color: shiny-aqua; background-image: url(../cdn/shop/files/swatch-shiny-aqua.jpg;">
+                    <label for="colorshiny-aqua-7285698723899" title="Shiny Aqua" class="label--swatch" data-img1="../cdn/shop/files/layflat__liam-sun_shiny-aqua.png" style="background-color: shiny-aqua; background-image: url(&quot;../cdn/shop/files/swatch-shiny-aqua.jpg&quot;);">
                       Shiny Aqua
                     </label>
                   
@@ -5989,7 +6006,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colortaupe-7317323743291" name="Color-7317323743291" value="Taupe" tabindex="0" aria-label="Taupe" data-product-option="option2" checked="" data-swatch-input="">
-                    <label for="colortaupe-7317323743291" title="Taupe" class="label--swatch" data-img1="../cdn/shop/files/layflat__sullivan-sun_taupe.png" style="background-color: taupe; background-image: url(../cdn/shop/files/swatch-taupe.jpg;">
+                    <label for="colortaupe-7317323743291" title="Taupe" class="label--swatch" data-img1="../cdn/shop/files/layflat__sullivan-sun_taupe.png" style="background-color: taupe; background-image: url(&quot;../cdn/shop/files/swatch-taupe.jpg&quot;);">
                       Taupe
                     </label>
                   
@@ -6003,7 +6020,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colornavy-7317323743291" name="Color-7317323743291" value="Navy" tabindex="0" aria-label="Navy" data-product-option="option2" data-swatch-input="">
-                    <label for="colornavy-7317323743291" title="Navy" class="label--swatch" data-img1="../cdn/shop/files/layflat__sullivan-sun_navy.png" style="background-color: navy; background-image: url(../cdn/shop/files/swatch-navy.jpg;">
+                    <label for="colornavy-7317323743291" title="Navy" class="label--swatch" data-img1="../cdn/shop/files/layflat__sullivan-sun_navy.png" style="background-color: navy; background-image: url(&quot;../cdn/shop/files/swatch-navy.jpg&quot;);">
                       Navy
                     </label>
                   
@@ -6216,7 +6233,7 @@ details[open] > .header__submenu.list-menu {
                   
                     
                     <input type="radio" class="radio--swatch" id="colortortoise-7499893669947" name="Color-7499893669947" value="Tortoise" tabindex="0" aria-label="Tortoise" data-product-option="option2" checked="" data-swatch-input="">
-                    <label for="colortortoise-7499893669947" title="Tortoise" class="label--swatch" data-img1="../cdn/shop/files/layflat__abbey-sun_tortoise.png" style="background-color: tortoise; background-image: url(../cdn/shop/files/swatch-tortoise.jpg;">
+                    <label for="colortortoise-7499893669947" title="Tortoise" class="label--swatch" data-img1="../cdn/shop/files/layflat__abbey-sun_tortoise.png" style="background-color: tortoise; background-image: url(&quot;../cdn/shop/files/swatch-tortoise.jpg&quot;);">
                       Tortoise
                     </label>
                   

@@ -1261,6 +1261,23 @@ details[open] > .header__submenu.list-menu {
 }
 </style>
 
+<style>
+/* Fix swatches display */
+.product-option .label--swatch {
+  display: inline-block !important;
+  width: 2rem !important;
+  height: 2rem !important;
+  border-radius: 100px !important;
+  background-size: cover !important;
+  background-position: center !important;
+  border: 2px solid rgb(var(--color-background)) !important;
+  cursor: pointer !important;
+  vertical-align: middle !important;
+}
+.product-option .radio--swatch:checked + .label--swatch {
+  box-shadow: 0 0 0 1px rgb(16,16,16) !important;
+}
+</style>
 </head>
   <body class="gradient fp_product_grid_images wnw_loaded" data-page-type="collection">
       <svg id="junipStarSymbols" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -2398,7 +2415,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colortortoise-6620523495483" name="Color-6620523495483" value="Tortoise" tabindex="0" aria-label="Tortoise" data-product-option="option2" data-swatch-input="">
-                    <label for="colortortoise-6620523495483" title="Tortoise" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo_tortoise.png" data-img2="../cdn/shop/files/cosmo_cosmo-readers_tortoise_002_ca81298b-a3e7-48c6-98a6-549f93c97aca.png" style="background-color: tortoise; background-image: url(../cdn/shop/files/swatch-tortoise.jpg;">
+                    <label for="colortortoise-6620523495483" title="Tortoise" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo_tortoise.png" data-img2="../cdn/shop/files/cosmo_cosmo-readers_tortoise_002_ca81298b-a3e7-48c6-98a6-549f93c97aca.png" style="background-color: tortoise; background-image: url(&quot;../cdn/shop/files/swatch-tortoise.jpg&quot;);">
                       Tortoise
                     </label>
                   
@@ -2412,7 +2429,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colorblack-6620523495483" name="Color-6620523495483" value="Black" tabindex="0" aria-label="Black" data-product-option="option2" data-swatch-input="">
-                    <label for="colorblack-6620523495483" title="Black" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo_black.png" data-img2="../cdn/shop/files/cosmo_cosmo-readers_black_002.png" style="background-color: black; background-image: url(../cdn/shop/files/swatch-black.jpg;">
+                    <label for="colorblack-6620523495483" title="Black" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo_black.png" data-img2="../cdn/shop/files/cosmo_cosmo-readers_black_002.png" style="background-color: black; background-image: url(&quot;../cdn/shop/files/swatch-black.jpg&quot;);">
                       Black
                     </label>
                   
@@ -2426,7 +2443,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colorlake-blue-6620523495483" name="Color-6620523495483" value="Lake Blue" tabindex="0" aria-label="Lake Blue" data-product-option="option2" checked="" data-swatch-input="">
-                    <label for="colorlake-blue-6620523495483" title="Lake Blue" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo_lake-blue.png" data-img2="../cdn/shop/files/cosmo_cosmo-readers_lake-blue_002.png" style="background-color: lake-blue; background-image: url(../cdn/shop/files/swatch-lake-blue.jpg;">
+                    <label for="colorlake-blue-6620523495483" title="Lake Blue" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo_lake-blue.png" data-img2="../cdn/shop/files/cosmo_cosmo-readers_lake-blue_002.png" style="background-color: lake-blue; background-image: url(&quot;../cdn/shop/files/swatch-lake-blue.jpg&quot;);">
                       Lake Blue
                     </label>
                   
@@ -2440,7 +2457,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colorchampagne-6620523495483" name="Color-6620523495483" value="Champagne" tabindex="0" aria-label="Champagne" data-product-option="option2" data-swatch-input="">
-                    <label for="colorchampagne-6620523495483" title="Champagne" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo_champagne.png" data-img2="../cdn/shop/files/cosmo__cosmo-readers_champagne_002_1.png" style="background-color: champagne; background-image: url(../cdn/shop/files/swatch-champagne.jpg;">
+                    <label for="colorchampagne-6620523495483" title="Champagne" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo_champagne.png" data-img2="../cdn/shop/files/cosmo__cosmo-readers_champagne_002_1.png" style="background-color: champagne; background-image: url(&quot;../cdn/shop/files/swatch-champagne.jpg&quot;);">
                       Champagne
                     </label>
                   
@@ -2454,7 +2471,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colortaupe-6620523495483" name="Color-6620523495483" value="Taupe" tabindex="0" aria-label="Taupe" data-product-option="option2" data-swatch-input="">
-                    <label for="colortaupe-6620523495483" title="Taupe" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo_taupe.png" data-img2="../cdn/shop/files/cosmo_cosmo-readers_taupe_002_cc8a9849-7c88-4b0f-8565-67eedd661a7a.png" style="background-color: taupe; background-image: url(../cdn/shop/files/swatch-taupe.jpg;">
+                    <label for="colortaupe-6620523495483" title="Taupe" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo_taupe.png" data-img2="../cdn/shop/files/cosmo_cosmo-readers_taupe_002_cc8a9849-7c88-4b0f-8565-67eedd661a7a.png" style="background-color: taupe; background-image: url(&quot;../cdn/shop/files/swatch-taupe.jpg&quot;);">
                       Taupe
                     </label>
                   
@@ -2468,7 +2485,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-navy-6620523495483" name="Color-6620523495483" value="Shiny Navy" tabindex="0" aria-label="Shiny Navy" data-product-option="option2" data-swatch-input="">
-                    <label for="colorshiny-navy-6620523495483" title="Shiny Navy" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo_shiny-navy.png" data-img2="../cdn/shop/files/cosmo_cosmo-readers_shiny-navy_002.png" style="background-color: shiny-navy; background-image: url(../cdn/shop/files/swatch-shiny-navy.jpg;">
+                    <label for="colorshiny-navy-6620523495483" title="Shiny Navy" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo_shiny-navy.png" data-img2="../cdn/shop/files/cosmo_cosmo-readers_shiny-navy_002.png" style="background-color: shiny-navy; background-image: url(&quot;../cdn/shop/files/swatch-shiny-navy.jpg&quot;);">
                       Shiny Navy
                     </label>
                   
@@ -2482,7 +2499,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-grey-blue-6620523495483" name="Color-6620523495483" value="Shiny Grey Blue" tabindex="0" aria-label="Shiny Grey Blue" data-product-option="option2" data-swatch-input="">
-                    <label for="colorshiny-grey-blue-6620523495483" title="Shiny Grey Blue" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo_shiny-grey-blue.png" data-img2="../cdn/shop/files/cosmo_cosmo-readers_shiny-grey-blue_002.png" style="background-color: shiny-grey-blue; background-image: url(../cdn/shop/files/swatch-shiny-grey-blue.jpg;">
+                    <label for="colorshiny-grey-blue-6620523495483" title="Shiny Grey Blue" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo_shiny-grey-blue.png" data-img2="../cdn/shop/files/cosmo_cosmo-readers_shiny-grey-blue_002.png" style="background-color: shiny-grey-blue; background-image: url(&quot;../cdn/shop/files/swatch-shiny-grey-blue.jpg&quot;);">
                       Shiny Grey Blue
                     </label>
                   
@@ -2496,7 +2513,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-cinnamon-6620523495483" name="Color-6620523495483" value="Shiny Cinnamon" tabindex="0" aria-label="Shiny Cinnamon" data-product-option="option2" data-swatch-input="">
-                    <label for="colorshiny-cinnamon-6620523495483" title="Shiny Cinnamon" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo_shiny-cinnamon.png" data-img2="../cdn/shop/files/cosmo_cosmo-readers_shiny-cinnamon_002.png" style="background-color: shiny-cinnamon; background-image: url(../cdn/shop/files/swatch-shiny-cinnamon.jpg;">
+                    <label for="colorshiny-cinnamon-6620523495483" title="Shiny Cinnamon" class="label--swatch" data-img1="../cdn/shop/files/layflat__cosmo_shiny-cinnamon.png" data-img2="../cdn/shop/files/cosmo_cosmo-readers_shiny-cinnamon_002.png" style="background-color: shiny-cinnamon; background-image: url(&quot;../cdn/shop/files/swatch-shiny-cinnamon.jpg&quot;);">
                       Shiny Cinnamon
                     </label>
                   
@@ -2816,7 +2833,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colorchampagne-6620523987003" name="Color-6620523987003" value="Champagne" tabindex="0" aria-label="Champagne" data-product-option="option2" data-swatch-input="">
-                    <label for="colorchampagne-6620523987003" title="Champagne" class="label--swatch" data-img1="../cdn/shop/files/layflat__laurel_champagne.png" data-img2="../cdn/shop/files/laurel_laurel-readers_champagne_002.png" style="background-color: champagne; background-image: url(../cdn/shop/files/swatch-champagne.jpg;">
+                    <label for="colorchampagne-6620523987003" title="Champagne" class="label--swatch" data-img1="../cdn/shop/files/layflat__laurel_champagne.png" data-img2="../cdn/shop/files/laurel_laurel-readers_champagne_002.png" style="background-color: champagne; background-image: url(&quot;../cdn/shop/files/swatch-champagne.jpg&quot;);">
                       Champagne
                     </label>
                   
@@ -2830,7 +2847,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colorblack-6620523987003" name="Color-6620523987003" value="Black" tabindex="0" aria-label="Black" data-product-option="option2" checked="" data-swatch-input="">
-                    <label for="colorblack-6620523987003" title="Black" class="label--swatch" data-img1="../cdn/shop/files/layflat__laurel_black.png" data-img2="../cdn/shop/files/laurel_laurel-readers_black_002.png" style="background-color: black; background-image: url(../cdn/shop/files/swatch-black.jpg;">
+                    <label for="colorblack-6620523987003" title="Black" class="label--swatch" data-img1="../cdn/shop/files/layflat__laurel_black.png" data-img2="../cdn/shop/files/laurel_laurel-readers_black_002.png" style="background-color: black; background-image: url(&quot;../cdn/shop/files/swatch-black.jpg&quot;);">
                       Black
                     </label>
                   
@@ -2844,7 +2861,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colortortoise-6620523987003" name="Color-6620523987003" value="Tortoise" tabindex="0" aria-label="Tortoise" data-product-option="option2" data-swatch-input="">
-                    <label for="colortortoise-6620523987003" title="Tortoise" class="label--swatch" data-img1="../cdn/shop/files/layflat__laurel_tortoise.png" data-img2="../cdn/shop/files/laurel_laurel-readers_tortoise_002_3de0c4f8-588e-402a-abfe-c701cb7b0da0.png" style="background-color: tortoise; background-image: url(../cdn/shop/files/swatch-tortoise.jpg;">
+                    <label for="colortortoise-6620523987003" title="Tortoise" class="label--swatch" data-img1="../cdn/shop/files/layflat__laurel_tortoise.png" data-img2="../cdn/shop/files/laurel_laurel-readers_tortoise_002_3de0c4f8-588e-402a-abfe-c701cb7b0da0.png" style="background-color: tortoise; background-image: url(&quot;../cdn/shop/files/swatch-tortoise.jpg&quot;);">
                       Tortoise
                     </label>
                   
@@ -2858,7 +2875,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colortaupe-6620523987003" name="Color-6620523987003" value="Taupe" tabindex="0" aria-label="Taupe" data-product-option="option2" data-swatch-input="">
-                    <label for="colortaupe-6620523987003" title="Taupe" class="label--swatch" data-img1="../cdn/shop/files/layflat__laurel_taupe.png" data-img2="../cdn/shop/files/laurel__laurel-blue-light_taupe_002copy.png" style="background-color: taupe; background-image: url(../cdn/shop/files/swatch-taupe.jpg;">
+                    <label for="colortaupe-6620523987003" title="Taupe" class="label--swatch" data-img1="../cdn/shop/files/layflat__laurel_taupe.png" data-img2="../cdn/shop/files/laurel__laurel-blue-light_taupe_002copy.png" style="background-color: taupe; background-image: url(&quot;../cdn/shop/files/swatch-taupe.jpg&quot;);">
                       Taupe
                     </label>
                   
@@ -2872,7 +2889,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colornavy-6620523987003" name="Color-6620523987003" value="Navy" tabindex="0" aria-label="Navy" data-product-option="option2" data-swatch-input="">
-                    <label for="colornavy-6620523987003" title="Navy" class="label--swatch" data-img1="../cdn/shop/files/layflat__laurel_navy.png" data-img2="../cdn/shop/files/laurel_laurel-readers_navy_002.png" style="background-color: navy; background-image: url(../cdn/shop/files/swatch-navy.jpg;">
+                    <label for="colornavy-6620523987003" title="Navy" class="label--swatch" data-img1="../cdn/shop/files/layflat__laurel_navy.png" data-img2="../cdn/shop/files/laurel_laurel-readers_navy_002.png" style="background-color: navy; background-image: url(&quot;../cdn/shop/files/swatch-navy.jpg&quot;);">
                       Navy
                     </label>
                   
@@ -2892,7 +2909,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-cinnamon-6620523987003" name="Color-6620523987003" value="Shiny Cinnamon" tabindex="0" aria-label="Shiny Cinnamon" data-product-option="option2" data-swatch-input="">
-                    <label for="colorshiny-cinnamon-6620523987003" title="Shiny Cinnamon" class="label--swatch" data-img1="../cdn/shop/files/layflat__laurel_shiny-cinnamon.png" data-img2="../cdn/shop/files/laurel_laurel-readers_shiny-cinnamon_002.png" style="background-color: shiny-cinnamon; background-image: url(../cdn/shop/files/swatch-shiny-cinnamon.jpg;">
+                    <label for="colorshiny-cinnamon-6620523987003" title="Shiny Cinnamon" class="label--swatch" data-img1="../cdn/shop/files/layflat__laurel_shiny-cinnamon.png" data-img2="../cdn/shop/files/laurel_laurel-readers_shiny-cinnamon_002.png" style="background-color: shiny-cinnamon; background-image: url(&quot;../cdn/shop/files/swatch-shiny-cinnamon.jpg&quot;);">
                       Shiny Cinnamon
                     </label>
                   
@@ -2906,7 +2923,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-espresso-6620523987003" name="Color-6620523987003" value="Shiny Espresso" tabindex="0" aria-label="Shiny Espresso" data-product-option="option2" data-swatch-input="">
-                    <label for="colorshiny-espresso-6620523987003" title="Shiny Espresso" class="label--swatch" data-img1="../cdn/shop/files/layflat__laurel_shiny-espresso.png" data-img2="../cdn/shop/files/laurel_laurel-readers_shiny-espresso_002.png" style="background-color: shiny-espresso; background-image: url(../cdn/shop/files/swatch-shiny-espresso.jpg;">
+                    <label for="colorshiny-espresso-6620523987003" title="Shiny Espresso" class="label--swatch" data-img1="../cdn/shop/files/layflat__laurel_shiny-espresso.png" data-img2="../cdn/shop/files/laurel_laurel-readers_shiny-espresso_002.png" style="background-color: shiny-espresso; background-image: url(&quot;../cdn/shop/files/swatch-shiny-espresso.jpg&quot;);">
                       Shiny Espresso
                     </label>
                   
@@ -3213,7 +3230,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-black-7521352515643" name="Color-7521352515643" value="Shiny Black" tabindex="0" aria-label="Shiny Black" data-product-option="option2" data-swatch-input="">
-                    <label for="colorshiny-black-7521352515643" title="Shiny Black" class="label--swatch" data-img1="../cdn/shop/files/layflat__davis_shiny-black.png" data-img2="../cdn/shop/files/davis_davis-readers_shiny-black_002.png" style="background-color: shiny-black; background-image: url(../cdn/shop/files/swatch-shiny-black.jpg;">
+                    <label for="colorshiny-black-7521352515643" title="Shiny Black" class="label--swatch" data-img1="../cdn/shop/files/layflat__davis_shiny-black.png" data-img2="../cdn/shop/files/davis_davis-readers_shiny-black_002.png" style="background-color: shiny-black; background-image: url(&quot;../cdn/shop/files/swatch-shiny-black.jpg&quot;);">
                       Shiny Black
                     </label>
                   
@@ -3227,7 +3244,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-black-yellow-tint-7521352515643" name="Color-7521352515643" value="Shiny Black Yellow Tint" tabindex="0" aria-label="Shiny Black Yellow Tint" data-product-option="option2" data-swatch-input="">
-                    <label for="colorshiny-black-yellow-tint-7521352515643" title="Shiny Black Yellow Tint" class="label--swatch" data-img1="../cdn/shop/files/layflat__davis_shiny-black-yellow-tint.png" data-img2="../cdn/shop/files/davis_davis-readers_shiny-black-yellow-tint_002.png" style="background-color: shiny-black-yellow-tint; background-image: url(../cdn/shop/files/swatch-shiny-black-yellow-tint.jpg;">
+                    <label for="colorshiny-black-yellow-tint-7521352515643" title="Shiny Black Yellow Tint" class="label--swatch" data-img1="../cdn/shop/files/layflat__davis_shiny-black-yellow-tint.png" data-img2="../cdn/shop/files/davis_davis-readers_shiny-black-yellow-tint_002.png" style="background-color: shiny-black-yellow-tint; background-image: url(&quot;../cdn/shop/files/swatch-shiny-black-yellow-tint.jpg&quot;);">
                       Shiny Black Yellow Tint
                     </label>
                   
@@ -3241,7 +3258,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-espresso-7521352515643" name="Color-7521352515643" value="Shiny Espresso" tabindex="0" aria-label="Shiny Espresso" data-product-option="option2" checked="" data-swatch-input="">
-                    <label for="colorshiny-espresso-7521352515643" title="Shiny Espresso" class="label--swatch" data-img1="../cdn/shop/files/layflat__davis_shiny-espresso.png" data-img2="../cdn/shop/files/davis_davis-readers_shiny-espresso_002.png" style="background-color: shiny-espresso; background-image: url(../cdn/shop/files/swatch-shiny-espresso.jpg;">
+                    <label for="colorshiny-espresso-7521352515643" title="Shiny Espresso" class="label--swatch" data-img1="../cdn/shop/files/layflat__davis_shiny-espresso.png" data-img2="../cdn/shop/files/davis_davis-readers_shiny-espresso_002.png" style="background-color: shiny-espresso; background-image: url(&quot;../cdn/shop/files/swatch-shiny-espresso.jpg&quot;);">
                       Shiny Espresso
                     </label>
                   
@@ -3255,7 +3272,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-espresso-orange-tint-7521352515643" name="Color-7521352515643" value="Shiny Espresso Orange Tint" tabindex="0" aria-label="Shiny Espresso Orange Tint" data-product-option="option2" data-swatch-input="">
-                    <label for="colorshiny-espresso-orange-tint-7521352515643" title="Shiny Espresso Orange Tint" class="label--swatch" data-img1="../cdn/shop/files/layflat__davis_shiny-espresso-orange-tint.png" data-img2="../cdn/shop/files/davis_davis-readers_shiny-espresso-orange-tint_002.png" style="background-color: shiny-espresso-orange-tint; background-image: url(../cdn/shop/files/swatch-shiny-espresso-orange-tint.jpg;">
+                    <label for="colorshiny-espresso-orange-tint-7521352515643" title="Shiny Espresso Orange Tint" class="label--swatch" data-img1="../cdn/shop/files/layflat__davis_shiny-espresso-orange-tint.png" data-img2="../cdn/shop/files/davis_davis-readers_shiny-espresso-orange-tint_002.png" style="background-color: shiny-espresso-orange-tint; background-image: url(&quot;../cdn/shop/files/swatch-shiny-espresso-orange-tint.jpg&quot;);">
                       Shiny Espresso Orange Tint
                     </label>
                   
@@ -3269,7 +3286,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colorchampagne-7521352515643" name="Color-7521352515643" value="Champagne" tabindex="0" aria-label="Champagne" data-product-option="option2" data-swatch-input="">
-                    <label for="colorchampagne-7521352515643" title="Champagne" class="label--swatch" data-img1="../cdn/shop/files/layflat__davis_champagne.png" data-img2="../cdn/shop/files/davis_davis-readers_champagne_002.png" style="background-color: champagne; background-image: url(../cdn/shop/files/swatch-champagne.jpg;">
+                    <label for="colorchampagne-7521352515643" title="Champagne" class="label--swatch" data-img1="../cdn/shop/files/layflat__davis_champagne.png" data-img2="../cdn/shop/files/davis_davis-readers_champagne_002.png" style="background-color: champagne; background-image: url(&quot;../cdn/shop/files/swatch-champagne.jpg&quot;);">
                       Champagne
                     </label>
                   
@@ -3543,7 +3560,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colornavy-6620530999355" name="Color-6620530999355" value="Navy" tabindex="0" aria-label="Navy" data-product-option="option2" data-swatch-input="">
-                    <label for="colornavy-6620530999355" title="Navy" class="label--swatch" data-img1="../cdn/shop/files/layflat__sullivan_navy.png" data-img2="../cdn/shop/products/sullivan__sullivan-readers_navy_002.png" style="background-color: navy; background-image: url(../cdn/shop/files/swatch-navy.jpg;">
+                    <label for="colornavy-6620530999355" title="Navy" class="label--swatch" data-img1="../cdn/shop/files/layflat__sullivan_navy.png" data-img2="../cdn/shop/products/sullivan__sullivan-readers_navy_002.png" style="background-color: navy; background-image: url(&quot;../cdn/shop/files/swatch-navy.jpg&quot;);">
                       Navy
                     </label>
                   
@@ -3557,7 +3574,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colorblack-6620530999355" name="Color-6620530999355" value="Black" tabindex="0" aria-label="Black" data-product-option="option2" checked="" data-swatch-input="">
-                    <label for="colorblack-6620530999355" title="Black" class="label--swatch" data-img1="../cdn/shop/files/layflat__sullivan_black.png" data-img2="../cdn/shop/products/sullivan__sullivan-readers_black_002.png" style="background-color: black; background-image: url(../cdn/shop/files/swatch-black.jpg;">
+                    <label for="colorblack-6620530999355" title="Black" class="label--swatch" data-img1="../cdn/shop/files/layflat__sullivan_black.png" data-img2="../cdn/shop/products/sullivan__sullivan-readers_black_002.png" style="background-color: black; background-image: url(&quot;../cdn/shop/files/swatch-black.jpg&quot;);">
                       Black
                     </label>
                   
@@ -3571,7 +3588,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colortortoise-6620530999355" name="Color-6620530999355" value="Tortoise" tabindex="0" aria-label="Tortoise" data-product-option="option2" data-swatch-input="">
-                    <label for="colortortoise-6620530999355" title="Tortoise" class="label--swatch" data-img1="../cdn/shop/files/layflat__sullivan_tortoise.png" data-img2="../cdn/shop/products/sullivan__sullivan-readers_tortoise_002.png" style="background-color: tortoise; background-image: url(../cdn/shop/files/swatch-tortoise.jpg;">
+                    <label for="colortortoise-6620530999355" title="Tortoise" class="label--swatch" data-img1="../cdn/shop/files/layflat__sullivan_tortoise.png" data-img2="../cdn/shop/products/sullivan__sullivan-readers_tortoise_002.png" style="background-color: tortoise; background-image: url(&quot;../cdn/shop/files/swatch-tortoise.jpg&quot;);">
                       Tortoise
                     </label>
                   
@@ -3591,7 +3608,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colortaupe-6620530999355" name="Color-6620530999355" value="Taupe" tabindex="0" aria-label="Taupe" data-product-option="option2" data-swatch-input="">
-                    <label for="colortaupe-6620530999355" title="Taupe" class="label--swatch" data-img1="../cdn/shop/files/layflat__sullivan_taupe.png" data-img2="../cdn/shop/products/sullivan__sullivan-readers_taupe_002.png" style="background-color: taupe; background-image: url(../cdn/shop/files/swatch-taupe.jpg;">
+                    <label for="colortaupe-6620530999355" title="Taupe" class="label--swatch" data-img1="../cdn/shop/files/layflat__sullivan_taupe.png" data-img2="../cdn/shop/products/sullivan__sullivan-readers_taupe_002.png" style="background-color: taupe; background-image: url(&quot;../cdn/shop/files/swatch-taupe.jpg&quot;);">
                       Taupe
                     </label>
                   
@@ -3880,7 +3897,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colortortoise-6665614753851" name="Color-6665614753851" value="Tortoise" tabindex="0" aria-label="Tortoise" data-product-option="option2" data-swatch-input="">
-                    <label for="colortortoise-6665614753851" title="Tortoise" class="label--swatch" data-img1="../cdn/shop/files/layflat__kaine_tortoise.png" data-img2="../cdn/shop/files/kaine_kaine-readers_tortoise_002.png" style="background-color: tortoise; background-image: url(../cdn/shop/files/swatch-tortoise.jpg;">
+                    <label for="colortortoise-6665614753851" title="Tortoise" class="label--swatch" data-img1="../cdn/shop/files/layflat__kaine_tortoise.png" data-img2="../cdn/shop/files/kaine_kaine-readers_tortoise_002.png" style="background-color: tortoise; background-image: url(&quot;../cdn/shop/files/swatch-tortoise.jpg&quot;);">
                       Tortoise
                     </label>
                   
@@ -3894,7 +3911,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-navy-6665614753851" name="Color-6665614753851" value="Shiny Navy" tabindex="0" aria-label="Shiny Navy" data-product-option="option2" checked="" data-swatch-input="">
-                    <label for="colorshiny-navy-6665614753851" title="Shiny Navy" class="label--swatch" data-img1="../cdn/shop/files/layflat__kaine_shiny-navy.png" data-img2="../cdn/shop/files/kaine_kaine-readers_shiny-navy_002.png" style="background-color: shiny-navy; background-image: url(../cdn/shop/files/swatch-shiny-navy.jpg;">
+                    <label for="colorshiny-navy-6665614753851" title="Shiny Navy" class="label--swatch" data-img1="../cdn/shop/files/layflat__kaine_shiny-navy.png" data-img2="../cdn/shop/files/kaine_kaine-readers_shiny-navy_002.png" style="background-color: shiny-navy; background-image: url(&quot;../cdn/shop/files/swatch-shiny-navy.jpg&quot;);">
                       Shiny Navy
                     </label>
                   
@@ -3908,7 +3925,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colortaupe-6665614753851" name="Color-6665614753851" value="Taupe" tabindex="0" aria-label="Taupe" data-product-option="option2" data-swatch-input="">
-                    <label for="colortaupe-6665614753851" title="Taupe" class="label--swatch" data-img1="../cdn/shop/files/layflat__kaine_taupe.png" data-img2="../cdn/shop/files/kaine_kaine-readers_taupe_002.png" style="background-color: taupe; background-image: url(../cdn/shop/files/swatch-taupe.jpg;">
+                    <label for="colortaupe-6665614753851" title="Taupe" class="label--swatch" data-img1="../cdn/shop/files/layflat__kaine_taupe.png" data-img2="../cdn/shop/files/kaine_kaine-readers_taupe_002.png" style="background-color: taupe; background-image: url(&quot;../cdn/shop/files/swatch-taupe.jpg&quot;);">
                       Taupe
                     </label>
                   
@@ -3922,7 +3939,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-espresso-6665614753851" name="Color-6665614753851" value="Shiny Espresso" tabindex="0" aria-label="Shiny Espresso" data-product-option="option2" data-swatch-input="">
-                    <label for="colorshiny-espresso-6665614753851" title="Shiny Espresso" class="label--swatch" data-img1="../cdn/shop/files/layflat__kaine_shiny-espresso.png" data-img2="../cdn/shop/files/kaine_kaine-readers_shiny-espresso_002.png" style="background-color: shiny-espresso; background-image: url(../cdn/shop/files/swatch-shiny-espresso.jpg;">
+                    <label for="colorshiny-espresso-6665614753851" title="Shiny Espresso" class="label--swatch" data-img1="../cdn/shop/files/layflat__kaine_shiny-espresso.png" data-img2="../cdn/shop/files/kaine_kaine-readers_shiny-espresso_002.png" style="background-color: shiny-espresso; background-image: url(&quot;../cdn/shop/files/swatch-shiny-espresso.jpg&quot;);">
                       Shiny Espresso
                     </label>
                   
@@ -4174,7 +4191,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colortortoise-6620519792699" name="Color-6620519792699" value="Tortoise" tabindex="0" aria-label="Tortoise" data-product-option="option2" checked="" data-swatch-input="">
-                    <label for="colortortoise-6620519792699" title="Tortoise" class="label--swatch" data-img1="../cdn/shop/files/layflat__abbey_tortoise.png" data-img2="../cdn/shop/files/abbey_abbey-readers_tortoise_002_fbbe3322-08a6-4281-b8c5-8e01593810d6.png" style="background-color: tortoise; background-image: url(../cdn/shop/files/swatch-tortoise.jpg;">
+                    <label for="colortortoise-6620519792699" title="Tortoise" class="label--swatch" data-img1="../cdn/shop/files/layflat__abbey_tortoise.png" data-img2="../cdn/shop/files/abbey_abbey-readers_tortoise_002_fbbe3322-08a6-4281-b8c5-8e01593810d6.png" style="background-color: tortoise; background-image: url(&quot;../cdn/shop/files/swatch-tortoise.jpg&quot;);">
                       Tortoise
                     </label>
                   
@@ -4188,7 +4205,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colorblack-6620519792699" name="Color-6620519792699" value="Black" tabindex="0" aria-label="Black" data-product-option="option2" data-swatch-input="">
-                    <label for="colorblack-6620519792699" title="Black" class="label--swatch" data-img1="../cdn/shop/files/layflat__abbey_black.png" data-img2="../cdn/shop/files/abbey_abbey-readers_black_002.png" style="background-color: black; background-image: url(../cdn/shop/files/swatch-black.jpg;">
+                    <label for="colorblack-6620519792699" title="Black" class="label--swatch" data-img1="../cdn/shop/files/layflat__abbey_black.png" data-img2="../cdn/shop/files/abbey_abbey-readers_black_002.png" style="background-color: black; background-image: url(&quot;../cdn/shop/files/swatch-black.jpg&quot;);">
                       Black
                     </label>
                   
@@ -4202,7 +4219,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colornavy-6620519792699" name="Color-6620519792699" value="Navy" tabindex="0" aria-label="Navy" data-product-option="option2" data-swatch-input="">
-                    <label for="colornavy-6620519792699" title="Navy" class="label--swatch" data-img1="../cdn/shop/files/layflat__abbey_navy.png" data-img2="../cdn/shop/files/abbey_abbey-readers_navy_002.png" style="background-color: navy; background-image: url(../cdn/shop/files/swatch-navy.jpg;">
+                    <label for="colornavy-6620519792699" title="Navy" class="label--swatch" data-img1="../cdn/shop/files/layflat__abbey_navy.png" data-img2="../cdn/shop/files/abbey_abbey-readers_navy_002.png" style="background-color: navy; background-image: url(&quot;../cdn/shop/files/swatch-navy.jpg&quot;);">
                       Navy
                     </label>
                   
@@ -4216,7 +4233,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-aqua-6620519792699" name="Color-6620519792699" value="Shiny Aqua" tabindex="0" aria-label="Shiny Aqua" data-product-option="option2" data-swatch-input="">
-                    <label for="colorshiny-aqua-6620519792699" title="Shiny Aqua" class="label--swatch" data-img1="../cdn/shop/files/layflat__abbey_shiny-aqua.png" data-img2="../cdn/shop/files/abbey_abbey-readers_shiny-aqua_002.png" style="background-color: shiny-aqua; background-image: url(../cdn/shop/files/swatch-shiny-aqua.jpg;">
+                    <label for="colorshiny-aqua-6620519792699" title="Shiny Aqua" class="label--swatch" data-img1="../cdn/shop/files/layflat__abbey_shiny-aqua.png" data-img2="../cdn/shop/files/abbey_abbey-readers_shiny-aqua_002.png" style="background-color: shiny-aqua; background-image: url(&quot;../cdn/shop/files/swatch-shiny-aqua.jpg&quot;);">
                       Shiny Aqua
                     </label>
                   
@@ -4230,7 +4247,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-pink-6620519792699" name="Color-6620519792699" value="Shiny Pink" tabindex="0" aria-label="Shiny Pink" data-product-option="option2" data-swatch-input="">
-                    <label for="colorshiny-pink-6620519792699" title="Shiny Pink" class="label--swatch" data-img1="../cdn/shop/files/layflat__abbey_shiny-pink.png" data-img2="../cdn/shop/files/abbey_abbey-readers_shiny-pink_002.png" style="background-color: shiny-pink; background-image: url(../cdn/shop/files/swatch-shiny-pink.jpg;">
+                    <label for="colorshiny-pink-6620519792699" title="Shiny Pink" class="label--swatch" data-img1="../cdn/shop/files/layflat__abbey_shiny-pink.png" data-img2="../cdn/shop/files/abbey_abbey-readers_shiny-pink_002.png" style="background-color: shiny-pink; background-image: url(&quot;../cdn/shop/files/swatch-shiny-pink.jpg&quot;);">
                       Shiny Pink
                     </label>
                   
@@ -4521,7 +4538,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colortortoise-6620559048763" name="Color-6620559048763" value="Tortoise" tabindex="0" aria-label="Tortoise" data-product-option="option2" checked="" data-swatch-input="">
-                    <label for="colortortoise-6620559048763" title="Tortoise" class="label--swatch" data-img1="../cdn/shop/files/layflat__liam_tortoise.png" data-img2="../cdn/shop/files/liam_liam-readers_tortoise_002_93528f31-768f-4fcc-8449-aed9fa91bfb0.png" style="background-color: tortoise; background-image: url(../cdn/shop/files/swatch-tortoise.jpg;">
+                    <label for="colortortoise-6620559048763" title="Tortoise" class="label--swatch" data-img1="../cdn/shop/files/layflat__liam_tortoise.png" data-img2="../cdn/shop/files/liam_liam-readers_tortoise_002_93528f31-768f-4fcc-8449-aed9fa91bfb0.png" style="background-color: tortoise; background-image: url(&quot;../cdn/shop/files/swatch-tortoise.jpg&quot;);">
                       Tortoise
                     </label>
                   
@@ -4535,7 +4552,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-navy-6620559048763" name="Color-6620559048763" value="Shiny Navy" tabindex="0" aria-label="Shiny Navy" data-product-option="option2" data-swatch-input="">
-                    <label for="colorshiny-navy-6620559048763" title="Shiny Navy" class="label--swatch" data-img1="../cdn/shop/files/layflat__liam_shiny-navy.png" data-img2="../cdn/shop/files/liam_liam-readers_shiny-navy_002.png" style="background-color: shiny-navy; background-image: url(../cdn/shop/files/swatch-shiny-navy.jpg;">
+                    <label for="colorshiny-navy-6620559048763" title="Shiny Navy" class="label--swatch" data-img1="../cdn/shop/files/layflat__liam_shiny-navy.png" data-img2="../cdn/shop/files/liam_liam-readers_shiny-navy_002.png" style="background-color: shiny-navy; background-image: url(&quot;../cdn/shop/files/swatch-shiny-navy.jpg&quot;);">
                       Shiny Navy
                     </label>
                   
@@ -4549,7 +4566,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colorblack-6620559048763" name="Color-6620559048763" value="Black" tabindex="0" aria-label="Black" data-product-option="option2" data-swatch-input="">
-                    <label for="colorblack-6620559048763" title="Black" class="label--swatch" data-img1="../cdn/shop/files/layflat__liam_black.png" data-img2="../cdn/shop/files/liam_liam-readers_black_002.png" style="background-color: black; background-image: url(../cdn/shop/files/swatch-black.jpg;">
+                    <label for="colorblack-6620559048763" title="Black" class="label--swatch" data-img1="../cdn/shop/files/layflat__liam_black.png" data-img2="../cdn/shop/files/liam_liam-readers_black_002.png" style="background-color: black; background-image: url(&quot;../cdn/shop/files/swatch-black.jpg&quot;);">
                       Black
                     </label>
                   
@@ -4563,7 +4580,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-bottle-green-6620559048763" name="Color-6620559048763" value="Shiny Bottle Green" tabindex="0" aria-label="Shiny Bottle Green" data-product-option="option2" data-swatch-input="">
-                    <label for="colorshiny-bottle-green-6620559048763" title="Shiny Bottle Green" class="label--swatch" data-img1="../cdn/shop/files/layflat__liam_shiny-bottle-green.png" data-img2="../cdn/shop/files/liam_liam-readers_shiny-bottle-green_002.png" style="background-color: shiny-bottle-green; background-image: url(../cdn/shop/files/swatch-shiny-bottle-green.jpg;">
+                    <label for="colorshiny-bottle-green-6620559048763" title="Shiny Bottle Green" class="label--swatch" data-img1="../cdn/shop/files/layflat__liam_shiny-bottle-green.png" data-img2="../cdn/shop/files/liam_liam-readers_shiny-bottle-green_002.png" style="background-color: shiny-bottle-green; background-image: url(&quot;../cdn/shop/files/swatch-shiny-bottle-green.jpg&quot;);">
                       Shiny Bottle Green
                     </label>
                   
@@ -4577,7 +4594,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-aqua-6620559048763" name="Color-6620559048763" value="Shiny Aqua" tabindex="0" aria-label="Shiny Aqua" data-product-option="option2" data-swatch-input="">
-                    <label for="colorshiny-aqua-6620559048763" title="Shiny Aqua" class="label--swatch" data-img1="../cdn/shop/files/layflat__liam_shiny-aqua.png" data-img2="../cdn/shop/files/liam_liam-readers_shiny-aqua_002.png" style="background-color: shiny-aqua; background-image: url(../cdn/shop/files/swatch-shiny-aqua.jpg;">
+                    <label for="colorshiny-aqua-6620559048763" title="Shiny Aqua" class="label--swatch" data-img1="../cdn/shop/files/layflat__liam_shiny-aqua.png" data-img2="../cdn/shop/files/liam_liam-readers_shiny-aqua_002.png" style="background-color: shiny-aqua; background-image: url(&quot;../cdn/shop/files/swatch-shiny-aqua.jpg&quot;);">
                       Shiny Aqua
                     </label>
                   
@@ -4826,7 +4843,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colorgold-pink-tint-7148436258875" name="Color-7148436258875" value="Gold Pink Tint" tabindex="0" aria-label="Gold Pink Tint" data-product-option="option2" data-swatch-input="">
-                    <label for="colorgold-pink-tint-7148436258875" title="Gold Pink Tint" class="label--swatch" data-img1="../cdn/shop/files/layflat__cooper_gold-pink-tint.png" data-img2="../cdn/shop/files/cooper_cooper-readers_gold-pink-tint_002.png" style="background-color: gold-pink-tint; background-image: url(../cdn/shop/files/swatch-gold-pink-tint.jpg;">
+                    <label for="colorgold-pink-tint-7148436258875" title="Gold Pink Tint" class="label--swatch" data-img1="../cdn/shop/files/layflat__cooper_gold-pink-tint.png" data-img2="../cdn/shop/files/cooper_cooper-readers_gold-pink-tint_002.png" style="background-color: gold-pink-tint; background-image: url(&quot;../cdn/shop/files/swatch-gold-pink-tint.jpg&quot;);">
                       Gold Pink Tint
                     </label>
                   
@@ -4840,7 +4857,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colorgold-7148436258875" name="Color-7148436258875" value="Gold" tabindex="0" aria-label="Gold" data-product-option="option2" data-swatch-input="">
-                    <label for="colorgold-7148436258875" title="Gold" class="label--swatch" data-img1="../cdn/shop/files/layflat__cooper_gold.png" data-img2="../cdn/shop/files/cooper_cooper-readers_gold_002.png" style="background-color: gold; background-image: url(../cdn/shop/files/swatch-gold.jpg;">
+                    <label for="colorgold-7148436258875" title="Gold" class="label--swatch" data-img1="../cdn/shop/files/layflat__cooper_gold.png" data-img2="../cdn/shop/files/cooper_cooper-readers_gold_002.png" style="background-color: gold; background-image: url(&quot;../cdn/shop/files/swatch-gold.jpg&quot;);">
                       Gold
                     </label>
                   
@@ -4854,7 +4871,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colorsilver-7148436258875" name="Color-7148436258875" value="Silver" tabindex="0" aria-label="Silver" data-product-option="option2" data-swatch-input="" checked="">
-                    <label for="colorsilver-7148436258875" title="Silver" class="label--swatch" data-img1="../cdn/shop/files/layflat__cooper_silver.png" data-img2="../cdn/shop/files/cooper_cooper-readers_silver_002.png" style="background-color: silver; background-image: url(../cdn/shop/files/swatch-silver.jpg;">
+                    <label for="colorsilver-7148436258875" title="Silver" class="label--swatch" data-img1="../cdn/shop/files/layflat__cooper_silver.png" data-img2="../cdn/shop/files/cooper_cooper-readers_silver_002.png" style="background-color: silver; background-image: url(&quot;../cdn/shop/files/swatch-silver.jpg&quot;);">
                       Silver
                     </label>
                   
@@ -5092,7 +5109,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colorgold-pink-tint-6914253357115" name="Color-6914253357115" value="Gold Pink Tint" tabindex="0" aria-label="Gold Pink Tint" data-product-option="option2" data-swatch-input="">
-                    <label for="colorgold-pink-tint-6914253357115" title="Gold Pink Tint" class="label--swatch" data-img1="../cdn/shop/files/layflat__muse_gold-pink-tint.png" data-img2="../cdn/shop/files/muse_muse-readers_gold-pink-tint_002.png" style="background-color: gold-pink-tint; background-image: url(../cdn/shop/files/swatch-gold-pink-tint.jpg;">
+                    <label for="colorgold-pink-tint-6914253357115" title="Gold Pink Tint" class="label--swatch" data-img1="../cdn/shop/files/layflat__muse_gold-pink-tint.png" data-img2="../cdn/shop/files/muse_muse-readers_gold-pink-tint_002.png" style="background-color: gold-pink-tint; background-image: url(&quot;../cdn/shop/files/swatch-gold-pink-tint.jpg&quot;);">
                       Gold Pink Tint
                     </label>
                   
@@ -5106,7 +5123,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colorgold-6914253357115" name="Color-6914253357115" value="Gold" tabindex="0" aria-label="Gold" data-product-option="option2" data-swatch-input="">
-                    <label for="colorgold-6914253357115" title="Gold" class="label--swatch" data-img1="../cdn/shop/files/layflat__muse_gold.png" data-img2="../cdn/shop/files/muse_muse-readers_gold_002.png" style="background-color: gold; background-image: url(../cdn/shop/files/swatch-gold.jpg;">
+                    <label for="colorgold-6914253357115" title="Gold" class="label--swatch" data-img1="../cdn/shop/files/layflat__muse_gold.png" data-img2="../cdn/shop/files/muse_muse-readers_gold_002.png" style="background-color: gold; background-image: url(&quot;../cdn/shop/files/swatch-gold.jpg&quot;);">
                       Gold
                     </label>
                   
@@ -5120,7 +5137,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colorgold-green-gradient-tint-6914253357115" name="Color-6914253357115" value="Gold Green Gradient Tint" tabindex="0" aria-label="Gold Green Gradient Tint" data-product-option="option2" data-swatch-input="">
-                    <label for="colorgold-green-gradient-tint-6914253357115" title="Gold Green Gradient Tint" class="label--swatch" data-img1="../cdn/shop/files/layflat__muse_gold-green-gradient-tint.png" data-img2="../cdn/shop/files/muse_muse-readers_gold-green-gradient-tint_002.png" style="background-color: gold-green-gradient-tint; background-image: url(../cdn/shop/files/swatch-gold-green-gradient-tint.jpg;">
+                    <label for="colorgold-green-gradient-tint-6914253357115" title="Gold Green Gradient Tint" class="label--swatch" data-img1="../cdn/shop/files/layflat__muse_gold-green-gradient-tint.png" data-img2="../cdn/shop/files/muse_muse-readers_gold-green-gradient-tint_002.png" style="background-color: gold-green-gradient-tint; background-image: url(&quot;../cdn/shop/files/swatch-gold-green-gradient-tint.jpg&quot;);">
                       Gold Green Gradient Tint
                     </label>
                   
@@ -5134,7 +5151,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colorsilver-6914253357115" name="Color-6914253357115" value="Silver" tabindex="0" aria-label="Silver" data-product-option="option2" checked="" data-swatch-input="">
-                    <label for="colorsilver-6914253357115" title="Silver" class="label--swatch" data-img1="../cdn/shop/files/layflat__muse_silver.png" data-img2="../cdn/shop/files/muse_muse-readers_silver_002.png" style="background-color: silver; background-image: url(../cdn/shop/files/swatch-silver.jpg;">
+                    <label for="colorsilver-6914253357115" title="Silver" class="label--swatch" data-img1="../cdn/shop/files/layflat__muse_silver.png" data-img2="../cdn/shop/files/muse_muse-readers_silver_002.png" style="background-color: silver; background-image: url(&quot;../cdn/shop/files/swatch-silver.jpg&quot;);">
                       Silver
                     </label>
                   
@@ -5154,7 +5171,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-rose-gold-6914253357115" name="Color-6914253357115" value="Shiny Rose Gold" tabindex="0" aria-label="Shiny Rose Gold" data-product-option="option2" data-swatch-input="">
-                    <label for="colorshiny-rose-gold-6914253357115" title="Shiny Rose Gold" class="label--swatch" data-img1="../cdn/shop/files/layflat__muse_shiny-rose-gold.png" data-img2="../cdn/shop/files/muse_muse-readers_shiny-rose-gold_002.png" style="background-color: shiny-rose-gold; background-image: url(../cdn/shop/files/swatch-shiny-rose-gold.jpg;">
+                    <label for="colorshiny-rose-gold-6914253357115" title="Shiny Rose Gold" class="label--swatch" data-img1="../cdn/shop/files/layflat__muse_shiny-rose-gold.png" data-img2="../cdn/shop/files/muse_muse-readers_shiny-rose-gold_002.png" style="background-color: shiny-rose-gold; background-image: url(&quot;../cdn/shop/files/swatch-shiny-rose-gold.jpg&quot;);">
                       Shiny Rose Gold
                     </label>
                   
@@ -5168,7 +5185,7 @@ font-size: 14px;
                   
                     
                     <input type="radio" class="radio--swatch" id="colorshiny-rose-gold-brown-gradient-tint-6914253357115" name="Color-6914253357115" value="Shiny Rose Gold Brown Gradient Tint" tabindex="0" aria-label="Shiny Rose Gold Brown Gradient Tint" data-product-option="option2" data-swatch-input="">
-                    <label for="colorshiny-rose-gold-brown-gradient-tint-6914253357115" title="Shiny Rose Gold Brown Gradient Tint" class="label--swatch" data-img1="../cdn/shop/files/layflat__muse_shiny-rose-gold-brown-gradient-tint.png" data-img2="../cdn/shop/files/muse_muse-readers_shiny-rose-gold-brown-gradient-tint_002.png" style="background-color: shiny-rose-gold-brown-gradient-tint; background-image: url(../cdn/shop/files/swatch-shiny-rose-gold-brown-gradient-tint.jpg;">
+                    <label for="colorshiny-rose-gold-brown-gradient-tint-6914253357115" title="Shiny Rose Gold Brown Gradient Tint" class="label--swatch" data-img1="../cdn/shop/files/layflat__muse_shiny-rose-gold-brown-gradient-tint.png" data-img2="../cdn/shop/files/muse_muse-readers_shiny-rose-gold-brown-gradient-tint_002.png" style="background-color: shiny-rose-gold-brown-gradient-tint; background-image: url(&quot;../cdn/shop/files/swatch-shiny-rose-gold-brown-gradient-tint.jpg&quot;);">
                       Shiny Rose Gold Brown Gradient Tint
                     </label>
                   
