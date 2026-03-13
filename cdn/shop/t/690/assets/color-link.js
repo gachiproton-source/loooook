@@ -4,37 +4,31 @@ document.addEventListener('DOMContentLoaded', function() {
     return (s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
   }
   
-  // === PRODUCT PAGES: Full color switching (replaces missing Shopify JS) ===
+  // === PRODUCT PAGES: Full color switching ===
   
   function switchColor(colorNorm) {
     if (!colorNorm) return;
     
-    // 1. Show/hide images by data-color
+    // Show/hide images by data-color
     var mediaItems = document.querySelectorAll('.product__media-item[data-color]');
     if (mediaItems.length > 0) {
-      var firstVisible = null;
       mediaItems.forEach(function(item) {
         if (normalize(item.getAttribute('data-color')) === colorNorm) {
           item.style.display = '';
-          if (!firstVisible) firstVisible = item;
         } else {
           item.style.display = 'none';
         }
       });
-      // Scroll to first visible image
-      if (firstVisible) {
-        var slider = firstVisible.closest('.slider, .product__media-list');
-        if (slider) slider.scrollLeft = 0;
-      }
+      var slider = document.querySelector('.product__media-list');
+      if (slider) slider.scrollLeft = 0;
     }
     
-    // 2. Check the matching radio + update label visual
+    // Check matching radio
     document.querySelectorAll('input[data-input-color]').forEach(function(input) {
-      var match = normalize(input.getAttribute('data-input-color')) === colorNorm;
-      input.checked = match;
+      input.checked = normalize(input.getAttribute('data-input-color')) === colorNorm;
     });
     
-    // 3. Update swatch label highlights
+    // Highlight swatch labels
     document.querySelectorAll('label[data-label-color]').forEach(function(label) {
       if (normalize(label.getAttribute('data-label-color')) === colorNorm) {
         label.style.outline = '1.5px solid #333';
@@ -45,44 +39,24 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
     
-    // 4. Update "Color: X" label text
+    // Update color label text
     var colorLabel = document.querySelector('[data-color-label]');
     if (colorLabel) {
-      // Find the original name from input
-      var matchedInput = document.querySelector('input[data-input-color][checked]');
-      if (!matchedInput) {
-        document.querySelectorAll('input[data-input-color]').forEach(function(inp) {
-          if (inp.checked) matchedInput = inp;
-        });
-      }
-      if (matchedInput) {
-        colorLabel.textContent = matchedInput.getAttribute('data-input-color');
-      }
+      document.querySelectorAll('input[data-input-color]').forEach(function(inp) {
+        if (inp.checked) colorLabel.textContent = inp.getAttribute('data-input-color');
+      });
     }
   }
   
-  // Add click handlers to ALL color swatch labels on product pages
+  // Click handlers for product page swatches
   document.querySelectorAll('label[data-label-color]').forEach(function(label) {
     label.addEventListener('click', function(e) {
       e.preventDefault();
-      var color = normalize(this.getAttribute('data-label-color'));
-      switchColor(color);
-      
-      // Also update URL without reload
-      var url = new URL(window.location);
-      url.searchParams.set('color', color);
-      window.history.replaceState({}, '', url);
+      switchColor(normalize(this.getAttribute('data-label-color')));
     });
   });
   
-  // Also handle radio input changes directly
-  document.querySelectorAll('input[data-input-color]').forEach(function(input) {
-    input.addEventListener('change', function() {
-      switchColor(normalize(this.getAttribute('data-input-color')));
-    });
-  });
-  
-  // Read ?color= from URL on page load
+  // Read ?color= from URL
   var params = new URLSearchParams(window.location.search);
   var selectedColor = params.get('color');
   if (selectedColor) {
@@ -91,37 +65,43 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 150);
   }
   
-  // === COLLECTION PAGES: update product link when swatch is clicked ===
-  
-  // lo-swatch style (readers.html)
-  if (typeof window.swapColor === 'function') {
-    var origSwap = window.swapColor;
-    window.swapColor = function(el) {
-      origSwap(el);
-      var color = normalize(el.getAttribute('title'));
-      if (!color) return;
-      var card = el.closest('.lo-card');
-      if (card) {
+  // === COLLECTION PAGES: Listen for clicks on lo-swatch elements ===
+  // Use event delegation instead of overriding swapColor
+  document.addEventListener('click', function(e) {
+    var swatch = e.target.closest('.lo-swatch');
+    if (!swatch) return;
+    
+    var color = normalize(swatch.getAttribute('title'));
+    if (!color) return;
+    
+    var card = swatch.closest('.lo-card');
+    if (card) {
+      // Small delay to let original swapColor run first
+      setTimeout(function() {
         card.querySelectorAll('a[href*="products/"]').forEach(function(a) {
           a.setAttribute('href', a.getAttribute('href').split('?')[0] + '?color=' + encodeURIComponent(color));
         });
-      }
-    };
-  }
+      }, 10);
+    }
+  });
   
-  // label--swatch style (other pages)
-  document.querySelectorAll('.product-option .label--swatch').forEach(function(swatch) {
-    swatch.addEventListener('click', function() {
-      var bg = this.style.backgroundImage || '';
-      var m = bg.match(/swatch-([^."]+)/);
-      var color = m ? m[1] : '';
-      if (!color) return;
-      var card = this.closest('.card-wrapper, .grid__item, li');
-      if (card) {
+  // Also handle label--swatch clicks in other collection pages
+  document.addEventListener('click', function(e) {
+    var swatch = e.target.closest('.product-option .label--swatch');
+    if (!swatch) return;
+    
+    var bg = swatch.style.backgroundImage || '';
+    var m = bg.match(/swatch-([^."]+)/);
+    var color = m ? m[1] : '';
+    if (!color) return;
+    
+    var card = swatch.closest('.card-wrapper, .grid__item, li');
+    if (card) {
+      setTimeout(function() {
         card.querySelectorAll('a[href*="products/"]').forEach(function(a) {
           a.setAttribute('href', a.getAttribute('href').split('?')[0] + '?color=' + encodeURIComponent(color));
         });
-      }
-    });
+      }, 10);
+    }
   });
 });
