@@ -5503,7 +5503,72 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
-<script src="../cdn/shop/t/690/assets/color-link.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  function norm(s) {
+    return (s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  }
+  
+  // Product page: label click switches color
+  document.querySelectorAll('label[data-label-color]').forEach(function(lbl) {
+    lbl.addEventListener('click', function(e) {
+      e.preventDefault();
+      var colorNorm = norm(this.getAttribute('data-label-color'));
+      
+      document.querySelectorAll('li[data-color]').forEach(function(el) {
+        if (norm(el.getAttribute('data-color')) === colorNorm) {
+          el.style.cssText = 'display: list-item !important;';
+        } else {
+          el.style.cssText = 'display: none !important;';
+        }
+      });
+      
+      document.querySelectorAll('input[data-input-color]').forEach(function(inp) {
+        inp.checked = norm(inp.getAttribute('data-input-color')) === colorNorm;
+      });
+      
+      document.querySelectorAll('label[data-label-color]').forEach(function(l) {
+        var m = norm(l.getAttribute('data-label-color')) === colorNorm;
+        l.style.outline = m ? '1.5px solid #333' : '';
+        l.style.outlineOffset = m ? '2px' : '';
+      });
+      
+      var cl = document.querySelector('[data-color-label]');
+      if (cl) {
+        document.querySelectorAll('input[data-input-color]').forEach(function(inp) {
+          if (inp.checked) cl.textContent = inp.getAttribute('data-input-color');
+        });
+      }
+      
+      var slider = document.querySelector('.product__media-list');
+      if (slider) slider.scrollLeft = 0;
+      
+      // Update URL
+      var url = new URL(window.location);
+      url.searchParams.set('color', colorNorm);
+      window.history.replaceState({}, '', url);
+    });
+  });
+  
+  // Collection page: swatch click updates product link
+  document.addEventListener('click', function(e) {
+    var swatch = e.target.closest('.lo-swatch');
+    if (swatch) {
+      var color = norm(swatch.getAttribute('title'));
+      if (!color) return;
+      var card = swatch.closest('.lo-card');
+      if (card) {
+        setTimeout(function() {
+          card.querySelectorAll('a[href*="products/"]').forEach(function(a) {
+            a.setAttribute('href', a.getAttribute('href').split('?')[0] + '?color=' + encodeURIComponent(color));
+          });
+        }, 10);
+      }
+    }
+  });
+});
+</script>
 </body>
 <style>
 .swiper-wrapper--announcement-bar-desktop, .swiper-wrapper--announcement-bar-desktop .announcement-bar, .swiper-wrapper--announcement-bar-mobile, .swiper-wrapper--announcement-bar-mobile .announcement-bar {
