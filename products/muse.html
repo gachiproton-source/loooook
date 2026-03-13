@@ -10368,126 +10368,1584 @@ window.waitForElementToAppear(
 
 
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    function isIE() {
+      const ua = window.navigator.userAgent;
+      const msie = ua.indexOf('MSIE ');
+      const trident = ua.indexOf('Trident/');
+
+      return (msie > 0 || trident > 0);
+    }
+
+    if (!isIE()) return;
+    const hiddenInput = document.querySelector('#product-form-template--15395984212027__main input[name="id"]');
+    const noScriptInputWrapper = document.createElement('div');
+    const variantSwitcher = document.querySelector('variant-radios[data-section="template--15395984212027__main"]') || document.querySelector('variant-selects[data-section="template--15395984212027__main"]');
+    noScriptInputWrapper.innerHTML = document.querySelector('.product-form__noscript-wrapper-template--15395984212027__main').textContent;
+    variantSwitcher.outerHTML = noScriptInputWrapper.outerHTML;
+
+    document.querySelector('#Variants-template--15395984212027__main').addEventListener('change', function(event) {
+      hiddenInput.value = event.currentTarget.value;
+    });
+  });
+</script><script>
+
+  function toggleAccordions() {
+    
+    const accordions = document.querySelectorAll('.product__accordion-item');
+    accordions.forEach((accordion) => {
+      if (window.innerWidth >= 990) {
+        if(accordion.dataset.desktopExpand === true || accordion.dataset.desktopExpand === 'true') {
+          accordion.setAttribute('open', '');
+        }
+        else {
+          accordion.removeAttribute('open');
+        }
+      }
+      else  {
+        if (accordion.dataset.mobileExpand === true || accordion.dataset.mobileExpand === 'true') {
+          accordion.setAttribute('open', '');
+        }
+        else {
+          accordion.removeAttribute('open');
+        }
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    toggleAccordions();
+  });
+
+</script>
 
 
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org/",
+    "@type": "Product",
+    "name": "Muse Readers",
+    
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "bestRating": 5,
+      "worstRating": 1,
+      "ratingValue": 4.78,
+      "reviewCount": 1697,
+      "ratingCount": 1697
+    },
+    
+    "url": "https:\/\/www.lookoptic.com\/products\/muse-readers",
+    "image": [
+        "https:\/\/www.lookoptic.com\/cdn\/shop\/files\/muse_muse-readers_gold_001_e6da1230-ee56-41c6-a5e4-f3426d058e21_2048x.png?v=1769205153"
+      ],
+    "description": "Inspired by our favorite metal frames, Muse’s attention to detail, including a unique half-rim design, was born to stand out. Add tinted lenses, and you have a modern classic with a luxurious edge.",
+    "sku": "MU35GLD10",
+    "brand": {
+      "@type": "Brand",
+      "name": "LOOK OPTIC"
+    },
+    "offers": [{
+          "@type" : "Offer","sku": "MU35GLP10","availability" : "http://schema.org/InStock",
+          "price" : 86.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=41737411985467"
+        },
+{
+          "@type" : "Offer","sku": "MU35GLP15","availability" : "http://schema.org/InStock",
+          "price" : 86.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=41737412018235"
+        },
+{
+          "@type" : "Offer","sku": "MU35GLP20","availability" : "http://schema.org/InStock",
+          "price" : 86.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=41737412051003"
+        },
+{
+          "@type" : "Offer","sku": "MU35GLP25","availability" : "http://schema.org/InStock",
+          "price" : 86.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=41737412083771"
+        },
+{
+          "@type" : "Offer","sku": "MU35GLP30","availability" : "http://schema.org/InStock",
+          "price" : 86.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=41737412116539"
+        },
+{
+          "@type" : "Offer","sku": "MU35GLD10","availability" : "http://schema.org/InStock",
+          "price" : 86.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=41737411821627"
+        },
+{
+          "@type" : "Offer","sku": "MU35GLD15","availability" : "http://schema.org/InStock",
+          "price" : 86.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=41737411854395"
+        },
+{
+          "@type" : "Offer","sku": "MU35GLD20","availability" : "http://schema.org/InStock",
+          "price" : 86.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=41737411887163"
+        },
+{
+          "@type" : "Offer","sku": "MU35GLD25","availability" : "http://schema.org/InStock",
+          "price" : 86.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=41737411919931"
+        },
+{
+          "@type" : "Offer","sku": "MU35GLD30","availability" : "http://schema.org/InStock",
+          "price" : 86.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=41737411952699"
+        },
+{
+          "@type" : "Offer","sku": "MU35GGG10","availability" : "http://schema.org/InStock",
+          "price" : 86.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=41737412149307"
+        },
+{
+          "@type" : "Offer","sku": "MU35GGG15","availability" : "http://schema.org/InStock",
+          "price" : 86.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=41737412182075"
+        },
+{
+          "@type" : "Offer","sku": "MU35GGG20","availability" : "http://schema.org/InStock",
+          "price" : 86.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=41737412214843"
+        },
+{
+          "@type" : "Offer","sku": "MU35GGG25","availability" : "http://schema.org/InStock",
+          "price" : 86.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=41737412247611"
+        },
+{
+          "@type" : "Offer","sku": "MU35GGG30","availability" : "http://schema.org/InStock",
+          "price" : 86.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=41737412280379"
+        },
+{
+          "@type" : "Offer","sku": "MU35SIL10","availability" : "http://schema.org/OutOfStock",
+          "price" : 86.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=41737412313147"
+        },
+{
+          "@type" : "Offer","sku": "MU35SIL15","availability" : "http://schema.org/InStock",
+          "price" : 86.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=41737412345915"
+        },
+{
+          "@type" : "Offer","sku": "MU35SIL20","availability" : "http://schema.org/OutOfStock",
+          "price" : 86.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=41737412378683"
+        },
+{
+          "@type" : "Offer","sku": "MU35BSIL25","availability" : "http://schema.org/OutOfStock",
+          "price" : 86.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=41737412411451"
+        },
+{
+          "@type" : "Offer","sku": "MU35SIL30","availability" : "http://schema.org/InStock",
+          "price" : 86.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=41737412444219"
+        },
+{
+          "@type" : "Offer","sku": "MU35SIB10","availability" : "http://schema.org/InStock",
+          "price" : 86.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=41737412476987"
+        },
+{
+          "@type" : "Offer","sku": "MU35SIB15","availability" : "http://schema.org/OutOfStock",
+          "price" : 86.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=41737412509755"
+        },
+{
+          "@type" : "Offer","sku": "MU35SIB20","availability" : "http://schema.org/OutOfStock",
+          "price" : 86.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=41737412542523"
+        },
+{
+          "@type" : "Offer","sku": "MU35SIB25","availability" : "http://schema.org/OutOfStock",
+          "price" : 86.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=41737412575291"
+        },
+{
+          "@type" : "Offer","sku": "MU35SIB30","availability" : "http://schema.org/OutOfStock",
+          "price" : 86.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=41737412608059"
+        },
+{
+          "@type" : "Offer","sku": "MU35SRG10","availability" : "http://schema.org/InStock",
+          "price" : 98.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=43058196971579"
+        },
+{
+          "@type" : "Offer","sku": "MU35SRG15","availability" : "http://schema.org/InStock",
+          "price" : 98.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=43058197004347"
+        },
+{
+          "@type" : "Offer","sku": "MU35SRG20","availability" : "http://schema.org/InStock",
+          "price" : 98.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=43058197037115"
+        },
+{
+          "@type" : "Offer","sku": "MU35SRG25","availability" : "http://schema.org/InStock",
+          "price" : 98.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=43058197069883"
+        },
+{
+          "@type" : "Offer","sku": "MU35SRG30","availability" : "http://schema.org/InStock",
+          "price" : 98.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=43058197102651"
+        },
+{
+          "@type" : "Offer","sku": "MU35SRB10","availability" : "http://schema.org/InStock",
+          "price" : 98.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=43058197135419"
+        },
+{
+          "@type" : "Offer","sku": "MU35SRB15","availability" : "http://schema.org/OutOfStock",
+          "price" : 98.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=43058197168187"
+        },
+{
+          "@type" : "Offer","sku": "MU35SRB20","availability" : "http://schema.org/OutOfStock",
+          "price" : 98.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=43058197200955"
+        },
+{
+          "@type" : "Offer","sku": "MU35SRB25","availability" : "http://schema.org/OutOfStock",
+          "price" : 98.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=43058197233723"
+        },
+{
+          "@type" : "Offer","sku": "MU35SRB30","availability" : "http://schema.org/OutOfStock",
+          "price" : 98.0,
+          "priceCurrency" : "USD",
+          "url" : "https:\/\/www.lookoptic.com\/products\/muse-readers?variant=43058197266491"
+        }
+]
+  }
+</script>
+
+</section><section id="shopify-section-template--15395984212027__164320154976218947" class="shopify-section"><link href="../cdn/shop/t/690/assets/component-icons-and-text.css" rel="stylesheet" type="text/css" media="all" />
+<style>
+  .icons-with-text--template--15395984212027__164320154976218947 .icons-with-text__item-image {
+    max-width: 54px;
+  }
+</style>
+
+  <div class="spaced-section all">
+    <div class="icons-with-text icons-with-text--template--15395984212027__164320154976218947 page-width"><div class="icons-with-text__item"><img src="../cdn/shop/files/bar_frame_54736bc5-5430-4be1-8c17-23b3a42aebf6_54x.png"
+            class="icons-with-text__item-image"
+            alt=""
+            loading="lazy"
+            width="103"
+            height="68"><h6 class="icons-with-text__item-text h6 text--light">PRESCRIPTION QUALITY SCRATCH-RESISTANT LENSES</h6></div><div class="icons-with-text__item"><img src="../cdn/shop/files/bar_clouds_1b8dec61-66d6-40e7-b6b9-cd2fd4525353_54x.png"
+            class="icons-with-text__item-image"
+            alt=""
+            loading="lazy"
+            width="94"
+            height="72"><h6 class="icons-with-text__item-text h6 text--light">50% LIGHTER THAN OUR COMPETITORS</h6></div><div class="icons-with-text__item"><img src="../cdn/shop/files/Temple_c8651b2f-23cc-4760-b8d2-2d7c946ad73e_54x.png"
+            class="icons-with-text__item-image"
+            alt=""
+            loading="lazy"
+            width="646"
+            height="428"><h6 class="icons-with-text__item-text h6 text--light">EASY FIT TEMPLES, ADJUSTABLE AT HOME</h6></div></div>
+  </div>
+
+</section><section id="shopify-section-template--15395984212027__19a201af-4078-4963-877e-b6719d9c1cd8" class="shopify-section"><link rel="stylesheet" href="../cdn/shop/t/690/assets/section-masonry-grid.css" media="print" onload="this.media='all'">
+<script src="../cdn/shop/t/690/assets/masonry-grid-dialog.js" defer="defer"></script>
+
+<div data-gender="female" class="spaced-section spaced-section--full-width all small-hide female masonry-grid-section" id="section-template--15395984212027__19a201af-4078-4963-877e-b6719d9c1cd8">
+  <div class="page-width">
+    
+    <div class="masonry-grid masonry-grid--2 "><div class="masonry-grid__item masonry-grid__subgrid twoup_portrait">
+            <div class="masonry-grid__subgrid--item">
+              <div class="masonry-grid__image-wrapper media media--transparent"><img
+                    srcset="../cdn/shop/files/muse-alex_1_550x.jpg 550w,../cdn/shop/files/muse-alex_1_720x.jpg 720w,../cdn/shop/files/muse-alex_1_990x.jpg 990w,../cdn/shop/files/muse-alex_1_1100x.jpg 1100w,../cdn/shop/files/muse-alex_1_1500x.jpg 1500w,../cdn/shop/files/muse-alex_1.jpg 2020w"
+                    src="../cdn/shop/files/muse-alex_1_1500x.jpg"
+                    sizes="(min-width: 1200px) 737px, (min-width: 750px) 500px, calc(100vw - 30px)"
+                    alt=""
+                    loading="lazy"
+                    width="2020"
+                    height="2904"
+                    class="masonry-grid__image"
+                    data-block-img="twoup_portrait_LDgfe8_1"
+                    style="object-position: 46.5651% 28.8402%;"
+                  >
+</div>
+            </div>
+            <div class="masonry-grid__subgrid--item">
+              <div class="masonry-grid__image-wrapper media media--transparent"><img
+                    srcset="../cdn/shop/files/venus-muse2_1_550x.jpg 550w,../cdn/shop/files/venus-muse2_1_720x.jpg 720w,../cdn/shop/files/venus-muse2_1_990x.jpg 990w,../cdn/shop/files/venus-muse2_1_1100x.jpg 1100w,../cdn/shop/files/venus-muse2_1_1500x.jpg 1500w,../cdn/shop/files/venus-muse2_1.jpg 2020w"
+                    src="../cdn/shop/files/venus-muse2_1_1500x.jpg"
+                    sizes="(min-width: 1200px) 737px, (min-width: 750px) 500px, calc(100vw - 30px)"
+                    alt=""
+                    loading="lazy"
+                    width="2020"
+                    height="2904"
+                    class="masonry-grid__image"
+                    data-block-img="twoup_portrait_LDgfe8_2"
+                    style="object-position: 48.1707% 25.407%;"
+                  >
+</div>
+            </div>
+          </div><div class="masonry-grid__item masonry-grid__subgrid twoup_portrait">
+            <div class="masonry-grid__subgrid--item">
+              <div class="masonry-grid__image-wrapper media media--transparent"><img
+                    srcset="../cdn/shop/files/eniko-muse_1_550x.jpg 550w,../cdn/shop/files/eniko-muse_1_720x.jpg 720w,../cdn/shop/files/eniko-muse_1_990x.jpg 990w,../cdn/shop/files/eniko-muse_1_1100x.jpg 1100w,../cdn/shop/files/eniko-muse_1_1500x.jpg 1500w,../cdn/shop/files/eniko-muse_1.jpg 2020w"
+                    src="../cdn/shop/files/eniko-muse_1_1500x.jpg"
+                    sizes="(min-width: 1200px) 737px, (min-width: 750px) 500px, calc(100vw - 30px)"
+                    alt=""
+                    loading="lazy"
+                    width="2020"
+                    height="2904"
+                    class="masonry-grid__image"
+                    data-block-img="twoup_portrait_aXxqnR_1"
+                    style="object-position: 50.7084% 26.3688%;"
+                  >
+</div>
+            </div>
+            <div class="masonry-grid__subgrid--item">
+              <div class="masonry-grid__image-wrapper media media--transparent"><img
+                    srcset="../cdn/shop/files/muse-dom_1_550x.jpg 550w,../cdn/shop/files/muse-dom_1_720x.jpg 720w,../cdn/shop/files/muse-dom_1_990x.jpg 990w,../cdn/shop/files/muse-dom_1_1100x.jpg 1100w,../cdn/shop/files/muse-dom_1_1500x.jpg 1500w,../cdn/shop/files/muse-dom_1.jpg 2020w"
+                    src="../cdn/shop/files/muse-dom_1_1500x.jpg"
+                    sizes="(min-width: 1200px) 737px, (min-width: 750px) 500px, calc(100vw - 30px)"
+                    alt=""
+                    loading="lazy"
+                    width="2020"
+                    height="2904"
+                    class="masonry-grid__image"
+                    data-block-img="twoup_portrait_aXxqnR_2"
+                    style="object-position: 46.8078% 23.4486%;"
+                  >
+</div>
+            </div>
+          </div></div>
+  </div>
+</div>
+
+<influencer-dialog id="InfluencerModal--template--15395984212027__19a201af-4078-4963-877e-b6719d9c1cd8" class="masonry-grid-modal">
+  <div role="dialog" aria-label="" aria-modal="true" class="masonry-grid-modal__content" tabindex="-1">
+    <button id="ModalClose-template--15395984212027__19a201af-4078-4963-877e-b6719d9c1cd8" type="button" class="masonry-grid-modal__toggle" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" fill="none" viewBox="0 0 18 17">
+  <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
+</svg>
+</button>
+    <div class="masonry-grid-modal__content-info center" data-masonry-modal-content>
+      <div class="masonry-grid-modal__image-wrapper media media--transparent" data-masonry-modal-image></div>
+      <div class="masonry-grid-modal__links">
+        <a class="button" data-masonry-modal-button></a>
+        <p class="influencer-handle h3" target="_blank" data-masonry-modal-handle></p>
+      </div>
+    </div>
+  </div>
+</influencer-dialog><style data-shopify>#section-template--15395984212027__19a201af-4078-4963-877e-b6719d9c1cd8 .masonry-grid.masonry-grid--inline {
+    display: flex;
+  }
+  #section-template--15395984212027__19a201af-4078-4963-877e-b6719d9c1cd8 .masonry-grid.masonry-grid--inline .masonry-grid__item {
+    flex: 1 1 0;
+  }</style></section><section id="shopify-section-template--15395984212027__05a05e01-3562-4009-be13-f7fba08d008e" class="shopify-section"><link rel="stylesheet" href="../cdn/shop/t/690/assets/section-masonry-grid.css" media="print" onload="this.media='all'">
+<script src="../cdn/shop/t/690/assets/masonry-grid-dialog.js" defer="defer"></script>
+
+<div data-gender="female" class="spaced-section spaced-section--full-width all medium-hide large-up-hide female masonry-grid-section" id="section-template--15395984212027__05a05e01-3562-4009-be13-f7fba08d008e">
+  <div class="full-width">
+    
+    <div class="masonry-grid masonry-grid--2 "><div class="masonry-grid__item oneup">
+            <div class="masonry-grid__image-wrapper media media--transparent"><img
+                  srcset="../cdn/shop/files/muse-alex_1_550x.jpg 550w,../cdn/shop/files/muse-alex_1_720x.jpg 720w,../cdn/shop/files/muse-alex_1_990x.jpg 990w,../cdn/shop/files/muse-alex_1_1100x.jpg 1100w,../cdn/shop/files/muse-alex_1_1500x.jpg 1500w,../cdn/shop/files/muse-alex_1.jpg 2020w"
+                  src="../cdn/shop/files/muse-alex_1_1500x.jpg"
+                  sizes="(min-width: 1200px) 737px, (min-width: 750px) 500px, calc(100vw - 30px)"
+                  alt=""
+                  loading="lazy"
+                  width="2020"
+                  height="2904"
+                  class="masonry-grid__image"
+                  data-block-img="template--15259820621883__05a05e01-3562-4009-be13-f7fba08d008e-167828974833b5f552-0_0"
+                  style="object-position: 46.5651% 28.8402%;"
+                >
+</div>
+          </div><div class="masonry-grid__item masonry-grid__subgrid threeup_portrait">
+            <div class="masonry-grid__subgrid--item">
+              <div class="masonry-grid__image-wrapper media media--transparent"><img
+                    srcset="../cdn/shop/files/venus-muse2_1_550x.jpg 550w,../cdn/shop/files/venus-muse2_1_720x.jpg 720w,../cdn/shop/files/venus-muse2_1_990x.jpg 990w,../cdn/shop/files/venus-muse2_1_1100x.jpg 1100w,../cdn/shop/files/venus-muse2_1_1500x.jpg 1500w,../cdn/shop/files/venus-muse2_1.jpg 2020w"
+                    src="../cdn/shop/files/venus-muse2_1_1500x.jpg"
+                    sizes="(min-width: 1200px) 737px, (min-width: 750px) 500px, calc(100vw - 30px)"
+                    alt=""
+                    loading="lazy"
+                    width="2020"
+                    height="2904"
+                    class="masonry-grid__image"
+                    data-block-img="template--15259820621883__05a05e01-3562-4009-be13-f7fba08d008e-167828974833b5f552-1_1"
+                    style="object-position: 48.1707% 25.407%;"
+                  >
+</div>
+            </div>
+            <div class="masonry-grid__subgrid--item">
+              <div class="masonry-grid__image-wrapper media media--transparent"><img
+                    srcset="../cdn/shop/files/eniko-muse_1_550x.jpg 550w,../cdn/shop/files/eniko-muse_1_720x.jpg 720w,../cdn/shop/files/eniko-muse_1_990x.jpg 990w,../cdn/shop/files/eniko-muse_1_1100x.jpg 1100w,../cdn/shop/files/eniko-muse_1_1500x.jpg 1500w,../cdn/shop/files/eniko-muse_1.jpg 2020w"
+                    src="../cdn/shop/files/eniko-muse_1_1500x.jpg"
+                    sizes="(min-width: 1200px) 737px, (min-width: 750px) 500px, calc(100vw - 30px)"
+                    alt=""
+                    loading="lazy"
+                    width="2020"
+                    height="2904"
+                    class="masonry-grid__image"
+                    data-block-img="template--15259820621883__05a05e01-3562-4009-be13-f7fba08d008e-167828974833b5f552-1_2"
+                    style="object-position: 50.7084% 26.3688%;"
+                  >
+</div>
+            </div>
+            <div class="masonry-grid__subgrid--item">
+              <div class="masonry-grid__image-wrapper media media--transparent"><img
+                    srcset="../cdn/shop/files/muse-dom_1_550x.jpg 550w,../cdn/shop/files/muse-dom_1_720x.jpg 720w,../cdn/shop/files/muse-dom_1_990x.jpg 990w,../cdn/shop/files/muse-dom_1_1100x.jpg 1100w,../cdn/shop/files/muse-dom_1_1500x.jpg 1500w,../cdn/shop/files/muse-dom_1.jpg 2020w"
+                    src="../cdn/shop/files/muse-dom_1_1500x.jpg"
+                    sizes="(min-width: 1200px) 737px, (min-width: 750px) 500px, calc(100vw - 30px)"
+                    alt=""
+                    loading="lazy"
+                    width="2020"
+                    height="2904"
+                    class="masonry-grid__image"
+                    data-block-img="template--15259820621883__05a05e01-3562-4009-be13-f7fba08d008e-167828974833b5f552-1_3"
+                    style="object-position: 46.8078% 23.4486%;"
+                  >
+</div>
+            </div>
+          </div></div>
+  </div>
+</div>
+
+<influencer-dialog id="InfluencerModal--template--15395984212027__05a05e01-3562-4009-be13-f7fba08d008e" class="masonry-grid-modal">
+  <div role="dialog" aria-label="" aria-modal="true" class="masonry-grid-modal__content" tabindex="-1">
+    <button id="ModalClose-template--15395984212027__05a05e01-3562-4009-be13-f7fba08d008e" type="button" class="masonry-grid-modal__toggle" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" fill="none" viewBox="0 0 18 17">
+  <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor">
+</svg>
+</button>
+    <div class="masonry-grid-modal__content-info center" data-masonry-modal-content>
+      <div class="masonry-grid-modal__image-wrapper media media--transparent" data-masonry-modal-image></div>
+      <div class="masonry-grid-modal__links">
+        <a class="button" data-masonry-modal-button></a>
+        <p class="influencer-handle h3" target="_blank" data-masonry-modal-handle></p>
+      </div>
+    </div>
+  </div>
+</influencer-dialog><style data-shopify>#section-template--15395984212027__05a05e01-3562-4009-be13-f7fba08d008e .masonry-grid.masonry-grid--inline {
+    display: flex;
+  }
+  #section-template--15395984212027__05a05e01-3562-4009-be13-f7fba08d008e .masonry-grid.masonry-grid--inline .masonry-grid__item {
+    flex: 1 1 0;
+  }</style></section><section id="shopify-section-template--15395984212027__1644269978c661c2b6" class="shopify-section"><link rel="stylesheet" href="../cdn/shop/t/690/assets/component-rte.css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="../cdn/shop/t/690/assets/section-rich-text.css" media="print" onload="this.media='all'">
+<div class="spaced-section all full-width">
+  <div class="rich-text color-background-2 gradient page-width--full-width">
+<h2 style="font-size: 3.6rem; margin: 0 0 2rem; letter-spacing: 0.2rem;">Our Promise</h2>
+<span class="hide-on-mobile" style="font-size: 3.2rem; font-weight: 3--;">Premium Materials. 90-Day Trial. One-Year Guarantee. </span>
+<span class="large-up-hide medium-hide" style="font-size: 2.4rem; font-weight: 3--;">Premium Materials.<br> 90-Day Trial.<br> One-Year Guarantee. </span>
+<p style="margin-bottom: 0; font-size: 1.8rem;">Don't love the look? Send them back, no questions asked.</p>
+</div>
+</div>
+
+</section><section id="shopify-section-template--15395984212027__1746607548368b986e" class="shopify-section"><section class="section app-section--template--15395984212027__1746607548368b986e padding-top--tight padded-bottom--none"  id="product-reviews">
+<style>
+  .app-section--template--15395984212027__1746607548368b986e {background-color: rgba(0,0,0,0);}
+</style>
+  <div class="spaced-section all page-width">
+    
+<div id="shopify-block-AWEpEdm1rU1locS9Wd__junip_junip_product_review_DiNhwp" class="shopify-block shopify-app-block"><!-- BEGIN app snippet: junip-product-review --><span
+  class="junip-product-review"
+  data-product-id="6914253357115"
+  data-title=""
+  data-title-alignment=""
+  data-sort-order="mostRecent">
+</span>
+<!-- END app snippet -->
+
+
+</div>
+</div>
+</section>
+
+
+</section>
+    </main>
+    
+      <!-- BEGIN sections: pdp-settings-group -->
+<div id="shopify-section-sections--15395975987259__pdp-messaging" class="shopify-section shopify-section-group-pdp-settings-group"><script type="application/json" data-pdp-notice-json>
+  []
+</script>
+
+</div>
+<!-- END sections: pdp-settings-group -->
+    
+<div id="shopify-section-footer" class="shopify-section">
+<link href="../cdn/shop/t/690/assets/section-footer.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="../cdn/shop/t/690/assets/component-newsletter.css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="../cdn/shop/t/690/assets/component-list-menu.css" media="print" onload="this.media='all'">
+
+<link rel="stylesheet" href="../cdn/shop/t/690/assets/component-list-social.css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="../cdn/shop/t/690/assets/component-rte.css" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="../cdn/shop/t/690/assets/disclosure.css" media="print" onload="this.media='all'">
+
+<noscript><link href="../cdn/shop/t/690/assets/component-newsletter.css" rel="stylesheet" type="text/css" media="all" /></noscript>
+<noscript><link href="../cdn/shop/t/690/assets/component-list-menu.css" rel="stylesheet" type="text/css" media="all" /></noscript>
+<noscript></noscript>
+<noscript><link href="../cdn/shop/t/690/assets/component-list-social.css" rel="stylesheet" type="text/css" media="all" /></noscript>
+<noscript><link href="../cdn/shop/t/690/assets/component-rte.css" rel="stylesheet" type="text/css" media="all" /></noscript>
+<noscript><link href="../cdn/shop/t/690/assets/disclosure.css" rel="stylesheet" type="text/css" media="all" /></noscript>
+
+<footer id="footer" class="footer color-background-1 gradient">
+  <div class="footer-block--newsletter"><div class="footer-block__newsletter footer-block__newsletter--with-social page-width"><h2 class="h1 text--center" style="margin-bottom: 0;">Fear not the<br class="large-up-hide"> fine print</h2><p class="text--center">Subscribe to learn more about our<br />
+latest releases & promotions</p><form method="post" action="/contact#ContactFooter" id="ContactFooter" accept-charset="UTF-8" class="footer__newsletter newsletter-form"><input type="hidden" name="form_type" value="customer" /><input type="hidden" name="utf8" value="✓" /><input type="hidden" name="contact[tags]" value="newsletter">
+              <div class="newsletter-form__field-wrapper">
+                <div class="field">
+                  <input
+                    id="NewsletterForm--footer"
+                    type="email"
+                    name="contact[email]"
+                    class="field__input newsletter-form__email"
+                    value=""
+                    aria-required="true"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    autocomplete="email"
+                    
+                    placeholder="Email"
+                    required
+                  >
+                  <label class="field__label" for="NewsletterForm--footer">
+                    Email
+                  </label>
+                  <button type="submit" class="newsletter-form__button button color-background-1" name="commit" id="Subscribe" aria-label="Subscribe">
+                    Subscribe
+                  </button>
+                </div><div>
+                  
+                  <h3 style="display:none;" class="already-subbed newsletter-form__message form__message">
+                    You&#39;re already subscribed!
+                  </h3>
+                </div>
+              </div></form><script>
+            document.addEventListener('DOMContentLoaded', function () {
+              if (window.location.href.indexOf('newsletter&form_type=customer') > -1) {
+                document.querySelectorAll('.already-subbed').forEach((x) => {
+                  x.style.display = 'block';
+                });
+              }
+            });
+          </script><div class="footer__column">
+              
+            </div></div></div><div class="footer__content-top page-width"><div class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet "><div class="footer-block grid__item footer-block--menu" ><h2 class="footer-block__heading h4">Product</h2><ul class="footer-block__details-content list-unstyled">
+                          <li>
+                            <a href="#" class="link link--text list-menu__item list-menu__item--link">
+                              LOOK x Alex Rodriguez
+                            </a>
+                          </li>
+                        
+
+                          <li>
+                            <a href="#" class="link link--text list-menu__item list-menu__item--link">
+                              LOOK x Eva Mendes
+                            </a>
+                          </li>
+                        
+
+                          <li>
+                            <a href="#" class="link link--text list-menu__item list-menu__item--link">
+                              LOOK x Diane Keaton
+                            </a>
+                          </li>
+                        
+
+                          <li>
+                            <a href="/collections/reader-products" class="link link--text list-menu__item list-menu__item--link">
+                              Women's
+                            </a>
+                          </li>
+                        
+
+                          <li>
+                            <a href="/pages/men" class="link link--text list-menu__item list-menu__item--link">
+                              Men's
+                            </a>
+                          </li>
+                        
+
+                          <li>
+                            <a href="/collections/reader-products" class="link link--text list-menu__item list-menu__item--link">
+                              Readers
+                            </a>
+                          </li>
+                        
+
+                          <li>
+                            <a href="/collections/progressives" class="link link--text list-menu__item list-menu__item--link">
+                              Progressives
+                            </a>
+                          </li>
+                        
+
+                          <li>
+                            <a href="/collections/blue-light-glasses" class="link link--text list-menu__item list-menu__item--link">
+                              Readers with Blue Light
+                            </a>
+                          </li>
+                        
+
+                          <li>
+                            <a href="/collections/sunglasses" class="link link--text list-menu__item list-menu__item--link">
+                              Sunglasses
+                            </a>
+                          </li>
+                        
+
+                          <li>
+                            <a href="/collections/sun-progressives" class="link link--text list-menu__item list-menu__item--link">
+                              Sun Progressives
+                            </a>
+                          </li>
+                        
+</ul></div><div class="footer-block grid__item footer-block--menu" ><h2 class="footer-block__heading h4">Shapes</h2><ul class="footer-block__details-content list-unstyled">
+                          <li>
+                            <a href="/collections/round-shaped-frames-footer" class="link link--text list-menu__item list-menu__item--link">
+                              Round
+                            </a>
+                          </li>
+                        
+
+                          <li>
+                            <a href="/collections/square-shaped-frames" class="link link--text list-menu__item list-menu__item--link">
+                              Square
+                            </a>
+                          </li>
+                        
+
+                          <li>
+                            <a href="/collections/rectangle-shaped-frames" class="link link--text list-menu__item list-menu__item--link">
+                              Rectangle
+                            </a>
+                          </li>
+                        
+
+                          <li>
+                            <a href="/collections/aviator-shaped-frames" class="link link--text list-menu__item list-menu__item--link">
+                              Aviator
+                            </a>
+                          </li>
+                        
+
+                          <li>
+                            <a href="/collections/oversized-shaped-frames-footer-archive" class="link link--text list-menu__item list-menu__item--link">
+                              Oversized
+                            </a>
+                          </li>
+                        
+
+                          <li>
+                            <a href="/collections/narrow-archive" class="link link--text list-menu__item list-menu__item--link">
+                              Narrow
+                            </a>
+                          </li>
+                        
+
+                          <li>
+                            <a href="/pages/find-your-look" class="link link--text list-menu__item list-menu__item--link">
+                              Virtual Mirror
+                            </a>
+                          </li>
+                        
+</ul></div><div class="footer-block grid__item footer-block--menu" ><h2 class="footer-block__heading h4">Support</h2><ul class="footer-block__details-content list-unstyled">
+                          <li>
+                            <a href="javascript:GorgiasChat.open();" class="link link--text list-menu__item list-menu__item--link">
+                              Contact Us
+                            </a>
+                          </li>
+                        
+
+                          <li>
+                            <a href="/pages/wholesale" class="link link--text list-menu__item list-menu__item--link">
+                              Become a Stockist
+                            </a>
+                          </li>
+                        
+
+                          <li>
+                            <a href="/pages/faq" class="link link--text list-menu__item list-menu__item--link">
+                              FAQs
+                            </a>
+                          </li>
+                        
+
+                          <li>
+                            <a href="/pages/fsa-hsa" class="link link--text list-menu__item list-menu__item--link">
+                              FSA and HSA
+                            </a>
+                          </li>
+                        
+
+                          <li>
+                            <a href="/pages/terms-of-service" class="link link--text list-menu__item list-menu__item--link">
+                              Terms & Conditions
+                            </a>
+                          </li>
+                        
+
+                          <li>
+                            <a href="/policies/privacy-policy" class="link link--text list-menu__item list-menu__item--link">
+                              Privacy Policy
+                            </a>
+                          </li>
+                        
+
+                          <li>
+                            <a href="/pages/accessibility" class="link link--text list-menu__item list-menu__item--link">
+                              Accessibility
+                            </a>
+                          </li>
+                        
+
+                          <li>
+                            <a href="/pages/returns" class="link link--text list-menu__item list-menu__item--link">
+                              Returns/Exchanges
+                            </a>
+                          </li>
+                        
+
+                          <li>
+                            <a href="#" class="link link--text list-menu__item list-menu__item--link">
+                              Track Your Order
+                            </a>
+                          </li>
+                        
+</ul></div><div class="footer-block grid__item footer-block--menu" ><h2 class="footer-block__heading h4">About Us</h2><ul class="footer-block__details-content list-unstyled">
+                          <li>
+                            <a href="/pages/about" class="link link--text list-menu__item list-menu__item--link">
+                              Our Story
+                            </a>
+                          </li>
+                        
+
+                          <li>
+                            <a href="/pages/sustainability" class="link link--text list-menu__item list-menu__item--link">
+                              Zero Waste Initiative
+                            </a>
+                          </li>
+                        
+
+                          <li>
+                            <a href="/blogs/the-look-blog/giving-back" class="link link--text list-menu__item list-menu__item--link">
+                              charity: water
+                            </a>
+                          </li>
+                        
+
+                          <li>
+                            <a href="/pages/store-locator" class="link link--text list-menu__item list-menu__item--link">
+                              Retail Partners
+                            </a>
+                          </li>
+                        
+
+                          <li>
+                            <a href="/blogs/the-look-blog" class="link link--text list-menu__item list-menu__item--link">
+                              Blog
+                            </a>
+                          </li>
+                        
+
+                          <li>
+                            <a href="/blogs/press-page" class="link link--text list-menu__item list-menu__item--link">
+                              Press
+                            </a>
+                          </li>
+                        
+</ul></div></div></div>
+    <div class="fp_contact_field">
+  <h3>CONTACT US</h3>
+
+  <span>We are available by phone, email or chat</span>
+  <span>Monday through Friday, 9:00 - 5:00 ET</span>
+  <span>(877) 857 LOOK</span>
+
+  <div>
+    
+
+    
+
+    
+  </div>
+</div><div class="footer__content-bottom">
+    <div class="footer__content-bottom-wrapper page-width">
+      <div class="footer__column footer__localization"></div>
+      <div class="footer__column footer__column--info"><div class="footer__copyright caption">
+          <small class="copyright__content">&copy; 2026, <a href="/" title="">LOOK OPTIC</a>, Los Angeles, CA</small></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</div>
+<ul hidden>
+      <li id="a11y-refresh-page-message">Choosing a selection results in a full page refresh.</li>
+    </ul>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+      window.shopUrl = 'https://www.lookoptic.com';
+      window.routes = {
+        cart_add_url: '/cart/add',
+        cart_change_url: '/cart/change',
+        cart_update_url: '/cart/update',
+        predictive_search_url: '/search/suggest'
+      };
+
+      window.cartStrings = {
+        error: `There was an error while updating your cart. Please try again.`,
+        quantityError: `You can only add [quantity] of this item to your cart.`
+      }
+
+      window.variantStrings = {
+        addToCart: `Add to cart`,
+        soldOut: `Sold out`,
+        unavailable: `Unavailable`,
+        preorder: `Preorder now`,
+      }
+
+      window.accessibilityStrings = {
+        shareSuccess: `Link copied to clipboard`,
+      }
+    </script><script src="../cdn/shop/t/690/assets/predictive-search.js" defer="defer"></script><!-- "snippets/smile-initializer.liquid" was not rendered, the associated app was uninstalled -->
+    
+      <script>
+      window.addEventListener('wnw_load', function() {
+          var _learnq = window._learnq || [];
+          function addedToCart() {
+            fetch(`${window.location.origin}/cart.js`)
+            .then(res => res.clone().json().then(data => {
+              var cart = {
+                total_price: data.total_price/100,
+                $value: data.total_price/100,
+                total_discount: data.total_discount,
+                original_total_price: data.original_total_price/100,
+                items: data.items
+              }
+              if (item !== 'undefined') {
+                cart = Object.assign(cart, item)
+              }
+              if (klAjax) {
+                  _learnq.push(['track', 'Added to Cart', cart]);
+                  klAjax = false;
+                }
+            }))
+          };
+          (function (ns, fetch) {
+            ns.fetch = function() {
+              const response = fetch.apply(this, arguments);
+              response.then(res => {
+                if (`${window.location.origin}/cart/add.js`
+                	.includes(res.url)) {
+                  	addedToCart()
+                }
+              });
+              return response
+            }
+          }(window, window.fetch));
+          var klAjax = true;
+          var atcButtons = document.querySelectorAll("form[action*='/cart/add'] button[type='submit']");
+          for (var i = 0; i < atcButtons.length; i++) {
+              atcButtons[i].addEventListener("click", function() {
+                if (klAjax) {
+                  _learnq.push(['track', 'Added to Cart', item]);
+                  klAjax = false;
+                }
+              })
+          }
+      });
+      </script>
+    
+    <script>
+      window.HIDE_POWERED_BY_GORGIAS = true;
+      window.GORGIASCHAT_DISABLE_AUTO_OPEN = true;
+      var initGorgiasChatPromise = (window.GorgiasChat) ? window.GorgiasChat.init() : new Promise(function (resolve) { window.addEventListener('gorgias-widget-loaded', function () { resolve();})});
+      initGorgiasChatPromise.then(async () => {
+          GorgiasChat.hidePoweredBy(true);
+          document.body.addEventListener('click', (event) => {
+              if (event && event.target && event.target && event.target.matches('a[href*="/pages/recommendations"]')) {
+                  event.preventDefault();
+                  if (window.GorgiasChat && window.GorgiasChat.open) {
+                    GorgiasChat.open();
+                    const selector = '[class*="message-window-iframe"] div[role="listitem"]:nth-child(4) [class*="message-window-iframe"]';
+                    setTimeout(() => {if (document.querySelector('#chat-window').contentDocument.querySelector(selector)) document.querySelector('#chat-window').contentDocument.querySelector(selector).click()}, 250);
+                  };
+              }
+          });
+      });
+      (function() {
+          let id;
+          const setExperiment = async (depth = 0) => {
+              try {
+                  const activeVariations = window.FIGPII.experimentManager.getActiveVariations();
+                  if (Object.keys(activeVariations).length === 0 || activeVariations[356034] === undefined) {
+                    throw Error('retrying')
+                  }
+                  const hasCohortActive = activeVariations[356034] == 59484;
+                  GorgiasChat.setExperiment("shopping-assistant", hasCohortActive);
+                  console.log('shopping-assistant: ', hasCohortActive);
+              } catch (error) {
+                  if (depth < 500) {
+                    id = setTimeout(() => setExperiment(depth + 1), 100);
+                  }
+              }
+          };
+          setExperiment();
+      })();
+    </script>
+    <script data-id="wnw-optimization-script">
+var src,srcset,wnw_windowWidth,wnw_windowHeight,critical2,lazyBackground,lazyIframe,lazybg,s,i,flag=1,external_single_loaded=1;
+
+document.addEventListener("DOMContentLoaded", function() {
+	wnw_windowWidth=screen.width;
+	wnw_windowHeight=screen.height;
+	lazyLoadImg2();
+	lazyLoadBackground2();
+	window.addEventListener("scroll", function() {
+		setTimeout(wnw_init, 50);
+	});
+	window.addEventListener("mousemove", function() {
+		setTimeout(wnw_init, 50);
+	});
+	window.addEventListener("touchstart", function() {
+		setTimeout(wnw_init, 50);
+	});
+    setTimeout(wnw_init, 2000);
+});
+
+function wnw_init() {
+	lazyLoadCss();
+	lazyLoadStyle();
+	lazyLoadImg();
+	lazyLoadBackground();
+	lazyLoadIframe();
+	if (flag) {
+		flag = 0;
+        setTimeout(load_all_js, 1000);
+	}
+}
+
+function insertAfter(newNode, referenceNode) {
+	referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+}
+
+function lazyLoadImg() {
+	var imgs = document.querySelectorAll("img.lazy2");
+
+	for (i = 0; i < imgs.length; i++) {
+		var elemRect = imgs[i].getBoundingClientRect();
+        if (elemRect.top != 0 && elemRect.top - wnw_windowHeight < 100) {
+			if (wnw_windowWidth < 600) {
+				src = (imgs[i].dataset.mobsrc === undefined) ? imgs[i].dataset.src : imgs[i].dataset.mobsrc;
+			} else {
+				src = (imgs[i].dataset.src === undefined) ? imgs[i].src : imgs[i].dataset.src;
+			}
+			srcset = imgs[i].getAttribute("data-srcset") ? imgs[i].getAttribute("data-srcset") : "";
+			if (src != null && src != "") {
+				imgs[i].src = src;
+			}
+			if (srcset != null && srcset != "") {
+				imgs[i].srcset = srcset;
+			}
+			imgs[i].classList.remove("lazy2");
+		}
+	}
+}
+
+function lazyLoadImg2() {
+	var imgs = document.querySelectorAll("img.lazy3");
+
+	for (i = 0; i < imgs.length; i++) {
+		var elemRect = imgs[i].getBoundingClientRect();
+        if (elemRect.top != 0 && elemRect.top - wnw_windowHeight < 1) {
+			if (wnw_windowWidth < 600) {
+				src = (imgs[i].dataset.mobsrc === undefined) ? imgs[i].dataset.src : imgs[i].dataset.mobsrc;
+			} else {
+				src = (imgs[i].dataset.src === undefined) ? imgs[i].src : imgs[i].dataset.src;
+			}
+			srcset = imgs[i].getAttribute("data-srcset") ? imgs[i].getAttribute("data-srcset") : "";
+			if (src != null && src != "") {
+				imgs[i].src = src;
+			}
+			if (srcset != null && srcset != "") {
+				imgs[i].srcset = srcset;
+			}
+			imgs[i].classList.remove("lazy3");
+		}
+	}
+}
+
+function lazyLoadBackground() {
+	lazyBackground = document.querySelectorAll(".lazybg");
+	lazyBackground.forEach(function(a) {
+		var elemRect = a.getBoundingClientRect();
+        if (elemRect.top != 0 && elemRect.top - wnw_windowHeight < 100) {
+            if (wnw_windowWidth < 600) {
+                lazybg = (a.dataset.mobstyle === undefined) ? a.dataset.style : a.dataset.mobstyle;
+            } else {
+                lazybg = (a.dataset.style === undefined) ? a.style : a.dataset.style;
+            }
+            if (lazybg != null && lazybg != "") {
+                a.style = lazybg;
+            }
+            a.classList.remove("lazybg");
+		}
+	});
+}
+
+function lazyLoadBackground2() {
+	lazyBackground = document.querySelectorAll(".lazybg");
+	lazyBackground.forEach(function(a) {
+		var elemRect = a.getBoundingClientRect();
+        if (elemRect.top != 0 && elemRect.top - wnw_windowHeight < 1) {
+            if (wnw_windowWidth < 600) {
+                lazybg = (a.dataset.mobstyle === undefined) ? a.dataset.style : a.dataset.mobstyle;
+            } else {
+                lazybg = (a.dataset.style === undefined) ? a.style : a.dataset.style;
+            }
+            if (lazybg != null && lazybg != "") {
+                a.style = lazybg;
+            }
+            a.classList.remove("lazybg");
+		}
+	});
+}
+
+function lazyLoadCss() {
+	var lazyLink = document.querySelectorAll("link[data-href]");
+	for (i = 0; i < lazyLink.length; i++) {
+		var css_element = document.createElement("link");
+		css_element.href = lazyLink[i].getAttribute("data-href");
+		css_element.rel = "stylesheet";
+		lazyLink[i].parentNode.insertBefore(css_element, lazyLink[i]);
+		delete lazyLink[i].dataset.href;
+		lazyLink[i].parentNode.removeChild(lazyLink[i]);
+	}
+}
+
+function lazyLoadStyle() {
+	var lazyStyle = document.querySelectorAll("style[type=lazyload2]");
+	for (i = 0; i < lazyStyle.length; i++) {
+		var style_element = document.createElement("style");
+		style_element.innerHTML = lazyStyle[i].innerHTML;
+		lazyStyle[i].parentNode.insertBefore(style_element, lazyStyle[i]);
+		lazyStyle[i].parentNode.removeChild(lazyStyle[i]);
+	}
+}
+
+function lazyLoadIframe() {
+	lazyIframe = document.querySelectorAll("iframe");
+	lazyIframe.forEach(function(a) {
+		if (a.dataset.src != null && a.dataset.src != "") {
+			a.src = a.dataset.src;
+			delete a.dataset.src;
+		}
+	});
+}
+
+function w3_load_js_uri(static_script) {
+	var ext_js_element = document.createElement("script");
+	if (typeof(static_script.attributes) != "undefined") {
+		for (var att, i3 = 0, atts = static_script.attributes, n3 = atts.length; i3 < n3; i3++) {
+			att = atts[i3];
+			if (att.nodeName != "data-src" && att.nodeName != "type") {
+				ext_js_element.setAttribute(att.nodeName, att.nodeValue);
+			}
+		}
+	}
+	ext_js_element.src = static_script.getAttribute("data-src");
+	insertAfter(ext_js_element, static_script);
+	delete static_script.dataset.src;
+	delete static_script.type;
+	static_script.parentNode.removeChild(static_script);
+	return ext_js_element;
+}
+
+function w3_load_inline_js_single(script) {
+	if (!external_single_loaded) {
+		setTimeout(function() {
+			w3_load_inline_js_single(script);
+		}, 200);
+		return false;
+	}
+	s = document.createElement("script");
+	for (var i2 = 0; i2 < script.attributes.length; i2++) {
+		var attrib = script.attributes[i2];
+		if (attrib.name != "type") {
+			s.setAttribute(attrib.name, attrib.value);
+		}
+	}
+	s.innerHTML = script.innerHTML;
+	insertAfter(s, script);
+	script.parentNode.removeChild(script);
+}
+
+function lazyLoadScripts() {
+	var static_script = document.querySelectorAll("script[type=lazyload2]");
+	if (static_script.length < 1) {
+      	document.body.classList.add("wnw_loaded");
+		fullJSLoadedCB();
+		return;
+	}
+	if (static_script[0].getAttribute("data-src") !== null) {
+		var js_obj = w3_load_js_uri(static_script[0]);
+		js_obj.onload = function() {
+			lazyLoadScripts();
+		};
+		js_obj.onerror = function() {
+			lazyLoadScripts();
+		};
+	} else {
+		w3_load_inline_js_single(static_script[0]);
+		lazyLoadScripts();
+	}
+}
+
+function wnwAnalytics() {
+	var script2 = document.querySelectorAll(".analytics");
+	script2.forEach(function(analyticsScript) {
+		trekkie.integrations=false;
+		s = document.createElement("script");
+		s.innerHTML = analyticsScript.innerHTML;
+		insertAfter(s, analyticsScript);
+		analyticsScript.parentNode.removeChild(analyticsScript);
+	});
+}
+
+function load_all_js() {
+	if(Shopify.designMode || window.location.href.indexOf("cart") > -1 || window.location.href.indexOf("checkout") > -1) {
+		console.log("No-optimization");
+	} else {
+		console.log("Yes-optimization");
+		setTimeout(function() {
+			wnwAnalytics();
+		}, 100);
+		setTimeout(function() {
+			var wnw_load_event = document.createEvent("Event");
+			wnw_load_event.initEvent("wnw_load", true, true);
+			window.document.dispatchEvent(wnw_load_event);
+		}, 500);
+		setTimeout(function() {
+			var DOMContentLoaded2_event = document.createEvent("Event");
+			DOMContentLoaded2_event.initEvent("DOMContentLoaded2", true, true);
+			window.document.dispatchEvent(DOMContentLoaded2_event);
+		}, 5000);
+	}
+
+	lazyLoadScripts();
+
+	setInterval(function() {
+		lazyLoadImg();
+		lazyLoadIframe();
+    });
+
+	setTimeout(function() {
+		critical2 = document.querySelectorAll(".critical2");
+		critical2.forEach(function(a) {
+			a.remove();
+		});
+	}, 8000);
+}
+
+function fullJSLoadedCB() {
+	setTimeout(function() {
+	});
+}
+
+function fixMissingWidthHeight() {
+  window.addEventListener('load', () => {
+    document.querySelectorAll('img:not([width])').forEach((img) => {
+        if ((!img.parentElement.classList.contains('col-brand--inner') || !img.parentElement.classList.contains('sideimage')) && img.offsetWidth !== 0) {
+          img.width = `${img.offsetWidth}`;
+          window.addEventListener('resize', () => {
+              img.width = `${img.offsetWidth}`;
+          });
+        }
+        if ((!img.parentElement.classList.contains('col-brand--inner') || !img.parentElement.classList.contains('sideimage')) && img.offsetHeight !== 0) {
+          img.height = `${img.offsetHeight}`;
+          window.addEventListener('resize', () => {
+              img.height = `${img.offsetHeight}`;
+          });
+        }
+    });
+  });
+}
+fixMissingWidthHeight();  
+</script>
+    
+    <script type="lazyload2" data-src="https://a.klaviyo.com/media/js/onsite/onsite.js"></script>
+    <script type="lazyload2">
+      var klaviyo = klaviyo || [];
+      klaviyo.init({
+        account: "HQd5zH",
+        platform: "shopify"
+      });
+      klaviyo.enable("backinstock",{
+        trigger: {
+          product_page_text: "Be notified when back in stock?",
+          product_page_class: "product-form__bis link",
+          product_page_text_align: "center",
+          product_page_margin: "0",
+          replace_anchor: false
+        },
+          modal: {
+          headline: "{product_name}",
+          body_content: "Our apologies. Due to high demand, this magnification is temporarily out of stock. Please register below to receive notification when this becomes available.",
+          email_field_label: "Email",
+          button_label: "Notify me when available",
+          subscription_success_label: "You're in! We'll let you know when it's back.",
+          footer_content: "",
+          drop_background_color: "#101010",
+          background_color: "#FFFFFF",
+          text_color: "#101010",
+          button_text_color: "#FFFFFF",
+          button_background_color: "#435a6f",
+          close_button_color: "#929ba8",
+          error_background_color: "#fcd6d7",
+          error_text_color: "#C72E2F",
+          success_background_color: "#d3efcd",
+          success_text_color: "#1B9500"
+        }
+      });
+    </script>
+    <script>
+      window.addEventListener("wnw_load", (event) => {
+        const script = document.createElement('script');
+        script.src = 'https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=HQd5zH';
+        document.head.append(script);
+      });
+    </script>
+    
+    <script>
+    
+    
+    
+    
+    var gsf_conversion_data = {page_type : 'product', event : 'view_item', data : {product_data : [{variant_id : 41737411821627, product_id : 6914253357115, name : "Muse Readers", price : "86.00", currency : "USD", sku : "MU35GLD10", brand : "LOOK OPTIC", variant : "Reader / Gold / +1.00", category : "READING GLASSES", quantity : "411" }], total_price : "86.00", shop_currency : "USD"}};
+    
+</script>
+    
+    <script>
+      window.addEventListener("wnw_load", (event) => {
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/@loophq/onstore-sdk@latest/dist/loop-onstore-sdk.min.js';
+        script.onload = function() {
+          LoopOnstore.init({
+            key: "436b6e5dbe244c4b52d3501f4d7e47e0d63b2197",
+            attach: "#checkout"
+          });
+        }
+        document.head.append(script);
+      });
+    </script>
+    <style>
+      html.overflow-hidden body.overflow-hidden #loop-onstore.loop-onstore {
+          z-index: 1;
+      }
+      body.loop-returns-activated #loop-onstore.loop-onstore {
+          background: #2f4b35;
+          padding: 2rem;
+      }
+      body.loop-returns-activated #loop-onstore div.loop-onstore__credit {
+          font-size: 1.75rem;
+          gap: 0.75rem;
+      }
+      body.loop-returns-activated button.loop-onstore__back {
+          border-radius: 0;
+          text-transform: uppercase;
+      }
+    </style>
+    
+    <script>
+      // Automatic Discount Code Checkout
+      !function() {
+          var o = {
+              freeShipping: "FREE_EXPEDITED",
+          };
+          window.express_checkout = function() {
+              if(window.fp_bf_checkout_shipping && window.fp_bf_checkout_shipping.isFreeShipping){
+                      window.location.href = "https://www.lookoptic.com/discount/" + o.freeShipping + "?redirect=/checkout";
+              }else {
+                  window.location.href = "https://www.lookoptic.com/checkout"
+              }
+          };
+          window.black_friday_checkout = window.express_checkout;
+      }();
+    </script>
+    <!-- ArtsAI Tracking -->
+    
+      <!-- Conversion Pixel for [content]- DO NOT MODIFY -->
+      <img src="https://arttrk.com/pixel/?ad_log=referer&action=content&pixid=3e9daba1-2d4b-40c6-8ef2-9177ac0d1547" width="1" height="1" border="0">
+      <!-- End of Conversion Pixel -->
+    
+    <!-- END ArtsAI Tracking -->
+
+    <!-- Ad Featured Product -->
+    <script async defer src="../cdn/shop/t/690/assets/ad-featured-product.js"></script>
+    <!-- END Featured Product -->
+
+    <script>
+      window.fp_checkout_shipping = {
+        isFreeShipping: false,
+        freeShippingThreshold: 98
+      }
+      window.fp_bf_checkout_shipping = window.fp_checkout_shipping;
+    </script>
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "qn9duyiz78");
+    </script>
+    <script src="../cdn/shop/t/690/assets/virtual-mirror-global-object.js" defer="defer"></script>
+    
+    
+    <span
+  class="junip-store-key"
+  data-store-key="y1zDFbdUnjqrx8bisjRBiEQA"
+  data-onsite-enabled="true"
+  data-review-count-enabled="true"
+  data-star-color="#435A6F"
+  data-star-template-url="https://api.juniphq.com/images/star_options/2/template">
+</span>
+
+
+    
+    <script async defer src="../cdn/shop/t/690/assets/cart-observer.js"></script>
+    
+    <style>
+  .masonry-grid-section[data-gender="male"] {
+    display: none !important;
+  }
+</style>
+
+
+    <script src="https://analytics.ahrefs.com/analytics.js" data-key="ltAkSiGXPgL2Qmrs8vmXRA" async></script>
+    
+    <script>
+      if (window.location.pathname === '/apps/wonderment/tracking') {
+        window.location.pathname = '/pages/tracking';
+      }
+    </script>
+    <script>
+      if (window.location.href.includes('vfsim=true') || window.sessionStorage.getItem('fp_vfsim')) {
+        window.sessionStorage.setItem('fp_vfsim', 'true');
+        document.head.insertAdjacentHTML('beforeend', `
+          <style>
+            #gorgias-chat-container {
+              display: none !important;
+              visibility: hidden;
+            }
+          </style>  
+        `);
+        var _a,vfP=null!==(_a=document.getElementById("vfHolder"))&&void 0!==_a?_a:document.head,vfS=document.createElement("script");vfS.setAttribute("src","https://d1o5e9vlirdalo.cloudfront.net/vfLoader.js");vfS.setAttribute("id","vfLoader");vfS.setAttribute("data-pk",encodeURIComponent("lookoptic"));vfS.setAttribute("data-e",encodeURIComponent("prod"));vfS.type="text/javascript";vfP&&vfP.appendChild(vfS);
+      }
+    </script>
+  <div id="shopify-block-AVElYbHJnemxjbVVrN__10840395464443086010" class="shopify-block shopify-app-block">
+
+
+<script>
+  console.log("[Alia app extension] v1.0.5");
+
+  const BACKEND_URL = "https://backend.alia-prod.com";
+
+  window.ALIA_SHOPIFY_EXTENSION_INFO = {
+    customerID: "",
+    country: "US",
+    market: "us",
+    language: "en"
+  }
+
+  if (document.readyState !== "loading") {
+    initAlia();
+  } else {
+    document.addEventListener("DOMContentLoaded", () => initAlia(), { once: true });
+  }
+
+  async function initAlia() {
+    if (window.Shopify.designMode) {
+      console.log("[Alia app extension] Not showing in Shopify theme editor");
+      return;
+    }
+    const url = BACKEND_URL + "/public/launcher.js?shop=look-optic.myshopify.com";
+    const script = document.createElement("script");
+    script.src = url;
+    script.async = true;
+    document.head.appendChild(script);
+  }
+</script>
+
+</div><div id="shopify-block-AbmR4ZVhWZXJvS2NJQ__2786716548061469553" class="shopify-block shopify-app-block">
+
+<script>
+</script>
+
+ </div><div id="shopify-block-AYU1uNGdwRjVma1l1U__16017602894386113438" class="shopify-block shopify-app-block"><!-- BEGIN app snippet: junip-store-key --><span
+  class="junip-store-key"
+  data-supports-theme-extensions="true"
+  data-shopify-preview-mode="true"
+  data-store-key="y1zDFbdUnjqrx8bisjRBiEQA"
+  data-onsite-enabled="true"
+  data-review-count-enabled="true"
+  data-star-color=
+<script src="../cdn/shop/t/690/assets/swiper-bundle.min.js"></script>
+<script src="../cdn/shop/t/690/assets/swiper-init.js"></script>
 <script id="color-variant-switch">
 (function() {
   var params = new URLSearchParams(window.location.search);
   var variantId = params.get('variant');
   if (!variantId) return;
-  
-  function norm(s) {
-    return (s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-  }
-  
-  // Find the variant in page JSON to get its color
+  function norm(s) { return (s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
   var scripts = document.querySelectorAll('script');
   var targetColor = null;
-  
   for (var i = 0; i < scripts.length; i++) {
     var text = scripts[i].textContent;
-    // Look for variant JSON like {"id":41737411821627,...,"option2":"Gold",...}
     var re = new RegExp('"id":\s*' + variantId + '[^}]*?"option2":\s*"([^"]+)"');
     var match = text.match(re);
-    if (match) {
-      targetColor = norm(match[1].replace(/[()]/g, ''));
-      break;
-    }
-    // Also try reverse order
-    var re2 = new RegExp('"option2":\s*"([^"]+)"[^}]*?"id":\s*' + variantId);
-    var match2 = text.match(re2);
-    if (match2) {
-      targetColor = norm(match2[1].replace(/[()]/g, ''));
-      break;
-    }
+    if (match) { targetColor = norm(match[1].replace(/[()]/g, '')); break; }
   }
-  
   if (!targetColor) return;
-  
   function doSwitch() {
-    // Show/hide images
     document.querySelectorAll('li[data-color]').forEach(function(el) {
-      if (norm(el.getAttribute('data-color')) === targetColor) {
-        el.style.cssText = 'display: list-item !important;';
-      } else {
-        el.style.cssText = 'display: none !important;';
-      }
+      if (norm(el.getAttribute('data-color')) === targetColor) { el.style.cssText = 'display: list-item !important;'; }
+      else { el.style.cssText = 'display: none !important;'; }
     });
-    
-    // Check radio
-    document.querySelectorAll('input[data-input-color]').forEach(function(inp) {
-      inp.checked = norm(inp.getAttribute('data-input-color')) === targetColor;
-    });
-    
-    // Highlight swatch
+    document.querySelectorAll('input[data-input-color]').forEach(function(inp) { inp.checked = norm(inp.getAttribute('data-input-color')) === targetColor; });
     document.querySelectorAll('label[data-label-color]').forEach(function(lbl) {
       var m = norm(lbl.getAttribute('data-label-color')) === targetColor;
-      lbl.style.outline = m ? '1.5px solid #333' : '';
-      lbl.style.outlineOffset = m ? '2px' : '';
+      lbl.style.outline = m ? '1.5px solid #333' : ''; lbl.style.outlineOffset = m ? '2px' : '';
     });
-    
-    // Update label text
     var cl = document.querySelector('[data-color-label]');
-    if (cl) {
-      document.querySelectorAll('input[data-input-color]').forEach(function(inp) {
-        if (inp.checked) cl.textContent = inp.getAttribute('data-input-color');
-      });
-    }
-    
-    var slider = document.querySelector('.product__media-list');
-    if (slider) slider.scrollLeft = 0;
+    if (cl) { document.querySelectorAll('input[data-input-color]').forEach(function(inp) { if (inp.checked) cl.textContent = inp.getAttribute('data-input-color'); }); }
+    var slider = document.querySelector('.product__media-list'); if (slider) slider.scrollLeft = 0;
   }
-  
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', doSwitch);
-  } else {
-    doSwitch();
-  }
-  setTimeout(doSwitch, 100);
-  setTimeout(doSwitch, 500);
-  setTimeout(doSwitch, 1500);
+  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', doSwitch); } else { doSwitch(); }
+  setTimeout(doSwitch, 100); setTimeout(doSwitch, 500); setTimeout(doSwitch, 1500);
 })();
 </script>
-
 <script id="color-swatch-handler">
 document.addEventListener('DOMContentLoaded', function() {
-  function norm(s) {
-    return (s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-  }
-  
+  function norm(s) { return (s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
   document.querySelectorAll('label[data-label-color]').forEach(function(lbl) {
     lbl.addEventListener('click', function(e) {
       e.preventDefault();
-      var colorNorm = norm(this.getAttribute('data-label-color'));
-      
+      var cn = norm(this.getAttribute('data-label-color'));
       document.querySelectorAll('li[data-color]').forEach(function(el) {
-        if (norm(el.getAttribute('data-color')) === colorNorm) {
-          el.style.cssText = 'display: list-item !important;';
+        el.style.cssText = norm(el.getAttribute('data-color')) === cn ? 'display: list-item !important;' : 'display: none !important;';
+      });
+      document.querySelectorAll('input[data-input-color]').forEach(function(inp) { inp.checked = norm(inp.getAttribute('data-input-color')) === cn; });
+      document.querySelectorAll('label[data-label-color]').forEach(function(l) {
+        var m = norm(l.getAttribute('data-label-color')) === cn;
+        l.style.outline = m ? '1.5px solid #333' : ''; l.style.outlineOffset = m ? '2px' : '';
+      });
+      var cl = document.querySelector('[data-color-label]');
+      if (cl) { document.querySelectorAll('input[data-input-color]').forEach(function(inp) { if (inp.checked) cl.textContent = inp.getAttribute('data-input-color'); }); }
+      var slider = document.querySelector('.product__media-list'); if (slider) slider.scrollLeft = 0;
+    });
+  });
+});
+</script>
+<script id="lookoptic-menu-js">
+document.addEventListener('DOMContentLoaded', function() {
+  var menuDetails = document.querySelectorAll('.header__inline-menu details');
+  
+  menuDetails.forEach(function(d) {
+    var summary = d.querySelector('summary');
+    if (summary) {
+      summary.addEventListener('click', function(e) {
+        e.preventDefault();
+        menuDetails.forEach(function(other) {
+          if (other !== d) other.removeAttribute('open');
+        });
+        if (d.hasAttribute('open')) {
+          d.removeAttribute('open');
         } else {
-          el.style.cssText = 'display: none !important;';
+          d.setAttribute('open', '');
         }
       });
-      
-      document.querySelectorAll('input[data-input-color]').forEach(function(inp) {
-        inp.checked = norm(inp.getAttribute('data-input-color')) === colorNorm;
-      });
-      
-      document.querySelectorAll('label[data-label-color]').forEach(function(l) {
-        var m = norm(l.getAttribute('data-label-color')) === colorNorm;
-        l.style.outline = m ? '1.5px solid #333' : '';
-        l.style.outlineOffset = m ? '2px' : '';
-      });
-      
-      var cl = document.querySelector('[data-color-label]');
-      if (cl) {
-        document.querySelectorAll('input[data-input-color]').forEach(function(inp) {
-          if (inp.checked) cl.textContent = inp.getAttribute('data-input-color');
-        });
+    }
+  });
+  
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.header__inline-menu details')) {
+      menuDetails.forEach(function(d) { d.removeAttribute('open'); });
+    }
+  });
+  
+  // Active page underline
+  var pageName = window.location.pathname.split('/').pop();
+  if (!pageName) return;
+  
+  // Get all menu links in the header navigation bar
+  var allMenuLinks = document.querySelectorAll('.header__inline-menu .header__menu-item');
+  
+  allMenuLinks.forEach(function(item) {
+    var href = item.getAttribute('href') || '';
+    var spanEl = item.querySelector('span');
+    
+    // Direct match: this menu item links to current page
+    if (href && pageName && href.indexOf(pageName.replace('.html','')) > -1) {
+      if (spanEl) spanEl.classList.add('header__active-menu-item');
+    }
+  });
+  
+  // Check submenu items - if match found, also underline parent summary
+  document.querySelectorAll('.header__inline-menu details').forEach(function(details) {
+    var subLinks = details.querySelectorAll('.header__submenu a');
+    var matched = false;
+    subLinks.forEach(function(link) {
+      var href = link.getAttribute('href') || '';
+      if (href && pageName && href.indexOf(pageName.replace('.html','')) > -1) {
+        matched = true;
       }
-      
-      var slider = document.querySelector('.product__media-list');
-      if (slider) slider.scrollLeft = 0;
     });
+    if (matched) {
+      var summary = details.querySelector('summary');
+      if (summary) {
+        var spanEl = summary.querySelector('span');
+        if (spanEl) spanEl.classList.add('header__active-menu-item');
+      }
+    }
   });
 });
 </script>
