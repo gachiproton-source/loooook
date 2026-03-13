@@ -4,54 +4,91 @@ document.addEventListener('DOMContentLoaded', function() {
     return (s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
   }
   
-  // === PRODUCT PAGE: Handle ?color= parameter ===
-  var params = new URLSearchParams(window.location.search);
-  var selectedColor = params.get('color');
+  // === PRODUCT PAGES: Full color switching (replaces missing Shopify JS) ===
   
-  if (selectedColor) {
-    var norm = normalize(decodeURIComponent(selectedColor));
+  function switchColor(colorNorm) {
+    if (!colorNorm) return;
     
-    setTimeout(function() {
-      // Find matching radio input by EXACT normalized match
-      var inputs = document.querySelectorAll('input[data-input-color]');
-      var matched = null;
-      
-      inputs.forEach(function(input) {
-        var inputNorm = normalize(input.getAttribute('data-input-color'));
-        if (inputNorm === norm) {
-          matched = input;
+    // 1. Show/hide images by data-color
+    var mediaItems = document.querySelectorAll('.product__media-item[data-color]');
+    if (mediaItems.length > 0) {
+      var firstVisible = null;
+      mediaItems.forEach(function(item) {
+        if (normalize(item.getAttribute('data-color')) === colorNorm) {
+          item.style.display = '';
+          if (!firstVisible) firstVisible = item;
+        } else {
+          item.style.display = 'none';
         }
       });
-      
-      if (matched) {
-        // Click the matching input's label to trigger native behavior
-        var label = document.querySelector('label[for="' + matched.id + '"]');
-        if (label) {
-          label.click();
-        } else {
-          matched.checked = true;
-          matched.dispatchEvent(new Event('change', {bubbles: true}));
-        }
-        
-        // Also show matching images
-        var mediaItems = document.querySelectorAll('.product__media-item[data-color]');
-        if (mediaItems.length > 0) {
-          mediaItems.forEach(function(item) {
-            if (normalize(item.getAttribute('data-color')) === norm) {
-              item.style.display = '';
-            } else {
-              item.style.display = 'none';
-            }
-          });
-        }
-        
-        // Update color label
-        var colorLabel = document.querySelector('[data-color-label]');
-        if (colorLabel) {
-          colorLabel.textContent = matched.getAttribute('data-input-color');
-        }
+      // Scroll to first visible image
+      if (firstVisible) {
+        var slider = firstVisible.closest('.slider, .product__media-list');
+        if (slider) slider.scrollLeft = 0;
       }
-    }, 200);
+    }
+    
+    // 2. Check the matching radio + update label visual
+    document.querySelectorAll('input[data-input-color]').forEach(function(input) {
+      var match = normalize(input.getAttribute('data-input-color')) === colorNorm;
+      input.checked = match;
+    });
+    
+    // 3. Update swatch label highlights
+    document.querySelectorAll('label[data-label-color]').forEach(function(label) {
+      if (normalize(label.getAttribute('data-label-color')) === colorNorm) {
+        label.style.outline = '1.5px solid #333';
+        label.style.outlineOffset = '2px';
+      } else {
+        label.style.outline = '';
+        label.style.outlineOffset = '';
+      }
+    });
+    
+    // 4. Update "Color: X" label text
+    var colorLabel = document.querySelector('[data-color-label]');
+    if (colorLabel) {
+      // Find the original name from input
+      var matchedInput = document.querySelector('input[data-input-color][checked]');
+      if (!matchedInput) {
+        document.querySelectorAll('input[data-input-color]').forEach(function(inp) {
+          if (inp.checked) matchedInput = inp;
+        });
+      }
+      if (matchedInput) {
+        colorLabel.textContent = matchedInput.getAttribute('data-input-color');
+      }
+    }
+  }
+  
+  // Add click handlers to ALL color swatch labels on product pages
+  document.querySelectorAll('label[data-label-color]').forEach(function(label) {
+    label.addEventListener('click', function(e) {
+      e.preventDefault();
+      var color = normalize(this.getAttribute('data-label-color'));
+      switchColor(color);
+      
+      // Also update URL without reload
+      var url = new URL(window.location);
+      url.searchParams.set('color', color);
+      window.history.replaceState({}, '', url);
+    });
+  });
+  
+  // Also handle radio input changes directly
+  document.querySelectorAll('input[data-input-color]').forEach(function(input) {
+    input.addEventListener('change', function() {
+      switchColor(normalize(this.getAttribute('data-input-color')));
+    });
+  });
+  
+  // Read ?color= from URL on page load
+  var params = new URLSearchParams(window.location.search);
+  var selectedColor = params.get('color');
+  if (selectedColor) {
+    setTimeout(function() {
+      switchColor(normalize(decodeURIComponent(selectedColor)));
+    }, 150);
   }
   
   // === COLLECTION PAGES: update product link when swatch is clicked ===
