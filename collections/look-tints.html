@@ -4176,49 +4176,78 @@ border-width: 2px;
 
 
 
+
+
 <script id="lookoptic-menu-js">
 document.addEventListener('DOMContentLoaded', function() {
   var menuDetails = document.querySelectorAll('.header__inline-menu details');
   
-  menuDetails.forEach(function(details) {
-    var summary = details.querySelector('summary');
-    
-    // Prevent default hover behavior - only open on click
-    summary.addEventListener('click', function(e) {
-      e.preventDefault();
-      
-      // Close all other menus first
-      menuDetails.forEach(function(other) {
-        if (other !== details) {
-          other.removeAttribute('open');
+  menuDetails.forEach(function(d) {
+    var summary = d.querySelector('summary');
+    if (summary) {
+      summary.addEventListener('click', function(e) {
+        e.preventDefault();
+        menuDetails.forEach(function(other) {
+          if (other !== d) other.removeAttribute('open');
+        });
+        if (d.hasAttribute('open')) {
+          d.removeAttribute('open');
+        } else {
+          d.setAttribute('open', '');
         }
-      });
-      
-      // Toggle this menu
-      if (details.hasAttribute('open')) {
-        details.removeAttribute('open');
-      } else {
-        details.setAttribute('open', '');
-      }
-    });
-    
-    // Remove any mouseenter/mouseleave handlers we added before
-    details.onmouseleave = null;
-    if (summary) summary.onmouseenter = null;
-  });
-  
-  // Click outside to close all menus
-  document.addEventListener('click', function(e) {
-    var clickedInMenu = e.target.closest('.header__inline-menu details');
-    if (!clickedInMenu) {
-      menuDetails.forEach(function(details) {
-        details.removeAttribute('open');
       });
     }
   });
+  
+  // Click outside to close
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.header__inline-menu details')) {
+      menuDetails.forEach(function(d) { d.removeAttribute('open'); });
+    }
+  });
+  
+  // Highlight active menu item based on current page
+  var path = window.location.pathname;
+  var page = path.split('/').pop().replace('.html','');
+  
+  // Map pages to menu item text
+  var pageMap = {
+    'readers': 'Readers',
+    'progressives': 'Progressives',
+    'blue-light-glasses': 'Blue Light',
+    'look-tints': 'Tints',
+    'sun-progressives': 'Sun Progressives',
+    'mens-1': 'Readers',
+    'mens-progressives': 'Progressives',
+    'mens-bluelight': 'Blue Light',
+  };
+  
+  var activeName = pageMap[page];
+  if (activeName) {
+    // Find and underline the matching top-level menu item
+    document.querySelectorAll('.header__menu-item').forEach(function(item) {
+      var spanEl = item.querySelector('span');
+      if (spanEl && spanEl.textContent.trim() === activeName) {
+        spanEl.classList.add('header__active-menu-item');
+      }
+      // Also check direct link items (not in details/summary)
+      if (!item.closest('details') && item.textContent.trim() === activeName) {
+        var s = item.querySelector('span');
+        if (s) s.classList.add('header__active-menu-item');
+      }
+    });
+    
+    // Also match standalone menu links
+    document.querySelectorAll('.header__menu-item.list-menu__item.link').forEach(function(item) {
+      var href = item.getAttribute('href') || '';
+      if (href.indexOf(page + '.html') > -1) {
+        var s = item.querySelector('span');
+        if (s) s.classList.add('header__active-menu-item');
+      }
+    });
+  }
 });
 </script>
-
 </body>
 <style>
 .swiper-wrapper--announcement-bar-desktop, .swiper-wrapper--announcement-bar-desktop .announcement-bar, .swiper-wrapper--announcement-bar-mobile, .swiper-wrapper--announcement-bar-mobile .announcement-bar {
