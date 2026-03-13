@@ -1166,7 +1166,19 @@ div.fp_banner_container {
 .junip-select { display: none; }
 .junip-checkbox { display: none; }
 /* junip-tooltip handled above */
+.shopify-pc__banner__dialog, #shopify-pc__banner { display: none !important; }
+</style>
 
+<style>
+#shopify-pc__banner, .shopify-pc__banner__dialog, [id*="shopify-pc"] { display: none !important; visibility: hidden !important; }
+</style>
+
+<style>
+/* Product card image aspect ratio: 810.906 x 614.391 */
+@media screen and (min-width: 750px) {
+  .card--product .media.media--square {
+    padding-bottom: 75.78% !important;
+  }
 }
 </style>
 
@@ -1554,7 +1566,7 @@ div[class*="contact-field"], div[class*="Contact"] {
                               </a></li></ul>
                     </details>
                   </details-disclosure></li></ul>
-        </nav><a href="../index.html" class="header__heading-link link link--text focus-inset"><img srcset="../cdn/shop/files/lo-logo_50x.png 1x, /cdn/shop/files/lo-logo_50x@2x.png 2x" src="../cdn/shop/files/lo-logo_50x.png" loading="lazy" class="header__heading-logo" width="546" height="546" alt="Look Optic"></a><div class="header__icons"><nav class="header__inline-menu">
+        </nav><a href="../index.html" class="header__heading-link link link--text focus-inset"><img srcset="../cdn/shop/files/lo-logo_50x.png 1x, ../cdn/shop/files/lo-logo_50x@2x.png 2x" src="../cdn/shop/files/lo-logo_50x.png" loading="lazy" class="header__heading-logo" width="546" height="546" alt="Look Optic"></a><div class="header__icons"><nav class="header__inline-menu">
             <ul class="list-menu list-menu--inline" role="list"><li><details-disclosure>
                       <details id="Details-HeaderMenu-1">
                         <summary class="header__menu-item list-menu__item link focus-inset" role="button" aria-expanded="false" aria-controls="HeaderMenu-MenuList-1">

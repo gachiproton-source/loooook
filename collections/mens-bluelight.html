@@ -952,7 +952,7 @@
 </style> <style id="junipCssVariables"> :root { --junipPrimaryColor: #435A6F; --junipButtonColor: #435A6F; --junipButtonOutlineColor: #435A6F80; --junipStarColor: #435A6F; --junipButtonTextColor: #fff; --junipBorderColor: rgba(0, 0, 0, 0.08); --junipSurfaceColor: rgba(0, 0, 0, 0.03); } </style> <script data-scrapbook-elem="custom-elements-loader">(function (names) { if (!customElements) { return; } for (const name of names) { customElements.define(name, class CustomElement extends HTMLElement {}); } })(["sticky-header","header-drawer","details-disclosure","cart-icon-bubble","cart-notification","facet-filters-form","facet-remove","menu-drawer","slider-component","modal-dialog","modal-opener"])</script>
 <style>
 /* No cookie banner */
-
+#shopify-pc__banner, .shopify-pc__banner__dialog, [id*="shopify-pc"] { display: none !important; visibility: hidden !important; }
 /* No social icons, no contact */
 .social-icons, .list-social, .header__icon--social, [class*="social-icon"],
 ul.list-social, .footer__list-social,
