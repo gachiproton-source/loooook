@@ -4,81 +4,54 @@ document.addEventListener('DOMContentLoaded', function() {
     return (s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
   }
   
-  // === PRODUCT PAGE: Color switching logic ===
-  function switchProductColor(colorName) {
-    var norm = normalize(colorName);
-    if (!norm) return;
-    
-    // 1. Check the matching radio input
-    document.querySelectorAll('input[data-input-color]').forEach(function(input) {
-      var isMatch = normalize(input.getAttribute('data-input-color')) === norm;
-      input.checked = isMatch;
-      // Update label visual state
-      var label = document.querySelector('label[for="' + input.id + '"]');
-      if (label) {
-        if (isMatch) label.classList.add('active');
-        else label.classList.remove('active');
-      }
-    });
-    
-    // 2. Show/hide product images by data-color
-    var mediaItems = document.querySelectorAll('.product__media-item[data-color]');
-    if (mediaItems.length > 0) {
-      mediaItems.forEach(function(item) {
-        var itemColor = normalize(item.getAttribute('data-color'));
-        if (itemColor === norm) {
-          item.style.display = '';
-          item.classList.add('is-active');
-        } else {
-          item.style.display = 'none';
-          item.classList.remove('is-active');
-        }
-      });
-    }
-    
-    // 3. Update color label text
-    var colorLabel = document.querySelector('.form__label--color, [data-color-label]');
-    if (colorLabel) {
-      // Convert "shiny-pink" back to "Shiny Pink"
-      colorLabel.textContent = colorName.replace(/(^|\s|-)\w/g, function(c) { return c.toUpperCase(); }).replace(/-/g, ' ');
-    }
-    
-    // 4. Also update swatch highlight on product page
-    document.querySelectorAll('.product-form__input label[data-color]').forEach(function(label) {
-      if (normalize(label.getAttribute('data-color')) === norm) {
-        label.classList.add('checked');
-      } else {
-        label.classList.remove('checked');
-      }
-    });
-  }
-  
-  // Add click handlers to product page color inputs
-  document.querySelectorAll('input[data-input-color]').forEach(function(input) {
-    input.addEventListener('change', function() {
-      switchProductColor(this.getAttribute('data-input-color'));
-    });
-    input.addEventListener('click', function() {
-      switchProductColor(this.getAttribute('data-input-color'));
-    });
-  });
-  
-  // Also handle label clicks for color swatches on product page
-  document.querySelectorAll('.product-form__input label[data-color]').forEach(function(label) {
-    label.addEventListener('click', function() {
-      var color = this.getAttribute('data-color');
-      switchProductColor(color);
-    });
-  });
-  
-  // Read ?color= from URL and activate
+  // === PRODUCT PAGE: Handle ?color= parameter ===
   var params = new URLSearchParams(window.location.search);
   var selectedColor = params.get('color');
+  
   if (selectedColor) {
-    // Small delay to let page render first
+    var norm = normalize(decodeURIComponent(selectedColor));
+    
     setTimeout(function() {
-      switchProductColor(decodeURIComponent(selectedColor));
-    }, 100);
+      // Find matching radio input by EXACT normalized match
+      var inputs = document.querySelectorAll('input[data-input-color]');
+      var matched = null;
+      
+      inputs.forEach(function(input) {
+        var inputNorm = normalize(input.getAttribute('data-input-color'));
+        if (inputNorm === norm) {
+          matched = input;
+        }
+      });
+      
+      if (matched) {
+        // Click the matching input's label to trigger native behavior
+        var label = document.querySelector('label[for="' + matched.id + '"]');
+        if (label) {
+          label.click();
+        } else {
+          matched.checked = true;
+          matched.dispatchEvent(new Event('change', {bubbles: true}));
+        }
+        
+        // Also show matching images
+        var mediaItems = document.querySelectorAll('.product__media-item[data-color]');
+        if (mediaItems.length > 0) {
+          mediaItems.forEach(function(item) {
+            if (normalize(item.getAttribute('data-color')) === norm) {
+              item.style.display = '';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        }
+        
+        // Update color label
+        var colorLabel = document.querySelector('[data-color-label]');
+        if (colorLabel) {
+          colorLabel.textContent = matched.getAttribute('data-input-color');
+        }
+      }
+    }, 200);
   }
   
   // === COLLECTION PAGES: update product link when swatch is clicked ===
