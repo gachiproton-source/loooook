@@ -1192,8 +1192,11 @@ div[class*="contact-field"], div[class*="Contact"] {
 }
 </style>
 
-<style id="lookoptic-fixes">
-/* 1. Menu items always black, no blue hover */
+
+
+
+<style id="lookoptic-menu-fixes">
+/* Menu items always black */
 .header__menu-item, .header__menu-item:hover,
 .header__submenu .header__menu-item, .header__submenu .header__menu-item:hover,
 .header__submenu a, .header__submenu a:hover,
@@ -1201,11 +1204,60 @@ div[class*="contact-field"], div[class*="Contact"] {
 .list-menu__item--link, .list-menu__item--link:hover {
   color: rgb(16,16,16) !important;
 }
-/* 2. Submenu hides when mouse leaves */
+
+/* Underline animation - left to right on hover */
+.header__menu-item span:after,
+.header__menu-item span:before {
+  content: '' !important;
+  position: absolute !important;
+  left: 0 !important;
+  bottom: -4px !important;
+  width: 0 !important;
+  height: 1px !important;
+  margin: 5px 0 0 !important;
+  transition: width 0.4s cubic-bezier(.65,.02,.23,1) !important;
+  opacity: 1 !important;
+  background-color: rgb(16,16,16) !important;
+}
+
+/* Hover: animate underline left to right */
+.header__menu-item:hover span:after,
+.header__menu-item:hover span:before {
+  width: 100% !important;
+  opacity: 1 !important;
+}
+
+/* Active menu item: underline stays */
+.header__menu-item.menu-item--active span:after,
+.header__menu-item.menu-item--active span:before,
+.header__menu-item[aria-expanded="true"] span:after,
+.header__menu-item[aria-expanded="true"] span:before,
+details[open] > .header__menu-item span:after,
+details[open] > .header__menu-item span:before {
+  width: 100% !important;
+  opacity: 1 !important;
+}
+
+/* Submenu dropdown styling */
+.header__submenu.list-menu {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-0.5rem);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* Show submenu only when details is open */
+details[open] > .header__submenu.list-menu {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: translateY(0) !important;
+}
+
+/* Override any previous fixes */
 .header__inline-menu details:not(:hover):not(:focus-within) > .header__submenu {
-  opacity: 0 !important;
-  pointer-events: none !important;
-  transform: translateY(-1rem) !important;
+  opacity: unset;
+  pointer-events: unset;
+  transform: unset;
 }
 </style>
 
@@ -6912,18 +6964,46 @@ font-size: 54px;
 <script src="../cdn/shop/t/690/assets/swiper-bundle.min.js"></script>
 <script src="../cdn/shop/t/690/assets/swiper-init.js"></script>
 
-<script>
+
+
+
+<script id="lookoptic-menu-js">
 document.addEventListener('DOMContentLoaded', function() {
-  // Close submenu when mouse leaves the details element
-  document.querySelectorAll('.header__inline-menu details').forEach(function(d) {
-    d.addEventListener('mouseleave', function() {
-      this.removeAttribute('open');
+  var menuDetails = document.querySelectorAll('.header__inline-menu details');
+  
+  menuDetails.forEach(function(details) {
+    var summary = details.querySelector('summary');
+    
+    // Prevent default hover behavior - only open on click
+    summary.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      // Close all other menus first
+      menuDetails.forEach(function(other) {
+        if (other !== details) {
+          other.removeAttribute('open');
+        }
+      });
+      
+      // Toggle this menu
+      if (details.hasAttribute('open')) {
+        details.removeAttribute('open');
+      } else {
+        details.setAttribute('open', '');
+      }
     });
-    // Open on hover
-    var summary = d.querySelector('summary');
-    if (summary) {
-      summary.addEventListener('mouseenter', function() {
-        this.parentElement.setAttribute('open','');
+    
+    // Remove any mouseenter/mouseleave handlers we added before
+    details.onmouseleave = null;
+    if (summary) summary.onmouseenter = null;
+  });
+  
+  // Click outside to close all menus
+  document.addEventListener('click', function(e) {
+    var clickedInMenu = e.target.closest('.header__inline-menu details');
+    if (!clickedInMenu) {
+      menuDetails.forEach(function(details) {
+        details.removeAttribute('open');
       });
     }
   });
