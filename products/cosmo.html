@@ -52,7 +52,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="#333333" />
-    <link rel="canonical" href="https://www.lookoptic.com/products/cosmo">
+    <link rel="canonical" href="../products/cosmo.html">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin><link rel="icon" type="image/png" href="../cdn/shop/files/Favicon_2_4d24917c-8637-43f8-a244-647becd78502_32x32.png"><link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin><title>
       Cosmo Readers
  &ndash; LOOK OPTIC</title>
@@ -79,7 +79,7 @@
 <meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/7977215/digital_wallets/dialog">
 <meta name="shopify-checkout-api-token" content="a9209c4cd7c91778bd289898c989bc0d">
 <meta id="in-context-paypal-metadata" data-shop-id="7977215" data-venmo-supported="false" data-environment="production" data-locale="en_US" data-paypal-v4="true" data-currency="USD">
-<link rel="alternate" type="application/json+oembed" href="https://www.lookoptic.com/products/cosmo.oembed">
+<link rel="alternate" type="application/json+oembed" href="#">
 <script type="lazyload2" data-src="/checkouts/internal/preloads.js?locale=en-US"></script>
 <link rel="preconnect" href="https://shop.app" crossorigin="anonymous">
 <script type="lazyload2" data-src="https://shop.app/checkouts/internal/preloads.js?locale=en-US&shop_id=7977215" crossorigin="anonymous"></script>
@@ -2647,7 +2647,25 @@ window.TriplePixelData={TripleName:"look-optic.myshopify.com",ver:"2.16",plat:"S
   }
 </script>
 
-<script>window.ShopifyAnalytics = window.ShopifyAnalytics || {};window.ShopifyAnalytics.performance = window.ShopifyAnalytics.performance || {};(function () {const LONG_FRAME_THRESHOLD = 50;const longAnimationFrames = [];let activeRafId = null;function collectLongFrames() {let previousTime = null;function rafMonitor(now) {if (activeRafId === null) {return;}const delta = now - previousTime;if (delta > LONG_FRAME_THRESHOLD) {longAnimationFrames.push({startTime: previousTime,endTime: now,});}previousTime = now;activeRafId = requestAnimationFrame(rafMonitor);}previousTime = performance.now();activeRafId = requestAnimationFrame(rafMonitor);}if (!PerformanceObserver.supportedEntryTypes.includes('long-animation-frame')) {collectLongFrames();const timeoutId = setTimeout(() => {cancelAnimationFrame(activeRafId);}, 10_000);window.ShopifyAnalytics.performance.getLongAnimationFrames = function(stopCollection = false) {if (stopCollection) {clearTimeout(timeoutId);cancelAnimationFrame(activeRafId);}return longAnimationFrames;};}})();</script></head>
+<script>window.ShopifyAnalytics = window.ShopifyAnalytics || {};window.ShopifyAnalytics.performance = window.ShopifyAnalytics.performance || {};(function () {const LONG_FRAME_THRESHOLD = 50;const longAnimationFrames = [];let activeRafId = null;function collectLongFrames() {let previousTime = null;function rafMonitor(now) {if (activeRafId === null) {return;}const delta = now - previousTime;if (delta > LONG_FRAME_THRESHOLD) {longAnimationFrames.push({startTime: previousTime,endTime: now,});}previousTime = now;activeRafId = requestAnimationFrame(rafMonitor);}previousTime = performance.now();activeRafId = requestAnimationFrame(rafMonitor);}if (!PerformanceObserver.supportedEntryTypes.includes('long-animation-frame')) {collectLongFrames();const timeoutId = setTimeout(() => {cancelAnimationFrame(activeRafId);}, 10_000);window.ShopifyAnalytics.performance.getLongAnimationFrames = function(stopCollection = false) {if (stopCollection) {clearTimeout(timeoutId);cancelAnimationFrame(activeRafId);}return longAnimationFrames;};}})();</script>
+<style id="lookoptic-fixes">
+/* 1. Menu items always black, no blue hover */
+.header__menu-item, .header__menu-item:hover,
+.header__submenu .header__menu-item, .header__submenu .header__menu-item:hover,
+.header__submenu a, .header__submenu a:hover,
+.menu-drawer__menu-item, .menu-drawer__menu-item:hover,
+.list-menu__item--link, .list-menu__item--link:hover {
+  color: rgb(16,16,16) !important;
+}
+/* 2. Submenu hides when mouse leaves */
+.header__inline-menu details:not(:hover):not(:focus-within) > .header__submenu {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translateY(-1rem) !important;
+}
+</style>
+
+</head>
   <body
     class="gradient"
     
@@ -2767,7 +2785,7 @@ window.TriplePixelData={TripleName:"look-optic.myshopify.com",ver:"2.16",plat:"S
                   <p class="menu-drawer__tagline text--center"></p>
                 
                 <nav class="menu-drawer__navigation">
-                  <ul class="menu-drawer__menu list-menu" role="list"><li><a href="https://www.lookoptic.com/collections/reader-products?gender=female" class="menu-drawer__menu-item menu-drawer__menu-item--primary list-menu__item link link--text focus-inset">
+                  <ul class="menu-drawer__menu list-menu" role="list"><li><a href="../collections/readers.html" class="menu-drawer__menu-item menu-drawer__menu-item--primary list-menu__item link link--text focus-inset">
                             Shop Women
                             
                               
@@ -2921,7 +2939,7 @@ window.TriplePixelData={TripleName:"look-optic.myshopify.com",ver:"2.16",plat:"S
 
                                   About Us
                                 </button>
-                                <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1"><li><a href="https://www.lookoptic.com/pages/about" class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
+                                <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1"><li><a href="#" class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
                                           Our Story
                                         </a></li><li><details id="Details-menu-drawer-submenu-2">
                                           <summary class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
@@ -2965,15 +2983,15 @@ window.TriplePixelData={TripleName:"look-optic.myshopify.com",ver:"2.16",plat:"S
                                                   </a>
                                                 </li></ul>
                                           </div>
-                                        </details></li><li><a href="https://www.lookoptic.com/blogs/the-look-blog/giving-back" class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
+                                        </details></li><li><a href="#" class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
                                           Giving Back
-                                        </a></li><li><a href="https://www.lookoptic.com/pages/sustainability" class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
+                                        </a></li><li><a href="#" class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
                                           Sustainability 
                                         </a></li></ul>
                               </div>
                             </div>
                           </details></li><li>
-                        <a href="https://www.lookoptic.com/customer_authentication/redirect?locale=en&region_country=US" class="menu-drawer__menu-item menu-drawer__menu-item--secondary list-menu__item link link--text focus-inset">Log in</a>
+                        <a href="#" class="menu-drawer__menu-item menu-drawer__menu-item--secondary list-menu__item link link--text focus-inset">Log in</a>
                       </li></ul>
                   
                 </nav>
@@ -2991,7 +3009,7 @@ window.TriplePixelData={TripleName:"look-optic.myshopify.com",ver:"2.16",plat:"S
 </svg>
 
                       </summary>
-                      <ul id="HeaderMenu-MenuList-1" class="header__submenu list-menu list-menu--disclosure caption-large motion-reduce" role="list" tabindex="-1"><li><a href="https://www.lookoptic.com/collections/reader-products?gender=female" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
+                      <ul id="HeaderMenu-MenuList-1" class="header__submenu list-menu list-menu--disclosure caption-large motion-reduce" role="list" tabindex="-1"><li><a href="../collections/readers.html" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
                                 Readers
                               </a></li><li><a href="../collections/progressives.html?gender=female" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
                                 Progressives
@@ -3057,7 +3075,7 @@ window.TriplePixelData={TripleName:"look-optic.myshopify.com",ver:"2.16",plat:"S
 </svg>
 
                         </summary>
-                        <ul id="HeaderMenu-MenuList-1" class="header__submenu list-menu list-menu--disclosure caption-large motion-reduce" role="list" tabindex="-1"><li><a href="https://www.lookoptic.com/pages/about" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
+                        <ul id="HeaderMenu-MenuList-1" class="header__submenu list-menu list-menu--disclosure caption-large motion-reduce" role="list" tabindex="-1"><li><a href="#" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
                                   Our Story
                                 </a></li><li><details id="Details-HeaderSubMenu-2">
                                   <summary class="header__menu-item link link--text list-menu__item focus-inset caption-large">
@@ -3088,9 +3106,9 @@ window.TriplePixelData={TripleName:"look-optic.myshopify.com",ver:"2.16",plat:"S
                                           Venus Williams
                                         </a>
                                       </li></ul>
-                                </details></li><li><a href="https://www.lookoptic.com/blogs/the-look-blog/giving-back" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
+                                </details></li><li><a href="#" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
                                   Giving Back
-                                </a></li><li><a href="https://www.lookoptic.com/pages/sustainability" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
+                                </a></li><li><a href="#" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
                                   Sustainability 
                                 </a></li></ul>
                       </details>
@@ -3108,11 +3126,11 @@ window.TriplePixelData={TripleName:"look-optic.myshopify.com",ver:"2.16",plat:"S
 </svg>
 
                     </summary>
-                    <ul id="HeaderMenu-MenuList-1" class="header__submenu list-menu list-menu--disclosure caption-large motion-reduce" role="list" tabindex="-1"><li><a href="https://www.lookoptic.com/account/login?return_url=%2Faccount" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
+                    <ul id="HeaderMenu-MenuList-1" class="header__submenu list-menu list-menu--disclosure caption-large motion-reduce" role="list" tabindex="-1"><li><a href="#" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
                               Log In
-                            </a></li><li><a href="https://www.lookoptic.com/account" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
+                            </a></li><li><a href="#" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
                               Order History
-                            </a></li><li><a href="https://www.lookoptic.com/account/addresses" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
+                            </a></li><li><a href="#" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
                               Edit Address
                             </a></li></ul>
                   </details>
@@ -21465,21 +21483,21 @@ latest releases & promotions</p><form method="post" action="/contact#ContactFoot
               
             </div></div></div><div class="footer__content-top page-width"><div class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet "><div class="footer-block grid__item footer-block--menu" ><h2 class="footer-block__heading h4">Product</h2><ul class="footer-block__details-content list-unstyled">
                           <li>
-                            <a href="https://www.lookoptic.com/pages/arod" class="link link--text list-menu__item list-menu__item--link">
+                            <a href="#" class="link link--text list-menu__item list-menu__item--link">
                               LOOK x Alex Rodriguez
                             </a>
                           </li>
                         
 
                           <li>
-                            <a href="https://www.lookoptic.com/pages/evita" class="link link--text list-menu__item list-menu__item--link">
+                            <a href="#" class="link link--text list-menu__item list-menu__item--link">
                               LOOK x Eva Mendes
                             </a>
                           </li>
                         
 
                           <li>
-                            <a href="https://www.lookoptic.com/pages/keaton" class="link link--text list-menu__item list-menu__item--link">
+                            <a href="#" class="link link--text list-menu__item list-menu__item--link">
                               LOOK x Diane Keaton
                             </a>
                           </li>
@@ -21640,7 +21658,7 @@ latest releases & promotions</p><form method="post" action="/contact#ContactFoot
                         
 
                           <li>
-                            <a href="https://www.lookoptic.com/apps/wonderment/tracking" class="link link--text list-menu__item list-menu__item--link">
+                            <a href="#" class="link link--text list-menu__item list-menu__item--link">
                               Track Your Order
                             </a>
                           </li>
@@ -22330,5 +22348,24 @@ fixMissingWidthHeight();
 
 </div><script src="../cdn/shop/t/690/assets/swiper-bundle.min.js"></script>
 <script src="../cdn/shop/t/690/assets/swiper-init.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Close submenu when mouse leaves the details element
+  document.querySelectorAll('.header__inline-menu details').forEach(function(d) {
+    d.addEventListener('mouseleave', function() {
+      this.removeAttribute('open');
+    });
+    // Open on hover
+    var summary = d.querySelector('summary');
+    if (summary) {
+      summary.addEventListener('mouseenter', function() {
+        this.parentElement.setAttribute('open','');
+      });
+    }
+  });
+});
+</script>
+
 </body>
 </html>

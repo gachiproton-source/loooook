@@ -959,6 +959,24 @@
 }
 </style><script data-scrapbook-elem="custom-elements-loader">(function (names) { if (!customElements) { return; } for (const name of names) { customElements.define(name, class CustomElement extends HTMLElement {}); } })(["sticky-header","header-drawer","details-disclosure","cart-icon-bubble","cart-notification","modal-dialog","modal-opener"])</script>
 
+
+<style id="lookoptic-fixes">
+/* 1. Menu items always black, no blue hover */
+.header__menu-item, .header__menu-item:hover,
+.header__submenu .header__menu-item, .header__submenu .header__menu-item:hover,
+.header__submenu a, .header__submenu a:hover,
+.menu-drawer__menu-item, .menu-drawer__menu-item:hover,
+.list-menu__item--link, .list-menu__item--link:hover {
+  color: rgb(16,16,16) !important;
+}
+/* 2. Submenu hides when mouse leaves */
+.header__inline-menu details:not(:hover):not(:focus-within) > .header__submenu {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translateY(-1rem) !important;
+}
+</style>
+
 </head>
   <body class="gradient wnw_loaded" data-page-type="index">
       <svg id="junipStarSymbols" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -1156,7 +1174,7 @@
                             
                               
                             
-                          </a></li><li><a href="https://www.lookoptic.com/collections/sunglasses" class="menu-drawer__menu-item menu-drawer__menu-item--primary list-menu__item link link--text focus-inset">
+                          </a></li><li><a href="../collections/look-tints.html" class="menu-drawer__menu-item menu-drawer__menu-item--primary list-menu__item link link--text focus-inset">
                             Sunglasses
                             
                               
@@ -1215,7 +1233,7 @@
 
                                   About Us
                                 </button>
-                                <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1"><li><a href="https://www.lookoptic.com/pages/about" class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
+                                <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1"><li><a href="#" class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
                                           Our Story
                                         </a></li><li><details id="Details-menu-drawer-submenu-2">
                                           <summary class="menu-drawer__menu-item link link--text list-menu__item focus-inset" role="button" aria-expanded="false" aria-controls="childlink-Collaborations">
@@ -1238,36 +1256,36 @@
                                               Collaborations
                                             </button>
                                             <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1"><li>
-                                                  <a href="https://www.lookoptic.com/pages/arod" class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
+                                                  <a href="#" class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
                                                     Alex Rodriguez
                                                   </a>
                                                 </li><li>
-                                                  <a href="https://www.lookoptic.com/pages/evita" class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
+                                                  <a href="#" class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
                                                     Eva Mendes
                                                   </a>
                                                 </li><li>
-                                                  <a href="https://www.lookoptic.com/pages/keaton" class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
+                                                  <a href="#" class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
                                                     Diane Keaton
                                                   </a>
                                                 </li><li>
-                                                  <a href="https://www.lookoptic.com/pages/lois" class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
+                                                  <a href="#" class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
                                                     Carolyn Murphy
                                                   </a>
                                                 </li><li>
-                                                  <a href="https://www.lookoptic.com/pages/eleven-by-venus-williams" class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
+                                                  <a href="#" class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
                                                     Venus Williams
                                                   </a>
                                                 </li></ul>
                                           </div>
-                                        </details></li><li><a href="https://www.lookoptic.com/blogs/the-look-blog/giving-back" class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
+                                        </details></li><li><a href="#" class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
                                           Giving Back
-                                        </a></li><li><a href="https://www.lookoptic.com/pages/sustainability" class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
+                                        </a></li><li><a href="#" class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
                                           Sustainability 
                                         </a></li></ul>
                               </div>
                             </div>
                           </details></li><li>
-                        <a href="https://www.lookoptic.com/customer_authentication/redirect?locale=en&amp;region_country=US" class="menu-drawer__menu-item menu-drawer__menu-item--secondary list-menu__item link link--text focus-inset">Log in</a>
+                        <a href="#" class="menu-drawer__menu-item menu-drawer__menu-item--secondary list-menu__item link link--text focus-inset">Log in</a>
                       </li></ul>
                   
                 </nav>
@@ -1325,7 +1343,7 @@
 </path></svg>
 
                       </summary>
-                      <ul id="HeaderMenu-MenuList-6" class="header__submenu list-menu list-menu--disclosure caption-large motion-reduce" role="list" tabindex="-1"><li><a href="https://www.lookoptic.com/collections/sunglasses" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
+                      <ul id="HeaderMenu-MenuList-6" class="header__submenu list-menu list-menu--disclosure caption-large motion-reduce" role="list" tabindex="-1"><li><a href="../collections/look-tints.html" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
                                 Sunglasses
                               </a></li><li><a href="../collections/sun-progressives.html" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
                                 Sun Progressives
@@ -1344,7 +1362,7 @@
 </path></svg>
 
                         </summary>
-                        <ul id="HeaderMenu-MenuList-1" class="header__submenu list-menu list-menu--disclosure caption-large motion-reduce" role="list" tabindex="-1"><li><a href="https://www.lookoptic.com/pages/about" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
+                        <ul id="HeaderMenu-MenuList-1" class="header__submenu list-menu list-menu--disclosure caption-large motion-reduce" role="list" tabindex="-1"><li><a href="#" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
                                   Our Story
                                 </a></li><li><details id="Details-HeaderSubMenu-2">
                                   <summary class="header__menu-item link link--text list-menu__item focus-inset caption-large" role="button" aria-expanded="false" aria-controls="HeaderMenu-SubMenuList-2">
@@ -1355,29 +1373,29 @@
 
                                   </summary>
                                   <ul id="HeaderMenu-SubMenuList-2" class="header__submenu list-menu motion-reduce"><li>
-                                        <a href="https://www.lookoptic.com/pages/arod" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
+                                        <a href="#" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
                                           Alex Rodriguez
                                         </a>
                                       </li><li>
-                                        <a href="https://www.lookoptic.com/pages/evita" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
+                                        <a href="#" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
                                           Eva Mendes
                                         </a>
                                       </li><li>
-                                        <a href="https://www.lookoptic.com/pages/keaton" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
+                                        <a href="#" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
                                           Diane Keaton
                                         </a>
                                       </li><li>
-                                        <a href="https://www.lookoptic.com/pages/lois" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
+                                        <a href="#" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
                                           Carolyn Murphy
                                         </a>
                                       </li><li>
-                                        <a href="https://www.lookoptic.com/pages/eleven-by-venus-williams" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
+                                        <a href="#" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
                                           Venus Williams
                                         </a>
                                       </li></ul>
-                                </details></li><li><a href="https://www.lookoptic.com/blogs/the-look-blog/giving-back" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
+                                </details></li><li><a href="#" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
                                   Giving Back
-                                </a></li><li><a href="https://www.lookoptic.com/pages/sustainability" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
+                                </a></li><li><a href="#" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
                                   Sustainability 
                                 </a></li></ul>
                       </details>
@@ -1395,11 +1413,11 @@
 </path></svg>
 
                     </summary>
-                    <ul id="HeaderMenu-MenuList-1" class="header__submenu list-menu list-menu--disclosure caption-large motion-reduce" role="list" tabindex="-1"><li><a href="https://www.lookoptic.com/account/login?return_url=%2Faccount" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
+                    <ul id="HeaderMenu-MenuList-1" class="header__submenu list-menu list-menu--disclosure caption-large motion-reduce" role="list" tabindex="-1"><li><a href="#" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
                               Log In
-                            </a></li><li><a href="https://www.lookoptic.com/account" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
+                            </a></li><li><a href="#" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
                               Order History
-                            </a></li><li><a href="https://www.lookoptic.com/account/addresses" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
+                            </a></li><li><a href="#" class="header__menu-item list-menu__item link link--text focus-inset caption-large">
                               Edit Address
                             </a></li></ul>
                   </details>
@@ -1474,7 +1492,7 @@
                 Blue Light
               </a>
           </li><li>
-              <a href="https://www.lookoptic.com/collections/sun-reading-glasses" class="menu-mobile__menu-item menu-mobile__menu-item--primary list-menu__item link link--text focus-inset">
+              <a href="#" class="menu-mobile__menu-item menu-mobile__menu-item--primary list-menu__item link link--text focus-inset">
                 Sun
               </a>
           </li></ul>
@@ -1875,7 +1893,7 @@
         <div class="lo-hero"><h1 class="lo-hero__title">Progressives</h1><div class="lo-hero__subtitle"><p>See near and far without taking your glasses off.</p></div></div>
         <div class="lo-tabs"><button class="lo-tab lo-tab--active">All</button><button class="lo-tab">Best Sellers</button><button class="lo-tab">Narrow</button><button class="lo-tab">Medium</button><button class="lo-tab">Wide</button></div>
         <div class="lo-filters"><div class="lo-filters__left"><span class="lo-filters__label">Filter:</span><button class="lo-filter-btn">Color</button><button class="lo-filter-btn">Gender</button><button class="lo-filter-btn">Shape</button><button class="lo-filter-btn">Lens Type</button></div><span class="lo-filters__count"><span class="lo-filters__count-text">23 products</span></span></div>
-        <ul class="lo-grid"><li class="lo-card"><a href="https://www.lookoptic.com/products/cosmo-progressives" class="lo-card__link"><div class="lo-card__media">
+        <ul class="lo-grid"><li class="lo-card"><a href="#" class="lo-card__link"><div class="lo-card__media">
       <img class="lo-card__img1" src="../cdn/shop/files/layflat__cosmo_tortoise.png" alt="COSMO PROGRESSIVES" loading="lazy">
       <img class="lo-card__img2" src="../cdn/shop/files/cosmo_cosmo-readers_tortoise_002.png" alt="" loading="lazy">
     </div></a><div class="lo-card__body"><div class="lo-card__swatches">
@@ -1888,9 +1906,9 @@
 <span class="lo-swatch" title="Shiny Cinnamon" style="--sw-color:#8B4513;background-color:#8B4513;background-image:url('../cdn/shop/files/swatch-shiny-cinnamon.jpg');" data-img1="../cdn/shop/files/layflat__cosmo_shiny-cinnamon.png" data-img2="../cdn/shop/files/cosmo_cosmo-progressives_shiny-cinnamon_002.png" onclick="swapColor(this)"></span>
 <span class="lo-swatch" title="Shiny Grey Blue" style="--sw-color:#6B7F99;background-color:#6B7F99;background-image:url('../cdn/shop/files/swatch-shiny-grey-blue.jpg');" data-img1="../cdn/shop/files/layflat__cosmo_shiny-grey-blue.png" data-img2="../cdn/shop/files/cosmo_cosmo-progressives_shiny-grey-blue_002.png" onclick="swapColor(this)"></span>
 </div>
-    <h3 class="lo-card__title"><a href="https://www.lookoptic.com/products/cosmo-progressives">COSMO PROGRESSIVES</a></h3>
+    <h3 class="lo-card__title"><a href="#">COSMO PROGRESSIVES</a></h3>
     <div class="lo-card__rating"><span class="lo-stars"><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span><span class="lo-review-count">(4,455)</span></div></div></li>
-<li class="lo-card"><a href="https://www.lookoptic.com/products/laurel-progressives" class="lo-card__link"><div class="lo-card__media">
+<li class="lo-card"><a href="#" class="lo-card__link"><div class="lo-card__media">
       <img class="lo-card__img1" src="../cdn/shop/files/layflat__laurel_champagne.png" alt="LAUREL PROGRESSIVES" loading="lazy">
       <img class="lo-card__img2" src="../cdn/shop/files/laurel_laurel-readers_champagne_002.png" alt="" loading="lazy">
     </div></a><div class="lo-card__body"><div class="lo-card__swatches">
@@ -1902,9 +1920,9 @@
 <span class="lo-swatch" title="Shiny Cinnamon" style="--sw-color:#8B4513;background-color:#8B4513;background-image:url('../cdn/shop/files/swatch-shiny-cinnamon.jpg');" data-img1="../cdn/shop/files/layflat__laurel_shiny-cinnamon.png" data-img2="../cdn/shop/files/laurel_laurel-progressives_shiny-cinnamon_002.png" onclick="swapColor(this)"></span>
 <span class="lo-swatch" title="Shiny Espresso" style="--sw-color:#3C1414;background-color:#3C1414;background-image:url('../cdn/shop/files/swatch-shiny-espresso.jpg');" data-img1="../cdn/shop/files/layflat__laurel_shiny-espresso.png" data-img2="../cdn/shop/files/laurel_laurel-progressives_shiny-espresso_002.png" onclick="swapColor(this)"></span>
 </div>
-    <h3 class="lo-card__title"><a href="https://www.lookoptic.com/products/laurel-progressives">LAUREL PROGRESSIVES</a></h3>
+    <h3 class="lo-card__title"><a href="#">LAUREL PROGRESSIVES</a></h3>
     <div class="lo-card__rating"><span class="lo-stars"><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span><span class="lo-review-count">(2,528)</span></div></div></li>
-<li class="lo-card"><a href="https://www.lookoptic.com/products/muse-progressives" class="lo-card__link"><div class="lo-card__media">
+<li class="lo-card"><a href="#" class="lo-card__link"><div class="lo-card__media">
       <img class="lo-card__img1" src="../cdn/shop/files/layflat__muse_gold.png" alt="MUSE PROGRESSIVES" loading="lazy">
       <img class="lo-card__img2" src="../cdn/shop/files/muse_muse-progressives_gold_002.png" alt="" loading="lazy">
     </div></a><div class="lo-card__body"><div class="lo-card__swatches">
@@ -1914,9 +1932,9 @@
 <span class="lo-swatch" title="Shiny Rose Gold" style="--sw-color:#B76E79;background-color:#B76E79;background-image:url('../cdn/shop/files/swatch-shiny-rose-gold.jpg');" data-img1="../cdn/shop/files/layflat__muse_shiny-rose-gold.png" data-img2="../cdn/shop/files/muse_muse-progressives_shiny-rose-gold_002.png" onclick="swapColor(this)"></span>
 <span class="lo-swatch" title="Shiny Rose Gold Brown Gradient Tint" style="--sw-color:#B76E79;background-color:#B76E79;background-image:url('../cdn/shop/files/swatch-shiny-rose-gold-brown-gradient-tint.jpg');" data-img1="../cdn/shop/files/layflat__muse_shiny-rose-gold-brown-gradient-tint.png" data-img2="../cdn/shop/files/muse_muse-progressives_shiny-rose-gold-brown-gradient-tint_002.png" onclick="swapColor(this)"></span>
 </div>
-    <h3 class="lo-card__title"><a href="https://www.lookoptic.com/products/muse-progressives">MUSE PROGRESSIVES</a></h3>
+    <h3 class="lo-card__title"><a href="#">MUSE PROGRESSIVES</a></h3>
     <div class="lo-card__rating"><span class="lo-stars"><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span><span class="lo-review-count">(1,696)</span></div></div></li>
-<li class="lo-card"><a href="https://www.lookoptic.com/products/davis-progressives" class="lo-card__link"><div class="lo-card__media">
+<li class="lo-card"><a href="#" class="lo-card__link"><div class="lo-card__media">
       <img class="lo-card__img1" src="../cdn/shop/files/layflat__davis_shiny-black.png" alt="DAVIS PROGRESSIVES" loading="lazy">
       <img class="lo-card__img2" src="../cdn/shop/files/davis_davis-progressives_shiny-black_002.png" alt="" loading="lazy">
     </div></a><div class="lo-card__body"><div class="lo-card__swatches">
@@ -1926,9 +1944,9 @@
 <span class="lo-swatch" title="Shiny Espresso Orange Tint" style="--sw-color:#3C1414;background-color:#3C1414;background-image:url('../cdn/shop/files/swatch-shiny-espresso-orange-tint.jpg');" data-img1="../cdn/shop/files/layflat__davis_shiny-espresso-orange-tint.png" data-img2="../cdn/shop/files/davis_davis-progressives_shiny-espresso-orange-tint_002.png" onclick="swapColor(this)"></span>
 <span class="lo-swatch" title="Champagne" style="--sw-color:#D4C5A9;background-color:#D4C5A9;background-image:url('../cdn/shop/files/swatch-champagne.jpg');" data-img1="../cdn/shop/files/layflat__davis_champagne.png" data-img2="../cdn/shop/files/davis_davis-progressives_champagne_002.png" onclick="swapColor(this)"></span>
 </div>
-    <h3 class="lo-card__title"><a href="https://www.lookoptic.com/products/davis-progressives">DAVIS PROGRESSIVES</a></h3>
+    <h3 class="lo-card__title"><a href="#">DAVIS PROGRESSIVES</a></h3>
     <div class="lo-card__rating"><span class="lo-stars"><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span><span class="lo-review-count">(8)</span></div></div></li>
-<li class="lo-card"><a href="https://www.lookoptic.com/products/evita-progressives" class="lo-card__link"><div class="lo-card__media">
+<li class="lo-card"><a href="#" class="lo-card__link"><div class="lo-card__media">
       <img class="lo-card__img1" src="../cdn/shop/files/layflat__evita_shiny-pink.png" alt="EVITA PROGRESSIVES" loading="lazy">
       <img class="lo-card__img2" src="../cdn/shop/files/evita_evita-progressives_shiny-pink_002.png" alt="" loading="lazy">
     </div></a><div class="lo-card__body"><div class="lo-card__swatches">
@@ -1940,9 +1958,9 @@
 <span class="lo-swatch" title="Lake Blue" style="--sw-color:#4682B4;background-color:#4682B4;background-image:url('../cdn/shop/files/swatch-lake-blue.jpg');" data-img1="../cdn/shop/files/layflat__evita_lake-blue.png" data-img2="../cdn/shop/files/evita_evita-progressives_lake-blue_002.png" onclick="swapColor(this)"></span>
 <span class="lo-swatch" title="Taupe" style="--sw-color:#8B7D6B;background-color:#8B7D6B;background-image:url('../cdn/shop/files/swatch-taupe.jpg');" data-img1="../cdn/shop/files/layflat__evita_taupe.png" data-img2="../cdn/shop/files/evita_evita-progressives_taupe_002.png" onclick="swapColor(this)"></span>
 </div>
-    <h3 class="lo-card__title"><a href="https://www.lookoptic.com/products/evita-progressives">EVITA PROGRESSIVES</a></h3>
+    <h3 class="lo-card__title"><a href="#">EVITA PROGRESSIVES</a></h3>
     <div class="lo-card__rating"><span class="lo-stars"><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span><span class="lo-review-count">(348)</span></div></div></li>
-<li class="lo-card"><a href="https://www.lookoptic.com/products/liam-progressives" class="lo-card__link"><div class="lo-card__media">
+<li class="lo-card"><a href="#" class="lo-card__link"><div class="lo-card__media">
       <img class="lo-card__img1" src="../cdn/shop/files/layflat__liam_black.png" alt="LIAM PROGRESSIVES" loading="lazy">
       <img class="lo-card__img2" src="../cdn/shop/files/liam_liam-readers_black_002.png" alt="" loading="lazy">
     </div></a><div class="lo-card__body"><div class="lo-card__swatches">
@@ -1952,9 +1970,9 @@
 <span class="lo-swatch" title="Shiny Aqua" style="--sw-color:#7FCDCD;background-color:#7FCDCD;background-image:url('../cdn/shop/files/swatch-shiny-aqua.jpg');" data-img1="../cdn/shop/files/layflat__liam_shiny-aqua.png" data-img2="../cdn/shop/files/liam_liam-progressives_shiny-aqua_002.png" onclick="swapColor(this)"></span>
 <span class="lo-swatch" title="Shiny Bottle Green" style="--sw-color:#006A4E;background-color:#006A4E;background-image:url('../cdn/shop/files/swatch-shiny-bottle-green.jpg');" data-img1="../cdn/shop/files/layflat__liam_shiny-bottle-green.png" data-img2="../cdn/shop/files/liam_liam-progressives_shiny-bottle-green_002.png" onclick="swapColor(this)"></span>
 </div>
-    <h3 class="lo-card__title"><a href="https://www.lookoptic.com/products/liam-progressives">LIAM PROGRESSIVES</a></h3>
+    <h3 class="lo-card__title"><a href="#">LIAM PROGRESSIVES</a></h3>
     <div class="lo-card__rating"><span class="lo-stars"><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span><span class="lo-review-count">(426)</span></div></div></li>
-<li class="lo-card"><a href="https://www.lookoptic.com/products/keaton-progressives" class="lo-card__link"><div class="lo-card__media">
+<li class="lo-card"><a href="#" class="lo-card__link"><div class="lo-card__media">
       <img class="lo-card__img1" src="../cdn/shop/files/layflat__keaton_shiny-forest-green.png" alt="KEATON PROGRESSIVES" loading="lazy">
       <img class="lo-card__img2" src="../cdn/shop/files/keaton_keaton-progressives_shiny-forest-green_002.png" alt="" loading="lazy">
     </div></a><div class="lo-card__body"><div class="lo-card__swatches">
@@ -1964,9 +1982,9 @@
 <span class="lo-swatch" title="Taupe" style="--sw-color:#8B7D6B;background-color:#8B7D6B;background-image:url('../cdn/shop/files/swatch-taupe.jpg');" data-img1="../cdn/shop/files/layflat__keaton_taupe.png" data-img2="../cdn/shop/files/keaton_keaton-progressives_taupe_002.png" onclick="swapColor(this)"></span>
 <span class="lo-swatch" title="Tortoise" style="--sw-color:#8B6914;background-color:#8B6914;background-image:url('../cdn/shop/files/swatch-tortoise.jpg');" data-img1="../cdn/shop/files/layflat__keaton_tortoise.png" data-img2="../cdn/shop/files/keaton_keaton-progressives_tortoise_002.png" onclick="swapColor(this)"></span>
 </div>
-    <h3 class="lo-card__title"><a href="https://www.lookoptic.com/products/keaton-progressives">KEATON PROGRESSIVES</a></h3>
+    <h3 class="lo-card__title"><a href="#">KEATON PROGRESSIVES</a></h3>
     <div class="lo-card__rating"><span class="lo-stars"><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span><span class="lo-review-count">(349)</span></div></div></li>
-<li class="lo-card"><a href="https://www.lookoptic.com/products/linda-progressives" class="lo-card__link"><div class="lo-card__media">
+<li class="lo-card"><a href="#" class="lo-card__link"><div class="lo-card__media">
       <img class="lo-card__img1" src="../cdn/shop/files/layflat__linda_shiny-vintage-tortoise.png" alt="LINDA PROGRESSIVES" loading="lazy">
       <img class="lo-card__img2" src="../cdn/shop/files/linda_linda-progressives_shiny-vintage-tortoise_002.png" alt="" loading="lazy">
     </div></a><div class="lo-card__body"><div class="lo-card__swatches">
@@ -1975,9 +1993,9 @@
 <span class="lo-swatch" title="Shiny Purple" style="--sw-color:#7B3F8D;background-color:#7B3F8D;background-image:url('../cdn/shop/files/swatch-shiny-purple.jpg');" data-img1="../cdn/shop/files/layflat__linda_shiny-purple.png" data-img2="../cdn/shop/files/linda_linda-progressives_shiny-purple_002.png" onclick="swapColor(this)"></span>
 <span class="lo-swatch" title="Shiny Honey" style="--sw-color:#DAA520;background-color:#DAA520;background-image:url('../cdn/shop/files/swatch-shiny-honey.jpg');" data-img1="../cdn/shop/files/layflat__linda_shiny-honey.png" data-img2="../cdn/shop/files/linda_linda-progressives_shiny-honey_002.png" onclick="swapColor(this)"></span>
 </div>
-    <h3 class="lo-card__title"><a href="https://www.lookoptic.com/products/linda-progressives">LINDA PROGRESSIVES</a></h3>
+    <h3 class="lo-card__title"><a href="#">LINDA PROGRESSIVES</a></h3>
     <div class="lo-card__rating"><span class="lo-stars"><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span><span class="lo-review-count">(37)</span></div></div></li>
-<li class="lo-card"><a href="https://www.lookoptic.com/products/uma-progressives" class="lo-card__link"><div class="lo-card__media">
+<li class="lo-card"><a href="#" class="lo-card__link"><div class="lo-card__media">
       <img class="lo-card__img1" src="../cdn/shop/files/layflat__uma_shiny-vintage-tortoise.png" alt="UMA PROGRESSIVES" loading="lazy">
       <img class="lo-card__img2" src="../cdn/shop/files/uma_uma-readers_shiny-vintage-tortoise_002.png" alt="" loading="lazy">
     </div></a><div class="lo-card__body"><div class="lo-card__swatches">
@@ -1985,9 +2003,9 @@
 <span class="lo-swatch" title="Shiny Black" style="--sw-color:#1a1a1a;background-color:#1a1a1a;background-image:url('../cdn/shop/files/swatch-shiny-black.jpg');" data-img1="../cdn/shop/files/layflat__uma_shiny-black.png" data-img2="../cdn/shop/files/uma_uma-readers_shiny-black_002.png" onclick="swapColor(this)"></span>
 <span class="lo-swatch" title="Shiny Rose" style="--sw-color:#C27083;background-color:#C27083;background-image:url('../cdn/shop/files/swatch-shiny-rose.jpg');" data-img1="../cdn/shop/files/layflat__uma_shiny-rose.png" data-img2="../cdn/shop/files/uma_uma-readers_shiny-rose_002.png" onclick="swapColor(this)"></span>
 </div>
-    <h3 class="lo-card__title"><a href="https://www.lookoptic.com/products/uma-progressives">UMA PROGRESSIVES</a></h3>
+    <h3 class="lo-card__title"><a href="#">UMA PROGRESSIVES</a></h3>
     <div class="lo-card__rating"><span class="lo-stars"><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span><span class="lo-review-count">(182)</span></div></div></li>
-<li class="lo-card"><a href="https://www.lookoptic.com/products/cooper-progressives" class="lo-card__link"><div class="lo-card__media">
+<li class="lo-card"><a href="#" class="lo-card__link"><div class="lo-card__media">
       <img class="lo-card__img1" src="../cdn/shop/files/layflat__cooper_gold-pink-tint.png" alt="COOPER PROGRESSIVES" loading="lazy">
       <img class="lo-card__img2" src="../cdn/shop/files/cooper_cooper-progressives_gold-pink-tint_002.png" alt="" loading="lazy">
     </div></a><div class="lo-card__body"><div class="lo-card__swatches">
@@ -1995,9 +2013,9 @@
 <span class="lo-swatch" title="Gold" style="--sw-color:#C5A55A;background-color:#C5A55A;background-image:url('../cdn/shop/files/swatch-gold.jpg');" data-img1="../cdn/shop/files/layflat__cooper_gold.png" data-img2="../cdn/shop/files/cooper_cooper-progressives_gold_002.png" onclick="swapColor(this)"></span>
 <span class="lo-swatch" title="Silver" style="--sw-color:#C0C0C0;background-color:#C0C0C0;background-image:url('../cdn/shop/files/swatch-silver.jpg');" data-img1="../cdn/shop/files/layflat__cooper_silver.png" data-img2="../cdn/shop/files/cooper_cooper-progressives_silver_002.png" onclick="swapColor(this)"></span>
 </div>
-    <h3 class="lo-card__title"><a href="https://www.lookoptic.com/products/cooper-progressives">COOPER PROGRESSIVES</a></h3>
+    <h3 class="lo-card__title"><a href="#">COOPER PROGRESSIVES</a></h3>
     <div class="lo-card__rating"><span class="lo-stars"><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span><span class="lo-review-count">(458)</span></div></div></li>
-<li class="lo-card"><a href="https://www.lookoptic.com/products/abbey-progressives" class="lo-card__link"><div class="lo-card__media">
+<li class="lo-card"><a href="#" class="lo-card__link"><div class="lo-card__media">
       <img class="lo-card__img1" src="../cdn/shop/files/layflat__abbey_tortoise.png" alt="ABBEY PROGRESSIVES" loading="lazy">
       <img class="lo-card__img2" src="../cdn/shop/files/abbey_abbey-readers_tortoise_002.png" alt="" loading="lazy">
     </div></a><div class="lo-card__body"><div class="lo-card__swatches">
@@ -2005,9 +2023,9 @@
 <span class="lo-swatch" title="Navy" style="--sw-color:#1B2951;background-color:#1B2951;background-image:url('../cdn/shop/files/swatch-navy.jpg');" data-img1="../cdn/shop/files/layflat__abbey_navy.png" data-img2="../cdn/shop/files/abbey_abbey-progressives_navy_002.png" onclick="swapColor(this)"></span>
 <span class="lo-swatch" title="Black" style="--sw-color:#1a1a1a;background-color:#1a1a1a;background-image:url('../cdn/shop/files/swatch-black.jpg');" data-img1="../cdn/shop/files/layflat__abbey_black.png" data-img2="../cdn/shop/files/abbey_abbey-progressives_black_002.png" onclick="swapColor(this)"></span>
 </div>
-    <h3 class="lo-card__title"><a href="https://www.lookoptic.com/products/abbey-progressives">ABBEY PROGRESSIVES</a></h3>
+    <h3 class="lo-card__title"><a href="#">ABBEY PROGRESSIVES</a></h3>
     <div class="lo-card__rating"><span class="lo-stars"><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span><span class="lo-review-count">(921)</span></div></div></li>
-<li class="lo-card"><a href="https://www.lookoptic.com/products/sullivan-progressives" class="lo-card__link"><div class="lo-card__media">
+<li class="lo-card"><a href="#" class="lo-card__link"><div class="lo-card__media">
       <img class="lo-card__img1" src="../cdn/shop/files/layflat__sullivan_tortoise.png" alt="SULLIVAN PROGRESSIVES" loading="lazy">
       <img class="lo-card__img2" src="../cdn/shop/files/sullivan_sullivan-progressives_tortoise_002.png" alt="" loading="lazy">
     </div></a><div class="lo-card__body"><div class="lo-card__swatches">
@@ -2016,9 +2034,9 @@
 <span class="lo-swatch" title="Taupe" style="--sw-color:#8B7D6B;background-color:#8B7D6B;background-image:url('../cdn/shop/files/swatch-taupe.jpg');" data-img1="../cdn/shop/files/layflat__sullivan_taupe.png" data-img2="../cdn/shop/files/sullivan_sullivan-progressives_taupe_002.png" onclick="swapColor(this)"></span>
 <span class="lo-swatch" title="Black" style="--sw-color:#1a1a1a;background-color:#1a1a1a;background-image:url('../cdn/shop/files/swatch-black.jpg');" data-img1="../cdn/shop/files/layflat__sullivan_black.png" data-img2="../cdn/shop/files/sullivan_sullivan-progressives_black_002.png" onclick="swapColor(this)"></span>
 </div>
-    <h3 class="lo-card__title"><a href="https://www.lookoptic.com/products/sullivan-progressives">SULLIVAN PROGRESSIVES</a></h3>
+    <h3 class="lo-card__title"><a href="#">SULLIVAN PROGRESSIVES</a></h3>
     <div class="lo-card__rating"><span class="lo-stars"><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span><span class="lo-review-count">(759)</span></div></div></li>
-<li class="lo-card"><a href="https://www.lookoptic.com/products/kaine-progressives" class="lo-card__link"><div class="lo-card__media">
+<li class="lo-card"><a href="#" class="lo-card__link"><div class="lo-card__media">
       <img class="lo-card__img1" src="../cdn/shop/files/layflat__kaine_tortoise.png" alt="KAINE PROGRESSIVES" loading="lazy">
       <img class="lo-card__img2" src="../cdn/shop/files/kaine_kaine-progressives_tortoise_002.png" alt="" loading="lazy">
     </div></a><div class="lo-card__body"><div class="lo-card__swatches">
@@ -2027,9 +2045,9 @@
 <span class="lo-swatch" title="Shiny Espresso" style="--sw-color:#3C1414;background-color:#3C1414;background-image:url('../cdn/shop/files/swatch-shiny-espresso.jpg');" data-img1="../cdn/shop/files/layflat__kaine_shiny-espresso.png" data-img2="../cdn/shop/files/kaine_kaine-readers_shiny-espresso_002.png" onclick="swapColor(this)"></span>
 <span class="lo-swatch" title="Shiny Navy" style="--sw-color:#1B2951;background-color:#1B2951;background-image:url('../cdn/shop/files/swatch-shiny-navy.jpg');" data-img1="../cdn/shop/files/layflat__kaine_shiny-navy.png" data-img2="../cdn/shop/files/kaine_kaine-readers_shiny-navy_002.png" onclick="swapColor(this)"></span>
 </div>
-    <h3 class="lo-card__title"><a href="https://www.lookoptic.com/products/kaine-progressives">KAINE PROGRESSIVES</a></h3>
+    <h3 class="lo-card__title"><a href="#">KAINE PROGRESSIVES</a></h3>
     <div class="lo-card__rating"><span class="lo-stars"><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span><span class="lo-review-count">(240)</span></div></div></li>
-<li class="lo-card"><a href="https://www.lookoptic.com/products/cosmo-sun-progressives" class="lo-card__link"><div class="lo-card__media">
+<li class="lo-card"><a href="#" class="lo-card__link"><div class="lo-card__media">
       <img class="lo-card__img1" src="../cdn/shop/files/layflat__cosmo-sun_black.png" alt="COSMO SUN PROGRESSIVES" loading="lazy">
       <img class="lo-card__img2" src="../cdn/shop/files/cosmo_cosmo-sun-progressives_black_002.png" alt="" loading="lazy">
     </div></a><div class="lo-card__body"><div class="lo-card__swatches">
@@ -2037,18 +2055,18 @@
 <span class="lo-swatch" title="Taupe" style="--sw-color:#8B7D6B;background-color:#8B7D6B;background-image:url('../cdn/shop/files/swatch-taupe.jpg');" data-img1="../cdn/shop/files/layflat__cosmo-sun_taupe.png" data-img2="../cdn/shop/files/cosmo_cosmo-sun-progressives_taupe_002.png" onclick="swapColor(this)"></span>
 <span class="lo-swatch" title="Tortoise" style="--sw-color:#8B6914;background-color:#8B6914;background-image:url('../cdn/shop/files/swatch-tortoise.jpg');" data-img1="../cdn/shop/files/layflat__cosmo-sun_tortoise.png" data-img2="../cdn/shop/files/cosmo_cosmo-readers_tortoise_002.png" onclick="swapColor(this)"></span>
 </div>
-    <h3 class="lo-card__title"><a href="https://www.lookoptic.com/products/cosmo-sun-progressives">COSMO SUN PROGRESSIVES</a></h3>
+    <h3 class="lo-card__title"><a href="#">COSMO SUN PROGRESSIVES</a></h3>
     <div class="lo-card__rating"><span class="lo-stars"><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span><span class="lo-review-count">(4,455)</span></div></div></li>
-<li class="lo-card"><a href="https://www.lookoptic.com/products/linda-sun-progressives" class="lo-card__link"><div class="lo-card__media">
+<li class="lo-card"><a href="#" class="lo-card__link"><div class="lo-card__media">
       <img class="lo-card__img1" src="../cdn/shop/files/layflat__linda-sun_shiny-honey.png" alt="LINDA SUN PROGRESSIVES" loading="lazy">
       <img class="lo-card__img2" src="../cdn/shop/files/linda_linda-sun-progressives_shiny-honey_002.png" alt="" loading="lazy">
     </div></a><div class="lo-card__body"><div class="lo-card__swatches">
 <span class="lo-swatch lo-swatch--active" title="Shiny Honey" style="--sw-color:#DAA520;background-color:#DAA520;background-image:url('../cdn/shop/files/swatch-shiny-honey.jpg');" data-img1="../cdn/shop/files/layflat__linda-sun_shiny-honey.png" data-img2="../cdn/shop/files/linda_linda-sun-progressives_shiny-honey_002.png" onclick="swapColor(this)"></span>
 <span class="lo-swatch" title="Shiny Forest Green" style="--sw-color:#228B22;background-color:#228B22;background-image:url('../cdn/shop/files/swatch-shiny-forest-green.jpg');" data-img1="../cdn/shop/files/layflat__linda-sun_shiny-forest-green.png" data-img2="../cdn/shop/files/linda_linda-sun-progressives_shiny-forest-green_002.png" onclick="swapColor(this)"></span>
 </div>
-    <h3 class="lo-card__title"><a href="https://www.lookoptic.com/products/linda-sun-progressives">LINDA SUN PROGRESSIVES</a></h3>
+    <h3 class="lo-card__title"><a href="#">LINDA SUN PROGRESSIVES</a></h3>
     <div class="lo-card__rating"><span class="lo-stars"><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span><span class="lo-review-count">(37)</span></div></div></li>
-<li class="lo-card"><a href="https://www.lookoptic.com/products/laurel-sun-progressives" class="lo-card__link"><div class="lo-card__media">
+<li class="lo-card"><a href="#" class="lo-card__link"><div class="lo-card__media">
       <img class="lo-card__img1" src="../cdn/shop/files/layflat__laurel-sun_champagne.png" alt="LAUREL SUN PROGRESSIVES" loading="lazy">
       <img class="lo-card__img2" src="../cdn/shop/files/laurel_laurel-sun-progressives_champagne_002.png" alt="" loading="lazy">
     </div></a><div class="lo-card__body"><div class="lo-card__swatches">
@@ -2056,18 +2074,18 @@
 <span class="lo-swatch" title="Tortoise" style="--sw-color:#8B6914;background-color:#8B6914;background-image:url('../cdn/shop/files/swatch-tortoise.jpg');" data-img1="../cdn/shop/files/layflat__laurel-sun_tortoise.png" data-img2="../cdn/shop/files/laurel_laurel-readers_tortoise_002.png" onclick="swapColor(this)"></span>
 <span class="lo-swatch" title="Navy" style="--sw-color:#1B2951;background-color:#1B2951;background-image:url('../cdn/shop/files/swatch-navy.jpg');" data-img1="../cdn/shop/files/layflat__laurel-sun_navy.png" data-img2="../cdn/shop/files/laurel_laurel-sun-progressives_navy_002.png" onclick="swapColor(this)"></span>
 </div>
-    <h3 class="lo-card__title"><a href="https://www.lookoptic.com/products/laurel-sun-progressives">LAUREL SUN PROGRESSIVES</a></h3>
+    <h3 class="lo-card__title"><a href="#">LAUREL SUN PROGRESSIVES</a></h3>
     <div class="lo-card__rating"><span class="lo-stars"><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span><span class="lo-review-count">(2,528)</span></div></div></li>
-<li class="lo-card"><a href="https://www.lookoptic.com/products/muse-sun-progressives" class="lo-card__link"><div class="lo-card__media">
+<li class="lo-card"><a href="#" class="lo-card__link"><div class="lo-card__media">
       <img class="lo-card__img1" src="../cdn/shop/files/layflat__muse-sun_silver.png" alt="MUSE SUN PROGRESSIVES" loading="lazy">
       <img class="lo-card__img2" src="../cdn/shop/files/muse_muse-sun-progressives_silver_002.png" alt="" loading="lazy">
     </div></a><div class="lo-card__body"><div class="lo-card__swatches">
 <span class="lo-swatch lo-swatch--active" title="Silver" style="--sw-color:#C0C0C0;background-color:#C0C0C0;background-image:url('../cdn/shop/files/swatch-silver.jpg');" data-img1="../cdn/shop/files/layflat__muse-sun_silver.png" data-img2="../cdn/shop/files/muse_muse-sun-progressives_silver_002.png" onclick="swapColor(this)"></span>
 <span class="lo-swatch" title="Gold" style="--sw-color:#C5A55A;background-color:#C5A55A;background-image:url('../cdn/shop/files/swatch-gold.jpg');" data-img1="../cdn/shop/files/layflat__muse-sun_gold.png" data-img2="../cdn/shop/files/muse_muse-sun-progressives_gold_002.png" onclick="swapColor(this)"></span>
 </div>
-    <h3 class="lo-card__title"><a href="https://www.lookoptic.com/products/muse-sun-progressives">MUSE SUN PROGRESSIVES</a></h3>
+    <h3 class="lo-card__title"><a href="#">MUSE SUN PROGRESSIVES</a></h3>
     <div class="lo-card__rating"><span class="lo-stars"><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span><span class="lo-review-count">(1,696)</span></div></div></li>
-<li class="lo-card"><a href="https://www.lookoptic.com/products/kaine-sun-progressives" class="lo-card__link"><div class="lo-card__media">
+<li class="lo-card"><a href="#" class="lo-card__link"><div class="lo-card__media">
       <img class="lo-card__img1" src="../cdn/shop/files/layflat__kaine-sun_tortoise.png" alt="KAINE SUN PROGRESSIVES" loading="lazy">
       <img class="lo-card__img2" src="../cdn/shop/files/kaine_kaine-sun-progressives_tortoise_002.png" alt="" loading="lazy">
     </div></a><div class="lo-card__body"><div class="lo-card__swatches">
@@ -2075,9 +2093,9 @@
 <span class="lo-swatch" title="Shiny Navy" style="--sw-color:#1B2951;background-color:#1B2951;background-image:url('../cdn/shop/files/swatch-shiny-navy.jpg');" data-img1="../cdn/shop/files/layflat__kaine-sun_shiny-navy.png" data-img2="../cdn/shop/files/kaine_kaine-sun-progressives_shiny-navy_002.png" onclick="swapColor(this)"></span>
 <span class="lo-swatch" title="Shiny Bone" style="--sw-color:#E3DAC9;background-color:#E3DAC9;background-image:url('../cdn/shop/files/swatch-shiny-bone.jpg');" data-img1="../cdn/shop/files/layflat__kaine-sun_shiny-bone.png" data-img2="../cdn/shop/files/kaine_kaine-sun-progressives_shiny-bone_002.png" onclick="swapColor(this)"></span>
 </div>
-    <h3 class="lo-card__title"><a href="https://www.lookoptic.com/products/kaine-sun-progressives">KAINE SUN PROGRESSIVES</a></h3>
+    <h3 class="lo-card__title"><a href="#">KAINE SUN PROGRESSIVES</a></h3>
     <div class="lo-card__rating"><span class="lo-stars"><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span><span class="lo-review-count">(240)</span></div></div></li>
-<li class="lo-card"><a href="https://www.lookoptic.com/products/uma-sun-progressives" class="lo-card__link"><div class="lo-card__media">
+<li class="lo-card"><a href="#" class="lo-card__link"><div class="lo-card__media">
       <img class="lo-card__img1" src="../cdn/shop/files/layflat__uma-sun_shiny-rose.png" alt="UMA SUN PROGRESSIVES" loading="lazy">
       <img class="lo-card__img2" src="../cdn/shop/files/uma_uma-sun-progressives_shiny-rose_002.png" alt="" loading="lazy">
     </div></a><div class="lo-card__body"><div class="lo-card__swatches">
@@ -2085,9 +2103,9 @@
 <span class="lo-swatch" title="Shiny Vintage Tortoise" style="--sw-color:#8B7355;background-color:#8B7355;background-image:url('../cdn/shop/files/swatch-shiny-vintage-tortoise.jpg');" data-img1="../cdn/shop/files/layflat__uma-sun_shiny-vintage-tortoise.png" data-img2="../cdn/shop/files/uma_uma-sun-progressives_shiny-vintage-tortoise_002.png" onclick="swapColor(this)"></span>
 <span class="lo-swatch" title="Shiny Black" style="--sw-color:#1a1a1a;background-color:#1a1a1a;background-image:url('../cdn/shop/files/swatch-shiny-black.jpg');" data-img1="../cdn/shop/files/layflat__uma-sun_shiny-black.png" data-img2="../cdn/shop/files/uma_uma-sun-progressives_shiny-black_002.png" onclick="swapColor(this)"></span>
 </div>
-    <h3 class="lo-card__title"><a href="https://www.lookoptic.com/products/uma-sun-progressives">UMA SUN PROGRESSIVES</a></h3>
+    <h3 class="lo-card__title"><a href="#">UMA SUN PROGRESSIVES</a></h3>
     <div class="lo-card__rating"><span class="lo-stars"><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span><span class="lo-review-count">(615)</span></div></div></li>
-<li class="lo-card"><a href="https://www.lookoptic.com/products/liam-sun-progressives" class="lo-card__link"><div class="lo-card__media">
+<li class="lo-card"><a href="#" class="lo-card__link"><div class="lo-card__media">
       <img class="lo-card__img1" src="../cdn/shop/files/layflat__liam-sun_tortoise.png" alt="LIAM SUN PROGRESSIVES" loading="lazy">
       <img class="lo-card__img2" src="../cdn/shop/files/liam_liam-sun-progressives_tortoise_002.png" alt="" loading="lazy">
     </div></a><div class="lo-card__body"><div class="lo-card__swatches">
@@ -2095,34 +2113,34 @@
 <span class="lo-swatch" title="Black" style="--sw-color:#1a1a1a;background-color:#1a1a1a;background-image:url('../cdn/shop/files/swatch-black.jpg');" data-img1="../cdn/shop/files/layflat__liam-sun_black.png" data-img2="../cdn/shop/files/liam_liam-sun-progressives_black_002.png" onclick="swapColor(this)"></span>
 <span class="lo-swatch" title="Shiny Aqua" style="--sw-color:#00CED1;background-color:#00CED1;background-image:url('../cdn/shop/files/swatch-shiny-aqua.jpg');" data-img1="../cdn/shop/files/layflat__liam-sun_shiny-aqua.png" data-img2="../cdn/shop/files/liam_liam-sun-progressives_shiny-aqua_002.png" onclick="swapColor(this)"></span>
 </div>
-    <h3 class="lo-card__title"><a href="https://www.lookoptic.com/products/liam-sun-progressives">LIAM SUN PROGRESSIVES</a></h3>
+    <h3 class="lo-card__title"><a href="#">LIAM SUN PROGRESSIVES</a></h3>
     <div class="lo-card__rating"><span class="lo-stars"><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span><span class="lo-review-count">(1350)</span></div></div></li>
-<li class="lo-card"><a href="https://www.lookoptic.com/products/sullivan-sun-progressives" class="lo-card__link"><div class="lo-card__media">
+<li class="lo-card"><a href="#" class="lo-card__link"><div class="lo-card__media">
       <img class="lo-card__img1" src="../cdn/shop/files/layflat__sullivan-sun_taupe.png" alt="SULLIVAN SUN PROGRESSIVES" loading="lazy">
       <img class="lo-card__img2" src="../cdn/shop/files/sullivan_sullivan-sun-progressives_taupe_002.png" alt="" loading="lazy">
     </div></a><div class="lo-card__body"><div class="lo-card__swatches">
 <span class="lo-swatch lo-swatch--active" title="Taupe" style="--sw-color:#8B7D6B;background-color:#8B7D6B;background-image:url('../cdn/shop/files/swatch-taupe.jpg');" data-img1="../cdn/shop/files/layflat__sullivan-sun_taupe.png" data-img2="../cdn/shop/files/sullivan_sullivan-sun-progressives_taupe_002.png" onclick="swapColor(this)"></span>
 <span class="lo-swatch" title="Navy" style="--sw-color:#1B2951;background-color:#1B2951;background-image:url('../cdn/shop/files/swatch-navy.jpg');" data-img1="../cdn/shop/files/layflat__sullivan-sun_navy.png" data-img2="../cdn/shop/files/sullivan_sullivan-sun-progressives_navy_002.png" onclick="swapColor(this)"></span>
 </div>
-    <h3 class="lo-card__title"><a href="https://www.lookoptic.com/products/sullivan-sun-progressives">SULLIVAN SUN PROGRESSIVES</a></h3>
+    <h3 class="lo-card__title"><a href="#">SULLIVAN SUN PROGRESSIVES</a></h3>
     <div class="lo-card__rating"><span class="lo-stars"><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span><span class="lo-review-count">(759)</span></div></div></li>
-<li class="lo-card"><a href="https://www.lookoptic.com/products/lois-sun-progressives" class="lo-card__link"><div class="lo-card__media">
+<li class="lo-card"><a href="#" class="lo-card__link"><div class="lo-card__media">
       <img class="lo-card__img1" src="../cdn/shop/files/layflat__lois-sun_shiny-jade.png" alt="LOIS SUN PROGRESSIVES" loading="lazy">
       <img class="lo-card__img2" src="../cdn/shop/files/lois_lois-sun_shiny-jade_002.png" alt="" loading="lazy">
     </div></a><div class="lo-card__body"><div class="lo-card__swatches">
 <span class="lo-swatch lo-swatch--active" title="Shiny Jade" style="--sw-color:#00A86B;background-color:#00A86B;background-image:url('../cdn/shop/files/swatch-shiny-jade.jpg');" data-img1="../cdn/shop/files/layflat__lois-sun_shiny-jade.png" data-img2="../cdn/shop/files/lois_lois-sun_shiny-jade_002.png" onclick="swapColor(this)"></span>
 <span class="lo-swatch" title="Shiny Vintage Tortoise" style="--sw-color:#8B7355;background-color:#8B7355;background-image:url('../cdn/shop/files/swatch-shiny-vintage-tortoise.jpg');" data-img1="../cdn/shop/files/layflat__lois-sun_shiny-vintage-tortoise.png" data-img2="../cdn/shop/files/lois_lois-sun_shiny-vintage-tortoise_002.png" onclick="swapColor(this)"></span>
 </div>
-    <h3 class="lo-card__title"><a href="https://www.lookoptic.com/products/lois-sun-progressives">LOIS SUN PROGRESSIVES</a></h3>
+    <h3 class="lo-card__title"><a href="#">LOIS SUN PROGRESSIVES</a></h3>
     <div class="lo-card__rating"><span class="lo-stars"><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span><span class="lo-review-count">(184)</span></div></div></li>
-<li class="lo-card"><a href="https://www.lookoptic.com/products/abbey-sun-progressives" class="lo-card__link"><div class="lo-card__media">
+<li class="lo-card"><a href="#" class="lo-card__link"><div class="lo-card__media">
       <img class="lo-card__img1" src="../cdn/shop/files/layflat__abbey-sun_tortoise.png" alt="ABBEY SUN PROGRESSIVES" loading="lazy">
       <img class="lo-card__img2" src="../cdn/shop/files/abbey_abbey-sun-progressives_tortoise_002.png" alt="" loading="lazy">
     </div></a><div class="lo-card__body"><div class="lo-card__swatches">
 <span class="lo-swatch lo-swatch--active" title="Tortoise" style="--sw-color:#8B6914;background-color:#8B6914;background-image:url('../cdn/shop/files/swatch-tortoise.jpg');" data-img1="../cdn/shop/files/layflat__abbey-sun_tortoise.png" data-img2="../cdn/shop/files/abbey_abbey-sun-progressives_tortoise_002.png" onclick="swapColor(this)"></span>
 <span class="lo-swatch" title="Shiny Aqua" style="--sw-color:#00CED1;background-color:#00CED1;background-image:url('../cdn/shop/files/swatch-shiny-aqua.jpg');" data-img1="../cdn/shop/files/layflat__abbey-sun_shiny-aqua.png" data-img2="../cdn/shop/files/abbey_abbey-sun-progressives_shiny-aqua_002.png" onclick="swapColor(this)"></span>
 </div>
-    <h3 class="lo-card__title"><a href="https://www.lookoptic.com/products/abbey-sun-progressives">ABBEY SUN PROGRESSIVES</a></h3>
+    <h3 class="lo-card__title"><a href="#">ABBEY SUN PROGRESSIVES</a></h3>
     <div class="lo-card__rating"><span class="lo-stars"><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="#333333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span><span class="lo-review-count">(921)</span></div></div></li>
 </ul>
 
@@ -2232,21 +2250,21 @@
 <footer id="footer" class="footer color-background-1 gradient">
   <div class="footer__content-top page-width"><div class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet "><div class="footer-block grid__item footer-block--menu"><h2 class="footer-block__heading h4">Product</h2><ul class="footer-block__details-content list-unstyled">
                           <li>
-                            <a href="https://www.lookoptic.com/pages/arod" class="link link--text list-menu__item list-menu__item--link">
+                            <a href="#" class="link link--text list-menu__item list-menu__item--link">
                               LOOK x Alex Rodriguez
                             </a>
                           </li>
                         
 
                           <li>
-                            <a href="https://www.lookoptic.com/pages/evita" class="link link--text list-menu__item list-menu__item--link">
+                            <a href="#" class="link link--text list-menu__item list-menu__item--link">
                               LOOK x Eva Mendes
                             </a>
                           </li>
                         
 
                           <li>
-                            <a href="https://www.lookoptic.com/pages/keaton" class="link link--text list-menu__item list-menu__item--link">
+                            <a href="#" class="link link--text list-menu__item list-menu__item--link">
                               LOOK x Diane Keaton
                             </a>
                           </li>
@@ -2260,7 +2278,7 @@
                         
 
                           <li>
-                            <a href="https://www.lookoptic.com/pages/men" class="link link--text list-menu__item list-menu__item--link">
+                            <a href="#" class="link link--text list-menu__item list-menu__item--link">
                               Men's
                             </a>
                           </li>
@@ -2288,7 +2306,7 @@
                         
 
                           <li>
-                            <a href="https://www.lookoptic.com/collections/sunglasses" class="link link--text list-menu__item list-menu__item--link">
+                            <a href="../collections/look-tints.html" class="link link--text list-menu__item list-menu__item--link">
                               Sunglasses
                             </a>
                           </li>
@@ -2302,49 +2320,49 @@
                         
 </ul></div><div class="footer-block grid__item footer-block--menu"><h2 class="footer-block__heading h4">Shapes</h2><ul class="footer-block__details-content list-unstyled">
                           <li>
-                            <a href="https://www.lookoptic.com/collections/round-shaped-frames-footer" class="link link--text list-menu__item list-menu__item--link">
+                            <a href="#" class="link link--text list-menu__item list-menu__item--link">
                               Round
                             </a>
                           </li>
                         
 
                           <li>
-                            <a href="https://www.lookoptic.com/collections/square-shaped-frames" class="link link--text list-menu__item list-menu__item--link">
+                            <a href="#" class="link link--text list-menu__item list-menu__item--link">
                               Square
                             </a>
                           </li>
                         
 
                           <li>
-                            <a href="https://www.lookoptic.com/collections/rectangle-shaped-frames" class="link link--text list-menu__item list-menu__item--link">
+                            <a href="#" class="link link--text list-menu__item list-menu__item--link">
                               Rectangle
                             </a>
                           </li>
                         
 
                           <li>
-                            <a href="https://www.lookoptic.com/collections/aviator-shaped-frames" class="link link--text list-menu__item list-menu__item--link">
+                            <a href="#" class="link link--text list-menu__item list-menu__item--link">
                               Aviator
                             </a>
                           </li>
                         
 
                           <li>
-                            <a href="https://www.lookoptic.com/collections/oversized-shaped-frames-footer-archive" class="link link--text list-menu__item list-menu__item--link">
+                            <a href="#" class="link link--text list-menu__item list-menu__item--link">
                               Oversized
                             </a>
                           </li>
                         
 
                           <li>
-                            <a href="https://www.lookoptic.com/collections/narrow-archive" class="link link--text list-menu__item list-menu__item--link">
+                            <a href="#" class="link link--text list-menu__item list-menu__item--link">
                               Narrow
                             </a>
                           </li>
                         
 
                           <li>
-                            <a href="https://www.lookoptic.com/pages/find-your-look" class="link link--text list-menu__item list-menu__item--link">
+                            <a href="#" class="link link--text list-menu__item list-menu__item--link">
                               Virtual Mirror
                             </a>
                           </li>
@@ -2358,98 +2376,98 @@
                         
 
                           <li>
-                            <a href="https://www.lookoptic.com/pages/wholesale" class="link link--text list-menu__item list-menu__item--link">
+                            <a href="#" class="link link--text list-menu__item list-menu__item--link">
                               Become a Stockist
                             </a>
                           </li>
                         
 
                           <li>
-                            <a href="https://www.lookoptic.com/pages/faq" class="link link--text list-menu__item list-menu__item--link">
+                            <a href="#" class="link link--text list-menu__item list-menu__item--link">
                               FAQs
                             </a>
                           </li>
                         
 
                           <li>
-                            <a href="https://www.lookoptic.com/pages/fsa-hsa" class="link link--text list-menu__item list-menu__item--link">
+                            <a href="#" class="link link--text list-menu__item list-menu__item--link">
                               FSA and HSA
                             </a>
                           </li>
                         
 
                           <li>
-                            <a href="https://www.lookoptic.com/pages/terms-of-service" class="link link--text list-menu__item list-menu__item--link">
+                            <a href="#" class="link link--text list-menu__item list-menu__item--link">
                               Terms &amp; Conditions
                             </a>
                           </li>
                         
 
                           <li>
-                            <a href="https://www.lookoptic.com/policies/privacy-policy" class="link link--text list-menu__item list-menu__item--link">
+                            <a href="#" class="link link--text list-menu__item list-menu__item--link">
                               Privacy Policy
                             </a>
                           </li>
                         
 
                           <li>
-                            <a href="https://www.lookoptic.com/pages/accessibility" class="link link--text list-menu__item list-menu__item--link">
+                            <a href="#" class="link link--text list-menu__item list-menu__item--link">
                               Accessibility
                             </a>
                           </li>
                         
 
                           <li>
-                            <a href="https://www.lookoptic.com/pages/returns" class="link link--text list-menu__item list-menu__item--link">
+                            <a href="#" class="link link--text list-menu__item list-menu__item--link">
                               Returns/Exchanges
                             </a>
                           </li>
                         
 
                           <li>
-                            <a href="https://www.lookoptic.com/apps/wonderment/tracking" class="link link--text list-menu__item list-menu__item--link">
+                            <a href="#" class="link link--text list-menu__item list-menu__item--link">
                               Track Your Order
                             </a>
                           </li>
                         
 </ul></div><div class="footer-block grid__item footer-block--menu"><h2 class="footer-block__heading h4">About Us</h2><ul class="footer-block__details-content list-unstyled">
                           <li>
-                            <a href="https://www.lookoptic.com/pages/about" class="link link--text list-menu__item list-menu__item--link">
+                            <a href="#" class="link link--text list-menu__item list-menu__item--link">
                               Our Story
                             </a>
                           </li>
                         
 
                           <li>
-                            <a href="https://www.lookoptic.com/pages/sustainability" class="link link--text list-menu__item list-menu__item--link">
+                            <a href="#" class="link link--text list-menu__item list-menu__item--link">
                               Zero Waste Initiative
                             </a>
                           </li>
                         
 
                           <li>
-                            <a href="https://www.lookoptic.com/blogs/the-look-blog/giving-back" class="link link--text list-menu__item list-menu__item--link">
+                            <a href="#" class="link link--text list-menu__item list-menu__item--link">
                               charity: water
                             </a>
                           </li>
                         
 
                           <li>
-                            <a href="https://www.lookoptic.com/pages/store-locator" class="link link--text list-menu__item list-menu__item--link">
+                            <a href="#" class="link link--text list-menu__item list-menu__item--link">
                               Retail Partners
                             </a>
                           </li>
                         
 
                           <li>
-                            <a href="https://www.lookoptic.com/blogs/the-look-blog" class="link link--text list-menu__item list-menu__item--link">
+                            <a href="#" class="link link--text list-menu__item list-menu__item--link">
                               Blog
                             </a>
                           </li>
                         
 
                           <li>
-                            <a href="https://www.lookoptic.com/blogs/press-page" class="link link--text list-menu__item list-menu__item--link">
+                            <a href="#" class="link link--text list-menu__item list-menu__item--link">
                               Press
                             </a>
                           </li>
@@ -3060,7 +3078,7 @@
       <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-78bf21d8158311d2" aria-disabled="false"></div>
       <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-78bf21d8158311d2" aria-disabled="false"></div>
     </div>
-    <a href="https://www.lookoptic.com/products/cosmo" class="button button--full-width" data-product-shop="">
+    <a href="../products/cosmo.html" class="button button--full-width" data-product-shop="">
       Shop COSMO
     </a>
   </div>
@@ -3722,6 +3740,25 @@ function swapColor(el) {
 </script>
 <script src="../cdn/shop/t/690/assets/swiper-bundle.min.js"></script>
 <script src="../cdn/shop/t/690/assets/swiper-init.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Close submenu when mouse leaves the details element
+  document.querySelectorAll('.header__inline-menu details').forEach(function(d) {
+    d.addEventListener('mouseleave', function() {
+      this.removeAttribute('open');
+    });
+    // Open on hover
+    var summary = d.querySelector('summary');
+    if (summary) {
+      summary.addEventListener('mouseenter', function() {
+        this.parentElement.setAttribute('open','');
+      });
+    }
+  });
+});
+</script>
+
 </body>
 <style>
 .swiper-wrapper--announcement-bar-desktop, .swiper-wrapper--announcement-bar-desktop .announcement-bar, .swiper-wrapper--announcement-bar-mobile, .swiper-wrapper--announcement-bar-mobile .announcement-bar {
