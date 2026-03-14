@@ -1878,6 +1878,13 @@ details[open] > .header__submenu.list-menu {
   }
 }
 </style>
+<style id="lens-disabled-css">
+fieldset[data-option-name="Lens Type"] label.lens-disabled {
+  opacity: 0.35;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+</style>
 </head>
   <body
     class="gradient"
@@ -14060,13 +14067,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
 <script id="lens-type-switcher">
 document.addEventListener('DOMContentLoaded', function() {
   function norm(s) { return (s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
   var pageUrls = { reader: 'kaine.html', progressive: 'kaine-progressives.html' };
+  
+  // Detect current lens type
   var currentLensType = 'reader';
   var lensCheck = document.querySelector('fieldset[data-option-name="Lens Type"] input[type="radio"]:checked');
   if (lensCheck && lensCheck.value.toLowerCase().indexOf('progressive') > -1) currentLensType = 'progressive';
+  var otherLensType = currentLensType === 'reader' ? 'progressive' : 'reader';
   
   function getDataForType(type) {
     var tpl = document.getElementById('lens-data-' + type);
@@ -14074,14 +14085,37 @@ document.addEventListener('DOMContentLoaded', function() {
     try { return JSON.parse(tpl.content.querySelector('script').textContent); } catch(e) { return null; }
   }
   
+  var currentData = getDataForType(currentLensType);
+  var otherData = getDataForType(otherLensType);
+  
+  // Find the other lens type label
+  var otherLensLabel = null;
+  var otherLensInput = null;
+  document.querySelectorAll('fieldset[data-option-name="Lens Type"] input[type="radio"]').forEach(function(inp) {
+    var isP = inp.value.toLowerCase().indexOf('progressive') > -1;
+    if ((otherLensType === 'progressive' && isP) || (otherLensType === 'reader' && !isP)) {
+      otherLensInput = inp;
+      otherLensLabel = document.querySelector('label[for="' + inp.id + '"]');
+    }
+  });
+  
+  function updateOtherLensButton(colorName) {
+    if (!otherLensLabel || !otherData) return;
+    var hasColor = otherData.variants.hasOwnProperty(colorName);
+    if (hasColor) {
+      otherLensLabel.classList.remove('lens-disabled');
+    } else {
+      otherLensLabel.classList.add('lens-disabled');
+    }
+  }
+  
   function updateURL(colorName) {
-    var data = getDataForType(currentLensType);
-    if (!data || !data.variants || !data.variants[colorName]) return;
+    if (!currentData || !currentData.variants || !currentData.variants[colorName]) return;
     var url = new URL(window.location);
     var pathParts = url.pathname.split('/');
     pathParts[pathParts.length - 1] = pageUrls[currentLensType];
     url.pathname = pathParts.join('/');
-    url.searchParams.set('variant', data.variants[colorName]);
+    url.searchParams.set('variant', currentData.variants[colorName]);
     window.history.replaceState({}, '', url);
   }
   
@@ -14110,128 +14144,63 @@ document.addEventListener('DOMContentLoaded', function() {
     if (cl && colorName) cl.textContent = colorName;
     var slider = document.querySelector('.product__media-list'); if (slider) slider.scrollLeft = 0;
     if (!skipURL && colorName) updateURL(colorName);
+    if (colorName) updateOtherLensButton(colorName);
   }
   
-  function attachSwatchHandlers() {
-    document.querySelectorAll('fieldset[data-option-name="Color"] label[data-label-color]').forEach(function(lbl) {
-      lbl.onclick = function(ev) {
-        ev.preventDefault();
-        ev.stopPropagation();
-        switchColorTo(norm(this.getAttribute('data-label-color')));
-      };
-    });
-  }
-  
-  function doLensSwitch(newType, currentColorNorm) {
-    currentLensType = newType;
-    var data = getDataForType(newType);
-    if (!data) return;
-    
-    // 1. Update lens radio buttons
-    document.querySelectorAll('fieldset[data-option-name="Lens Type"] input[type="radio"]').forEach(function(inp) {
-      var isP = inp.value.toLowerCase().indexOf('progressive') > -1;
-      inp.checked = (newType === 'progressive' && isP) || (newType === 'reader' && !isP);
-    });
-    document.querySelectorAll('fieldset[data-option-name="Lens Type"] label').forEach(function(l) { l.classList.remove('active'); });
-    var checkedLens = document.querySelector('fieldset[data-option-name="Lens Type"] input:checked');
-    if (checkedLens) { var lbl = document.querySelector('label[for="' + checkedLens.id + '"]'); if (lbl) lbl.classList.add('active'); }
-    
-    // 2. Update title
-    var titleEl = document.querySelector('.product__title') || document.querySelector('h1');
-    if (titleEl) titleEl.textContent = data.title;
-    
-    // 3. Update price
-    document.querySelectorAll('.price-item--regular, .price-item').forEach(function(el) { el.textContent = data.price; });
-    
-    // 4. Update description
-    var descTpl = document.getElementById('lens-desc-' + newType);
-    if (descTpl) { var descEl = document.querySelector('.product__description'); if (descEl) descEl.innerHTML = descTpl.innerHTML; }
-    
-    // 5. Swap gallery - remove ALL old items, add new from template
-    var mediaList = document.querySelector('.product__media-list');
-    var galleryTpl = document.getElementById('lens-gallery-' + newType);
-    if (mediaList && galleryTpl) {
-      // Get new HTML from template
-      var div = document.createElement('div');
-      div.appendChild(galleryTpl.content.cloneNode(true));
-      var newHTML = div.innerHTML;
-      // Remove all li items
-      while (mediaList.querySelector('li')) { mediaList.querySelector('li').remove(); }
-      // Insert new HTML
-      mediaList.insertAdjacentHTML('beforeend', newHTML);
-    }
-    
-    // 6. Swap color swatches
-    var swatchesTpl = document.getElementById('lens-swatches-' + newType);
-    if (swatchesTpl) {
-      var oldFieldset = document.querySelector('fieldset[data-option-name="Color"]');
-      if (oldFieldset) {
-        var div2 = document.createElement('div');
-        div2.appendChild(swatchesTpl.content.cloneNode(true));
-        var newFieldset = div2.querySelector('fieldset');
-        if (newFieldset) { oldFieldset.parentNode.replaceChild(newFieldset, oldFieldset); }
-      }
-    }
-    
-    // 7. Select color
-    var colorToSelect = null;
-    if (currentColorNorm) {
-      var normColors = data.colors.map(function(c) { return norm(c); });
-      if (normColors.indexOf(currentColorNorm) > -1) { colorToSelect = currentColorNorm; }
-    }
-    if (!colorToSelect && data.colors.length > 0) { colorToSelect = norm(data.colors[0]); }
-    
-    // 8. Reattach handlers and select color
-    attachSwatchHandlers();
-    if (colorToSelect) switchColorTo(colorToSelect);
-  }
-  
-  // Lens type click handlers
-  document.querySelectorAll('fieldset[data-option-name="Lens Type"] label').forEach(function(label) {
-    label.onclick = function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      var input = document.getElementById(this.getAttribute('for'));
-      if (!input) return;
-      var isProgressive = input.value.toLowerCase().indexOf('progressive') > -1;
-      var newType = isProgressive ? 'progressive' : 'reader';
-      if (newType === currentLensType) return;
-      
-      // Get current color
-      var currentColor = null;
-      var checkedColor = document.querySelector('fieldset[data-option-name="Color"] input[data-input-color]:checked');
-      if (checkedColor) currentColor = norm(checkedColor.getAttribute('data-input-color'));
-      
-      doLensSwitch(newType, currentColor);
+  // Color swatch click handlers
+  document.querySelectorAll('label[data-label-color]').forEach(function(lbl) {
+    lbl.onclick = function(ev) {
+      ev.preventDefault();
+      ev.stopPropagation();
+      switchColorTo(norm(this.getAttribute('data-label-color')));
     };
   });
   
-  // Initial load: handle ?variant=
-  var params = new URLSearchParams(window.location.search);
-  var variantId = params.get('variant');
-  if (variantId) {
-    // Check current lens type first, then other
-    var types = [currentLensType, currentLensType === 'reader' ? 'progressive' : 'reader'];
-    var found = false;
-    types.forEach(function(type) {
-      if (found) return;
-      var data = getDataForType(type);
-      if (!data) return;
-      for (var colorName in data.variants) {
-        if (data.variants[colorName] === variantId) {
-          found = true;
-          if (type !== currentLensType) {
-            doLensSwitch(type, norm(colorName));
-          } else {
-            switchColorTo(norm(colorName), true);
-          }
-          return;
-        }
+  // Lens type button: navigate to other page
+  if (otherLensLabel) {
+    otherLensLabel.onclick = function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      if (this.classList.contains('lens-disabled')) return;
+      if (!otherData) return;
+      
+      var currentColor = null;
+      var checkedColor = document.querySelector('input[data-input-color]:checked');
+      if (checkedColor) currentColor = checkedColor.getAttribute('data-input-color');
+      
+      var variantId = null;
+      if (currentColor && otherData.variants[currentColor]) {
+        variantId = otherData.variants[currentColor];
       }
-    });
+      if (!variantId && otherData.colors.length > 0) {
+        variantId = otherData.variants[otherData.colors[0]];
+      }
+      if (variantId) {
+        var url = new URL(window.location);
+        var pathParts = url.pathname.split('/');
+        pathParts[pathParts.length - 1] = pageUrls[otherLensType];
+        url.pathname = pathParts.join('/');
+        url.searchParams.set('variant', variantId);
+        window.location.href = url.toString();
+      }
+    };
   }
   
-  attachSwatchHandlers();
+  // Initial: handle ?variant= from URL
+  var params = new URLSearchParams(window.location.search);
+  var variantId = params.get('variant');
+  if (variantId && currentData) {
+    for (var colorName in currentData.variants) {
+      if (currentData.variants[colorName] === variantId) {
+        switchColorTo(norm(colorName), true);
+        break;
+      }
+    }
+  }
+  
+  // Set initial state of other lens button
+  var initialColor = document.querySelector('input[data-input-color]:checked');
+  if (initialColor) updateOtherLensButton(initialColor.getAttribute('data-input-color'));
 });
 </script>
 </body>
