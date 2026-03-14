@@ -4952,8 +4952,7 @@ window.waitForElementToAppear(
                 <strong>Expected to ship <span data-preorder-ship-date></span></strong>
               </p><div class="" data-variant-id="41853975789627" data-preorder-item="false" data-pdp-notice></div><div class="product__description product__description--desktop rte">
                 <p>Designed by Diane herself, "Keaton" is destined to become an eyewear icon. Seamlessly blending style and functionality, it’s time to elevate your look and embrace a piece of Hollywood glamour.</p>
-              </div><variant-radios id="variant-radios-template--15524700454971__main"  class="no-js-hidden" data-section="template--15524700454971__main" data-url="/products/keaton"  data-product-type="READING GLASSES" data-has-family
-                data-product-options='{"Lens Type":1,"Color":2,"Magnification":3}'>
+              </div>
 
 <fieldset class="js product-form__input product-form__input--len " data-option-name="Lens Type" data-product-form data-option-length="2">
   <legend class="form__label ">
@@ -8730,7 +8729,7 @@ window.waitForElementToAppear(
     }
 ]
 </script>
-</variant-radios><noscript class="product-form__noscript-wrapper-template--15524700454971__main">
+<noscript class="product-form__noscript-wrapper-template--15524700454971__main">
               <div class="product-form__input">
                 <label class="form__label" for="Variants-template--15524700454971__main">Product variants</label>
                 <div class="select">
@@ -9976,8 +9975,7 @@ window.waitForElementToAppear(
     if (!isIE()) return;
     const hiddenInput = document.querySelector('#product-form-template--15524700454971__main input[name="id"]');
     const noScriptInputWrapper = document.createElement('div');
-    const variantSwitcher = document.querySelector('variant-radios[data-section="template--15524700454971__main"]') || document.querySelector('variant-selects[data-section="template--15524700454971__main"]');
-    noScriptInputWrapper.innerHTML = document.querySelector('.product-form__noscript-wrapper-template--15524700454971__main').textContent;
+        noScriptInputWrapper.innerHTML = document.querySelector('.product-form__noscript-wrapper-template--15524700454971__main').textContent;
     variantSwitcher.outerHTML = noScriptInputWrapper.outerHTML;
 
     document.querySelector('#Variants-template--15524700454971__main').addEventListener('change', function(event) {

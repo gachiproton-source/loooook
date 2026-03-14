@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head><title>Test Lens Switch</title></head>
+<body>
+<h1 id="title">READER TITLE</h1>
+<p id="price">$68</p>
+<ul id="gallery">
+  <li data-color="red" class="active">RED IMG 1</li>
+  <li data-color="red" class="active">RED IMG 2</li>
+  <li data-color="blue">BLUE IMG 1</li>
+</ul>
+<button id="switch-btn">Switch to Progressive</button>
+
+<template id="prog-gallery">
+  <li data-color="green">GREEN IMG 1</li>
+  <li data-color="green">GREEN IMG 2</li>
+  <li data-color="yellow">YELLOW IMG 1</li>
+</template>
+
+<script>
+document.getElementById('switch-btn').onclick = function() {
+  var gallery = document.getElementById('gallery');
+  var tpl = document.getElementById('prog-gallery');
+  
+  // Method 1: cloneNode + appendChild
+  // while (gallery.firstChild) gallery.removeChild(gallery.firstChild);
+  // gallery.appendChild(tpl.content.cloneNode(true));
+  
+  // Method 2: innerHTML
+  var tmp = document.createElement('div');
+  tmp.appendChild(tpl.content.cloneNode(true));
+  gallery.innerHTML = tmp.innerHTML;
+  
+  document.getElementById('title').textContent = 'PROGRESSIVE TITLE';
+  document.getElementById('price').textContent = '$98';
+  
+  console.log('Gallery children:', gallery.children.length);
+  console.log('Gallery HTML:', gallery.innerHTML.substring(0, 200));
+};
+</script>
+</body>
+</html>
