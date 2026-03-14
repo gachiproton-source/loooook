@@ -1,6 +1,20 @@
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
+<script>
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var vid = params.get('variant');
+  if (!vid) return;
+  // Add CSS to hide all gallery items until JS properly sets them
+  var style = document.createElement('style');
+  style.id = 'early-hide';
+  style.textContent = '.product__media-item { display: none !important; }';
+  document.head.appendChild(style);
+  // Remove after JS runs
+  setTimeout(function() { var s = document.getElementById('early-hide'); if (s) s.remove(); }, 2000);
+})();
+</script>
     
     <link rel="preload" as="image" href="../cdn/shop/files/Eva_pink_e14d0d6d-a73d-4b8e-bd04-2c420056d33a.jpg" type="image/jpeg">
     <link rel="preload" as="image" href="../cdn/shop/files/v1_hp_january_1200x.jpg" type="image/jpeg">
@@ -14732,7 +14746,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Swap gallery - REMOVE old items first
     var mediaList = document.querySelector('.product__media-list');
     if (mediaList) {
-      mediaList.querySelectorAll('li.product__media-item[data-color]').forEach(function(li) { li.remove(); });
+      mediaList.querySelectorAll('li.product__media-item').forEach(function(li) { li.remove(); });
       mediaList.appendChild(galleryTpl.content.cloneNode(true));
     }
     
