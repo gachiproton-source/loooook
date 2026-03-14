@@ -11930,95 +11930,8 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 
-<script id="color-variant-switch">
-(function() {
-  var params = new URLSearchParams(window.location.search);
-  var variantId = params.get('variant');
-  if (!variantId) return;
-  function norm(s) { return (s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
-  var scripts = document.querySelectorAll('script');
-  var targetColor = null;
-  for (var i = 0; i < scripts.length; i++) {
-    var text = scripts[i].textContent;
-    var re = new RegExp('"id":\\s*' + variantId + '[^}]*?"option2":\\s*"([^"]+)"');
-    var match = text.match(re);
-    if (match) { targetColor = norm(match[1].replace(/[()]/g, '')); break; }
-  }
-  if (!targetColor) return;
 
-  function doSwitch() {
-    var items = document.querySelectorAll('li.product__media-item[data-color]');
-    var orderCount = 0;
-    
-    items.forEach(function(el) {
-      var c = norm(el.getAttribute('data-color'));
-      if (c === targetColor) {
-        el.classList.add('active');
-        orderCount++;
-        // Set ONLY order in style - CSS selectors match [style="order: X;"]
-        el.setAttribute('style', 'order: ' + orderCount + ';');
-        if (orderCount === 1) {
-          el.classList.add('first-active');
-        } else {
-          el.classList.remove('first-active');
-        }
-      } else {
-        el.classList.remove('active', 'first-active');
-        el.removeAttribute('style');
-      }
-    });
-    
-    document.querySelectorAll('input[data-input-color]').forEach(function(inp) { inp.checked = norm(inp.getAttribute('data-input-color')) === targetColor; });
-    document.querySelectorAll('label[data-label-color]').forEach(function(lbl) {
-      var m = norm(lbl.getAttribute('data-label-color')) === targetColor;
-      lbl.style.outline = m ? '1.5px solid #333' : ''; lbl.style.outlineOffset = m ? '2px' : '';
-    });
-    var cl = document.querySelector('[data-color-label]');
-    if (cl) { document.querySelectorAll('input[data-input-color]').forEach(function(inp) { if (inp.checked) cl.textContent = inp.getAttribute('data-input-color'); }); }
-    var slider = document.querySelector('.product__media-list'); if (slider) slider.scrollLeft = 0;
-  }
-  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', doSwitch); } else { doSwitch(); }
-  setTimeout(doSwitch, 100); setTimeout(doSwitch, 500); setTimeout(doSwitch, 1500);
-})();
-</script>
-<script id="color-swatch-handler">
-document.addEventListener('DOMContentLoaded', function() {
-  function norm(s) { return (s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
-  document.querySelectorAll('label[data-label-color]').forEach(function(lbl) {
-    lbl.addEventListener('click', function(e) {
-      e.preventDefault();
-      var cn = norm(this.getAttribute('data-label-color'));
 
-      var items = document.querySelectorAll('li.product__media-item[data-color]');
-      var orderCount = 0;
-      items.forEach(function(el) {
-        var c = norm(el.getAttribute('data-color'));
-        if (c === cn) {
-          el.classList.add('active');
-          orderCount++;
-          el.setAttribute('style', 'order: ' + orderCount + ';');
-          if (orderCount === 1) {
-            el.classList.add('first-active');
-          } else {
-            el.classList.remove('first-active');
-          }
-        } else {
-          el.classList.remove('active', 'first-active');
-          el.removeAttribute('style');
-        }
-      });
-      document.querySelectorAll('input[data-input-color]').forEach(function(inp) { inp.checked = norm(inp.getAttribute('data-input-color')) === cn; });
-      document.querySelectorAll('label[data-label-color]').forEach(function(l) {
-        var m = norm(l.getAttribute('data-label-color')) === cn;
-        l.style.outline = m ? '1.5px solid #333' : ''; l.style.outlineOffset = m ? '2px' : '';
-      });
-      var cl = document.querySelector('[data-color-label]');
-      if (cl) { document.querySelectorAll('input[data-input-color]').forEach(function(inp) { if (inp.checked) cl.textContent = inp.getAttribute('data-input-color'); }); }
-      var slider = document.querySelector('.product__media-list'); if (slider) slider.scrollLeft = 0;
-    });
-  });
-});
-</script>
 
 
 <template id="lens-desc-reader"><p><span data-mce-fragment="1">Inspired by our favorite metal frames, Muse’s attention to detail, including a unique half-rim design, was born to stand out. Add tinted lenses, and you have a modern classic with a luxurious edge.</span></p></template>
@@ -15024,131 +14937,157 @@ document.addEventListener('DOMContentLoaded', function() {
                                   Shiny Rose Gold Brown Gradient Tint
                                 </label> </fieldset></template>
 
+
 <script id="lens-type-switcher">
 document.addEventListener('DOMContentLoaded', function() {
   function norm(s) { return (s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
   
-  // Find Lens Type radio inputs
-  var lensInputs = document.querySelectorAll('fieldset[data-option-name="Lens Type"] input[type="radio"]');
+  // Track current lens type
+  var currentLensType = 'reader';
+  var lensCheck = document.querySelector('fieldset[data-option-name="Lens Type"] input[type="radio"]:checked');
+  if (lensCheck && lensCheck.value.toLowerCase().indexOf('progressive') > -1) currentLensType = 'progressive';
   
+  function getCurrentData() {
+    var dataTpl = document.getElementById('lens-data-' + currentLensType);
+    if (!dataTpl) return null;
+    try { return JSON.parse(dataTpl.content.querySelector('script').textContent); } catch(e) { return null; }
+  }
+  
+  function updateURL(colorName) {
+    var data = getCurrentData();
+    if (!data || !data.variants) return;
+    var variantId = data.variants[colorName];
+    if (variantId) {
+      var url = new URL(window.location);
+      url.searchParams.set('variant', variantId);
+      window.history.replaceState({}, '', url);
+    }
+  }
+  
+  function switchColorTo(cn, skipURL) {
+    var items = document.querySelectorAll('li.product__media-item[data-color]');
+    var orderCount = 0;
+    items.forEach(function(el) {
+      if (norm(el.getAttribute('data-color')) === cn) {
+        el.classList.add('active'); orderCount++;
+        el.setAttribute('style', 'order: ' + orderCount + ';');
+        if (orderCount === 1) el.classList.add('first-active'); else el.classList.remove('first-active');
+      } else { el.classList.remove('active', 'first-active'); el.removeAttribute('style'); }
+    });
+    
+    var colorName = '';
+    document.querySelectorAll('input[data-input-color]').forEach(function(inp) {
+      var match = norm(inp.getAttribute('data-input-color')) === cn;
+      inp.checked = match;
+      if (match) colorName = inp.getAttribute('data-input-color');
+    });
+    document.querySelectorAll('label[data-label-color]').forEach(function(lbl) {
+      var m = norm(lbl.getAttribute('data-label-color')) === cn;
+      lbl.style.outline = m ? '1.5px solid #333' : ''; lbl.style.outlineOffset = m ? '2px' : '';
+    });
+    var cl = document.querySelector('[data-color-label]');
+    if (cl && colorName) cl.textContent = colorName;
+    var slider = document.querySelector('.product__media-list'); if (slider) slider.scrollLeft = 0;
+    
+    if (!skipURL && colorName) updateURL(colorName);
+  }
+  
+  function attachSwatchHandlers() {
+    document.querySelectorAll('fieldset[data-option-name="Color"] label[data-label-color]').forEach(function(lbl) {
+      lbl.addEventListener('click', function(ev) {
+        ev.preventDefault();
+        switchColorTo(norm(this.getAttribute('data-label-color')));
+      });
+    });
+  }
+  
+  // Lens type switching
+  var lensInputs = document.querySelectorAll('fieldset[data-option-name="Lens Type"] input[type="radio"]');
   lensInputs.forEach(function(input) {
     var label = document.querySelector('label[for="' + input.id + '"]');
     if (label) {
       label.addEventListener('click', function(e) {
         e.preventDefault();
+        var isProgressive = input.value.toLowerCase().indexOf('progressive') > -1;
+        currentLensType = isProgressive ? 'progressive' : 'reader';
         
-        var lensValue = input.value.toLowerCase();
-        var isProgressive = lensValue.indexOf('progressive') > -1;
-        var type = isProgressive ? 'progressive' : 'reader';
-        
-        // Check all lens radios
         lensInputs.forEach(function(li) { li.checked = (li === input); });
+        document.querySelectorAll('fieldset[data-option-name="Lens Type"] label').forEach(function(l) { l.classList.remove('active'); });
+        this.classList.add('active');
         
-        // Get data
-        var dataTpl = document.getElementById('lens-data-' + type);
-        var galleryTpl = document.getElementById('lens-gallery-' + type);
-        var swatchesTpl = document.getElementById('lens-swatches-' + type);
-        
+        var dataTpl = document.getElementById('lens-data-' + currentLensType);
+        var galleryTpl = document.getElementById('lens-gallery-' + currentLensType);
+        var swatchesTpl = document.getElementById('lens-swatches-' + currentLensType);
+        var descTpl = document.getElementById('lens-desc-' + currentLensType);
         if (!dataTpl || !galleryTpl) return;
         
         var data = JSON.parse(dataTpl.content.querySelector('script').textContent);
         
-        // 0. Update description
-        var descTpl = document.getElementById('lens-desc-' + type);
-        if (descTpl) {
-          var descEl = document.querySelector('.product__description');
-          if (descEl) descEl.innerHTML = descTpl.innerHTML;
-        }
+        if (descTpl) { var descEl = document.querySelector('.product__description'); if (descEl) descEl.innerHTML = descTpl.innerHTML; }
+        var titleEl = document.querySelector('.product__title, h1'); if (titleEl) titleEl.textContent = data.title;
+        var priceEl = document.querySelector('.price-item--regular, .price-item'); if (priceEl) priceEl.textContent = data.price;
         
-        // 1. Update title
-        var titleEl = document.querySelector('.product__title, h1');
-        if (titleEl) titleEl.textContent = data.title;
-        
-        // 2. Update price
-        var priceEl = document.querySelector('.price-item--regular, .price-item');
-        if (priceEl) priceEl.textContent = data.price;
-        
-        // 3. Swap gallery
         var mediaList = document.querySelector('.product__media-list');
         if (mediaList && galleryTpl) {
-          // Remove existing media items with data-color
           mediaList.querySelectorAll('li.product__media-item[data-color]').forEach(function(li) { li.remove(); });
-          // Insert new ones
-          var clone = galleryTpl.content.cloneNode(true);
-          mediaList.appendChild(clone);
+          mediaList.appendChild(galleryTpl.content.cloneNode(true));
         }
-        
-        // 4. Swap color swatches
         if (swatchesTpl) {
           var colorFieldset = document.querySelector('fieldset[data-option-name="Color"]');
           if (colorFieldset) {
-            var clone = swatchesTpl.content.cloneNode(true);
-            var newFieldset = clone.querySelector('fieldset');
-            if (newFieldset) {
-              colorFieldset.replaceWith(newFieldset);
-              // Re-attach swatch click handlers
-              newFieldset.querySelectorAll('label[data-label-color]').forEach(function(lbl) {
-                lbl.addEventListener('click', function(ev) {
-                  ev.preventDefault();
-                  var cn = norm(this.getAttribute('data-label-color'));
-                  var items = document.querySelectorAll('li.product__media-item[data-color]');
-                  var orderCount = 0;
-                  items.forEach(function(el) {
-                    if (norm(el.getAttribute('data-color')) === cn) {
-                      el.classList.add('active'); orderCount++;
-                      el.setAttribute('style', 'order: ' + orderCount + ';');
-                      if (orderCount === 1) el.classList.add('first-active'); else el.classList.remove('first-active');
-                    } else { el.classList.remove('active', 'first-active'); el.removeAttribute('style'); }
-                  });
-                  newFieldset.querySelectorAll('input[data-input-color]').forEach(function(inp) { inp.checked = norm(inp.getAttribute('data-input-color')) === cn; });
-                  newFieldset.querySelectorAll('label[data-label-color]').forEach(function(l) {
-                    var m = norm(l.getAttribute('data-label-color')) === cn;
-                    l.style.outline = m ? '1.5px solid #333' : ''; l.style.outlineOffset = m ? '2px' : '';
-                  });
-                  var cl = document.querySelector('[data-color-label]');
-                  if (cl) { newFieldset.querySelectorAll('input[data-input-color]').forEach(function(inp) { if (inp.checked) cl.textContent = inp.getAttribute('data-input-color'); }); }
-                });
-              });
-            }
+            var newFieldset = swatchesTpl.content.cloneNode(true).querySelector('fieldset');
+            if (newFieldset) { colorFieldset.replaceWith(newFieldset); }
           }
         }
         
-        // 5. Select first color
         setTimeout(function() {
+          attachSwatchHandlers();
           var firstColor = data.colors[0];
-          if (firstColor) {
-            var cn = norm(firstColor);
-            var items = document.querySelectorAll('li.product__media-item[data-color]');
-            var orderCount = 0;
-            items.forEach(function(el) {
-              if (norm(el.getAttribute('data-color')) === cn) {
-                el.classList.add('active'); orderCount++;
-                el.setAttribute('style', 'order: ' + orderCount + ';');
-                if (orderCount === 1) el.classList.add('first-active'); else el.classList.remove('first-active');
-              } else { el.classList.remove('active', 'first-active'); el.removeAttribute('style'); }
-            });
-            document.querySelectorAll('input[data-input-color]').forEach(function(inp) { inp.checked = norm(inp.getAttribute('data-input-color')) === cn; });
-            document.querySelectorAll('label[data-label-color]').forEach(function(lbl) {
-              var m = norm(lbl.getAttribute('data-label-color')) === cn;
-              lbl.style.outline = m ? '1.5px solid #333' : ''; lbl.style.outlineOffset = m ? '2px' : '';
-            });
-            var cl = document.querySelector('[data-color-label]');
-            if (cl) cl.textContent = firstColor;
-          }
+          if (firstColor) switchColorTo(norm(firstColor));
         }, 50);
       });
     }
   });
   
-  // Also handle Lens Type label clicks for visual feedback
-  document.querySelectorAll('fieldset[data-option-name="Lens Type"] label').forEach(function(label) {
-    label.addEventListener('click', function() {
-      document.querySelectorAll('fieldset[data-option-name="Lens Type"] label').forEach(function(l) {
-        l.classList.remove('active');
-      });
-      this.classList.add('active');
+  // Initial: handle ?variant= from URL
+  var params = new URLSearchParams(window.location.search);
+  var variantId = params.get('variant');
+  if (variantId) {
+    // Find which lens type and color this variant belongs to
+    var found = false;
+    ['reader', 'progressive'].forEach(function(type) {
+      if (found) return;
+      var dataTpl = document.getElementById('lens-data-' + type);
+      if (!dataTpl) return;
+      try {
+        var data = JSON.parse(dataTpl.content.querySelector('script').textContent);
+        for (var colorName in data.variants) {
+          if (data.variants[colorName] === variantId) {
+            // Found! Switch to this lens type and color
+            if (type !== currentLensType) {
+              // Click the correct lens type label
+              lensInputs.forEach(function(input) {
+                var isP = input.value.toLowerCase().indexOf('progressive') > -1;
+                if ((type === 'progressive' && isP) || (type === 'reader' && !isP)) {
+                  var lbl = document.querySelector('label[for="' + input.id + '"]');
+                  if (lbl) lbl.click();
+                }
+              });
+              // After lens switch, select color
+              setTimeout(function() { switchColorTo(norm(colorName), true); }, 200);
+            } else {
+              setTimeout(function() { switchColorTo(norm(colorName), true); }, 150);
+            }
+            found = true;
+            return;
+          }
+        }
+      } catch(e) {}
     });
-  });
+  }
+  
+  // Attach swatch handlers for initial page
+  attachSwatchHandlers();
 });
 </script>
 </body>
