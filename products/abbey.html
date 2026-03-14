@@ -2194,8 +2194,29 @@ details[open] > .header__submenu.list-menu {
 </style>
 
 <style id="product-color-filter">
+/* Hide non-active color variants */
 .product__media-list > .product__media-item[data-color]:not(.active) {
   display: none !important;
+}
+/* Fix gallery layout: first image full width, rest 2-per-row with gap */
+@media screen and (min-width: 750px) {
+  .product__media-list {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 5px !important;
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+  .product__media-item.grid__item.first-active {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+  .product__media-item.grid__item.active:not(.first-active) {
+    width: calc(50% - 2.5px) !important;
+    max-width: calc(50% - 2.5px) !important;
+    flex: 0 0 calc(50% - 2.5px) !important;
+  }
 }
 </style>
 </head>
