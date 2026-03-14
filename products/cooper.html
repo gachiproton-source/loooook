@@ -1652,6 +1652,9 @@ details[open] > .header__submenu.list-menu {
   flex-shrink: 0 !important;
 }
 </style>
+<style id="product-color-filter">
+.product__media-item.slider__slide:not(.active) { display: none !important; }
+</style>
 </head>
   <body
     class="gradient"
@@ -9881,8 +9884,8 @@ fixMissingWidthHeight();
   if (!targetColor) return;
   function doSwitch() {
     document.querySelectorAll('li[data-color]').forEach(function(el) {
-      if (norm(el.getAttribute('data-color')) === targetColor) { el.style.cssText = 'display: list-item !important;'; }
-      else { el.style.cssText = 'display: none !important;'; }
+      if (norm(el.getAttribute('data-color')) === targetColor) { el.classList.add('active'); el.style.cssText = ''; }
+      else { el.classList.remove('active'); el.style.cssText = ''; }
     });
     document.querySelectorAll('input[data-input-color]').forEach(function(inp) { inp.checked = norm(inp.getAttribute('data-input-color')) === targetColor; });
     document.querySelectorAll('label[data-label-color]').forEach(function(lbl) {
