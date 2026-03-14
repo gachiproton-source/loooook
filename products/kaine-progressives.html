@@ -4443,9 +4443,9 @@ window.waitForElementToAppear(
           
           type="radio" id="template--15395983589435__main-option1-1"
           name="Lens Type"
-          value="Progressive Reader"
+          value="Progressive Reader" checked
           form=""
-          checked
+         
           data-option-input
         >
         <label for="template--15395983589435__main-option1-1">
@@ -9800,6 +9800,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   function switchLens(newType) {
+    console.log('switchLens called:', newType, 'from:', curType);
     if (newType === curType) return;
     var d = getData(newType);
     if (!d) return;
@@ -9853,6 +9854,7 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('fieldset[data-option-name="Lens Type"] label').forEach(function(lbl) {
     lbl.onclick = function(e) {
       e.preventDefault(); e.stopPropagation();
+      console.log('Lens click!', this.textContent.trim(), 'disabled:', this.classList.contains('lens-disabled'));
       if (this.classList.contains('lens-disabled')) return;
       var inp = document.getElementById(this.getAttribute('for'));
       if (!inp) return;
