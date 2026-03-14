@@ -12020,6 +12020,10 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+
+<template id="lens-desc-reader"><p><span data-mce-fragment="1">Inspired by our favorite metal frames, Muse’s attention to detail, including a unique half-rim design, was born to stand out. Add tinted lenses, and you have a modern classic with a luxurious edge.</span></p></template>
+<template id="lens-desc-progressive"><p><meta charset="utf-8"><span data-mce-fragment="1">Inspired by our favorite metal frames, Muse’s attention to detail, including a unique half-rim design, was born to stand out. Add tinted lenses and you have a modern classic with a luxurious edge.</span></p></template>
+
 <template id="lens-data-reader">
 <script type="application/json">{"title": "Muse Readers", "price": "$86.00", "colors": ["Gold", "Gold Green Gradient Tint", "Gold Pink Tint", "Shiny Rose Gold", "Shiny Rose Gold Brown Gradient Tint", "Silver", "Silver Blue Tint"], "variants": {"Gold Pink Tint": "6914253357115", "Gold": "41737411821627", "Gold Green Gradient Tint": "41737412149307", "Silver": "41737412313147", "Silver Blue Tint": "41737412476987", "Shiny Rose Gold": "43058196971579", "Shiny Rose Gold Brown Gradient Tint": "43058197135419"}}</script>
 </template>
@@ -15048,6 +15052,13 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!dataTpl || !galleryTpl) return;
         
         var data = JSON.parse(dataTpl.content.querySelector('script').textContent);
+        
+        // 0. Update description
+        var descTpl = document.getElementById('lens-desc-' + type);
+        if (descTpl) {
+          var descEl = document.querySelector('.product__description');
+          if (descEl) descEl.innerHTML = descTpl.innerHTML;
+        }
         
         // 1. Update title
         var titleEl = document.querySelector('.product__title, h1');
