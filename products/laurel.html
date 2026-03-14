@@ -25616,12 +25616,14 @@ document.addEventListener('DOMContentLoaded', function() {
     var mediaList = document.querySelector('.product__media-list');
     var galleryTpl = document.getElementById('lens-gallery-' + newType);
     if (mediaList && galleryTpl) {
-      // Remove everything except the figure/badge
-      var toRemove = mediaList.querySelectorAll('li');
-      toRemove.forEach(function(li) { li.remove(); });
-      // Clone and append new items
-      var fragment = galleryTpl.content.cloneNode(true);
-      mediaList.appendChild(fragment);
+      // Get new HTML from template
+      var div = document.createElement('div');
+      div.appendChild(galleryTpl.content.cloneNode(true));
+      var newHTML = div.innerHTML;
+      // Remove all li items
+      while (mediaList.querySelector('li')) { mediaList.querySelector('li').remove(); }
+      // Insert new HTML
+      mediaList.insertAdjacentHTML('beforeend', newHTML);
     }
     
     // 6. Swap color swatches
@@ -25629,7 +25631,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (swatchesTpl) {
       var oldFieldset = document.querySelector('fieldset[data-option-name="Color"]');
       if (oldFieldset) {
-        var newFieldset = swatchesTpl.content.cloneNode(true).querySelector('fieldset');
+        var div2 = document.createElement('div');
+        div2.appendChild(swatchesTpl.content.cloneNode(true));
+        var newFieldset = div2.querySelector('fieldset');
         if (newFieldset) { oldFieldset.parentNode.replaceChild(newFieldset, oldFieldset); }
       }
     }
