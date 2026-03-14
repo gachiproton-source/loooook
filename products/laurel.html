@@ -25617,28 +25617,28 @@ document.addEventListener('DOMContentLoaded', function() {
                            </fieldset></template>
 
 
+
 <script id="lens-type-switcher">
 document.addEventListener('DOMContentLoaded', function() {
   function norm(s) { return (s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
   
-  // Track current lens type
   var currentLensType = 'reader';
   var lensCheck = document.querySelector('fieldset[data-option-name="Lens Type"] input[type="radio"]:checked');
   if (lensCheck && lensCheck.value.toLowerCase().indexOf('progressive') > -1) currentLensType = 'progressive';
   
   function getCurrentData() {
-    var dataTpl = document.getElementById('lens-data-' + currentLensType);
-    if (!dataTpl) return null;
-    try { return JSON.parse(dataTpl.content.querySelector('script').textContent); } catch(e) { return null; }
+    var tpl = document.getElementById('lens-data-' + currentLensType);
+    if (!tpl) return null;
+    try { return JSON.parse(tpl.content.querySelector('script').textContent); } catch(e) { return null; }
   }
   
   function updateURL(colorName) {
     var data = getCurrentData();
     if (!data || !data.variants) return;
-    var variantId = data.variants[colorName];
-    if (variantId) {
+    var vid = data.variants[colorName];
+    if (vid) {
       var url = new URL(window.location);
-      url.searchParams.set('variant', variantId);
+      url.searchParams.set('variant', vid);
       window.history.replaceState({}, '', url);
     }
   }
@@ -25653,21 +25653,19 @@ document.addEventListener('DOMContentLoaded', function() {
         if (orderCount === 1) el.classList.add('first-active'); else el.classList.remove('first-active');
       } else { el.classList.remove('active', 'first-active'); el.removeAttribute('style'); }
     });
-    
     var colorName = '';
-    document.querySelectorAll('input[data-input-color]').forEach(function(inp) {
+    document.querySelectorAll('fieldset[data-option-name="Color"] input[data-input-color]').forEach(function(inp) {
       var match = norm(inp.getAttribute('data-input-color')) === cn;
       inp.checked = match;
       if (match) colorName = inp.getAttribute('data-input-color');
     });
-    document.querySelectorAll('label[data-label-color]').forEach(function(lbl) {
+    document.querySelectorAll('fieldset[data-option-name="Color"] label[data-label-color]').forEach(function(lbl) {
       var m = norm(lbl.getAttribute('data-label-color')) === cn;
       lbl.style.outline = m ? '1.5px solid #333' : ''; lbl.style.outlineOffset = m ? '2px' : '';
     });
     var cl = document.querySelector('[data-color-label]');
     if (cl && colorName) cl.textContent = colorName;
     var slider = document.querySelector('.product__media-list'); if (slider) slider.scrollLeft = 0;
-    
     if (!skipURL && colorName) updateURL(colorName);
   }
   
@@ -25680,7 +25678,76 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Lens type switching
+  function switchLensType(type, targetColorNorm) {
+    currentLensType = type;
+    
+    var dataTpl = document.getElementById('lens-data-' + type);
+    var galleryTpl = document.getElementById('lens-gallery-' + type);
+    var swatchesTpl = document.getElementById('lens-swatches-' + type);
+    var descTpl = document.getElementById('lens-desc-' + type);
+    if (!dataTpl || !galleryTpl) return;
+    
+    var data = JSON.parse(dataTpl.content.querySelector('script').textContent);
+    
+    // Update lens type radio buttons
+    document.querySelectorAll('fieldset[data-option-name="Lens Type"] input[type="radio"]').forEach(function(inp) {
+      var isP = inp.value.toLowerCase().indexOf('progressive') > -1;
+      inp.checked = (type === 'progressive' && isP) || (type === 'reader' && !isP);
+    });
+    document.querySelectorAll('fieldset[data-option-name="Lens Type"] label').forEach(function(l) { l.classList.remove('active'); });
+    var checkedLens = document.querySelector('fieldset[data-option-name="Lens Type"] input:checked');
+    if (checkedLens) {
+      var lbl = document.querySelector('label[for="' + checkedLens.id + '"]');
+      if (lbl) lbl.classList.add('active');
+    }
+    
+    // Update description
+    if (descTpl) { var descEl = document.querySelector('.product__description'); if (descEl) descEl.innerHTML = descTpl.innerHTML; }
+    
+    // Update title
+    var titleEl = document.querySelector('.product__title, h1'); if (titleEl) titleEl.textContent = data.title;
+    
+    // Update price
+    var priceEl = document.querySelector('.price-item--regular, .price-item'); if (priceEl) priceEl.textContent = data.price;
+    
+    // Swap gallery - REMOVE old items first
+    var mediaList = document.querySelector('.product__media-list');
+    if (mediaList) {
+      mediaList.querySelectorAll('li.product__media-item[data-color]').forEach(function(li) { li.remove(); });
+      mediaList.appendChild(galleryTpl.content.cloneNode(true));
+    }
+    
+    // Swap color swatches
+    if (swatchesTpl) {
+      var colorFieldset = document.querySelector('fieldset[data-option-name="Color"]');
+      if (colorFieldset) {
+        var newFieldset = swatchesTpl.content.cloneNode(true).querySelector('fieldset');
+        if (newFieldset) { colorFieldset.replaceWith(newFieldset); }
+      }
+    }
+    
+    // Select color: try to keep current color, fallback to first
+    setTimeout(function() {
+      attachSwatchHandlers();
+      var colorToSelect = null;
+      
+      if (targetColorNorm) {
+        // Check if this color exists in new type
+        var normColors = data.colors.map(function(c) { return norm(c); });
+        if (normColors.indexOf(targetColorNorm) > -1) {
+          colorToSelect = targetColorNorm;
+        }
+      }
+      
+      if (!colorToSelect && data.colors.length > 0) {
+        colorToSelect = norm(data.colors[0]);
+      }
+      
+      if (colorToSelect) switchColorTo(colorToSelect);
+    }, 50);
+  }
+  
+  // Lens type click handlers
   var lensInputs = document.querySelectorAll('fieldset[data-option-name="Lens Type"] input[type="radio"]');
   lensInputs.forEach(function(input) {
     var label = document.querySelector('label[for="' + input.id + '"]');
@@ -25688,51 +25755,23 @@ document.addEventListener('DOMContentLoaded', function() {
       label.addEventListener('click', function(e) {
         e.preventDefault();
         var isProgressive = input.value.toLowerCase().indexOf('progressive') > -1;
-        currentLensType = isProgressive ? 'progressive' : 'reader';
+        var newType = isProgressive ? 'progressive' : 'reader';
+        if (newType === currentLensType) return;
         
-        lensInputs.forEach(function(li) { li.checked = (li === input); });
-        document.querySelectorAll('fieldset[data-option-name="Lens Type"] label').forEach(function(l) { l.classList.remove('active'); });
-        this.classList.add('active');
+        // Get currently selected color
+        var currentColor = null;
+        var checkedColor = document.querySelector('fieldset[data-option-name="Color"] input[data-input-color]:checked');
+        if (checkedColor) currentColor = norm(checkedColor.getAttribute('data-input-color'));
         
-        var dataTpl = document.getElementById('lens-data-' + currentLensType);
-        var galleryTpl = document.getElementById('lens-gallery-' + currentLensType);
-        var swatchesTpl = document.getElementById('lens-swatches-' + currentLensType);
-        var descTpl = document.getElementById('lens-desc-' + currentLensType);
-        if (!dataTpl || !galleryTpl) return;
-        
-        var data = JSON.parse(dataTpl.content.querySelector('script').textContent);
-        
-        if (descTpl) { var descEl = document.querySelector('.product__description'); if (descEl) descEl.innerHTML = descTpl.innerHTML; }
-        var titleEl = document.querySelector('.product__title, h1'); if (titleEl) titleEl.textContent = data.title;
-        var priceEl = document.querySelector('.price-item--regular, .price-item'); if (priceEl) priceEl.textContent = data.price;
-        
-        var mediaList = document.querySelector('.product__media-list');
-        if (mediaList && galleryTpl) {
-          mediaList.querySelectorAll('li.product__media-item[data-color]').forEach(function(li) { li.remove(); });
-          mediaList.appendChild(galleryTpl.content.cloneNode(true));
-        }
-        if (swatchesTpl) {
-          var colorFieldset = document.querySelector('fieldset[data-option-name="Color"]');
-          if (colorFieldset) {
-            var newFieldset = swatchesTpl.content.cloneNode(true).querySelector('fieldset');
-            if (newFieldset) { colorFieldset.replaceWith(newFieldset); }
-          }
-        }
-        
-        setTimeout(function() {
-          attachSwatchHandlers();
-          var firstColor = data.colors[0];
-          if (firstColor) switchColorTo(norm(firstColor));
-        }, 50);
+        switchLensType(newType, currentColor);
       });
     }
   });
   
-  // Initial: handle ?variant= from URL
+  // Initial load: handle ?variant= from URL
   var params = new URLSearchParams(window.location.search);
   var variantId = params.get('variant');
   if (variantId) {
-    // Find which lens type and color this variant belongs to
     var found = false;
     ['reader', 'progressive'].forEach(function(type) {
       if (found) return;
@@ -25742,22 +25781,12 @@ document.addEventListener('DOMContentLoaded', function() {
         var data = JSON.parse(dataTpl.content.querySelector('script').textContent);
         for (var colorName in data.variants) {
           if (data.variants[colorName] === variantId) {
-            // Found! Switch to this lens type and color
+            found = true;
             if (type !== currentLensType) {
-              // Click the correct lens type label
-              lensInputs.forEach(function(input) {
-                var isP = input.value.toLowerCase().indexOf('progressive') > -1;
-                if ((type === 'progressive' && isP) || (type === 'reader' && !isP)) {
-                  var lbl = document.querySelector('label[for="' + input.id + '"]');
-                  if (lbl) lbl.click();
-                }
-              });
-              // After lens switch, select color
-              setTimeout(function() { switchColorTo(norm(colorName), true); }, 200);
+              switchLensType(type, norm(colorName));
             } else {
               setTimeout(function() { switchColorTo(norm(colorName), true); }, 150);
             }
-            found = true;
             return;
           }
         }
@@ -25765,7 +25794,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Attach swatch handlers for initial page
   attachSwatchHandlers();
 });
 </script>
