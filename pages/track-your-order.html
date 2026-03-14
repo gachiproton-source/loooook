@@ -11,16 +11,18 @@ body {
   color: #101010;
   margin: 0;
   background: #fff;
+  font-size: 15px;
+  font-weight: 500;
 }
-.track-page {
-  max-width: 500px;
-  margin: 80px auto;
+.track-section {
+  max-width: 560px;
+  margin: 80px auto 60px;
   padding: 0 20px;
   text-align: center;
 }
-.track-page h1 {
+.track-section h1 {
   font-family: "DIN Condensed", Figtree, sans-serif;
-  font-size: 2.8rem;
+  font-size: 3.2rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.3rem;
@@ -30,61 +32,116 @@ body {
 .track-form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 0;
 }
 .track-form input {
   width: 100%;
   padding: 14px 16px;
-  font-size: 1rem;
+  font-size: 15px;
   font-family: inherit;
-  border: 1px solid #ccc;
+  font-weight: 400;
+  border: 1px solid #bbb;
   border-radius: 0;
   box-sizing: border-box;
   outline: none;
   transition: border-color 0.2s;
 }
+.track-form input + input {
+  border-top: none;
+}
 .track-form input:focus {
   border-color: #333;
+  position: relative;
+  z-index: 1;
 }
 .track-form input::placeholder {
   color: #999;
+  font-weight: 400;
 }
 .track-form button {
   width: 100%;
-  padding: 15px;
-  font-size: 1rem;
+  padding: 16px;
+  font-size: 15px;
   font-family: "DIN Condensed", Figtree, sans-serif;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.25rem;
   background: #333;
   color: #fff;
   border: none;
   cursor: pointer;
-  margin-top: 4px;
+  margin-top: 12px;
   transition: background-color 0.2s;
 }
 .track-form button:hover {
   background: #555;
 }
 .track-result {
-  margin-top: 30px;
+  margin-top: 20px;
   text-align: left;
   display: none;
 }
-.track-result.active {
-  display: block;
+.track-result.active { display: block; }
+.track-result p { color: #666; font-size: 14px; line-height: 1.6; }
+
+/* FAQ Section */
+.faq-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 100px;
+  border-top: 1px solid rgba(0,0,0,0.08);
 }
-.track-result p {
-  color: #666;
-  font-size: 0.95rem;
-  line-height: 1.6;
+@media (max-width: 768px) {
+  .faq-section { padding: 40px 20px; }
+}
+.faq-section h2 {
+  font-family: "DIN Condensed", Figtree, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  margin-bottom: 10px;
+}
+.faq-item {
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.faq-item:first-of-type {
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  color: #101010;
+}
+.faq-question:hover { color: #435a6f; }
+.faq-arrow {
+  font-size: 18px;
+  transition: transform 0.3s;
+  color: #999;
+}
+.faq-item.open .faq-arrow { transform: rotate(180deg); }
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  font-size: 14px;
+  line-height: 1.8;
+  color: rgba(16,16,16,0.7);
+}
+.faq-item.open .faq-answer {
+  max-height: 500px;
+  padding-bottom: 20px;
 }
 </style>
 </head>
 <body>
 <main>
-<div class="track-page">
+<div class="track-section">
   <h1>Track Your Order</h1>
   <div class="track-form">
     <input type="text" id="track-order" placeholder="Order number or tracking code">
@@ -95,7 +152,52 @@ body {
     <p>For order tracking, please contact us at <a href="mailto:hello@lookoptic.com" style="color:#435a6f;">hello@lookoptic.com</a> or call <strong>(877) 857-LOOK</strong> with your order number.</p>
   </div>
 </div>
+
+<div class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+  
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      <span>Where Is My Order?</span>
+      <span class="faq-arrow">&#8964;</span>
+    </div>
+    <div class="faq-answer">Once your package has been shipped, we will send you an email that provides your tracking number. If you are unable to find this email, you can also track your package using the form above. Most orders will arrive within 7-10 business days.</div>
+  </div>
+  
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      <span>When Will My Order Ship?</span>
+      <span class="faq-arrow">&#8964;</span>
+    </div>
+    <div class="faq-answer">Orders placed Monday-Friday before 2pm ET are packaged and picked-up for shipping the same day. We also include 2-day shipping within the continental U.S.</div>
+  </div>
+  
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      <span>My Order Status Hasn't Changed In Several Days. What Should I Do?</span>
+      <span class="faq-arrow">&#8964;</span>
+    </div>
+    <div class="faq-answer">Occasionally, tracking information may not update right away. If your order status hasn't changed in 5+ business days, please contact us at hello@lookoptic.com or call (877) 857-LOOK and we will investigate.</div>
+  </div>
+  
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      <span>What Is Your Return And Exchange Policy?</span>
+      <span class="faq-arrow">&#8964;</span>
+    </div>
+    <div class="faq-answer">In the unlikely event that you do not LOOK great in your readers, you have 90 days from the date of purchase to return them, no questions asked. Exchanges are free. However, due to increased shipping and handling costs, we do charge a $8 fee for returned items.</div>
+  </div>
+  
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      <span>Can I Edit My Order Or Update My Shipping Address?</span>
+      <span class="faq-arrow">&#8964;</span>
+    </div>
+    <div class="faq-answer">To cancel or edit an order please email hello@lookoptic.com and include your order number within 1 hour of purchase. Please note, if the request is made more than one hour after purchase we may not be able to honor the request, as our warehouse is super fast!</div>
+  </div>
+</div>
 </main>
+
 <script>
 function trackOrder() {
   var order = document.getElementById('track-order').value;
@@ -103,6 +205,10 @@ function trackOrder() {
   if (order || email) {
     document.getElementById('track-result').classList.add('active');
   }
+}
+function toggleFaq(el) {
+  var item = el.parentElement;
+  item.classList.toggle('open');
 }
 </script>
 </body>

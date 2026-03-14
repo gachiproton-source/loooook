@@ -1093,14 +1093,31 @@ details[open] > .header__submenu.list-menu {
   flex-shrink: 0 !important;
 }
 </style>
+
 <style id="page-width-fix">
-.page-width, .page-width--narrow {
-  max-width: 72.6rem !important;
+.shopify-policy__container, .page-width, .page-width--narrow, .rte {
+  max-width: 560px !important;
+  max-width: 65ch !important;
   margin: 0 auto !important;
-  padding: 0 5rem !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
 }
-.rte { font-size: 1.4rem !important; line-height: 1.8 !important; }
-.rte h1, .rte h2, .rte h3 { font-family: "Avenir Next", Figtree, sans-serif !important; }
+.shopify-policy__title {
+  font-family: "Avenir Next", Figtree, sans-serif !important;
+  text-align: center !important;
+  margin: 40px auto 20px !important;
+}
+.shopify-policy__body {
+  font-family: "Avenir Next", Figtree, sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.8 !important;
+  color: rgba(16,16,16,0.75) !important;
+}
+.shopify-policy__body h1, .shopify-policy__body h2, .shopify-policy__body h3,
+.rte h1, .rte h2, .rte h3 {
+  font-family: "Avenir Next", Figtree, sans-serif !important;
+  color: rgb(16,16,16) !important;
+}
 </style>
 </head>
   <body
