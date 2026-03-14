@@ -15475,7 +15475,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   function switchColorTo(cn, skipURL) {
-    var items = document.querySelectorAll('.product__media-list > li[data-color]');
+    var items = document.querySelectorAll('.product__media-list li[data-color]');
     var orderCount = 0;
     items.forEach(function(el) {
       if (norm(el.getAttribute('data-color')) === cn) {
@@ -15485,14 +15485,15 @@ document.addEventListener('DOMContentLoaded', function() {
       } else { el.classList.remove('active', 'first-active'); el.removeAttribute('style'); }
     });
     var colorName = '';
-    document.querySelectorAll('fieldset[data-option-name="Color"] input[data-input-color]').forEach(function(inp) {
+    document.querySelectorAll('input[data-input-color]').forEach(function(inp) {
       var match = norm(inp.getAttribute('data-input-color')) === cn;
       inp.checked = match;
       if (match) colorName = inp.getAttribute('data-input-color');
     });
-    document.querySelectorAll('fieldset[data-option-name="Color"] label[data-label-color]').forEach(function(lbl) {
+    document.querySelectorAll('label[data-label-color]').forEach(function(lbl) {
       var m = norm(lbl.getAttribute('data-label-color')) === cn;
-      lbl.style.outline = m ? '1.5px solid #333' : ''; lbl.style.outlineOffset = m ? '2px' : '';
+      lbl.style.outline = m ? '1.5px solid #333' : '';
+      lbl.style.outlineOffset = m ? '2px' : '';
     });
     var cl = document.querySelector('[data-color-label]');
     if (cl && colorName) cl.textContent = colorName;
