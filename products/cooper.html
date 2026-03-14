@@ -9936,6 +9936,8 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
+
+
 <script id="color-variant-switch">
 (function() {
   var params = new URLSearchParams(window.location.search);
@@ -9946,7 +9948,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var targetColor = null;
   for (var i = 0; i < scripts.length; i++) {
     var text = scripts[i].textContent;
-    var re = new RegExp('"id":\s*' + variantId + '[^}]*?"option2":\s*"([^"]+)"');
+    var re = new RegExp('"id":\\s*' + variantId + '[^}]*?"option2":\\s*"([^"]+)"');
     var match = text.match(re);
     if (match) { targetColor = norm(match[1].replace(/[()]/g, '')); break; }
   }
@@ -9961,21 +9963,16 @@ document.addEventListener('DOMContentLoaded', function() {
       if (c === targetColor) {
         el.classList.add('active');
         orderCount++;
-        el.style.order = orderCount;
+        // Set ONLY order in style - CSS selectors match [style="order: X;"]
+        el.setAttribute('style', 'order: ' + orderCount + ';');
         if (orderCount === 1) {
           el.classList.add('first-active');
-          el.style.maxWidth = 'unset';
         } else {
           el.classList.remove('first-active');
-          el.style.maxWidth = 'calc(50% - 2.5px)';
-          if (orderCount % 2 === 0) el.style.marginLeft = '5px';
-          else el.style.marginLeft = '';
         }
       } else {
         el.classList.remove('active', 'first-active');
-        el.style.order = '';
-        el.style.maxWidth = '';
-        el.style.marginLeft = '';
+        el.removeAttribute('style');
       }
     });
     
@@ -10007,21 +10004,15 @@ document.addEventListener('DOMContentLoaded', function() {
         if (c === cn) {
           el.classList.add('active');
           orderCount++;
-          el.style.order = orderCount;
+          el.setAttribute('style', 'order: ' + orderCount + ';');
           if (orderCount === 1) {
             el.classList.add('first-active');
-            el.style.maxWidth = 'unset';
           } else {
             el.classList.remove('first-active');
-            el.style.maxWidth = 'calc(50% - 2.5px)';
-            if (orderCount % 2 === 0) el.style.marginLeft = '5px';
-            else el.style.marginLeft = '';
           }
         } else {
           el.classList.remove('active', 'first-active');
-          el.style.order = '';
-          el.style.maxWidth = '';
-          el.style.marginLeft = '';
+          el.removeAttribute('style');
         }
       });
       document.querySelectorAll('input[data-input-color]').forEach(function(inp) { inp.checked = norm(inp.getAttribute('data-input-color')) === cn; });
