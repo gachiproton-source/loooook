@@ -1585,6 +1585,117 @@ fieldset[data-option-name="Lens Type"] label.lens-disabled {
   cursor: not-allowed !important;
 }
 </style>
+<style id="cart-drawer-css">
+.cart-notification-bg {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 4;
+}
+#cart-notification {
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 420px !important;
+  max-width: 100vw !important;
+  background: #fff !important;
+  z-index: 5 !important;
+  transform: translateX(100%) !important;
+  transition: transform 0.3s ease !important;
+  visibility: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow-y: auto !important;
+  border-left: 1px solid rgba(0,0,0,0.1) !important;
+}
+#cart-notification.active {
+  transform: translateX(0) !important;
+  visibility: visible !important;
+}
+.cart-notification__header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 20px 25px !important;
+  border-bottom: 1px solid rgba(0,0,0,0.08) !important;
+}
+.cart-notification__heading {
+  font-family: var(--font-heading-family, 'DIN Condensed', sans-serif) !important;
+  font-size: 2.4rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.3rem !important;
+  font-weight: 500 !important;
+  margin: 0 !important;
+}
+.cart-notification__close {
+  background: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  padding: 5px !important;
+  color: rgba(16,16,16,0.55) !important;
+  border: 1px solid rgba(16,16,16,0.1) !important;
+  border-radius: 50% !important;
+  width: 36px !important;
+  height: 36px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.cart-notification__close:hover {
+  color: #101010 !important;
+  border-color: rgba(16,16,16,0.3) !important;
+}
+.cart-notification__close .icon-close {
+  width: 14px !important;
+  height: 14px !important;
+}
+.cart-contents {
+  flex: 1 !important;
+  padding: 20px 25px !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+.cart-notification-product {
+  color: rgba(16,16,16,0.6) !important;
+  font-size: 1.4rem !important;
+}
+.cart-notification-lower {
+  padding: 15px 25px 25px !important;
+  border-top: 1px solid rgba(0,0,0,0.08) !important;
+}
+.cart-notification-lower__text {
+  font-size: 1.3rem !important;
+  color: rgba(16,16,16,0.6) !important;
+}
+.cart-notification__messaging {
+  margin-bottom: 10px !important;
+}
+.cart-notification__icon-bar .h5 {
+  font-size: 1.3rem !important;
+  margin: 0 !important;
+}
+.cart-notification-totals {
+  display: none !important;
+}
+.cart-notification .announcement-bar {
+  padding: 8px 0 !important;
+  text-align: center !important;
+}
+.cart-notification .announcement-bar .announcement-bar__message {
+  font-size: 1.2rem !important;
+}
+body.overflow-hidden {
+  overflow: hidden !important;
+}
+cart-notification {
+  display: contents !important;
+}
+.cart-notification-wrapper {
+  display: contents !important;
+}
+</style>
 </head>
   <body
     class="gradient"
@@ -9713,6 +9824,38 @@ document.addEventListener('DOMContentLoaded', function() {
   attachColorHandlers();
   var initColor = document.querySelector('input[data-input-color]:checked');
   if (initColor) updateLensBtn(initColor.getAttribute('data-input-color'));
+})();
+</script>
+<script id="cart-drawer-js">
+(function() {
+  var cartBg = document.querySelector('.cart-notification-bg');
+  var cartDrawer = document.querySelector('#cart-notification');
+  var cartIcon = document.querySelector('#cart-icon-bubble');
+  var closeBtn = document.querySelector('[data-cart-notification-close]');
+  
+  if (!cartDrawer || !cartIcon) return;
+  
+  function openCart(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    if (cartBg) cartBg.style.display = 'block';
+    cartDrawer.classList.add('active');
+    document.body.classList.add('overflow-hidden');
+  }
+  
+  function closeCart() {
+    cartDrawer.classList.remove('active');
+    if (cartBg) cartBg.style.display = 'none';
+    document.body.classList.remove('overflow-hidden');
+  }
+  
+  cartIcon.addEventListener('click', openCart);
+  if (closeBtn) closeBtn.addEventListener('click', closeCart);
+  if (cartBg) cartBg.addEventListener('click', closeCart);
+  
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeCart();
+  });
 })();
 </script>
 </body>
