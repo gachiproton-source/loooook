@@ -21856,6 +21856,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
 <!-- CART OVERLAY -->
 <div id="cart-overlay" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);z-index:998;cursor:pointer;"></div>
 <!-- CART DRAWER -->
@@ -21909,16 +21910,16 @@ document.addEventListener('DOMContentLoaded', function() {
   function addToCart(item){
     var cart = getCart();
     // Check if same variant already in cart
-    var exists = cart.findIndex(function(c){ return c.variantId === item.variantId; });
-    if(exists > -1){ cart[exists].qty = (cart[exists].qty||1) + 1; }
-    else { item.qty = 1; cart.push(item); }
+    item.qty = 1;
+    item.cartId = Date.now() + '_' + Math.random().toString(36).substr(2,5);
+    cart.push(item);
     saveCart(cart);
     renderCart();
     openCart();
   }
   
-  function removeFromCart(variantId){
-    var cart = getCart().filter(function(c){ return c.variantId !== variantId; });
+  function removeFromCart(cartId){
+    var cart = getCart().filter(function(c){ return c.cartId !== cartId; });
     saveCart(cart);
     renderCart();
   }
