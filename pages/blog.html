@@ -1028,10 +1028,7 @@ details[open] > .header__submenu.list-menu {
 
 
 
-<style id="cart-drawer-css">
-.cart-notification-bg { display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); z-index:999; cursor:pointer; }
-body.overflow-hidden { overflow:hidden !important; }
-</style>
+
 </head>
   <body
     class="gradient"
@@ -1646,49 +1643,8 @@ body.overflow-hidden { overflow:hidden !important; }
 
 </div>
 </sticky-header><div id="shopify-section-cart-drawer" class="shopify-section">
-<div class="cart-notification-bg" data-cart-notification-bg></div>
-<cart-notification>
-  <div class="cart-notification-wrapper  color-background-1">
-    <div id="cart-notification" class="cart-notification cart-notification--cart-drawer" aria-modal="true" aria-label="Your cart" role="dialog" tabindex="-1" data-cart-notification>
-      <div>
-        <div class="cart-notification__header">
-          <h2 class="cart-notification__heading h1">Your cart</h2>
-          <button type="button" class="cart-notification__close modal__close-button link link--text focus-inset" aria-label="Close" data-cart-notification-close>
-            <svg class="icon icon-close" aria-hidden="true" focusable="false"><use href="#icon-close"></use></svg>
-          </button>
-        </div><div class="announcement-bar" role="region" aria-label="Announcement"><p class="announcement-bar__message h5 text--light">FREE SHIPPING ON ORDERS OVER <span data-shipping-threshold>$98</span></p></div></div>
-
-      <div class="cart-contents"><div id="cart-notification-product" class="cart-notification-product"><p>Your cart is currently empty</p></div>
-
-              
-
-              <div class="cart-notification-lower sticky">
 
 
-                <div class="cart-notification-lower__text">
-                  <div class="cart-notification__messaging"></div><div class="cart-notification__icon-bar"><p class="h5">Orders ship in one business day.</p>
-                          <script type="application/json" data-cart-notification-item>
-                            {
-                              "text": "Orders ship in one business day.",
-                              "override_text": "",
-                              "product_type": ""
-                            }
-                          </script>
-                        </div></div>
-
-                <div id="cart-notification-totals" class="cart-notification-totals"></div>
-
-                <div class="fp_cart_easy_return">
-                  <span>SHOP WITH CONFIDENCE - 90 DAYS EASY RETURNS</span>
-                </div></div></div>
-    </div>
-  </div>
-
-  
-  <script type="application/json" data-cart-messaging>
-    []
-  </script>
-</cart-notification>
 
 <style>
   .cart-notification .announcement-bar { background-color: #c4bcae; }
@@ -3595,89 +3551,39 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+<!-- CLEAN CART DRAWER -->
+<div id="cart-overlay" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);z-index:998;cursor:pointer;"></div>
+<div id="cart-drawer" style="position:fixed;top:0;right:0;bottom:0;width:460px;max-width:100vw;background:#fff;z-index:999;transform:translateX(100%);transition:transform 0.25s ease;display:flex;flex-direction:column;overflow:hidden;">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;padding:24px 24px 20px;flex-shrink:0;">
+    <h2 style="font-family:DIN Condensed,sans-serif;font-size:44px;text-transform:uppercase;letter-spacing:0.3rem;font-weight:500;margin:0;color:#101010;line-height:1;">Your Cart</h2>
+    <button id="cart-close" style="background:none;border:1px solid rgba(16,16,16,0.1);cursor:pointer;padding:0;color:rgba(16,16,16,0.55);border-radius:50%;width:40px;height:40px;min-width:40px;display:flex;align-items:center;justify-content:center;margin-top:4px;">
+      <svg width="16" height="16" viewBox="0 0 18 17" fill="none"><path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.239a.5.5 0 10-.693-.722L9.025 7.838 1.572.646a.5.5 0 00-.707.708l7.173 6.916-7.173 7.708z" fill="currentColor"/></svg>
+    </button>
+  </div>
+  <div style="background:#d7cfbf;padding:14px 10px;text-align:center;flex-shrink:0;">
+    <p style="font-family:Avenir Next,sans-serif;font-size:13px;font-weight:500;text-transform:uppercase;color:#121212;margin:0;line-height:16px;">Free Shipping On Orders Over $120</p>
+  </div>
+  <div style="flex:1;padding:20px 24px;overflow-y:auto;">
+    <p style="color:rgba(16,16,16,0.75);font-size:15px;font-weight:400;margin:0;">Your cart is currently empty</p>
+  </div>
+  <div style="flex-shrink:0;border-top:1px solid #e0e0e0;padding:1rem 0;text-align:center;">
+    <p style="margin:0;text-transform:uppercase;font-weight:700;font-size:13px;letter-spacing:0.1rem;color:#333;">Orders ship in one business day.</p>
+  </div>
+</div>
 <script id="cart-drawer-js">
 document.addEventListener('DOMContentLoaded', function() {
-  var bg = document.querySelector('[data-cart-notification-bg]');
-  var cart = document.getElementById('cart-notification');
+  var overlay = document.getElementById('cart-overlay');
+  var drawer = document.getElementById('cart-drawer');
   var icon = document.getElementById('cart-icon-bubble');
-  var closeBtn = document.querySelector('[data-cart-notification-close]');
-  if (!cart || !icon) return;
-
-  // Force cart styles inline - nothing can override this
-  cart.style.cssText = 'position:fixed!important;top:0!important;right:0!important;bottom:0!important;width:460px!important;max-width:100vw!important;background:#fff!important;z-index:1000!important;transform:translateX(100%)!important;transition:transform 0.25s ease!important;display:flex!important;flex-direction:column!important;overflow:hidden!important;border:none!important;visibility:visible!important;';
-
-  // Style the header
-  var header = cart.querySelector('.cart-notification__header');
-  if (header) header.style.cssText = 'display:flex!important;justify-content:space-between!important;align-items:flex-start!important;padding:24px 24px 20px!important;flex-shrink:0!important;';
-
-  // Style heading
-  var heading = cart.querySelector('.cart-notification__heading');
-  if (heading) heading.style.cssText = 'font-family:DIN Condensed,sans-serif!important;font-size:36px!important;text-transform:uppercase!important;letter-spacing:0.3rem!important;font-weight:500!important;margin:0!important;color:#101010!important;line-height:1!important;';
-
-  // Style close button
-  if (closeBtn) closeBtn.style.cssText = 'background:none!important;border:1px solid rgba(16,16,16,0.1)!important;cursor:pointer!important;padding:0!important;color:rgba(16,16,16,0.55)!important;border-radius:50%!important;width:40px!important;height:40px!important;min-width:40px!important;display:flex!important;align-items:center!important;justify-content:center!important;';
-
-  // Style announcement bar inside cart
-  var annBar = cart.querySelector('.announcement-bar');
-  if (annBar) annBar.style.cssText = 'background:#d7cfbf!important;padding:0!important;text-align:center!important;border:none!important;margin:0!important;flex-shrink:0!important;height:37px!important;display:flex!important;align-items:center!important;justify-content:center!important;';
-  var annMsg = cart.querySelector('.announcement-bar__message');
-  if (annMsg) annMsg.style.cssText = 'font-family:Avenir Next,sans-serif!important;font-size:13px!important;font-weight:500!important;letter-spacing:0!important;text-transform:uppercase!important;color:#121212!important;margin:0!important;padding:0!important;';
-
-  // Style cart contents
-  var contents = cart.querySelector('.cart-contents');
-  if (contents) contents.style.cssText = 'flex:1!important;padding:20px 24px!important;overflow-y:auto!important;';
-
-  // Style lower section
-  var lower = cart.querySelector('.cart-notification-lower');
-  if (lower) lower.style.cssText = 'display:block!important;flex-shrink:0!important;visibility:visible!important;opacity:1!important;';
-  var lowerText = cart.querySelector('.cart-notification-lower__text');
-  if (lowerText) lowerText.style.cssText = 'border-top:1px solid #e0e0e0!important;padding:1rem 0!important;text-align:center!important;';
-  var iconBar = cart.querySelector('.cart-notification__icon-bar');
-  if (iconBar) iconBar.style.cssText = 'display:flex!important;gap:1rem!important;align-items:center!important;margin:0!important;padding:0 2rem!important;justify-content:center!important;';
-  var iconBarP = iconBar ? iconBar.querySelector('.h5') : null;
-  if (iconBarP) iconBarP.style.cssText = 'margin:0!important;text-transform:uppercase!important;font-weight:700!important;font-size:13px!important;letter-spacing:0.1rem!important;color:#333!important;';
-
-  // Hide totals
-  var totals = cart.querySelector('.cart-notification-totals');
-  if (totals) totals.style.display = 'none';
-
-  // Hide messaging
-  var messaging = cart.querySelector('.cart-notification__messaging');
-  if (messaging) messaging.style.display = 'none';
-
-  // Fix wrapper elements
-  var wrapper = cart.closest('.cart-notification-wrapper');
-  if (wrapper) wrapper.style.cssText = 'display:contents!important;';
-  var cartNotif = cart.closest('cart-notification');
-  if (cartNotif) cartNotif.style.cssText = 'display:contents!important;';
-
-  // First child div needs to be flex column full height
-  var firstDiv = cart.querySelector(':scope > div:first-child');
-  if (firstDiv) firstDiv.style.cssText = 'display:flex!important;flex-direction:column!important;height:100%!important;';
-
-  function openCart(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    cart.style.transform = 'translateX(0)';
-    if (bg) bg.style.display = 'block';
-    document.body.classList.add('overflow-hidden');
-  }
-
-  function closeCart() {
-    cart.style.transform = 'translateX(100%)';
-    if (bg) bg.style.display = 'none';
-    document.body.classList.remove('overflow-hidden');
-  }
-
+  var closeBtn = document.getElementById('cart-close');
+  if (!drawer || !icon) return;
+  function openCart(e) { e.preventDefault(); e.stopPropagation(); drawer.style.transform='translateX(0)'; overlay.style.display='block'; document.body.style.overflow='hidden'; }
+  function closeCart() { drawer.style.transform='translateX(100%)'; overlay.style.display='none'; document.body.style.overflow=''; }
   icon.addEventListener('click', openCart);
-  if (closeBtn) closeBtn.addEventListener('click', function(e) { e.preventDefault(); closeCart(); });
-  if (bg) bg.addEventListener('click', closeCart);
-  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeCart(); });
-  document.addEventListener('click', function(e) {
-    if (cart.style.transform === 'translateX(0)' || cart.style.transform === 'translateX(0px)') {
-      if (!cart.contains(e.target) && !icon.contains(e.target)) closeCart();
-    }
-  });
+  closeBtn.addEventListener('click', function(e){ e.preventDefault(); closeCart(); });
+  overlay.addEventListener('click', closeCart);
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeCart(); });
 });
 </script>
 </body>
