@@ -1056,35 +1056,42 @@ details[open] > .header__submenu.list-menu {
 
 
 
+
 <style id="card-size-fix">
 .lo-grid-wrap {
   display: flex !important;
   flex-wrap: wrap !important;
   flex-direction: row !important;
+  margin-bottom: 2rem !important;
+  margin-left: -1rem !important;
   padding: 0 !important;
-  margin: 0 0 2rem -2.2rem !important;
   list-style: none !important;
 }
 .lo-grid-wrap > .lo-card {
-  width: 33.333% !important;
-  max-width: 33.333% !important;
-  flex: 0 0 33.333% !important;
-  padding: 0 0 5rem 2.2rem !important;
+  width: 33.33% !important;
+  max-width: 33.33% !important;
+  flex: 0 0 33.33% !important;
+  flex-grow: 0 !important;
+  padding-left: 2.2rem !important;
+  padding-bottom: calc(5rem + var(--page-width-margin, 0rem)) !important;
+  padding-right: 0 !important;
+  padding-top: 0 !important;
   box-sizing: border-box !important;
   display: block !important;
   list-style: none !important;
 }
 .lo-card__media {
-  aspect-ratio: 810.906 / 614.391 !important;
-  width: 100% !important;
-  overflow: hidden !important;
   position: relative !important;
-  background: #f0efed !important;
+  overflow: hidden !important;
+  background-color: rgba(var(--color-foreground, 16,16,16), 0.04) !important;
+  padding-bottom: 75.77% !important;
+  height: 0 !important;
 }
 .lo-card__media img {
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important;
+  object-position: center center !important;
   position: absolute !important;
   top: 0 !important;
   left: 0 !important;
@@ -1102,10 +1109,11 @@ details[open] > .header__submenu.list-menu {
 .lo-card__rating .lo-stars {
   display: inline-flex !important;
   gap: 1px !important;
+  align-items: center !important;
 }
 .lo-card__rating .lo-stars svg {
   width: 16px !important;
-  height: 16px !important;
+  height: auto !important;
   display: block !important;
 }
 .lo-card__rating .lo-review-count {
@@ -1115,16 +1123,21 @@ details[open] > .header__submenu.list-menu {
   color: inherit !important;
 }
 .lo-collection.page-width--full-width {
-  padding-left: 59px !important;
-  padding-right: 59px !important;
+  padding-left: 3.4rem !important;
+  padding-right: 3.4rem !important;
+  max-width: none !important;
+}
+.lo-hero {
+  padding: 4rem 0 0 !important;
+  margin-bottom: 2rem !important;
 }
 @media screen and (max-width: 989px) {
   .lo-grid-wrap > .lo-card { width: 50% !important; max-width: 50% !important; flex: 0 0 50% !important; }
-  .lo-collection.page-width--full-width { padding-left: 30px !important; padding-right: 30px !important; }
 }
 @media screen and (max-width: 749px) {
-  .lo-grid-wrap > .lo-card { width: 100% !important; max-width: 100% !important; flex: 0 0 100% !important; }
-  .lo-collection.page-width--full-width { padding-left: 15px !important; padding-right: 15px !important; }
+  .lo-grid-wrap > .lo-card { width: 100% !important; max-width: 100% !important; flex: 0 0 100% !important; padding-left: 0 !important; }
+  .lo-grid-wrap { margin-left: 0 !important; }
+  .lo-collection.page-width--full-width { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
 }
 .lo-filters, .lo-filters__left, .lo-filters__right,
 [class*="facet"], [class*="FacetFilters"],
@@ -2048,7 +2061,7 @@ details[open] > .header__submenu.list-menu {
         <div class="lo-tabs"><button class="lo-tab lo-tab--active">All</button><button class="lo-tab">Best Sellers</button></div>
         <span class="lo-filters__count"><span class="lo-filters__count-text">8 products</span></span></div>
         <div class="lo-grid-wrap" style="display:flex;flex-wrap:wrap;list-style:none;padding:0;margin:0;">
-<li class="lo-card" style="width:33.333%!important;max-width:33.333%!important;flex:0 0 33.333%!important;padding:0 0 5rem 2.2rem!important;box-sizing:border-box!important;display:block!important;list-style:none!important;"><a href="../products/cosmo.html?variant=6620523495483" class="lo-card__link"><div class="lo-card__media">
+<li class="lo-card" style="width:33.33%!important;max-width:33.33%!important;flex:0 0 33.33%!important;padding-left:2.2rem!important;padding-bottom:5rem!important;box-sizing:border-box!important;display:block!important;list-style:none!important;"><a href="../products/cosmo.html?variant=6620523495483" class="lo-card__link"><div class="lo-card__media">
       <img class="lo-card__img1" src="../cdn/shop/files/layflat__cosmo_tortoise.png" alt="Cosmo Readers" loading="lazy">
       <img class="lo-card__img2" src="../cdn/shop/files/cosmo_cosmo-readers_tortoise_002_f772aa6e-5b71-4d1d-845b-6f0da7564c96.png" alt="" loading="lazy">
     </div></a><div class="lo-card__body"><div class="lo-card__swatches"><span class="lo-swatch lo-swatch--active" title="Tortoise" style="--sw-color:#8B6914;background-color:#8B6914;background-image:url('../cdn/shop/files/swatch-tortoise.jpg');" data-img1="../cdn/shop/files/layflat__cosmo_tortoise.png" data-img2="../cdn/shop/files/cosmo_cosmo-readers_tortoise_002_f772aa6e-5b71-4d1d-845b-6f0da7564c96.png" onclick="swapColor(this)" data-variant-id="6620523495483"></span>
@@ -2062,7 +2075,7 @@ details[open] > .header__submenu.list-menu {
 </div>
     <h3 class="lo-card__title"><a href="../products/cosmo.html?variant=6620523495483">COSMO READERS</a></h3>
     <div class="lo-card__rating"><span class="lo-stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span><span class="lo-review-count">4,456 Reviews</span></div></div></li>
-<li class="lo-card" style="width:33.333%!important;max-width:33.333%!important;flex:0 0 33.333%!important;padding:0 0 5rem 2.2rem!important;box-sizing:border-box!important;display:block!important;list-style:none!important;"><a href="../products/cosmo-progressives.html?variant=41737420374075" class="lo-card__link"><div class="lo-card__media">
+<li class="lo-card" style="width:33.33%!important;max-width:33.33%!important;flex:0 0 33.33%!important;padding-left:2.2rem!important;padding-bottom:5rem!important;box-sizing:border-box!important;display:block!important;list-style:none!important;"><a href="../products/cosmo-progressives.html?variant=41737420374075" class="lo-card__link"><div class="lo-card__media">
       <img class="lo-card__img1" src="../cdn/shop/files/layflat__cosmo-sun_black.png" alt="COSMO SUN PROGRESSIVES" loading="lazy">
       <img class="lo-card__img2" src="../cdn/shop/files/cosmo_cosmo-sun-progressives_black_002.png" alt="" loading="lazy">
     </div></a><div class="lo-card__body"><div class="lo-card__swatches">
@@ -2072,7 +2085,7 @@ details[open] > .header__submenu.list-menu {
 </div>
     <h3 class="lo-card__title"><a href="../products/cosmo-progressives.html?variant=41737420374075">COSMO SUN PROGRESSIVES</a></h3>
     <div class="lo-card__rating"><span class="lo-stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span><span class="lo-review-count">4,456 Reviews</span></div></div></li>
-<li class="lo-card" style="width:33.333%!important;max-width:33.333%!important;flex:0 0 33.333%!important;padding:0 0 5rem 2.2rem!important;box-sizing:border-box!important;display:block!important;list-style:none!important;"><a href="../products/kaine.html?variant=6665614753851" class="lo-card__link"><div class="lo-card__media">
+<li class="lo-card" style="width:33.33%!important;max-width:33.33%!important;flex:0 0 33.33%!important;padding-left:2.2rem!important;padding-bottom:5rem!important;box-sizing:border-box!important;display:block!important;list-style:none!important;"><a href="../products/kaine.html?variant=6665614753851" class="lo-card__link"><div class="lo-card__media">
       <img class="lo-card__img1" src="../cdn/shop/files/layflat__kaine_tortoise.png" alt="Kaine Readers" loading="lazy">
       <img class="lo-card__img2" src="../cdn/shop/files/kaine_kaine-readers_tortoise_002.png" alt="" loading="lazy">
     </div></a><div class="lo-card__body"><div class="lo-card__swatches"><span class="lo-swatch lo-swatch--active" title="Tortoise" style="--sw-color:#8B6914;background-color:#8B6914;background-image:url('../cdn/shop/files/swatch-tortoise.jpg');" data-img1="../cdn/shop/files/layflat__kaine_tortoise.png" data-img2="../cdn/shop/files/kaine_kaine-readers_tortoise_002.png" onclick="swapColor(this)" data-variant-id="6665614753851"></span>
@@ -2082,7 +2095,7 @@ details[open] > .header__submenu.list-menu {
 </div>
     <h3 class="lo-card__title"><a href="../products/kaine.html?variant=6665614753851">KAINE READERS</a></h3>
     <div class="lo-card__rating"><span class="lo-stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span><span class="lo-review-count">1,543 Reviews</span></div></div></li>
-<li class="lo-card" style="width:33.333%!important;max-width:33.333%!important;flex:0 0 33.333%!important;padding:0 0 5rem 2.2rem!important;box-sizing:border-box!important;display:block!important;list-style:none!important;"><a href="../products/kaine-progressives.html?variant=7364111204411" class="lo-card__link"><div class="lo-card__media">
+<li class="lo-card" style="width:33.33%!important;max-width:33.33%!important;flex:0 0 33.33%!important;padding-left:2.2rem!important;padding-bottom:5rem!important;box-sizing:border-box!important;display:block!important;list-style:none!important;"><a href="../products/kaine-progressives.html?variant=7364111204411" class="lo-card__link"><div class="lo-card__media">
       <img class="lo-card__img1" src="../cdn/shop/files/layflat__kaine-sun_tortoise.png" alt="KAINE SUN PROGRESSIVES" loading="lazy">
       <img class="lo-card__img2" src="../cdn/shop/files/kaine_kaine-sun-progressives_tortoise_002.png" alt="" loading="lazy">
     </div></a><div class="lo-card__body"><div class="lo-card__swatches">
@@ -2092,7 +2105,7 @@ details[open] > .header__submenu.list-menu {
 </div>
     <h3 class="lo-card__title"><a href="../products/kaine-progressives.html?variant=7364111204411">KAINE SUN PROGRESSIVES</a></h3>
     <div class="lo-card__rating"><span class="lo-stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span><span class="lo-review-count">1,543 Reviews</span></div></div></li>
-<li class="lo-card" style="width:33.333%!important;max-width:33.333%!important;flex:0 0 33.333%!important;padding:0 0 5rem 2.2rem!important;box-sizing:border-box!important;display:block!important;list-style:none!important;"><a href="../products/laurel.html?variant=6620523987003" class="lo-card__link"><div class="lo-card__media"><img class="lo-card__img1" src="../cdn/shop/files/layflat__laurel_champagne.png" alt="Laurel Readers" loading="lazy">
+<li class="lo-card" style="width:33.33%!important;max-width:33.33%!important;flex:0 0 33.33%!important;padding-left:2.2rem!important;padding-bottom:5rem!important;box-sizing:border-box!important;display:block!important;list-style:none!important;"><a href="../products/laurel.html?variant=6620523987003" class="lo-card__link"><div class="lo-card__media"><img class="lo-card__img1" src="../cdn/shop/files/layflat__laurel_champagne.png" alt="Laurel Readers" loading="lazy">
       <img class="lo-card__img2" src="../cdn/shop/files/laurel_laurel-readers_champagne_002.png" alt="" loading="lazy">
     </div></a><div class="lo-card__body"><div class="lo-card__swatches"><span class="lo-swatch lo-swatch--active" title="Champagne" style="--sw-color:#D4C5A9;background-color:#D4C5A9;background-image:url('../cdn/shop/files/swatch-champagne.jpg');" data-img1="../cdn/shop/files/layflat__laurel_champagne.png" data-img2="../cdn/shop/files/laurel_laurel-readers_champagne_002.png" onclick="swapColor(this)" data-variant-id="6620523987003"></span>
 <span class="lo-swatch" title="Black" style="--sw-color:#1a1a1a;background-color:#1a1a1a;background-image:url('../cdn/shop/files/swatch-black.jpg');" data-img1="../cdn/shop/files/layflat__laurel_black.png" data-img2="../cdn/shop/files/laurel_laurel-readers_black_002.png" onclick="swapColor(this)" data-variant-id="41737460908091"></span>
@@ -2105,7 +2118,7 @@ details[open] > .header__submenu.list-menu {
 </div>
     <h3 class="lo-card__title"><a href="../products/laurel.html?variant=6620523987003">LAUREL READERS</a></h3>
     <div class="lo-card__rating"><span class="lo-stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span><span class="lo-review-count">2,528 Reviews</span></div></div></li>
-<li class="lo-card" style="width:33.333%!important;max-width:33.333%!important;flex:0 0 33.333%!important;padding:0 0 5rem 2.2rem!important;box-sizing:border-box!important;display:block!important;list-style:none!important;"><a href="../products/laurel-progressives.html?variant=6770063769659" class="lo-card__link"><div class="lo-card__media">
+<li class="lo-card" style="width:33.33%!important;max-width:33.33%!important;flex:0 0 33.33%!important;padding-left:2.2rem!important;padding-bottom:5rem!important;box-sizing:border-box!important;display:block!important;list-style:none!important;"><a href="../products/laurel-progressives.html?variant=6770063769659" class="lo-card__link"><div class="lo-card__media">
       <img class="lo-card__img1" src="../cdn/shop/files/layflat__laurel-sun_champagne.png" alt="LAUREL SUN PROGRESSIVES" loading="lazy">
       <img class="lo-card__img2" src="../cdn/shop/files/laurel_laurel-sun-progressives_champagne_002.png" alt="" loading="lazy">
     </div></a><div class="lo-card__body"><div class="lo-card__swatches">
@@ -2115,7 +2128,7 @@ details[open] > .header__submenu.list-menu {
 </div>
     <h3 class="lo-card__title"><a href="../products/laurel-progressives.html?variant=6770063769659">LAUREL SUN PROGRESSIVES</a></h3>
     <div class="lo-card__rating"><span class="lo-stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span><span class="lo-review-count">2,528 Reviews</span></div></div></li>
-<li class="lo-card" style="width:33.333%!important;max-width:33.333%!important;flex:0 0 33.333%!important;padding:0 0 5rem 2.2rem!important;box-sizing:border-box!important;display:block!important;list-style:none!important;"><a href="../products/sullivan.html?variant=6620530999355" class="lo-card__link"><div class="lo-card__media">
+<li class="lo-card" style="width:33.33%!important;max-width:33.33%!important;flex:0 0 33.33%!important;padding-left:2.2rem!important;padding-bottom:5rem!important;box-sizing:border-box!important;display:block!important;list-style:none!important;"><a href="../products/sullivan.html?variant=6620530999355" class="lo-card__link"><div class="lo-card__media">
       <img class="lo-card__img1" src="../cdn/shop/files/layflat__sullivan_navy.png" alt="Sullivan Readers" loading="lazy">
       <img class="lo-card__img2" src="../cdn/shop/files/sullivan_sullivan-readers_navy_002.png" alt="" loading="lazy">
     </div></a><div class="lo-card__body"><div class="lo-card__swatches"><span class="lo-swatch lo-swatch--active" title="Navy" style="--sw-color:#1B2951;background-color:#1B2951;background-image:url('../cdn/shop/files/swatch-navy.jpg');" data-img1="../cdn/shop/files/layflat__sullivan_navy.png" data-img2="../cdn/shop/files/sullivan_sullivan-readers_navy_002.png" onclick="swapColor(this)" data-variant-id="6620530999355"></span>
@@ -2125,7 +2138,7 @@ details[open] > .header__submenu.list-menu {
 </div>
     <h3 class="lo-card__title"><a href="../products/sullivan.html?variant=6620530999355">SULLIVAN READERS</a></h3>
     <div class="lo-card__rating"><span class="lo-stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="#333333" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span><span class="lo-review-count">1,321 Reviews</span></div></div></li>
-<li class="lo-card" style="width:33.333%!important;max-width:33.333%!important;flex:0 0 33.333%!important;padding:0 0 5rem 2.2rem!important;box-sizing:border-box!important;display:block!important;list-style:none!important;"><a href="../products/sullivan-progressives.html?variant=41737396617275" class="lo-card__link"><div class="lo-card__media">
+<li class="lo-card" style="width:33.33%!important;max-width:33.33%!important;flex:0 0 33.33%!important;padding-left:2.2rem!important;padding-bottom:5rem!important;box-sizing:border-box!important;display:block!important;list-style:none!important;"><a href="../products/sullivan-progressives.html?variant=41737396617275" class="lo-card__link"><div class="lo-card__media">
       <img class="lo-card__img1" src="../cdn/shop/files/layflat__sullivan-sun_taupe.png" alt="SULLIVAN SUN PROGRESSIVES" loading="lazy">
       <img class="lo-card__img2" src="../cdn/shop/files/sullivan_sullivan-sun-progressives_taupe_002.png" alt="" loading="lazy">
     </div></a><div class="lo-card__body"><div class="lo-card__swatches">
