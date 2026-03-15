@@ -1290,21 +1290,22 @@ details[open] > .header__submenu.list-menu {
 
 
 
+
+
 <style id="card-size-fix">
 .lo-grid-wrap {
   display: flex !important;
   flex-wrap: wrap !important;
   flex-direction: row !important;
   padding: 0 !important;
-  margin: 0 !important;
-  gap: 5px !important;
-  justify-content: flex-start !important;
+  margin: 0 0 2rem -2.2rem !important;
+  list-style: none !important;
 }
 .lo-grid-wrap > .lo-card {
-  width: calc(33.333% - 4px) !important;
-  max-width: calc(33.333% - 4px) !important;
-  flex: 0 0 calc(33.333% - 4px) !important;
-  padding: 0 0 24px 0 !important;
+  width: 33.333% !important;
+  max-width: 33.333% !important;
+  flex: 0 0 33.333% !important;
+  padding: 0 0 5rem 2.2rem !important;
   box-sizing: border-box !important;
   display: block !important;
   list-style: none !important;
@@ -1324,13 +1325,37 @@ details[open] > .header__submenu.list-menu {
   top: 0 !important;
   left: 0 !important;
 }
+.lo-card__title, .lo-card__title a {
+  text-decoration: none !important;
+}
+.lo-card__price { display: none !important; }
+.lo-card__rating {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0 !important;
+  margin-top: 2px !important;
+}
+.lo-card__rating .lo-stars {
+  display: inline-flex !important;
+  gap: 1px !important;
+}
+.lo-card__rating .lo-stars svg {
+  width: 16px !important;
+  height: 16px !important;
+  display: block !important;
+}
+.lo-card__rating .lo-review-count {
+  font-size: 1.4rem !important;
+  margin-left: 3px !important;
+  margin-top: 2px !important;
+  color: inherit !important;
+}
 .lo-collection.page-width--full-width {
   padding-left: 59px !important;
   padding-right: 59px !important;
 }
-.lo-hero { padding-left: 0 !important; }
 @media screen and (max-width: 989px) {
-  .lo-grid-wrap > .lo-card { width: calc(50% - 3px) !important; max-width: calc(50% - 3px) !important; flex: 0 0 calc(50% - 3px) !important; }
+  .lo-grid-wrap > .lo-card { width: 50% !important; max-width: 50% !important; flex: 0 0 50% !important; }
   .lo-collection.page-width--full-width { padding-left: 30px !important; padding-right: 30px !important; }
 }
 @media screen and (max-width: 749px) {
@@ -1341,10 +1366,6 @@ details[open] > .header__submenu.list-menu {
 [class*="facet"], [class*="FacetFilters"],
 [class*="active-facets"], #ProductCount,
 .lo-filter-bar { display: none !important; }
-</style>
-<style id="card-title-fix">
-.lo-card__title, .lo-card__title a { text-decoration: none !important; }
-.lo-card__price { display: none !important; }
 </style>
 </head>
   <body class="gradient fp_product_grid_images wnw_loaded" data-page-type="collection">
