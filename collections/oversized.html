@@ -1051,23 +1051,23 @@ details[open] > .header__submenu.list-menu {
   flex-shrink: 0 !important;
 }
 </style>
+
 <style id="card-size-fix">
-ul.lo-grid {
+.lo-grid-wrap {
   display: flex !important;
   flex-wrap: wrap !important;
   flex-direction: row !important;
-  list-style: none !important;
   padding: 0 !important;
   margin: 0 0 2rem 0 !important;
-  gap: 0 !important;
 }
-ul.lo-grid > li.lo-card {
+.lo-grid-wrap > .lo-card {
   width: 33.333% !important;
   max-width: 33.333% !important;
   flex: 0 0 33.333% !important;
-  padding: 0 10px 20px !important;
+  padding: 0 10px 24px !important;
   box-sizing: border-box !important;
   display: block !important;
+  list-style: none !important;
 }
 .lo-card__media {
   aspect-ratio: 810.906 / 614.391 !important;
@@ -1084,10 +1084,10 @@ ul.lo-grid > li.lo-card {
   left: 0 !important;
 }
 @media screen and (max-width: 989px) {
-  ul.lo-grid > li.lo-card { width: 50% !important; max-width: 50% !important; flex: 0 0 50% !important; }
+  .lo-grid-wrap > .lo-card { width: 50% !important; max-width: 50% !important; flex: 0 0 50% !important; }
 }
 @media screen and (max-width: 749px) {
-  ul.lo-grid > li.lo-card { width: 100% !important; max-width: 100% !important; flex: 0 0 100% !important; }
+  .lo-grid-wrap > .lo-card { width: 100% !important; max-width: 100% !important; flex: 0 0 100% !important; }
 }
 .lo-filters, .lo-filters__left, .lo-filters__right,
 [class*="facet"], [class*="FacetFilters"],
@@ -1392,7 +1392,7 @@ ul.lo-grid > li.lo-card {
                                                   <a href="#" class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
                                                     Venus Williams
                                                   </a>
-                                                </li></ul>
+                                                </li></div>
                                           </div>
                                         </details></li><li><a href="#" class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
                                           Giving Back
@@ -2010,7 +2010,7 @@ ul.lo-grid > li.lo-card {
         <div class="lo-hero"><h1 class="collection__title h0">OVERSIZED FRAMES</h1></div>
         <div class="lo-tabs"><button class="lo-tab lo-tab--active">All</button><button class="lo-tab">Best Sellers</button></div>
         <span class="lo-filters__count"><span class="lo-filters__count-text">16 products</span></span></div>
-        <ul class="lo-grid" role="list">
+        <div class="lo-grid-wrap" style="display:flex;flex-wrap:wrap;list-style:none;padding:0;margin:0;">
 <li class="lo-card"><a href="../products/cosmo.html?variant=6620523495483" class="lo-card__link"><div class="lo-card__media">
       <img class="lo-card__img1" src="../cdn/shop/files/layflat__cosmo_tortoise.png" alt="Cosmo Readers" loading="lazy">
       <img class="lo-card__img2" src="../cdn/shop/files/cosmo_cosmo-readers_tortoise_002_f772aa6e-5b71-4d1d-845b-6f0da7564c96.png" alt="" loading="lazy">

@@ -1051,23 +1051,23 @@ details[open] > .header__submenu.list-menu {
   flex-shrink: 0 !important;
 }
 </style>
+
 <style id="card-size-fix">
-ul.lo-grid {
+.lo-grid-wrap {
   display: flex !important;
   flex-wrap: wrap !important;
   flex-direction: row !important;
-  list-style: none !important;
   padding: 0 !important;
   margin: 0 0 2rem 0 !important;
-  gap: 0 !important;
 }
-ul.lo-grid > li.lo-card {
+.lo-grid-wrap > .lo-card {
   width: 33.333% !important;
   max-width: 33.333% !important;
   flex: 0 0 33.333% !important;
-  padding: 0 10px 20px !important;
+  padding: 0 10px 24px !important;
   box-sizing: border-box !important;
   display: block !important;
+  list-style: none !important;
 }
 .lo-card__media {
   aspect-ratio: 810.906 / 614.391 !important;
@@ -1084,10 +1084,10 @@ ul.lo-grid > li.lo-card {
   left: 0 !important;
 }
 @media screen and (max-width: 989px) {
-  ul.lo-grid > li.lo-card { width: 50% !important; max-width: 50% !important; flex: 0 0 50% !important; }
+  .lo-grid-wrap > .lo-card { width: 50% !important; max-width: 50% !important; flex: 0 0 50% !important; }
 }
 @media screen and (max-width: 749px) {
-  ul.lo-grid > li.lo-card { width: 100% !important; max-width: 100% !important; flex: 0 0 100% !important; }
+  .lo-grid-wrap > .lo-card { width: 100% !important; max-width: 100% !important; flex: 0 0 100% !important; }
 }
 .lo-filters, .lo-filters__left, .lo-filters__right,
 [class*="facet"], [class*="FacetFilters"],
@@ -2010,6 +2010,7 @@ ul.lo-grid > li.lo-card {
         <div class="lo-hero"><h1 class="lo-hero__title">Readers</h1></div>
         <div class="lo-tabs"><button class="lo-tab lo-tab--active">All</button><button class="lo-tab">Best Sellers</button></div>
         </li>
+<div class="lo-grid-wrap" style="display:flex;flex-wrap:wrap;list-style:none;padding:0;margin:0;">
 <li class="lo-card"><a href="../products/cosmo-sun.html?variant=6620519661627" class="lo-card__link"><div class="lo-card__media"><img class="lo-card__img1" src="../cdn/shop/files/cosmo_cosmo-sun_black_001_39088afd-d920-42a4-a405-09313e24d003_1500x.png" alt="Cosmo Sun" loading="lazy">
       <img class="lo-card__img2" src="../cdn/shop/files/cosmo_cosmo-sun_black_002_1500x.png" alt="" loading="lazy">
     </div></a><div class="lo-card__body"><div class="lo-card__swatches"><span class="lo-swatch lo-swatch--active" title="Black" data-variant-id="6620519661627" style="--sw-color:transparent;background-color: Black; background-image: url(../cdn/shop/files/swatch-black.jpg);" data-img1="../cdn/shop/files/cosmo_cosmo-sun_black_001_39088afd-d920-42a4-a405-09313e24d003_1500x.png" data-img2="../cdn/shop/files/cosmo_cosmo-sun_black_002_1500x.png" onclick="swapColor(this)"></span>
@@ -2108,6 +2109,7 @@ ul.lo-grid > li.lo-card {
       <img class="lo-card__img2" src="../cdn/shop/files/muse-tints_001.png" alt="" loading="lazy">
     </div></a><div class="lo-card__body"><div class="lo-card__swatches"><span class="lo-swatch lo-swatch--active" title="No Magnification" data-variant-id="7402831577147" style="--sw-color:transparent;background-image:url("../cdn/shop/files/swatch-no-magnification.jpg")" data-img1="../cdn/shop/files/muse-tints_001.png" data-img2="../cdn/shop/files/muse-tints_001.png" onclick="swapColor(this)"></span>
 </div><a href="../products/muse-tints.html?variant=7402831577147" class="lo-card__title">Muse Tints</a><div class="lo-card__price">$86.00</div></div></li>
+</div>
 </ul>
         <div class="lo-testimonials"><div class="lo-testimonials__grid">
           <div class="lo-testimonial"><div class="lo-testimonial__stars">★★★★★</div><h4>Lightweight &amp; Comfortable</h4><p>These sunglasses are so glamorous, lightweight and functional. Everyone should own a pair!</p><cite>Robin C.</cite></div>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preview: Sunglasses Collection</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Avenir Next", system-ui, sans-serif; color: #101010; background: #fff; font-weight: 500; }
+
+.page { max-width: 1200px; margin: 0 auto; padding: 20px 50px; }
+
+.hero { padding: 30px 0 0; }
+.hero h1 { font-family: "DIN Condensed", sans-serif; font-size: 44px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.3rem; line-height: 1; margin-bottom: 6px; }
+.hero p { font-size: 15px; color: rgba(16,16,16,0.6); font-weight: 400; margin-bottom: 24px; }
+
+.tabs { display: flex; gap: 8px; margin-bottom: 28px; }
+.tab { padding: 9px 22px; border: 1.5px solid #101010; background: #fff; color: #101010; font-size: 13px; font-weight: 500; cursor: pointer; font-family: inherit; }
+.tab.active { background: #101010; color: #fff; }
+
+.grid { display: flex; flex-wrap: wrap; gap: 0; }
+.card { width: 33.333%; padding: 0 10px 24px; }
+.card-media { aspect-ratio: 810.906 / 614.391; background: #f0efed; position: relative; overflow: hidden; }
+.card-media img { width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; }
+.card-media .placeholder { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; position: absolute; font-size: 14px; color: #aaa; }
+.swatches { display: flex; gap: 4px; margin: 10px 0 6px; }
+.swatch { width: 20px; height: 20px; border-radius: 50%; border: 1px solid #ddd; }
+.card-title { font-family: "DIN Condensed", sans-serif; font-size: 22px; text-transform: uppercase; letter-spacing: 0.15rem; font-weight: 500; text-decoration: none; color: #101010; }
+.card-rating { display: flex; align-items: center; gap: 4px; margin-top: 3px; }
+.stars { color: #435a6f; font-size: 14px; }
+.review-count { font-size: 12px; color: #888; }
+.card-price { font-size: 14px; margin-top: 2px; color: rgba(16,16,16,0.75); }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="hero">
+    <h1>Sunglasses</h1>
+    <p>Your favorite styles available with sun lenses, no magnification, and 100% UV protection.</p>
+  </div>
+  
+  <div class="tabs">
+    <button class="tab active">All</button>
+    <button class="tab">Best Sellers</button>
+    <button class="tab">Narrow</button>
+    <button class="tab">Medium</button>
+    <button class="tab">Wide</button>
+  </div>
+  
+  <div class="grid">
+    <div class="card">
+      <div class="card-media"><div class="placeholder">Cosmo Sun</div></div>
+      <div class="swatches">
+        <span class="swatch" style="background:#222"></span>
+        <span class="swatch" style="background:#b5a48a"></span>
+        <span class="swatch" style="background:#8b6914"></span>
+      </div>
+      <div class="card-title">COSMO SUN</div>
+      <div class="card-rating"><span class="stars">★★★★★</span><span class="review-count">4,456 Reviews</span></div>
+      <div class="card-price">$82.00</div>
+    </div>
+    
+    <div class="card">
+      <div class="card-media"><div class="placeholder">Laurel Sun</div></div>
+      <div class="swatches">
+        <span class="swatch" style="background:#1a2744"></span>
+        <span class="swatch" style="background:#8b6914"></span>
+        <span class="swatch" style="background:#d4c5a0"></span>
+      </div>
+      <div class="card-title">LAUREL SUN</div>
+      <div class="card-rating"><span class="stars">★★★★★</span><span class="review-count">2,528 Reviews</span></div>
+      <div class="card-price">$82.00</div>
+    </div>
+    
+    <div class="card">
+      <div class="card-media"><div class="placeholder">Sullivan Sun</div></div>
+      <div class="swatches">
+        <span class="swatch" style="background:#b5a48a"></span>
+        <span class="swatch" style="background:#1a2744"></span>
+      </div>
+      <div class="card-title">SULLIVAN SUN</div>
+      <div class="card-rating"><span class="stars">★★★★★</span><span class="review-count">1,697 Reviews</span></div>
+      <div class="card-price">$82.00</div>
+    </div>
+    
+    <div class="card">
+      <div class="card-media"><div class="placeholder">Liam Sun</div></div>
+      <div class="swatches">
+        <span class="swatch" style="background:#5ba8a0"></span>
+      </div>
+      <div class="card-title">LIAM SUN</div>
+      <div class="card-rating"><span class="stars">★★★★★</span><span class="review-count">1,234 Reviews</span></div>
+      <div class="card-price">$82.00</div>
+    </div>
+    
+    <div class="card">
+      <div class="card-media"><div class="placeholder">Kaine Sun</div></div>
+      <div class="swatches">
+        <span class="swatch" style="background:#8b6914"></span>
+        <span class="swatch" style="background:#1a2744"></span>
+        <span class="swatch" style="background:#e8dcc8"></span>
+      </div>
+      <div class="card-title">KAINE SUN</div>
+      <div class="card-rating"><span class="stars">★★★★★</span><span class="review-count">987 Reviews</span></div>
+      <div class="card-price">$82.00</div>
+    </div>
+    
+    <div class="card">
+      <div class="card-media"><div class="placeholder">Evita Sun</div></div>
+      <div class="swatches">
+        <span class="swatch" style="background:#8b6914"></span>
+        <span class="swatch" style="background:#e8dcc8"></span>
+        <span class="swatch" style="background:#6b1a2a"></span>
+      </div>
+      <div class="card-title">EVITA SUN</div>
+      <div class="card-rating"><span class="stars">★★★★★</span><span class="review-count">654 Reviews</span></div>
+      <div class="card-price">$82.00</div>
+    </div>
+    
+    <div class="card">
+      <div class="card-media"><div class="placeholder">Linda Sun</div></div>
+      <div class="swatches">
+        <span class="swatch" style="background:#8b6914"></span>
+        <span class="swatch" style="background:#2d5a3a"></span>
+        <span class="swatch" style="background:#c8a050"></span>
+      </div>
+      <div class="card-title">LINDA SUN</div>
+      <div class="card-rating"><span class="stars">★★★★★</span><span class="review-count">432 Reviews</span></div>
+      <div class="card-price">$82.00</div>
+    </div>
+    
+    <div class="card">
+      <div class="card-media"><div class="placeholder">Uma Sun</div></div>
+      <div class="swatches">
+        <span class="swatch" style="background:#8b6914"></span>
+        <span class="swatch" style="background:#c88a9a"></span>
+        <span class="swatch" style="background:#222"></span>
+      </div>
+      <div class="card-title">UMA SUN</div>
+      <div class="card-rating"><span class="stars">★★★★★</span><span class="review-count">321 Reviews</span></div>
+      <div class="card-price">$82.00</div>
+    </div>
+    
+    <div class="card">
+      <div class="card-media"><div class="placeholder">Cooper Sun</div></div>
+      <div class="swatches">
+        <span class="swatch" style="background:#c0c0c0"></span>
+      </div>
+      <div class="card-title">COOPER SUN</div>
+      <div class="card-rating"><span class="stars">★★★★★</span><span class="review-count">234 Reviews</span></div>
+      <div class="card-price">$96.00</div>
+    </div>
+    
+    <div class="card">
+      <div class="card-media"><div class="placeholder">Muse Sun</div></div>
+      <div class="swatches">
+        <span class="swatch" style="background:#c0c0c0"></span>
+      </div>
+      <div class="card-title">MUSE SUN</div>
+      <div class="card-rating"><span class="stars">★★★★★</span><span class="review-count">198 Reviews</span></div>
+      <div class="card-price">$96.00</div>
+    </div>
+    
+    <div class="card">
+      <div class="card-media"><div class="placeholder">Cooper Tints</div></div>
+      <div class="swatches">
+        <span class="swatch" style="background:#d4a07a"></span>
+      </div>
+      <div class="card-title">COOPER TINTS</div>
+      <div class="card-rating"><span class="stars">★★★★★</span><span class="review-count">156 Reviews</span></div>
+      <div class="card-price">$86.00</div>
+    </div>
+    
+    <div class="card">
+      <div class="card-media"><div class="placeholder">Muse Tints</div></div>
+      <div class="swatches">
+        <span class="swatch" style="background:#7ab88a"></span>
+        <span class="swatch" style="background:#d4a07a"></span>
+      </div>
+      <div class="card-title">MUSE TINTS</div>
+      <div class="card-rating"><span class="stars">★★★★★</span><span class="review-count">123 Reviews</span></div>
+      <div class="card-price">$86.00</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
