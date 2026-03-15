@@ -1288,19 +1288,21 @@ details[open] > .header__submenu.list-menu {
 }
 </style>
 
+
 <style id="card-size-fix">
 .lo-grid-wrap {
   display: flex !important;
   flex-wrap: wrap !important;
   flex-direction: row !important;
   padding: 0 !important;
-  margin: 0 0 2rem 0 !important;
+  margin: 0 !important;
+  justify-content: flex-start !important;
 }
 .lo-grid-wrap > .lo-card {
   width: 33.333% !important;
   max-width: 33.333% !important;
   flex: 0 0 33.333% !important;
-  padding: 0 10px 24px !important;
+  padding: 0 8px 24px 0 !important;
   box-sizing: border-box !important;
   display: block !important;
   list-style: none !important;
@@ -1310,6 +1312,7 @@ details[open] > .header__submenu.list-menu {
   width: 100% !important;
   overflow: hidden !important;
   position: relative !important;
+  background: #f0efed !important;
 }
 .lo-card__media img {
   width: 100% !important;
@@ -1319,6 +1322,7 @@ details[open] > .header__submenu.list-menu {
   top: 0 !important;
   left: 0 !important;
 }
+.lo-collection { padding-left: 3rem !important; padding-right: 3rem !important; }
 @media screen and (max-width: 989px) {
   .lo-grid-wrap > .lo-card { width: 50% !important; max-width: 50% !important; flex: 0 0 50% !important; }
 }
