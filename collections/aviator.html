@@ -1052,6 +1052,23 @@ details[open] > .header__submenu.list-menu {
 }
 </style>
 <style id="card-size-fix">
+ul.lo-grid {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  flex-direction: row !important;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 0 2rem 0 !important;
+  gap: 0 !important;
+}
+ul.lo-grid > li.lo-card {
+  width: 33.333% !important;
+  max-width: 33.333% !important;
+  flex: 0 0 33.333% !important;
+  padding: 0 10px 20px !important;
+  box-sizing: border-box !important;
+  display: block !important;
+}
 .lo-card__media {
   aspect-ratio: 810.906 / 614.391 !important;
   width: 100% !important;
@@ -1066,20 +1083,11 @@ details[open] > .header__submenu.list-menu {
   top: 0 !important;
   left: 0 !important;
 }
-.lo-grid {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  gap: 20px !important;
-}
-.lo-card {
-  width: calc(33.333% - 14px) !important;
-  max-width: calc(33.333% - 14px) !important;
-}
 @media screen and (max-width: 989px) {
-  .lo-card { width: calc(50% - 10px) !important; max-width: calc(50% - 10px) !important; }
+  ul.lo-grid > li.lo-card { width: 50% !important; max-width: 50% !important; flex: 0 0 50% !important; }
 }
 @media screen and (max-width: 749px) {
-  .lo-card { width: 100% !important; max-width: 100% !important; }
+  ul.lo-grid > li.lo-card { width: 100% !important; max-width: 100% !important; flex: 0 0 100% !important; }
 }
 .lo-filters, .lo-filters__left, .lo-filters__right,
 [class*="facet"], [class*="FacetFilters"],
