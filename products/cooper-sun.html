@@ -37,7 +37,7 @@
       <!-- End FigPii Anti-Flicker Snippet -->
     
     <!-- FigPii Asynchronous Tracking Code -->
-    <script id="piiTester" blocking="render" fetchpriority="high" src="https://tracking-cdn.figpii.com/9325970b3c45e868471a4d62c6baf51d.js"></script>
+    
     <!-- End FigPii Asynchronous Tracking Code -->
     <script>
       window.giftWithPurchase = false;
@@ -84,7 +84,7 @@
 <link rel="preconnect" href="https://shop.app" crossorigin="anonymous">
 <script type="lazyload2" data-src="https://shop.app/checkouts/internal/preloads.js?locale=en-US&shop_id=7977215" crossorigin="anonymous"></script>
 <script id="apple-pay-shop-capabilities" type="application/json">{"shopId":7977215,"countryCode":"US","currencyCode":"USD","merchantCapabilities":["supports3DS"],"merchantId":"gid:\/\/shopify\/Shop\/7977215","merchantName":"LOOK OPTIC","requiredBillingContactFields":["postalAddress","email"],"requiredShippingContactFields":["postalAddress","email"],"shippingType":"shipping","supportedNetworks":["visa","masterCard","amex","discover","elo","jcb"],"total":{"type":"pending","label":"LOOK OPTIC","amount":"1.00"},"shopifyPaymentsEnabled":true,"supportsSubscriptions":true}</script>
-<script id="shopify-features" type="application/json">{"accessToken":"a9209c4cd7c91778bd289898c989bc0d","betas":["rich-media-storefront-analytics"],"domain":"www.lookoptic.com","predictiveSearch":true,"shopId":7977215,"locale":"en"}</script>
+
 <script>var Shopify = Shopify || {};
 Shopify.shop = "look-optic.myshopify.com";
 Shopify.locale = "en";
@@ -138,7 +138,7 @@ Shopify.routes.root = "/";</script>
   }
 })();</script>
 <script id="__st">var __st={"a":7977215,"offset":-14400,"reqid":"f06ff61d-465e-48b4-bae9-eda881420966-1773530262","pageurl":"www.lookoptic.com\/products\/cooper-sun","u":"9baacedfebb3","p":"product","rtyp":"product","rid":7148505333819};</script>
-<script>window.ShopifyPaypalV4VisibilityTracking = true;</script>
+
 <script id="form-persister">!function(){'use strict';const t='contact',e='new_comment',n=[[t,t],['blogs',e],['comments',e],[t,'customer']],o='password',r='form_key',c=['recaptcha-v3-token','g-recaptcha-response','h-captcha-response',o],s=()=>{try{return window.sessionStorage}catch{return}},i='__shopify_v',u=t=>t.elements[r],a=function(){const t=[...n].map((([t,e])=>`form[action*='/${t}']:not([data-nocaptcha='true']) input[name='form_type'][value='${e}']`)).join(',');var e;return e=t,()=>e?[...document.querySelectorAll(e)].map((t=>t.form)):[]}();function m(t){const e=u(t);a().includes(t)&&(!e||!e.value)&&function(t){try{if(!s())return;!function(t){const e=s();if(!e)return;const n=u(t);if(!n)return;const o=n.value;o&&e.removeItem(o)}(t);const e=Array.from(Array(32),(()=>Math.random().toString(36)[2])).join('');!function(t,e){u(t)||t.append(Object.assign(document.createElement('input'),{type:'hidden',name:r})),t.elements[r].value=e}(t,e),function(t,e){const n=s();if(!n)return;const r=[...t.querySelectorAll(`input[type='${o}']`)].map((({name:t})=>t)),u=[...c,...r],a={};for(const[o,c]of new FormData(t).entries())u.includes(o)||(a[o]=c);n.setItem(e,JSON.stringify({[i]:1,action:t.action,data:a}))}(t,e)}catch(e){console.error('failed to persist form',e)}}(t)}const f=t=>{if('true'===t.dataset.persistBound)return;const e=function(t,e){const n=function(t){return'function'==typeof t.submit?t.submit:HTMLFormElement.prototype.submit}(t).bind(t);return function(){let t;return()=>{t||(t=!0,(()=>{try{e(),n()}catch(t){(t=>{console.error('form submit failed',t)})(t)}})(),setTimeout((()=>t=!1),250))}}()}(t,(()=>{m(t)}));!function(t,e){if('function'==typeof t.submit&&'function'==typeof e)try{t.submit=e}catch{}}(t,e),t.addEventListener('submit',(t=>{t.preventDefault(),e()})),t.dataset.persistBound='true'};!function(){function t(t){const e=(t=>{const e=t.target;return e instanceof HTMLFormElement?e:e&&e.form})(t);e&&m(e)}document.addEventListener('submit',t),document.addEventListener('DOMContentLoaded2',(()=>{const e=a();for(const t of e)f(t);var n;n=document.body,new window.MutationObserver((t=>{for(const e of t)if('childList'===e.type&&e.addedNodes.length)for(const t of e.addedNodes)1===t.nodeType&&'FORM'===t.tagName&&a().includes(t)&&f(t)})).observe(n,{childList:!0,subtree:!0,attributes:!1}),document.removeEventListener('submit',t)}))}()}();</script>
 <script integrity="sha256-4kQ18oKyAcykRKYeNunJcIwy7WH5gtpwJnB7kiuLZ1E=" data-source-attribution="shopify.loadfeatures" type="lazyload2" data-src="//www.lookoptic.com/cdn/shopifycloud/storefront/assets/storefront/load_feature-a0a9edcb.js" crossorigin="anonymous"></script>
 <script crossorigin="anonymous" type="lazyload2" data-src="//www.lookoptic.com/cdn/shopifycloud/storefront/assets/shopify_pay/storefront-65b4c6d7.js?v=20250812"></script>
@@ -201,26 +201,12 @@ Shopify.routes.root = "/";</script>
     font-style: normal;
     font-display: swap;
   }
-  @font-face {
-  font-family: Figtree;
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src: url("//www.lookoptic.com/cdn/fonts/figtree/figtree_n4.3c0838aba1701047e60be6a99a1b0a40ce9b8419.woff2") format("woff2"),
-       url("//www.lookoptic.com/cdn/fonts/figtree/figtree_n4.c0575d1db21fc3821f17fd6617d3dee552312137.woff") format("woff");
-}
+  
 
   
   
   
-  @font-face {
-  font-family: Figtree;
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-  src: url("//www.lookoptic.com/cdn/fonts/figtree/figtree_n5.3b6b7df38aa5986536945796e1f947445832047c.woff2") format("woff2"),
-       url("//www.lookoptic.com/cdn/fonts/figtree/figtree_n5.f26bf6dcae278b0ed902605f6605fa3338e81dab.woff") format("woff");
-}
+  
 
 </style>
 
@@ -628,7 +614,7 @@ window.TriplePixelData={TripleName:"look-optic.myshopify.com",ver:"2.16",plat:"S
 .oke-stars{line-height:1;position:relative;display:inline-block}.oke-stars-background svg{overflow:visible}.oke-stars-foreground{overflow:hidden;position:absolute;top:0;left:0}.oke-sr{display:inline-block;padding-top:var(--oke-starRating-spaceAbove);padding-bottom:var(--oke-starRating-spaceBelow)}.oke-sr .oke-is-clickable{cursor:pointer}.oke-sr--hidden{display:none}.oke-sr-count,.oke-sr-rating,.oke-sr-stars{display:inline-block;vertical-align:middle}.oke-sr-stars{line-height:1;margin-right:8px}.oke-sr-rating{display:none}.oke-sr-count--brackets:before{content:"("}.oke-sr-count--brackets:after{content:")"}
 .oke-rs{display:block}.oke-rs .oke-reviewsSummary-heading{position:relative}.oke-rs .oke-reviewsSummary-heading-skeleton{background:#e5e5eb;border-radius:4px;height:85%;left:0;max-width:150px;overflow:hidden;position:absolute;top:50%;transform:translateY(-50%);width:100%}.oke-rs .oke-reviewsSummary-heading-skeleton:after{animation:shimmer .8s linear infinite;background:linear-gradient(90deg,#e5e5eb,#f7f7f8 50%,#e5e5eb);background-repeat:no-repeat;background-size:250px 100%;content:"";display:block;height:100%;position:absolute;width:100%;top:0;left:0}@keyframes shimmer{0%{background-position:200%}to{background-position:-200%}}.oke-rs .oke-reviewsSummary.oke-is-preRender .oke-reviewsSummary-heading-text{opacity:0}.oke-rs .oke-reviewsSummary.oke-is-preRender .oke-reviewsSummary-summary{-webkit-mask:linear-gradient(180deg,#000 0,#000 40%,transparent 95%,transparent 0) 100% 50%/100% 100% repeat-x;mask:linear-gradient(180deg,#000 0,#000 40%,transparent 95%,transparent 0) 100% 50%/100% 100% repeat-x;max-height:150px}.okeReviews[data-oke-container] .oke-reviewsSummary .oke-tooltip,div.okeReviews .oke-reviewsSummary .oke-tooltip{display:inline-block;font-weight:400}.okeReviews[data-oke-container] .oke-reviewsSummary .oke-tooltip-trigger,div.okeReviews .oke-reviewsSummary .oke-tooltip-trigger{height:15px;width:15px;overflow:hidden;transform:translateY(-10%)}.okeReviews[data-oke-container] .oke-reviewsSummary-heading,div.okeReviews .oke-reviewsSummary-heading{align-items:center;-moz-column-gap:4px;column-gap:4px;display:inline-flex;font-weight:700;margin-bottom:8px}.okeReviews[data-oke-container] .oke-reviewsSummary-icon,div.okeReviews .oke-reviewsSummary-icon{fill:currentColor;font-size:14px}.okeReviews[data-oke-container] .oke-reviewsSummary-icon svg,div.okeReviews .oke-reviewsSummary-icon svg{vertical-align:baseline}.okeReviews[data-oke-container] .oke-reviewsSummary-summary.oke-is-truncated,div.okeReviews .oke-reviewsSummary-summary.oke-is-truncated{display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}</style>
 
-    <script type="application/json" id="oke-reviews-settings">{"subscriberId":"992bc8a8-d6e8-4f02-b914-78e980e1069c","analyticsSettings":{"provider":"none"},"locale":"en","localeAndVariant":{"code":"en"},"matchCustomerLocale":false,"widgetSettings":{"global":{"dateSettings":{"format":{"type":"relative"}},"hideOkendoBranding":true,"stars":{"backgroundColor":"#E5E5E5","foregroundColor":"#435A6F","interspace":2,"shape":{"type":"default"},"showBorder":false},"recorderPlusEnabled":true},"homepageCarousel":{"defaultSort":"rating desc","scrollBehaviour":"slide","slidesPerPage":{"large":3,"medium":2},"style":{"arrows":{"color":"#676986","size":{"value":24,"unit":"px"},"enabled":true},"avatar":{"backgroundColor":"#E5E5EB","placeholderTextColor":"#2C3E50","size":{"value":48,"unit":"px"},"enabled":true},"border":{"color":"#E5E5EB","width":{"value":1,"unit":"px"}},"highlightColor":"#0E7A82","layout":{"name":"default","reviewDetailsPosition":"below","showAttributeBars":false,"showProductDetails":"only-when-grouped","showProductName":false},"media":{"size":{"value":80,"unit":"px"},"imageGap":{"value":4,"unit":"px"},"enabled":true},"productImageSize":{"value":48,"unit":"px"},"showDates":true,"spaceAbove":{"value":20,"unit":"px"},"spaceBelow":{"value":20,"unit":"px"},"stars":{"height":{"value":18,"unit":"px"},"globalOverrideSettings":{"backgroundColor":"#E5E5E5","foregroundColor":"#FFCF2A"}},"text":{"primaryColor":"#2C3E50","fontSizeRegular":{"value":14,"unit":"px"},"fontSizeSmall":{"value":12,"unit":"px"},"secondaryColor":"#676986"}},"totalSlides":12,"truncation":{"bodyMaxLines":4,"enabled":true,"truncateAll":false}},"mediaCarousel":{"minimumImages":1,"linkText":"Read More","stars":{"backgroundColor":"#E5E5E5","foregroundColor":"#FFCF2A","height":{"value":12,"unit":"px"}},"autoPlay":false,"slideSize":"medium","arrowPosition":"outside"},"mediaGrid":{"showMoreArrow":{"arrowColor":"#676986","enabled":true,"backgroundColor":"#f4f4f6"},"infiniteScroll":false,"gridStyleDesktop":{"layout":"default-desktop"},"gridStyleMobile":{"layout":"default-mobile"},"linkText":"Read More","stars":{"backgroundColor":"#E5E5E5","foregroundColor":"#FFCF2A","height":{"value":12,"unit":"px"}},"gapSize":{"value":10,"unit":"px"}},"questions":{"initialPageSize":6,"loadMorePageSize":6},"reviewsBadge":{"layout":"large","colorScheme":"dark"},"reviewsTab":{"enabled":false},"reviewsWidget":{"tabs":{"reviews":true,"questions":true},"header":{"columnDistribution":"left","verticalAlignment":"top","blocks":[{"columnWidth":"one-third","modules":[{"name":"rating-average","layout":"one-line"},{"name":"rating-breakdown","backgroundColor":"#F4F4F4","shadingColor":"#6B6D76","stretchMode":"contain"}],"textAlignment":"left"},{"columnWidth":"one-third","modules":[{"name":"media-grid","imageGap":{"value":4,"unit":"px"},"scaleToFill":true,"rows":2,"columns":3}],"textAlignment":"left"}]},"style":{"showDates":true,"border":{"color":"#E0E0E0","width":{"value":1,"unit":"px"}},"filters":{"backgroundColorActive":"#435A6F","backgroundColor":"#FFFFFF","borderColor":"#435A6F","borderRadius":{"value":100,"unit":"px"},"borderColorActive":"#435A6F","textColorActive":"#FFFFFF","textColor":"#435A6F","searchHighlightColor":"#B2F9E9"},"avatar":{"backgroundColor":"#435A6F","placeholderTextColor":"#FFFFFF","size":{"value":48,"unit":"px"},"enabled":true},"stars":{"height":{"value":15,"unit":"px"},"globalOverrideSettings":{"backgroundColor":"#E5E5E5","foregroundColor":"#435A6F","interspace":2,"showBorder":false}},"shadingColor":"#FFFFFF","productImageSize":{"value":48,"unit":"px"},"button":{"backgroundColorActive":"#FFFFFF","borderColorHover":"#E0E0E0","backgroundColor":"#FFFFFF","borderColor":"#E0E0E0","backgroundColorHover":"#FFFFFF","textColorHover":"#525252","borderRadius":{"value":1,"unit":"px"},"borderWidth":{"value":1,"unit":"px"},"borderColorActive":"#E0E0E0","textColorActive":"#525252","textColor":"#525252"},"highlightColor":"#435A6F","spaceAbove":{"value":20,"unit":"px"},"text":{"primaryColor":"#525252","fontSizeRegular":{"value":14,"unit":"px"},"fontSizeLarge":{"value":20,"unit":"px"},"fontSizeSmall":{"value":12,"unit":"px"},"secondaryColor":"#525252"},"spaceBelow":{"value":20,"unit":"px"},"attributeBar":{"style":"default","backgroundColor":"#D3D4DD","shadingColor":"#435A6F","markerColor":"#435A6F"}},"showWhenEmpty":true,"reviews":{"list":{"layout":{"name":"default","showAttributeBars":false,"borderStyle":"full","collapseReviewerDetails":false,"columnAmount":4,"showProductDetails":"only-when-grouped"},"initialPageSize":5,"media":{"layout":"hidden"},"truncation":{"bodyMaxLines":4,"truncateAll":false,"enabled":false},"loadMorePageSize":5},"controls":{"filterMode":"off","defaultSort":"date desc","writeReviewButtonEnabled":true,"freeTextSearchEnabled":false}}},"starRatings":{"showWhenEmpty":false,"style":{"text":{"content":"review-count","style":"number-and-text","brackets":false},"spaceAbove":{"value":0,"unit":"px"},"globalOverrideSettings":{"backgroundColor":"#E5E5E5","foregroundColor":"#435A6F","interspace":2,"showBorder":false},"spaceBelow":{"value":0,"unit":"px"},"height":{"value":15,"unit":"px"}},"clickBehavior":"scroll-to-widget"}},"features":{"recorderPlusEnabled":true,"recorderQandaPlusEnabled":true,"reviewsSummariesEnabled":true}}</script>
+    
             <style id="oke-css-vars">:root{--oke-widget-spaceAbove:20px;--oke-widget-spaceBelow:20px;--oke-starRating-spaceAbove:0;--oke-starRating-spaceBelow:0;--oke-button-backgroundColor:#fff;--oke-button-backgroundColorHover:#fff;--oke-button-backgroundColorActive:#fff;--oke-button-textColor:#525252;--oke-button-textColorHover:#525252;--oke-button-textColorActive:#525252;--oke-button-borderColor:#e0e0e0;--oke-button-borderColorHover:#e0e0e0;--oke-button-borderColorActive:#e0e0e0;--oke-button-borderRadius:1px;--oke-button-borderWidth:1px;--oke-button-fontWeight:700;--oke-button-fontSize:var(--oke-text-regular,14px);--oke-button-fontFamily:inherit;--oke-border-color:#e0e0e0;--oke-border-width:1px;--oke-text-primaryColor:#525252;--oke-text-secondaryColor:#525252;--oke-text-small:12px;--oke-text-regular:14px;--oke-text-large:20px;--oke-text-fontFamily:inherit;--oke-avatar-size:48px;--oke-avatar-backgroundColor:#435a6f;--oke-avatar-placeholderTextColor:#fff;--oke-highlightColor:#435a6f;--oke-shadingColor:#fff;--oke-productImageSize:48px;--oke-attributeBar-shadingColor:#435a6f;--oke-attributeBar-borderColor:undefined;--oke-attributeBar-backgroundColor:#d3d4dd;--oke-attributeBar-markerColor:#435a6f;--oke-filter-backgroundColor:#fff;--oke-filter-backgroundColorActive:#435a6f;--oke-filter-borderColor:#435a6f;--oke-filter-borderColorActive:#435a6f;--oke-filter-textColor:#435a6f;--oke-filter-textColorActive:#fff;--oke-filter-borderRadius:100px;--oke-filter-searchHighlightColor:#b2f9e9;--oke-mediaGrid-chevronColor:#676986;--oke-stars-foregroundColor:#435a6f;--oke-stars-backgroundColor:#e5e5e5;--oke-stars-borderWidth:0}.oke-reviewCarousel{--oke-stars-foregroundColor:#ffcf2a;--oke-stars-backgroundColor:#e5e5e5;--oke-stars-borderWidth:0}.oke-w,.oke-modal{--oke-stars-foregroundColor:#435a6f;--oke-stars-backgroundColor:#e5e5e5;--oke-stars-borderWidth:0}.oke-sr{--oke-stars-foregroundColor:#435a6f;--oke-stars-backgroundColor:#e5e5e5;--oke-stars-borderWidth:0}.oke-w,oke-modal{--oke-title-fontWeight:600;--oke-title-fontSize:var(--oke-text-regular,14px);--oke-title-fontFamily:inherit;--oke-bodyText-fontWeight:400;--oke-bodyText-fontSize:var(--oke-text-regular,14px);--oke-bodyText-fontFamily:inherit}</style>
             <style id="oke-reviews-custom-css">[data-oke-widget] .oke-w,[data-oke-widget] div.okeReviews.oke-w{width:auto;padding:20px}.okeReviews[data-oke-container].oke-w .oke-w-controls-nav,div.okeReviews.oke-w .oke-w-controls-nav{border-bottom:0}.okeReviews[data-oke-container] .oke-w-navBar-item,[data-oke-widget] div.okeReviews .oke-w-navBar-item{font-family:"Avenir Next",sans-serif;color:#101010bf;font-size:16px}.okeReviews[data-oke-container] .oke-w-navBar-item-count:before,[data-oke-widget] div.okeReviews .oke-w-navBar-item-count:before,.okeReviews[data-oke-container] .oke-w-navBar-item-count:after,[data-oke-widget] div.okeReviews .oke-w-navBar-item-count:after{display:none}.okeReviews[data-oke-container] .oke-w-navBar-item-count,[data-oke-widget] div.okeReviews .oke-w-navBar-item-count{font-size:12px;margin-left:10px}[data-oke-widget] div.okeReviews p:last-child{line-height:1.8}.okeReviews.oke-w .oke-button{font-size:14px;font-weight:400;line-height:unset}.okeReviews.oke-w .oke-button:not(.oke-is-loading):not(.oke-is-active):hover{box-shadow:none}.okeReviews.oke-w .oke-is-small .oke-button,.okeReviews.oke-w .oke-is-small .oke-w-reviews-writeReview,.okeReviews.oke-w .oke-is-small .oke-qw-askQuestion{width:100%}.okeReviews.oke-w .oke-is-small .oke-w-reviews-writeReview{margin-top:15px}.okeReviews[data-oke-container] .oke-w-writeReview:before,[data-oke-widget] div.okeReviews .oke-w-writeReview:before{display:none}.okeReviews[data-oke-container] .oke-reviewContent-title,[data-oke-widget] div.okeReviews .oke-reviewContent-title{font-family:"DIN Condensed","Avenir Next",sans-serif;font-size:17.5px;font-weight:500;letter-spacing:.0006rem;text-transform:uppercase}.okeReviews[data-oke-container] .oke-w-reviewerRecommendation,[data-oke-widget] div.okeReviews .oke-w-reviewerRecommendation,.okeReviews[data-oke-container] .oke-helpful,[data-oke-widget] div.okeReviews .oke-helpful{display:none}.okeReviews[data-oke-container].oke-w .oke-w-reviewer-avatar,div.okeReviews.oke-w .oke-w-reviewer-avatar,.okeReviews.oke-w .oke-qw-question-avatar{display:none}</style>
             <template id="oke-reviews-body-template"><svg id="oke-star-symbols" style="display:none!important" data-oke-id="oke-star-symbols"><symbol id="oke-star-empty" style="overflow:visible;"><path id="star-default--empty" fill="var(--oke-stars-backgroundColor)" stroke="var(--oke-stars-borderColor)" stroke-width="var(--oke-stars-borderWidth)" d="M3.34 13.86c-.48.3-.76.1-.63-.44l1.08-4.56L.26 5.82c-.42-.36-.32-.7.24-.74l4.63-.37L6.92.39c.2-.52.55-.52.76 0l1.8 4.32 4.62.37c.56.05.67.37.24.74l-3.53 3.04 1.08 4.56c.13.54-.14.74-.63.44L7.3 11.43l-3.96 2.43z"/></symbol><symbol id="oke-star-filled" style="overflow:visible;"><path id="star-default--filled" fill="var(--oke-stars-foregroundColor)" stroke="var(--oke-stars-borderColor)" stroke-width="var(--oke-stars-borderWidth)" d="M3.34 13.86c-.48.3-.76.1-.63-.44l1.08-4.56L.26 5.82c-.42-.36-.32-.7.24-.74l4.63-.37L6.92.39c.2-.52.55-.52.76 0l1.8 4.32 4.62.37c.56.05.67.37.24.74l-3.53 3.04 1.08 4.56c.13.54-.14.74-.63.44L7.3 11.43l-3.96 2.43z"/></symbol></svg></template><script>document.addEventListener('readystatechange',() =>{Array.from(document.getElementById('oke-reviews-body-template')?.content.children)?.forEach(function(child){if(!Array.from(document.body.querySelectorAll('[data-oke-id='.concat(child.getAttribute('data-oke-id'),']'))).length){document.body.prepend(child)}})},{once:true});</script>
@@ -660,44 +646,7 @@ window.TriplePixelData={TripleName:"look-optic.myshopify.com",ver:"2.16",plat:"S
 <!-- END app snippet -->
 
 
-<!-- END app block --><!-- BEGIN app block: shopify://apps/hulk-form-builder/blocks/app-embed/b6b8dd14-356b-4725-a4ed-77232212b3c3 --><!-- BEGIN app snippet: hulkapps-formbuilder-theme-ext --><script type="text/javascript">
-  
-  if (typeof window.formbuilder_customer != "object") {
-        window.formbuilder_customer = {}
-  }
-
-  window.hulkFormBuilder = {
-    form_data: {"form_jrcIcODmOiAEVYOk5051XQ":{"uuid":"jrcIcODmOiAEVYOk5051XQ","form_name":"Damaged Product Exchange","form_data":{"div_back_gradient_1":"#fff","div_back_gradient_2":"#fff","back_color":"#fff","form_title":"\u003ch2 style=\"text-align: center;\"\u003e\u003cspan style=\"font-size:24px;\"\u003eReplace Damaged Item\u003c\/span\u003e\u003c\/h2\u003e\n","form_submit":"Request Replacement","after_submit":"clearAndAllow","after_submit_msg":"\u003cp\u003eThanks! We\u0026#39;ll be in touch.\u0026nbsp;\u003c\/p\u003e\n","captcha_enable":"no","label_style":"inlineLabels","input_border_radius":"2","back_type":"transparent","input_back_color":"#fff","input_back_color_hover":"#fff","back_shadow":"none","label_font_clr":"#000000","input_font_clr":"#969696","button_align":"centerBtn","button_clr":"#000000","button_back_clr":"#ffffff","button_border_radius":"2","form_width":"100%","form_border_size":"2","form_border_clr":"#c7c7c7","form_border_radius":"1","label_font_size":"14","input_font_size":"12","button_font_size":"16","form_padding":"35","input_border_color":"#cccccc","input_border_color_hover":"#ccc","btn_border_clr":"#000000","btn_border_size":"1","form_name":"Damaged Product Exchange","":"","form_emails":"charlie@lookoptic.com","form_description":"\u003cp style=\"text-align: center;\"\u003e\u0026nbsp;\u003c\/p\u003e\n\n\u003cp style=\"text-align: center;\"\u003e\u003cstrong\u003e\u003cspan style=\"font-size:14px;\"\u003ePlease provide us with some additional information and we will send you a replacement right way.\u0026nbsp;\u003c\/span\u003e\u003c\/strong\u003e\u003c\/p\u003e\n","label_font_family":"Nunito","advance_css":"h1, h2, h3, h4, h5, h6 {\n    color: #394263;\n}","notification_email_send":true,"formElements":[{"type":"email","position":0,"label":"Email","required":"yes","email_confirm":"yes","Conditions":{},"page_number":1},{"Conditions":{},"type":"text","position":1,"label":"Order number","page_number":1},{"type":"textarea","position":2,"label":"Explain issue","required":"yes","Conditions":{},"page_number":1},{"Conditions":{},"type":"image","position":3,"label":"Upload Image of Damage (if possible)","imageMultiple":"yes","imagenoMultiple":"5","halfwidth":"no","page_number":1}]},"is_spam_form":false,"shop_uuid":"JJ-LuUmyu4F9LGRnzYfSsQ","shop_timezone":"America\/New_York","shop_id":54262,"shop_is_after_submit_enabled":true,"shop_shopify_plan":"shopify_plus","shop_shopify_domain":"look-optic.myshopify.com","shop_remove_watermark":false,"shop_created_at":"2021-07-16T10:27:06.135-05:00"}},
-    shop_data: {"shop_JJ-LuUmyu4F9LGRnzYfSsQ":{"shop_uuid":"JJ-LuUmyu4F9LGRnzYfSsQ","shop_timezone":"America\/New_York","shop_id":54262,"shop_is_after_submit_enabled":true,"shop_shopify_plan":"Plus","shop_shopify_domain":"look-optic.myshopify.com","shop_created_at":"2021-07-16T10:27:06.135-05:00","is_skip_metafield":false,"shop_deleted":false,"shop_disabled":false}},
-    settings_data: {"shop_settings":{"shop_customise_msgs":[],"default_customise_msgs":{"is_required":"is required","thank_you":"Thank you! The form was submitted successfully.","processing":"Processing...","valid_data":"Please provide valid data","valid_email":"Provide valid email format","valid_tags":"HTML Tags are not allowed","valid_phone":"Provide valid phone number","valid_captcha":"Please provide a valid CAPTCHA response.","valid_url":"Provide valid URL","only_number_alloud":"Provide valid number in","number_less":"must be less than","number_more":"must be more than","image_must_less":"Image must be less than 20MB","image_number":"Images allowed","image_extension":"Invalid extension! Please provide image file","error_image_upload":"Error in image upload. Please try again.","error_file_upload":"Error in file upload. Please try again.","your_response":"Your response","error_form_submit":"Error occur.Please try again after sometime.","email_submitted":"Form with this email is already submitted","invalid_email_by_zerobounce":"The email address you entered appears to be invalid. Please check it and try again.","download_file":"Download file","card_details_invalid":"Your card details are invalid","card_details":"Card details","please_enter_card_details":"Please enter card details","card_number":"Card number","exp_mm":"Exp MM","exp_yy":"Exp YY","crd_cvc":"CVV","payment_value":"Payment amount","please_enter_payment_amount":"Please enter a payment amount.","address1":"Address line 1","address2":"Address line 2","city":"City","province":"Province","zipcode":"Zip code","country":"Country","blocked_domain":"This form does not accept addresses from","file_must_less":"File must be less than 20MB","file_extension":"Invalid extension! Please provide file","only_file_number_alloud":"files allowed","previous":"Previous","next":"Next","must_have_a_input":"Please enter at least one field.","please_enter_required_data":"Please enter required data","atleast_one_special_char":"Include at least one special character","atleast_one_lowercase_char":"Include at least one lowercase character","atleast_one_uppercase_char":"Include at least one uppercase character","atleast_one_number":"Include at least one number","must_have_8_chars":"Must have 8 characters long","be_between_8_and_12_chars":"Be between 8 and 12 characters long","please_select":"Please Select","phone_submitted":"Form with this phone number is already submitted","user_res_parse_error":"Error while submitting the form","valid_same_values":"values must be the same","product_choice_clear_selection":"Clear Selection","picture_choice_clear_selection":"Clear Selection","remove_all_for_file_image_upload":"Remove All","invalid_file_type_for_image_upload":"You can't upload files of this type.","invalid_file_type_for_signature_upload":"You can't upload files of this type.","max_files_exceeded_for_file_upload":"You can not upload any more files.","max_files_exceeded_for_image_upload":"You can not upload any more files.","file_already_exist":"File already uploaded","max_limit_exceed":"You have added the maximum number of text fields.","cancel_upload_for_file_upload":"Cancel upload","cancel_upload_for_image_upload":"Cancel upload","cancel_upload_for_signature_upload":"Cancel upload"},"shop_blocked_domains":[]}},
-    features_data: {"shop_plan_features":{"shop_plan_features":["unlimited-forms","full-design-customization","export-form-submissions","multiple-recipients-for-form-submissions","multiple-admin-notifications","enable-captcha","unlimited-file-uploads","save-submitted-form-data","set-auto-response-message","conditional-logic","form-banner","save-as-draft-facility","include-user-response-in-admin-email","disable-form-submission","mail-platform-integration","stripe-payment-integration","pre-built-templates","create-customer-account-on-shopify","google-analytics-3-by-tracking-id","facebook-pixel-id","bing-uet-pixel-id","advanced-js","advanced-css","api-available","customize-form-message","hidden-field","restrict-from-submissions-per-one-user","utm-tracking","ratings","privacy-notices","heading","paragraph","shopify-flow-trigger","domain-setup","block-domain","address","html-code","form-schedule","after-submit-script","customize-form-scrolling","on-form-submission-record-the-referrer-url","password","duplicate-the-forms","include-user-response-in-auto-responder-email","elements-add-ons","admin-and-auto-responder-email-with-tokens","email-export","premium-support","google-analytics-4-by-measurement-id","google-ads-for-tracking-conversion","validation-field","file-upload","load_form_as_popup","advanced_conditional_logic"]}},
-    shop: null,
-    shop_id: null,
-    plan_features: null,
-    validateDoubleQuotes: false,
-    assets: {
-      extraFunctions: "https://cdn.shopify.com/extensions/019cb229-1d9a-7ddf-9952-ce2348f7efa4/form-builder-by-hulkapps-56/assets/extra-functions.js",
-      extraStyles: "https://cdn.shopify.com/extensions/019cb229-1d9a-7ddf-9952-ce2348f7efa4/form-builder-by-hulkapps-56/assets/extra-styles.css",
-      bootstrapStyles: "https://cdn.shopify.com/extensions/019cb229-1d9a-7ddf-9952-ce2348f7efa4/form-builder-by-hulkapps-56/assets/theme-app-extension-bootstrap.css"
-    },
-    translations: {
-      htmlTagNotAllowed: "HTML Tags are not allowed",
-      sqlQueryNotAllowed: "SQL Queries are not allowed",
-      doubleQuoteNotAllowed: "Double quotes are not allowed",
-      vorwerkHttpWwwNotAllowed: "The words \u0026#39;http\u0026#39; and \u0026#39;www\u0026#39; are not allowed. Please remove them and try again.",
-      maxTextFieldsReached: "You have added the maximum number of text fields.",
-      avoidNegativeWords: "Avoid negative words: Don\u0026#39;t use negative words in your contact message.",
-      customDesignOnly: "This form is for custom designs requests. For general inquiries please contact our team at info@stagheaddesigns.com",
-      zerobounceApiErrorMsg: "We couldn\u0026#39;t verify your email due to a technical issue. Please try again later.",
-    }
-
-  }
-
-  
-
-  window.FbThemeAppExtSettingsHash = {}
-  
-</script><!-- END app snippet --><!-- END app block --><!-- BEGIN app block: shopify://apps/gorgias-live-chat-helpdesk/blocks/gorgias/a66db725-7b96-4e3f-916e-6c8e6f87aaaa -->
+<!-- END app block --><!-- BEGIN app block: shopify://apps/hulk-form-builder/blocks/app-embed/b6b8dd14-356b-4725-a4ed-77232212b3c3 --><!-- BEGIN app snippet: hulkapps-formbuilder-theme-ext --><!-- END app snippet --><!-- END app block --><!-- BEGIN app block: shopify://apps/gorgias-live-chat-helpdesk/blocks/gorgias/a66db725-7b96-4e3f-916e-6c8e6f87aaaa -->
 
 
 
@@ -724,80 +673,7 @@ window.TriplePixelData={TripleName:"look-optic.myshopify.com",ver:"2.16",plat:"S
   <script>!function(){if(!window.klaviyo){window._klOnsite=window._klOnsite||[];try{window.klaviyo=new Proxy({},{get:function(n,i){return"push"===i?function(){var n;(n=window._klOnsite).push.apply(n,arguments)}:function(){for(var n=arguments.length,o=new Array(n),w=0;w<n;w++)o[w]=arguments[w];var t="function"==typeof o[o.length-1]?o.pop():void 0,e=new Promise((function(n){window._klOnsite.push([i].concat(o,[function(i){t&&t(i),n(i)}]))}));return e}}})}catch(n){window.klaviyo=window.klaviyo||[],window.klaviyo.push=function(){var n;(n=window._klOnsite).push.apply(n,arguments)}}}}();</script>
 
   
-    <script id="viewed_product">
-      if (item == null) {
-        var _learnq = _learnq || [];
-
-        var MetafieldReviews = null
-        var MetafieldYotpoRating = null
-        var MetafieldYotpoCount = null
-        var MetafieldLooxRating = null
-        var MetafieldLooxCount = null
-        var okendoProduct = null
-        var okendoProductReviewCount = null
-        var okendoProductReviewAverageValue = null
-        try {
-          // The following fields are used for Customer Hub recently viewed in order to add reviews.
-          // This information is not part of __kla_viewed. Instead, it is part of __kla_viewed_reviewed_items
-          MetafieldReviews = {"rating":{"scale_min":"1.0","scale_max":"5.0","value":"4.7"},"rating_count":458};
-          MetafieldYotpoRating = null
-          MetafieldYotpoCount = null
-          MetafieldLooxRating = null
-          MetafieldLooxCount = null
-
-          okendoProduct = {"reviewCount":314,"reviewAverageValue":"4.9"}
-          // If the okendo metafield is not legacy, it will error, which then requires the new json formatted data
-          if (okendoProduct && 'error' in okendoProduct) {
-            okendoProduct = null
-          }
-          okendoProductReviewCount = okendoProduct ? okendoProduct.reviewCount : null
-          okendoProductReviewAverageValue = okendoProduct ? okendoProduct.reviewAverageValue : null
-        } catch (error) {
-          console.error('Error in Klaviyo onsite reviews tracking:', error);
-        }
-
-        var item = {
-          Name: "Cooper Sun",
-          ProductID: 7148505333819,
-          Categories: ["ALL EXCLUDING PROGRESSIVES","All Excluding Readers","ALL PRODUCTS","ALL SUN","Ange June Picks","Aviator Frames","Aviator Frames","AVIATOR SALE","Aviators","Aviators","Aviators","Carolyn's Favorites","Connected - Cooper Sun","COOPER","COOPER","Cooper","Frederik Sun","GOLD METALS","GREEN","NAV - SUN","NEW LOOKS FOR FALL SALE","NOT ON SALE","NOT ON SALE NOT COLLAB","Promo Inclusion List","RECYCLED 2","RECYCLED METAL FRAMES","Silver","Silver \u0026 Gold","Small Frames","Spring Greens","STAFF SUMMER PICKS","Sun","Sun Sale","SUNGLASSES"],
-          ImageURL: "../cdn/shop/files/cooper_cooper-sun_gold-pink-tint_001_b2dfcd77-d1aa-4bf3-932d-67d249ec687d_grande.png",
-          URL: "https://www.lookoptic.com/products/cooper-sun",
-          Brand: "LOOK OPTIC",
-          Price: "$96.00",
-          Value: "96.00",
-          CompareAtPrice: "$0.00"
-        };
-        _learnq.push(['track', 'Viewed Product', item]);
-        _learnq.push(['trackViewedItem', {
-          Title: item.Name,
-          ItemId: item.ProductID,
-          Categories: item.Categories,
-          ImageUrl: item.ImageURL,
-          Url: item.URL,
-          Metadata: {
-            Brand: item.Brand,
-            Price: item.Price,
-            Value: item.Value,
-            CompareAtPrice: item.CompareAtPrice
-          },
-          metafields:{
-            reviews: MetafieldReviews,
-            yotpo:{
-              rating: MetafieldYotpoRating,
-              count: MetafieldYotpoCount,
-            },
-            loox:{
-              rating: MetafieldLooxRating,
-              count: MetafieldLooxCount,
-            },
-            okendo: {
-              rating: okendoProductReviewAverageValue,
-              count: okendoProductReviewCount,
-            }
-          }
-        }]);
-      }
-    </script>
+    
   
 
 
@@ -987,16 +863,8 @@ window.TriplePixelData={TripleName:"look-optic.myshopify.com",ver:"2.16",plat:"S
 <!-- END app block --><script src="https://cdn.shopify.com/extensions/019cc5c9-6f29-77d6-a470-88a437443729/axon-shop-integration-78/assets/app-embed.js" type="text/javascript" defer="defer"></script>
 <script src="https://cdn.shopify.com/extensions/019cb229-1d9a-7ddf-9952-ce2348f7efa4/form-builder-by-hulkapps-56/assets/form-builder-script.js" type="text/javascript" defer="defer"></script>
 <link href="https://monorail-edge.shopifysvc.com" rel="dns-prefetch">
-<script>(function(){if ("sendBeacon" in navigator && "performance" in window) {try {var session_token_from_headers = performance.getEntriesByType('navigation')[0].serverTiming.find(x => x.name == '_s').description;} catch {var session_token_from_headers = undefined;}var session_cookie_matches = document.cookie.match(/_shopify_s=([^;]*)/);var session_token_from_cookie = session_cookie_matches && session_cookie_matches.length === 2 ? session_cookie_matches[1] : "";var session_token = session_token_from_headers || session_token_from_cookie || "";function handle_abandonment_event(e) {var entries = performance.getEntries().filter(function(entry) {return /monorail-edge.shopifysvc.com/.test(entry.name);});if (!window.abandonment_tracked && entries.length === 0) {window.abandonment_tracked = true;var currentMs = Date.now();var navigation_start = performance.timing.navigationStart;var payload = {shop_id: 7977215,url: window.location.href,navigation_start,duration: currentMs - navigation_start,session_token,page_type: "product"};window.navigator.sendBeacon("https://monorail-edge.shopifysvc.com/v1/produce", JSON.stringify({schema_id: "online_store_buyer_site_abandonment/1.1",payload: payload,metadata: {event_created_at_ms: currentMs,event_sent_at_ms: currentMs}}));}}window.addEventListener('pagehide', handle_abandonment_event);}}());</script>
-<script id="web-pixels-manager-setup">(function e(e,d,r,n,o){if(void 0===o&&(o={}),!Boolean(null===(a=null===(i=window.Shopify)||void 0===i?void 0:i.analytics)||void 0===a?void 0:a.replayQueue)){var i,a;window.Shopify=window.Shopify||{};var t=window.Shopify;t.analytics=t.analytics||{};var s=t.analytics;s.replayQueue=[],s.publish=function(e,d,r){return s.replayQueue.push([e,d,r]),!0};try{self.performance.mark("wpm:start")}catch(e){}var l=function(){var e={modern:/Edge?\/(1{2}[4-9]|1[2-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Firefox\/(1{2}[4-9]|1[2-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Chrom(ium|e)\/(9{2}|\d{3,})\.\d+(\.\d+|)|(Maci|X1{2}).+ Version\/(15\.\d+|(1[6-9]|[2-9]\d|\d{3,})\.\d+)([,.]\d+|)( \(\w+\)|)( Mobile\/\w+|) Safari\/|Chrome.+OPR\/(9{2}|\d{3,})\.\d+\.\d+|(CPU[ +]OS|iPhone[ +]OS|CPU[ +]iPhone|CPU IPhone OS|CPU iPad OS)[ +]+(15[._]\d+|(1[6-9]|[2-9]\d|\d{3,})[._]\d+)([._]\d+|)|Android:?[ /-](13[3-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})(\.\d+|)(\.\d+|)|Android.+Firefox\/(13[5-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+Chrom(ium|e)\/(13[3-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|SamsungBrowser\/([2-9]\d|\d{3,})\.\d+/,legacy:/Edge?\/(1[6-9]|[2-9]\d|\d{3,})\.\d+(\.\d+|)|Firefox\/(5[4-9]|[6-9]\d|\d{3,})\.\d+(\.\d+|)|Chrom(ium|e)\/(5[1-9]|[6-9]\d|\d{3,})\.\d+(\.\d+|)([\d.]+$|.*Safari\/(?![\d.]+ Edge\/[\d.]+$))|(Maci|X1{2}).+ Version\/(10\.\d+|(1[1-9]|[2-9]\d|\d{3,})\.\d+)([,.]\d+|)( \(\w+\)|)( Mobile\/\w+|) Safari\/|Chrome.+OPR\/(3[89]|[4-9]\d|\d{3,})\.\d+\.\d+|(CPU[ +]OS|iPhone[ +]OS|CPU[ +]iPhone|CPU IPhone OS|CPU iPad OS)[ +]+(10[._]\d+|(1[1-9]|[2-9]\d|\d{3,})[._]\d+)([._]\d+|)|Android:?[ /-](13[3-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})(\.\d+|)(\.\d+|)|Mobile Safari.+OPR\/([89]\d|\d{3,})\.\d+\.\d+|Android.+Firefox\/(13[5-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+Chrom(ium|e)\/(13[3-9]|1[4-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+(UC? ?Browser|UCWEB|U3)[ /]?(15\.([5-9]|\d{2,})|(1[6-9]|[2-9]\d|\d{3,})\.\d+)\.\d+|SamsungBrowser\/(5\.\d+|([6-9]|\d{2,})\.\d+)|Android.+MQ{2}Browser\/(14(\.(9|\d{2,})|)|(1[5-9]|[2-9]\d|\d{3,})(\.\d+|))(\.\d+|)|K[Aa][Ii]OS\/(3\.\d+|([4-9]|\d{2,})\.\d+)(\.\d+|)/},d=e.modern,r=e.legacy,n=navigator.userAgent;return n.match(d)?"modern":n.match(r)?"legacy":"unknown"}(),u="modern"===l?"modern":"legacy",c=(null!=n?n:{modern:"",legacy:""})[u],f=function(e){return[e.baseUrl,"/wpm","/b",e.hashVersion,"modern"===e.buildTarget?"m":"l",".js"].join("")}({baseUrl:d,hashVersion:r,buildTarget:u}),m=function(e){var d=e.version,r=e.bundleTarget,n=e.surface,o=e.pageUrl,i=e.monorailEndpoint;return{emit:function(e){var a=e.status,t=e.errorMsg,s=(new Date).getTime(),l=JSON.stringify({metadata:{event_sent_at_ms:s},events:[{schema_id:"web_pixels_manager_load/3.1",payload:{version:d,bundle_target:r,page_url:o,status:a,surface:n,error_msg:t},metadata:{event_created_at_ms:s}}]});if(!i)return console&&console.warn&&console.warn("[Web Pixels Manager] No Monorail endpoint provided, skipping logging."),!1;try{return self.navigator.sendBeacon.bind(self.navigator)(i,l)}catch(e){}var u=new XMLHttpRequest;try{return u.open("POST",i,!0),u.setRequestHeader("Content-Type","text/plain"),u.send(l),!0}catch(e){return console&&console.warn&&console.warn("[Web Pixels Manager] Got an unhandled error while logging to Monorail."),!1}}}}({version:r,bundleTarget:l,surface:e.surface,pageUrl:self.location.href,monorailEndpoint:e.monorailEndpoint});try{o.browserTarget=l,function(e){var d=e.src,r=e.async,n=void 0===r||r,o=e.onload,i=e.onerror,a=e.sri,t=e.scriptDataAttributes,s=void 0===t?{}:t,l=document.createElement("script"),u=document.querySelector("head"),c=document.querySelector("body");if(l.async=n,l.src=d,a&&(l.integrity=a,l.crossOrigin="anonymous"),s)for(var f in s)if(Object.prototype.hasOwnProperty.call(s,f))try{l.dataset[f]=s[f]}catch(e){}if(o&&l.addEventListener("load",o),i&&l.addEventListener("error",i),u)u.appendChild(l);else{if(!c)throw new Error("Did not find a head or body element to append the script");c.appendChild(l)}}({src:f,async:!0,onload:function(){if(!function(){var e,d;return Boolean(null===(d=null===(e=window.Shopify)||void 0===e?void 0:e.analytics)||void 0===d?void 0:d.initialized)}()){var d=window.webPixelsManager.init(e)||void 0;if(d){var r=window.Shopify.analytics;r.replayQueue.forEach((function(e){var r=e[0],n=e[1],o=e[2];d.publishCustomEvent(r,n,o)})),r.replayQueue=[],r.publish=d.publishCustomEvent,r.visitor=d.visitor,r.initialized=!0}}},onerror:function(){return m.emit({status:"failed",errorMsg:"".concat(f," has failed to load")})},sri:function(e){var d=/^sha384-[A-Za-z0-9+/=]+$/;return"string"==typeof e&&d.test(e)}(c)?c:"",scriptDataAttributes:o}),m.emit({status:"loading"})}catch(e){m.emit({status:"failed",errorMsg:(null==e?void 0:e.message)||"Unknown error"})}}})({shopId: 7977215,storefrontBaseUrl: "https://www.lookoptic.com",extensionsBaseUrl: "https://extensions.shopifycdn.com/cdn/shopifycloud/web-pixels-manager",monorailEndpoint: "https://monorail-edge.shopifysvc.com/unstable/produce_batch",surface: "storefront-renderer",enabledBetaFlags: ["2dca8a86","5476ea20","ed8389fc"],webPixelsConfigList: [{"id":"1474428987","configuration":"{\"shopId\":\"look-optic.myshopify.com\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"31536d5a2ef62c1887054e49fd58dba0","type":"APP","apiClientId":4845829,"privacyPurposes":["ANALYTICS"],"dataSharingAdjustments":{"protectedCustomerApprovalScopes":["read_customer_address","read_customer_email","read_customer_name","read_customer_personal_data","read_customer_phone"],"dataSharingControls":["share_all_events"]},"dataSharingState":"unrestricted"},{"id":"1350271035","configuration":"{\"campaignID\":\"47992\",\"externalExecutionURL\":\"https:\/\/engine.saasler.com\/api\/v1\/webhook_executions\/6bd8b8335c626def44fe379bd68b0217\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"3d960a6043b3d636d6fc1f5046e03e67","type":"APP","apiClientId":3546795,"privacyPurposes":[],"dataSharingAdjustments":{"protectedCustomerApprovalScopes":["read_customer_email","read_customer_personal_data"],"dataSharingControls":["share_all_events"]},"dataSharingState":"unrestricted"},{"id":"1312358459","configuration":"{\"trackingDomainUrl\":\"www.g1zqn8trk.com\",\"networkId\":\"2254\",\"advertiserId\":\"70\",\"integrationShopifyV2Id\":\"16\",\"clickBehaviorMode\":\"basic\",\"clickScript\":\"NULL\",\"conversionBehaviorMode\":\"custom\",\"conversionScript\":\"const lineItems \\u003d checkout.lineItems.map((item) \\u003d\\u003e ({  ps: item.variant?.sku ?? \\u0027\\u0027,  vs: item.variant?.sku ?? \\u0027\\u0027,  p: item.variant?.price?.amount ?? 0,  qty: item.quantity,  ds: item.discountAllocations?.length \\u003e 0 ? item.discountAllocations[0]?.amount?.amount ?? 0 : 0}));const total \\u003d event.data.checkout.totalPrice.amount;const tax \\u003d event.data.checkout.totalTax.amount;const ship \\u003d event.data.checkout.shippingLine?.price?.amount || 0;const amount \\u003d total - tax - ship;const order \\u003d {  oid: checkout.order.id,  amt: checkout.subtotalPrice.amount,  bs: checkout.shippingAddress?.province || checkout.billingAddress?.province || \\u0027\\u0027,  bc: checkout.shippingAddress?.country || checkout.billingAddress?.country || \\u0027\\u0027,  cc: checkout.discountApplications.find(discount \\u003d\\u003e discount?.type \\u003d\\u003d\\u003d \\\"DISCOUNT_CODE\\\")?.title ?? \\u0027\\u0027,  items: lineItems};EF.conversion({  transaction_id: EF.urlParameter(\\u0027_ef_transaction_id\\u0027),  advertiser_id: integrationSettings.advertiserId.toString(),  amount: amount,  email: event.data.checkout.email ?? \\u0027\\u0027,  adv1: EF.urlParameter(\\u0027adv1\\u0027),  adv2: EF.urlParameter(\\u0027adv2\\u0027),  adv3: EF.urlParameter(\\u0027adv3\\u0027),  adv4: EF.urlParameter(\\u0027adv4\\u0027),  adv5: EF.urlParameter(\\u0027adv5\\u0027),  order_id: checkout.order.id,  order,  parameters: {\\u0027currency\\u0027: event.data.checkout.currencyCode},}).then(x \\u003d\\u003e {});\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"b65e64a5d4ee8e7630c2e76976111f64","type":"APP","apiClientId":148011515905,"privacyPurposes":["ANALYTICS","MARKETING","SALE_OF_DATA"],"dataSharingAdjustments":{"protectedCustomerApprovalScopes":["read_customer_email","read_customer_personal_data"],"dataSharingControls":["share_all_events"]},"dataSharingState":"optimized"},{"id":"1133117499","configuration":"{\"shopToken\":\"UmdFRTdUSzZVYTFqTGJnazF2eTBVZzk2K215YS0teVpGNkhOQmN5bXU4WnJMay0taVFQdUh0TmlIOTQ2Rk5CV2RwZVFSZz09\",\"trackingUrl\":\"https:\\\/\\\/events-ocu.zipify.com\\\/events\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"900ed9c7affd21e82057ec2f7c1b4546","type":"APP","apiClientId":4339901,"privacyPurposes":["ANALYTICS","MARKETING"],"dataSharingAdjustments":{"protectedCustomerApprovalScopes":["read_customer_address","read_customer_email","read_customer_name","read_customer_personal_data","read_customer_phone"],"dataSharingControls":["share_all_events"]},"dataSharingState":"optimized"},{"id":"1105985595","configuration":"{\"account_ID\":\"38899\",\"google_analytics_tracking_tag\":\"1\",\"measurement_id\":\"2\",\"api_secret\":\"3\",\"shop_settings\":\"{\\\"custom_pixel_script\\\":\\\"https:\\\\\\\/\\\\\\\/storage.googleapis.com\\\\\\\/gsf-scripts\\\\\\\/custom-pixels\\\\\\\/look-optic.js\\\"}\"}","eventPayloadVersion":"v1","runtimeContext":"LAX","scriptVersion":"a90a2386b8d48cfc1abdd2eff8b04392","type":"APP","apiClientId":1558137,"privacyPurposes":[],"dataSharingAdjustments":{"protectedCustomerApprovalScopes":["read_customer_address","read_customer_email","read_customer_name","read_customer_personal_data","read_customer_phone"],"dataSharingControls":["share_all_events"]},"dataSharingState":"unrestricted"},{"id":"1089536059","configuration":"{\"ti\":\"355008853\",\"endpoint\":\"https:\/\/bat.bing.com\/action\/0\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"5ee93563fe31b11d2d65e2f09a5229dc","type":"APP","apiClientId":2997493,"privacyPurposes":["ANALYTICS","MARKETING","SALE_OF_DATA"],"dataSharingAdjustments":{"protectedCustomerApprovalScopes":["read_customer_personal_data"],"dataSharingControls":["share_all_events"]},"dataSharingState":"optimized","enabledFlags":["3b5414a6"]},{"id":"934608955","configuration":"{\"accountID\":\"HQd5zH\",\"webPixelConfig\":\"eyJlbmFibGVBZGRlZFRvQ2FydEV2ZW50cyI6IHRydWV9\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"524f6c1ee37bacdca7657a665bdca589","type":"APP","apiClientId":123074,"privacyPurposes":["ANALYTICS","MARKETING"],"dataSharingAdjustments":{"protectedCustomerApprovalScopes":["read_customer_address","read_customer_email","read_customer_name","read_customer_personal_data","read_customer_phone"],"dataSharingControls":["share_all_events"]},"dataSharingState":"optimized","enabledFlags":["9a3ed68a"]},{"id":"704544827","configuration":"{\"eventKey\":\"51135242-9fe9-4ba1-acc4-6f7671f53de5\",\"name\":\"offline_look-optic.myshopify.com - Axon Pixel\",\"storefrontToken\":\"15f43415b8af18bd400385540759b737\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"86aef2a6698ef3a56b8694026779e73f","type":"APP","apiClientId":256560922625,"privacyPurposes":["ANALYTICS","MARKETING","SALE_OF_DATA"],"dataSharingAdjustments":{"protectedCustomerApprovalScopes":["read_customer_address","read_customer_email","read_customer_personal_data","read_customer_phone"],"dataSharingControls":["share_all_events"]},"dataSharingState":"optimized"},{"id":"605257787","configuration":"{ \"accountId\": \"look-optic.myshopify.com\" }","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"4729d2215f5fc8e745868c30197454a7","type":"APP","apiClientId":94099111937,"privacyPurposes":["ANALYTICS","MARKETING"],"dataSharingAdjustments":{"protectedCustomerApprovalScopes":["read_customer_address","read_customer_email","read_customer_name","read_customer_personal_data","read_customer_phone"],"dataSharingControls":["share_all_events"]},"dataSharingState":"optimized"},{"id":"568328251","configuration":"{}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"f0af4213e47be1020811d284172e1b0d","type":"APP","apiClientId":30400643073,"privacyPurposes":["ANALYTICS"],"dataSharingAdjustments":{"protectedCustomerApprovalScopes":["read_customer_address","read_customer_email","read_customer_name","read_customer_personal_data","read_customer_phone"],"dataSharingControls":["share_all_events"]},"dataSharingState":"unrestricted"},{"id":"326926395","configuration":"{\"Enabled\":\"true\",\"UpdatedAt\":\"2026-03-14T22:40:59.749Z\",\"DeveloperPreview\":\"false\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"fd1f3866ebe764c5951ab54d2e1a554a","type":"APP","apiClientId":34646425601,"privacyPurposes":["ANALYTICS"],"dataSharingAdjustments":{"protectedCustomerApprovalScopes":["read_customer_address","read_customer_email","read_customer_name","read_customer_personal_data","read_customer_phone"],"dataSharingControls":["share_all_events"]},"dataSharingState":"optimized"},{"id":"314605627","configuration":"{\"shopDomain\":\"look-optic.myshopify.com\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"7f2de0ecb6b420d2fa07cf04a37a4dbf","type":"APP","apiClientId":2436932,"privacyPurposes":["ANALYTICS","MARKETING","SALE_OF_DATA"],"dataSharingAdjustments":{"protectedCustomerApprovalScopes":["read_customer_address","read_customer_email","read_customer_personal_data"],"dataSharingControls":["share_all_events"]},"dataSharingState":"optimized"},{"id":"235798587","configuration":"{\"config\":\"{\\\"pixel_id\\\":\\\"G-SPD63PQ7JX\\\",\\\"gtag_events\\\":[{\\\"type\\\":\\\"purchase\\\",\\\"action_label\\\":\\\"G-SPD63PQ7JX\\\"},{\\\"type\\\":\\\"page_view\\\",\\\"action_label\\\":\\\"G-SPD63PQ7JX\\\"},{\\\"type\\\":\\\"view_item\\\",\\\"action_label\\\":\\\"G-SPD63PQ7JX\\\"},{\\\"type\\\":\\\"search\\\",\\\"action_label\\\":\\\"G-SPD63PQ7JX\\\"},{\\\"type\\\":\\\"add_to_cart\\\",\\\"action_label\\\":\\\"G-SPD63PQ7JX\\\"},{\\\"type\\\":\\\"begin_checkout\\\",\\\"action_label\\\":\\\"G-SPD63PQ7JX\\\"},{\\\"type\\\":\\\"add_payment_info\\\",\\\"action_label\\\":\\\"G-SPD63PQ7JX\\\"}],\\\"enable_monitoring_mode\\\":false}\"}","eventPayloadVersion":"v1","runtimeContext":"OPEN","scriptVersion":"6b33379668fd964ef67c850d23f6cbac","type":"APP","apiClientId":1780363,"privacyPurposes":[],"dataSharingAdjustments":{"protectedCustomerApprovalScopes":["read_customer_address","read_customer_email","read_customer_name","read_customer_personal_data","read_customer_phone"],"dataSharingControls":["share_all_events"]},"dataSharingState":"optimized","enabledFlags":["9a3ed68a"]},{"id":"203489339","configuration":"{\"shopId\":\"look-optic.myshopify.com\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"9735d291f34c37bb980cad11123d15e3","type":"APP","apiClientId":2753413,"privacyPurposes":["ANALYTICS","MARKETING","SALE_OF_DATA"],"dataSharingAdjustments":{"protectedCustomerApprovalScopes":["read_customer_address","read_customer_email","read_customer_name","read_customer_personal_data","read_customer_phone"],"dataSharingControls":["share_all_events"]},"dataSharingState":"optimized"},{"id":"15630395","configuration":"{\"config_url\": \"\/a\/elevar\/static\/configs\/451964ff83708ecea7cfbf6cf540c4d01627df02\/config.js\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"ab86028887ec2044af7d02b854e52653","type":"APP","apiClientId":2509311,"privacyPurposes":[],"dataSharingAdjustments":{"protectedCustomerApprovalScopes":["read_customer_address","read_customer_email","read_customer_name","read_customer_personal_data","read_customer_phone"],"dataSharingControls":["share_all_events"]},"dataSharingState":"unrestricted"},{"id":"8388667","eventPayloadVersion":"1","runtimeContext":"LAX","scriptVersion":"2","type":"CUSTOM","privacyPurposes":[],"name":"FigPii Order Tracking"},{"id":"8454203","eventPayloadVersion":"1","runtimeContext":"LAX","scriptVersion":"1","type":"CUSTOM","privacyPurposes":["ANALYTICS","MARKETING","SALE_OF_DATA"],"name":"FigPii Begin Checkout Event"},{"id":"24739899","eventPayloadVersion":"1","runtimeContext":"LAX","scriptVersion":"1","type":"CUSTOM","privacyPurposes":[],"name":"Pepperjam"},{"id":"25165883","eventPayloadVersion":"1","runtimeContext":"LAX","scriptVersion":"3","type":"CUSTOM","privacyPurposes":[],"name":"ArtsAI Purchase Tracking"},{"id":"28540987","eventPayloadVersion":"1","runtimeContext":"LAX","scriptVersion":"1","type":"CUSTOM","privacyPurposes":[],"name":"ProfitMetrics"},{"id":"28573755","eventPayloadVersion":"1","runtimeContext":"LAX","scriptVersion":"1","type":"CUSTOM","privacyPurposes":["ANALYTICS","MARKETING","SALE_OF_DATA"],"name":"Migrated checkout liquid"},{"id":"28606523","eventPayloadVersion":"1","runtimeContext":"LAX","scriptVersion":"1","type":"CUSTOM","privacyPurposes":[],"name":"Elevar Tracking"},{"id":"85491771","eventPayloadVersion":"1","runtimeContext":"LAX","scriptVersion":"1","type":"CUSTOM","privacyPurposes":[],"name":"Magellan"},{"id":"100630587","eventPayloadVersion":"1","runtimeContext":"LAX","scriptVersion":"1","type":"CUSTOM","privacyPurposes":["ANALYTICS","MARKETING"],"name":"Pagedeck"},{"id":"100827195","eventPayloadVersion":"1","runtimeContext":"LAX","scriptVersion":"1","type":"CUSTOM","privacyPurposes":[],"name":"Custom - Remove OPTIN Purchase"},{"id":"shopify-app-pixel","configuration":"{}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"0450","apiClientId":"shopify-pixel","type":"APP","privacyPurposes":["ANALYTICS","MARKETING"]},{"id":"shopify-custom-pixel","eventPayloadVersion":"v1","runtimeContext":"LAX","scriptVersion":"0450","apiClientId":"shopify-pixel","type":"CUSTOM","privacyPurposes":["ANALYTICS","MARKETING"]}],isMerchantRequest: false,initData: {"shop":{"name":"LOOK OPTIC","paymentSettings":{"currencyCode":"USD"},"myshopifyDomain":"look-optic.myshopify.com","countryCode":"US","storefrontUrl":"https:\/\/www.lookoptic.com"},"customer":null,"cart":null,"checkout":null,"productVariants":[{"price":{"amount":96.0,"currencyCode":"USD"},"product":{"title":"Cooper Sun","vendor":"LOOK OPTIC","id":"7148505333819","untranslatedTitle":"Cooper Sun","url":"\/products\/cooper-sun","type":"Sunglasses"},"id":"41737390194747","image":{"src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/cooper_cooper-sun_silver_001_724c6650-6d40-44e9-910a-fe3c9125611e.png?v=1769205323"},"sku":"CP85SSIL00","title":"Sunglasses \/ Silver \/ No Magnification","untranslatedTitle":"Sunglasses \/ Silver \/ No Magnification"},{"price":{"amount":96.0,"currencyCode":"USD"},"product":{"title":"Cooper Sun","vendor":"LOOK OPTIC","id":"7148505333819","untranslatedTitle":"Cooper Sun","url":"\/products\/cooper-sun","type":"Sunglasses"},"id":"41737390030907","image":{"src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/cooper_cooper-sun_gold_001_65f038df-e335-4fc8-bb40-dfdd03f3d58d.png?v=1769205345"},"sku":"CP85SGLD00","title":"Sunglasses \/ (Gold) \/ No Magnification","untranslatedTitle":"Sunglasses \/ (Gold) \/ No Magnification"},{"price":{"amount":96.0,"currencyCode":"USD"},"product":{"title":"Cooper Sun","vendor":"LOOK OPTIC","id":"7148505333819","untranslatedTitle":"Cooper Sun","url":"\/products\/cooper-sun","type":"Sunglasses"},"id":"41737389867067","image":{"src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/cooper_cooper-sun_gunmetal_001_86d03fbb-6cb4-4b1e-8d3f-b9ad7d7f1afa.png?v=1769205334"},"sku":"CP85SGUN00","title":"Sunglasses \/ (Gunmetal) \/ No Magnification","untranslatedTitle":"Sunglasses \/ (Gunmetal) \/ No Magnification"}],"purchasingCompany":null},},"https://www.lookoptic.com/cdn","df8d3400wef50681bp68ad6cf7m44c53f1a",{"modern":"","legacy":""},{"shopId":"7977215","storefrontBaseUrl":"https:\/\/www.lookoptic.com","extensionBaseUrl":"https:\/\/extensions.shopifycdn.com\/cdn\/shopifycloud\/web-pixels-manager","surface":"storefront-renderer","enabledBetaFlags":"[\"2dca8a86\", \"5476ea20\", \"ed8389fc\"]","isMerchantRequest":"false","hashVersion":"df8d3400wef50681bp68ad6cf7m44c53f1a","publish":"custom","events":"[[\"page_viewed\",{}],[\"product_viewed\",{\"productVariant\":{\"price\":{\"amount\":96.0,\"currencyCode\":\"USD\"},\"product\":{\"title\":\"Cooper Sun\",\"vendor\":\"LOOK OPTIC\",\"id\":\"7148505333819\",\"untranslatedTitle\":\"Cooper Sun\",\"url\":\"\/products\/cooper-sun\",\"type\":\"Sunglasses\"},\"id\":\"41737390194747\",\"image\":{\"src\":\"\/\/www.lookoptic.com\/cdn\/shop\/files\/cooper_cooper-sun_silver_001_724c6650-6d40-44e9-910a-fe3c9125611e.png?v=1769205323\"},\"sku\":\"CP85SSIL00\",\"title\":\"Sunglasses \/ Silver \/ No Magnification\",\"untranslatedTitle\":\"Sunglasses \/ Silver \/ No Magnification\"}}]]"});</script><script>
-  window.ShopifyAnalytics = window.ShopifyAnalytics || {};
-  window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
-  window.ShopifyAnalytics.meta.currency = 'USD';
-  var meta = {"product":{"id":7148505333819,"gid":"gid:\/\/shopify\/Product\/7148505333819","vendor":"LOOK OPTIC","type":"Sunglasses","handle":"cooper-sun","variants":[{"id":41737390194747,"price":9600,"name":"Cooper Sun - Sunglasses \/ Silver \/ No Magnification","public_title":"Sunglasses \/ Silver \/ No Magnification","sku":"CP85SSIL00"},{"id":41737390030907,"price":9600,"name":"Cooper Sun - Sunglasses \/ (Gold) \/ No Magnification","public_title":"Sunglasses \/ (Gold) \/ No Magnification","sku":"CP85SGLD00"},{"id":41737389867067,"price":9600,"name":"Cooper Sun - Sunglasses \/ (Gunmetal) \/ No Magnification","public_title":"Sunglasses \/ (Gunmetal) \/ No Magnification","sku":"CP85SGUN00"}],"remote":false},"page":{"pageType":"product","resourceType":"product","resourceId":7148505333819,"requestId":"f06ff61d-465e-48b4-bae9-eda881420966-1773530262"}};
-  for (var attr in meta) {
-    window.ShopifyAnalytics.meta[attr] = meta[attr];
-  }
-</script>
+
+
 <script class="analytics">
   (function () {
     var customDocumentWrite = function(content) {
@@ -1156,20 +1024,7 @@ window.TriplePixelData={TripleName:"look-optic.myshopify.com",ver:"2.16",plat:"S
         document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
 
 })();</script>
-  <script>
-  if (!window.ga || (window.ga && typeof window.ga !== 'function')) {
-    window.ga = function ga() {
-      (window.ga.q = window.ga.q || []).push(arguments);
-      if (window.Shopify && window.Shopify.analytics && typeof window.Shopify.analytics.publish === 'function') {
-        window.Shopify.analytics.publish("ga_stub_called", {}, {sendTo: "google_osp_migration"});
-      }
-      console.error("Shopify's Google Analytics stub called with:", Array.from(arguments), "\nSee https://help.shopify.com/manual/promoting-marketing/pixels/pixel-migration#google for more information.");
-    };
-    if (window.Shopify && window.Shopify.analytics && typeof window.Shopify.analytics.publish === 'function') {
-      window.Shopify.analytics.publish("ga_stub_initialized", {}, {sendTo: "google_osp_migration"});
-    }
-  }
-</script>
+  
 
 <style id="lookoptic-menu-fixes">
 /* Menu items always black */
@@ -3349,9 +3204,7 @@ window.waitForElementToAppear(
                 
                   
                     
-<modal-opener data-modal="#PopupModal-ec542a6d-6b7c-4d72-8dc7-6b7c4ae0667f" data-fitmix-color="Silver" class="product-form__sub-cta hidden">
-                          
-                        </modal-opener>
+
                   
                 
             </li><li 
@@ -3396,9 +3249,7 @@ window.waitForElementToAppear(
                 
                   
                     
-<modal-opener data-modal="#PopupModal-ec542a6d-6b7c-4d72-8dc7-6b7c4ae0667f" data-fitmix-color="Silver" class="product-form__sub-cta hidden">
-                          
-                        </modal-opener>
+
                   
                 
             </li><li 
@@ -3443,9 +3294,7 @@ window.waitForElementToAppear(
                 
                   
                     
-<modal-opener data-modal="#PopupModal-ec542a6d-6b7c-4d72-8dc7-6b7c4ae0667f" data-fitmix-color="Silver" class="product-form__sub-cta hidden">
-                          
-                        </modal-opener>
+
                   
                 
             </li><li 
@@ -3490,9 +3339,7 @@ window.waitForElementToAppear(
                 
                   
                     
-<modal-opener data-modal="#PopupModal-ec542a6d-6b7c-4d72-8dc7-6b7c4ae0667f" data-fitmix-color="Silver" class="product-form__sub-cta hidden">
-                          
-                        </modal-opener>
+
                   
                 
             </li><li 
@@ -3537,9 +3384,7 @@ window.waitForElementToAppear(
                 
                   
                     
-<modal-opener data-modal="#PopupModal-ec542a6d-6b7c-4d72-8dc7-6b7c4ae0667f" data-fitmix-color="Silver" class="product-form__sub-cta hidden">
-                          
-                        </modal-opener>
+
                   
                 
             </li><li 
@@ -3584,9 +3429,7 @@ window.waitForElementToAppear(
                 
                   
                     
-<modal-opener data-modal="#PopupModal-ec542a6d-6b7c-4d72-8dc7-6b7c4ae0667f" data-fitmix-color="Silver" class="product-form__sub-cta hidden">
-                          
-                        </modal-opener>
+
                   
                 
             </li><li 
@@ -3631,9 +3474,7 @@ window.waitForElementToAppear(
                 
                   
                     
-<modal-opener data-modal="#PopupModal-ec542a6d-6b7c-4d72-8dc7-6b7c4ae0667f" data-fitmix-color="Silver" class="product-form__sub-cta hidden">
-                          
-                        </modal-opener>
+
                   
                 
             </li><li 
@@ -3678,9 +3519,7 @@ window.waitForElementToAppear(
                 
                   
                     
-<modal-opener data-modal="#PopupModal-ec542a6d-6b7c-4d72-8dc7-6b7c4ae0667f" data-fitmix-color="Silver" class="product-form__sub-cta hidden">
-                          
-                        </modal-opener>
+
                   
                 
             </li><li 
@@ -3725,9 +3564,7 @@ window.waitForElementToAppear(
                 
                   
                     
-<modal-opener data-modal="#PopupModal-ec542a6d-6b7c-4d72-8dc7-6b7c4ae0667f" data-fitmix-color="Silver" class="product-form__sub-cta inline">
-                          
-                        </modal-opener>
+
                   
                 
             </li><li 
@@ -3772,9 +3609,7 @@ window.waitForElementToAppear(
                 
                   
                     
-<modal-opener data-modal="#PopupModal-ec542a6d-6b7c-4d72-8dc7-6b7c4ae0667f" data-fitmix-color="Silver" class="product-form__sub-cta hidden">
-                          
-                        </modal-opener>
+
                   
                 
             </li><li 
@@ -3819,9 +3654,7 @@ window.waitForElementToAppear(
                 
                   
                     
-<modal-opener data-modal="#PopupModal-ec542a6d-6b7c-4d72-8dc7-6b7c4ae0667f" data-fitmix-color="Silver" class="product-form__sub-cta hidden">
-                          
-                        </modal-opener>
+
                   
                 
             </li><li 
@@ -3866,9 +3699,7 @@ window.waitForElementToAppear(
                 
                   
                     
-<modal-opener data-modal="#PopupModal-ec542a6d-6b7c-4d72-8dc7-6b7c4ae0667f" data-fitmix-color="Silver" class="product-form__sub-cta hidden">
-                          
-                        </modal-opener>
+
                   
                 
             </li><li 
@@ -3913,9 +3744,7 @@ window.waitForElementToAppear(
                 
                   
                     
-<modal-opener data-modal="#PopupModal-ec542a6d-6b7c-4d72-8dc7-6b7c4ae0667f" data-fitmix-color="Silver" class="product-form__sub-cta hidden">
-                          
-                        </modal-opener>
+
                   
                 
             </li><li 
@@ -3960,9 +3789,7 @@ window.waitForElementToAppear(
                 
                   
                     
-<modal-opener data-modal="#PopupModal-ec542a6d-6b7c-4d72-8dc7-6b7c4ae0667f" data-fitmix-color="Silver" class="product-form__sub-cta hidden">
-                          
-                        </modal-opener>
+
                   
                 
             </li><li 
@@ -4007,9 +3834,7 @@ window.waitForElementToAppear(
                 
                   
                     
-<modal-opener data-modal="#PopupModal-ec542a6d-6b7c-4d72-8dc7-6b7c4ae0667f" data-fitmix-color="Silver" class="product-form__sub-cta hidden">
-                          
-                        </modal-opener>
+
                   
                 
             </li><li 
@@ -4054,9 +3879,7 @@ window.waitForElementToAppear(
                 
                   
                     
-<modal-opener data-modal="#PopupModal-ec542a6d-6b7c-4d72-8dc7-6b7c4ae0667f" data-fitmix-color="Silver" class="product-form__sub-cta hidden">
-                          
-                        </modal-opener>
+
                   
                 
             </li><li 
@@ -4101,9 +3924,7 @@ window.waitForElementToAppear(
                 
                   
                     
-<modal-opener data-modal="#PopupModal-ec542a6d-6b7c-4d72-8dc7-6b7c4ae0667f" data-fitmix-color="Silver" class="product-form__sub-cta hidden">
-                          
-                        </modal-opener>
+
                   
                 
             </li><li 
@@ -4148,9 +3969,7 @@ window.waitForElementToAppear(
                 
                   
                     
-<modal-opener data-modal="#PopupModal-ec542a6d-6b7c-4d72-8dc7-6b7c4ae0667f" data-fitmix-color="Silver" class="product-form__sub-cta hidden">
-                          
-                        </modal-opener>
+
                   
                 
             </li><li 
@@ -4195,9 +4014,7 @@ window.waitForElementToAppear(
                 
                   
                     
-<modal-opener data-modal="#PopupModal-ec542a6d-6b7c-4d72-8dc7-6b7c4ae0667f" data-fitmix-color="Silver" class="product-form__sub-cta hidden">
-                          
-                        </modal-opener>
+
                   
                 
             </li><li 
@@ -4242,9 +4059,7 @@ window.waitForElementToAppear(
                 
                   
                     
-<modal-opener data-modal="#PopupModal-ec542a6d-6b7c-4d72-8dc7-6b7c4ae0667f" data-fitmix-color="Silver" class="product-form__sub-cta hidden">
-                          
-                        </modal-opener>
+
                   
                 
             </li>
@@ -6785,11 +6600,7 @@ fixMissingWidthHeight();
 
     <script src="https://analytics.ahrefs.com/analytics.js" data-key="ltAkSiGXPgL2Qmrs8vmXRA" async></script>
     
-    <script>
-      if (window.location.pathname === '/apps/wonderment/tracking') {
-        window.location.pathname = '/pages/tracking';
-      }
-    </script>
+    
     <script>
       if (window.location.href.includes('vfsim=true') || window.sessionStorage.getItem('fp_vfsim')) {
         window.sessionStorage.setItem('fp_vfsim', 'true');
