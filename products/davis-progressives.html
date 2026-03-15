@@ -1622,6 +1622,7 @@ fieldset[data-option-name="Lens Type"] label.lens-disabled {
 </style>
 
 
+
 <style id="cart-drawer-css">
 .cart-notification-bg {
   display: none;
@@ -1638,19 +1639,19 @@ fieldset[data-option-name="Lens Type"] label.lens-disabled {
   bottom: 0 !important;
   width: 460px !important;
   max-width: 100vw !important;
-  background: #fff !important;
+  background: rgb(var(--color-background, 255,255,255)) !important;
   z-index: 5 !important;
   transform: translateX(100%) !important;
-  transition: transform 0.3s ease !important;
+  transition: transform 0.2s ease, visibility 0s 0.2s !important;
   visibility: hidden !important;
   display: flex !important;
   flex-direction: column !important;
   overflow: hidden !important;
-  box-shadow: -2px 0 10px rgba(0,0,0,0.08) !important;
 }
 #cart-notification.active {
   transform: translateX(0) !important;
   visibility: visible !important;
+  transition: transform 0.2s ease, visibility 0s !important;
 }
 #cart-notification > div:first-child {
   display: flex !important;
@@ -1661,8 +1662,9 @@ fieldset[data-option-name="Lens Type"] label.lens-disabled {
   display: flex !important;
   justify-content: space-between !important;
   align-items: flex-start !important;
-  padding: 28px 28px 22px !important;
+  padding: 24px 24px 20px !important;
   flex-shrink: 0 !important;
+  border: none !important;
 }
 .cart-notification__heading {
   font-family: var(--font-heading-family, 'DIN Condensed', sans-serif) !important;
@@ -1671,15 +1673,15 @@ fieldset[data-option-name="Lens Type"] label.lens-disabled {
   letter-spacing: 0.3rem !important;
   font-weight: 500 !important;
   margin: 0 !important;
-  color: #101010 !important;
+  color: rgb(var(--color-foreground, 16,16,16)) !important;
   line-height: 1 !important;
 }
 .cart-notification__close {
   background: none !important;
-  border: 1px solid rgba(16,16,16,0.15) !important;
+  border: 1px solid rgba(var(--color-foreground, 16,16,16), 0.1) !important;
   cursor: pointer !important;
   padding: 0 !important;
-  color: rgba(16,16,16,0.5) !important;
+  color: rgba(var(--color-foreground, 16,16,16), 0.55) !important;
   border-radius: 50% !important;
   width: 40px !important;
   height: 40px !important;
@@ -1687,39 +1689,46 @@ fieldset[data-option-name="Lens Type"] label.lens-disabled {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  transition: all 0.2s !important;
-  margin-top: 2px !important;
 }
 .cart-notification__close:hover {
-  color: #101010 !important;
-  border-color: rgba(16,16,16,0.4) !important;
+  color: rgb(var(--color-foreground, 16,16,16)) !important;
+  border-color: rgba(var(--color-foreground, 16,16,16), 0.3) !important;
 }
 .cart-notification__close .icon-close {
   width: 14px !important;
   height: 14px !important;
 }
-.cart-notification .announcement-bar {
+#cart-notification .announcement-bar {
   background: #d7cfbf !important;
-  padding: 10px 28px !important;
+  padding: 0 !important;
   text-align: center !important;
   border: none !important;
+  border-bottom: none !important;
   margin: 0 !important;
   flex-shrink: 0 !important;
+  height: 37px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
-.cart-notification .announcement-bar .announcement-bar__message {
-  font-size: 1.2rem !important;
-  letter-spacing: 0.12rem !important;
+#cart-notification .announcement-bar .announcement-bar__message {
+  font-family: "Avenir Next", sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
   text-transform: uppercase !important;
-  font-weight: 600 !important;
-  color: #101010 !important;
+  color: #121212 !important;
   margin: 0 !important;
   padding: 0 !important;
+  height: 37px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
 }
 .cart-contents {
   flex: 1 !important;
-  padding: 24px 28px !important;
-  display: flex !important;
-  flex-direction: column !important;
+  padding: 20px 24px !important;
   overflow-y: auto !important;
   -ms-overflow-style: none !important;
   scrollbar-width: none !important;
@@ -1727,41 +1736,51 @@ fieldset[data-option-name="Lens Type"] label.lens-disabled {
 .cart-contents::-webkit-scrollbar {
   display: none !important;
 }
-.cart-notification-product {
-  color: rgba(16,16,16,0.55) !important;
+#cart-notification-product {
+  color: rgba(var(--color-foreground, 16,16,16), 0.75) !important;
   font-size: 1.5rem !important;
   font-weight: 400 !important;
 }
-.cart-notification-product p {
+#cart-notification-product p {
   margin: 0 !important;
 }
 .cart-notification-lower {
   display: block !important;
-  padding: 16px 28px 20px !important;
-  border-top: 1px solid rgba(0,0,0,0.08) !important;
   flex-shrink: 0 !important;
-  text-align: center !important;
 }
 .cart-notification-lower__text {
-  display: block !important;
+  border-top: 1px solid #e0e0e0 !important;
+  padding: 1rem 0 !important;
+  text-align: center !important;
 }
 .cart-notification__messaging {
   display: none !important;
 }
 .cart-notification__icon-bar {
-  display: block !important;
-}
-.cart-notification__icon-bar .h5 {
-  font-family: var(--font-heading-family, 'DIN Condensed', sans-serif) !important;
-  font-size: 1.4rem !important;
-  font-weight: 500 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.12rem !important;
+  display: flex !important;
+  gap: 1rem !important;
+  align-items: center !important;
   margin: 0 !important;
-  color: #101010 !important;
+  padding: 0 2rem !important;
+  color: rgb(var(--color-base-accent-1, 51,51,51)) !important;
+  text-align: center !important;
+  justify-content: center !important;
+}
+.cart-notification__icon-bar p,
+.cart-notification__icon-bar .h5 {
+  margin: 0 !important;
+  text-transform: uppercase !important;
+  font-family: var(--font-body-family, "Avenir Next", sans-serif) !important;
+  font-weight: 700 !important;
+  font-size: 1.3rem !important;
+  letter-spacing: 0.1rem !important;
+  color: rgb(var(--color-base-accent-1, 51,51,51)) !important;
 }
 .cart-notification-totals {
   display: none !important;
+}
+.cart-notification .sticky {
+  position: static !important;
 }
 body.overflow-hidden {
   overflow: hidden !important;
