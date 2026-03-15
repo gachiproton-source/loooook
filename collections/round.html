@@ -1054,12 +1054,24 @@ details[open] > .header__submenu.list-menu {
 <style id="card-size-fix">
 .lo-card__media {
   aspect-ratio: 810.906 / 614.391 !important;
+  width: 100% !important;
   overflow: hidden !important;
+  position: relative !important;
 }
 .lo-card__media img {
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+.lo-card {
+  width: calc(50% - 10px) !important;
+  max-width: calc(50% - 10px) !important;
+}
+@media screen and (max-width: 749px) {
+  .lo-card { width: 100% !important; max-width: 100% !important; }
 }
 </style>
 </head>

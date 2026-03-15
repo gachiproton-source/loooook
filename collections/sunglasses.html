@@ -1054,12 +1054,24 @@ details[open] > .header__submenu.list-menu {
 <style id="card-size-fix">
 .lo-card__media {
   aspect-ratio: 810.906 / 614.391 !important;
+  width: 100% !important;
   overflow: hidden !important;
+  position: relative !important;
 }
 .lo-card__media img {
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+.lo-card {
+  width: calc(50% - 10px) !important;
+  max-width: calc(50% - 10px) !important;
+}
+@media screen and (max-width: 749px) {
+  .lo-card { width: 100% !important; max-width: 100% !important; }
 }
 </style>
 </head>
@@ -1975,8 +1987,8 @@ details[open] > .header__submenu.list-menu {
 </style>
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       <div class="lo-collection page-width--full-width">
-        <div class="lo-hero"><h1 class="lo-hero__title">Sunglasses</h1></div>
-        <div class="lo-tabs"><button class="lo-tab lo-tab--active">All</button><button class="lo-tab">Best Sellers</button></div>
+        <div class="lo-hero"><h1 class="lo-hero__title">Sunglasses</h1><div class="lo-hero__subtitle"><p>Your favorite styles available with sun lenses, no magnification, and 100% UV protection.</p></div></div>
+        <div class="lo-tabs"><button class="lo-tab lo-tab--active" data-filter="all">All</button><button class="lo-tab" data-filter="best-seller">Best Sellers</button><button class="lo-tab" data-filter="narrow">Narrow</button><button class="lo-tab" data-filter="medium">Medium</button><button class="lo-tab" data-filter="wide">Wide</button></div>
         <div class="lo-filters"><div class="lo-filters__left"><span class="lo-filters__label">Filter:</span><button class="lo-filter-btn">Color</button><button class="lo-filter-btn">Gender</button><button class="lo-filter-btn">Shape</button><button class="lo-filter-btn">Lens Type</button></div><span class="lo-filters__count"><span class="lo-filters__count-text">13 products</span></span></div>
         <ul class="lo-grid" role="list">
 <li class="lo-card"><a href="../products/abbey-sun.html?variant=43025003806779" class="lo-card__link"><div class="lo-card__media"><img class="lo-card__img1" src="../cdn/shop/files/abbey_abbey-sun_shiny-aqua_001_1500x.png" alt="Abbey Sun" loading="lazy">
