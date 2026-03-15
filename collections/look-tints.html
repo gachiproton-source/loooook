@@ -1066,13 +1066,25 @@ details[open] > .header__submenu.list-menu {
   top: 0 !important;
   left: 0 !important;
 }
+.lo-grid {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 20px !important;
+}
 .lo-card {
-  width: calc(50% - 10px) !important;
-  max-width: calc(50% - 10px) !important;
+  width: calc(33.333% - 14px) !important;
+  max-width: calc(33.333% - 14px) !important;
+}
+@media screen and (max-width: 989px) {
+  .lo-card { width: calc(50% - 10px) !important; max-width: calc(50% - 10px) !important; }
 }
 @media screen and (max-width: 749px) {
   .lo-card { width: 100% !important; max-width: 100% !important; }
 }
+.lo-filters, .lo-filters__left, .lo-filters__right,
+[class*="facet"], [class*="FacetFilters"],
+[class*="active-facets"], #ProductCount,
+.lo-filter-bar { display: none !important; }
 </style>
 </head>
   <body class="gradient wnw_loaded" data-page-type="index">
@@ -1989,21 +2001,7 @@ details[open] > .header__submenu.list-menu {
       <div class="lo-collection page-width--full-width">
         <div class="lo-hero"><h1 class="lo-hero__title">Readers</h1></div>
         <div class="lo-tabs"><button class="lo-tab lo-tab--active">All</button><button class="lo-tab">Best Sellers</button></div>
-        <div class="lo-filters"><div class="lo-filters__left"><span class="lo-filters__label">Filter:</span><button class="lo-filter-btn">Color</button><button class="lo-filter-btn">Gender</button><button class="lo-filter-btn">Shape</button><button class="lo-filter-btn">Lens Type</button></div><span class="lo-filters__count"><span class="lo-filters__count-text">13 products</span></span></div>
-        <ul class="lo-grid" role="list">
-<li class="lo-card"><a href="../products/abbey-sun.html?variant=43025003806779" class="lo-card__link"><div class="lo-card__media"><img class="lo-card__img1" src="../cdn/shop/files/abbey_abbey-sun_shiny-aqua_001_1500x.png" alt="Abbey Sun" loading="lazy">
-      <img class="lo-card__img2" src="../cdn/shop/files/abbey_abbey-sun_shiny-aqua_002_1500x.png" alt="" loading="lazy">
-    </div></a><div class="lo-card__body"><div class="lo-card__swatches"><span class="lo-swatch lo-swatch--active" title="Shiny Aqua" data-variant-id="43025003806779" style="--sw-color:transparent;background-color: Shiny Aqua; background-image: url(../cdn/shop/files/swatch-shiny-aqua.jpg);" data-img1="../cdn/shop/files/abbey_abbey-sun_shiny-aqua_001_1500x.png" data-img2="../cdn/shop/files/abbey_abbey-sun_shiny-aqua_002_1500x.png" onclick="swapColor(this)"></span>
-<span class="lo-swatch" title="Tortoise" data-variant-id="41737449504827" style="--sw-color:transparent;background-color: Tortoise; background-image: url(../cdn/shop/files/swatch-tortoise.jpg);" data-img1="../cdn/shop/files/abbey_abbey-sun_shiny-aqua_001_1500x.png" data-img2="../cdn/shop/files/abbey_abbey-sun_shiny-aqua_002_1500x.png" onclick="swapColor(this)"></span>
-<span class="lo-swatch" title="Black" data-variant-id="41737449340987" style="--sw-color:transparent;background-color: (Black); background-image: url(../cdn/shop/files/swatch-black.jpg); display: none !important;" data-img1="../cdn/shop/files/abbey_abbey-sun_shiny-aqua_001_1500x.png" data-img2="../cdn/shop/files/abbey_abbey-sun_shiny-aqua_002_1500x.png" onclick="swapColor(this)"></span>
-<span class="lo-swatch" title="Clear" data-variant-id="41737450029115" style="--sw-color:transparent;background-color: (Clear); background-image: url(../cdn/shop/files/swatch-clear.jpg); display: none !important;" data-img1="../cdn/shop/files/abbey_abbey-sun_shiny-aqua_001_1500x.png" data-img2="../cdn/shop/files/abbey_abbey-sun_shiny-aqua_002_1500x.png" onclick="swapColor(this)"></span>
-<span class="lo-swatch" title="Chestnut" data-variant-id="41737449668667" style="--sw-color:transparent;background-color: (Chestnut); background-image: url(../cdn/shop/files/swatch-chestnut.jpg); display: none !important;" data-img1="../cdn/shop/files/abbey_abbey-sun_shiny-aqua_001_1500x.png" data-img2="../cdn/shop/files/abbey_abbey-sun_shiny-aqua_002_1500x.png" onclick="swapColor(this)"></span>
-<span class="lo-swatch" title="Grey" data-variant-id="41737449832507" style="--sw-color:transparent;background-color: (Grey); background-image: url(../cdn/shop/files/swatch-grey.jpg); display: none !important;" data-img1="../cdn/shop/files/abbey_abbey-sun_shiny-aqua_001_1500x.png" data-img2="../cdn/shop/files/abbey_abbey-sun_shiny-aqua_002_1500x.png" onclick="swapColor(this)"></span>
-<span class="lo-swatch" title="Champagne" data-variant-id="41737450291259" style="--sw-color:transparent;background-color: (Champagne); background-image: url(../cdn/shop/files/swatch-champagne.jpg); display: none !important;" data-img1="../cdn/shop/files/abbey_abbey-sun_shiny-aqua_001_1500x.png" data-img2="../cdn/shop/files/abbey_abbey-sun_shiny-aqua_002_1500x.png" onclick="swapColor(this)"></span>
-<span class="lo-swatch" title="Grey Camo" data-variant-id="41737450455099" style="--sw-color:transparent;background-color: (Grey Camo); background-image: url(../cdn/shop/files/swatch-grey-camo.jpg); display: none !important;" data-img1="../cdn/shop/files/abbey_abbey-sun_shiny-aqua_001_1500x.png" data-img2="../cdn/shop/files/abbey_abbey-sun_shiny-aqua_002_1500x.png" onclick="swapColor(this)"></span>
-<span class="lo-swatch" title="Blue Camo" data-variant-id="41737450618939" style="--sw-color:transparent;background-color: (Blue Camo); background-image: url(../cdn/shop/files/swatch-blue-camo.jpg); display: none !important;" data-img1="../cdn/shop/files/abbey_abbey-sun_shiny-aqua_001_1500x.png" data-img2="../cdn/shop/files/abbey_abbey-sun_shiny-aqua_002_1500x.png" onclick="swapColor(this)"></span>
-<span class="lo-swatch" title="Mint" data-variant-id="41737450782779" style="--sw-color:transparent;background-color: (Mint); background-image: url(../cdn/shop/files/swatch-mint.jpg); display: none !important;" data-img1="../cdn/shop/files/abbey_abbey-sun_shiny-aqua_001_1500x.png" data-img2="../cdn/shop/files/abbey_abbey-sun_shiny-aqua_002_1500x.png" onclick="swapColor(this)"></span>
-</div><a href="../products/abbey-sun.html?variant=43025003806779" class="lo-card__title">Abbey Sun</a><div class="lo-card__price">$82.00</div></div></li>
+        </li>
 <li class="lo-card"><a href="../products/cosmo-sun.html?variant=6620519661627" class="lo-card__link"><div class="lo-card__media"><img class="lo-card__img1" src="../cdn/shop/files/cosmo_cosmo-sun_black_001_39088afd-d920-42a4-a405-09313e24d003_1500x.png" alt="Cosmo Sun" loading="lazy">
       <img class="lo-card__img2" src="../cdn/shop/files/cosmo_cosmo-sun_black_002_1500x.png" alt="" loading="lazy">
     </div></a><div class="lo-card__body"><div class="lo-card__swatches"><span class="lo-swatch lo-swatch--active" title="Black" data-variant-id="6620519661627" style="--sw-color:transparent;background-color: Black; background-image: url(../cdn/shop/files/swatch-black.jpg);" data-img1="../cdn/shop/files/cosmo_cosmo-sun_black_001_39088afd-d920-42a4-a405-09313e24d003_1500x.png" data-img2="../cdn/shop/files/cosmo_cosmo-sun_black_002_1500x.png" onclick="swapColor(this)"></span>
