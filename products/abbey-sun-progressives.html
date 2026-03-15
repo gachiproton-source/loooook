@@ -60,7 +60,7 @@
 
     <script src="../cdn/shop/t/690/assets/global.js" defer="defer"></script>
     <!-- content_for_header start -->
-      <script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.start');</script><meta name="facebook-domain-verification" content="t6fwkwu85eiy5vnghodozbcqq3xnzz">
+      <meta name="facebook-domain-verification" content="t6fwkwu85eiy5vnghodozbcqq3xnzz">
 <meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/7977215/digital_wallets/dialog">
 <meta name="shopify-checkout-api-token" content="a9209c4cd7c91778bd289898c989bc0d">
 <meta id="in-context-paypal-metadata" data-shop-id="7977215" data-venmo-supported="false" data-environment="production" data-locale="en_US" data-paypal-v4="true" data-currency="USD">
@@ -70,17 +70,7 @@
 <script type="lazyload2" data-src="https://shop.app/checkouts/internal/preloads.js?locale=en-US&shop_id=7977215" crossorigin="anonymous"></script>
 <script id="apple-pay-shop-capabilities" type="application/json">{"shopId":7977215,"countryCode":"US","currencyCode":"USD","merchantCapabilities":["supports3DS"],"merchantId":"gid:\/\/shopify\/Shop\/7977215","merchantName":"LOOK OPTIC","requiredBillingContactFields":["postalAddress","email"],"requiredShippingContactFields":["postalAddress","email"],"shippingType":"shipping","supportedNetworks":["visa","masterCard","amex","discover","elo","jcb"],"total":{"type":"pending","label":"LOOK OPTIC","amount":"1.00"},"shopifyPaymentsEnabled":true,"supportsSubscriptions":true}</script>
 
-<script>var Shopify = Shopify || {};
-Shopify.shop = "look-optic.myshopify.com";
-Shopify.locale = "en";
-Shopify.currency = {"active":"USD","rate":"1.0"};
-Shopify.country = "US";
-Shopify.theme = {"name":"LIVE - [3.24.0] New Homepage Hero","id":127256461371,"schema_name":"Look Optic","schema_version":"3.24.0","theme_store_id":null,"role":"main"};
-Shopify.theme.handle = "null";
-Shopify.theme.style = {"id":null,"handle":null};
-Shopify.cdnHost = "www.lookoptic.com/cdn";
-Shopify.routes = Shopify.routes || {};
-Shopify.routes.root = "/";</script>
+
 <script type="module">!function(o){(o.Shopify=o.Shopify||{}).modules=!0}(window);</script>
 <script>!function(o){function n(){var o=[];function n(){o.push(Array.prototype.slice.apply(arguments))}return n.q=o,n}var t=o.Shopify=o.Shopify||{};t.loadFeatures=n(),t.autoloadFeatures=n()}(window);</script>
 <script>
@@ -161,7 +151,7 @@ Shopify.routes.root = "/";</script>
 
       </style>
 <script id="sections-script" data-sections="main-product" defer="defer" src="../cdn/shop/t/690/compiled_assets/scripts.js"></script>
-<script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.end');</script>
+
       <script>
         const cookieBanner = document.querySelector('script[data-src*="/privacy-banner/storefront-banner.js"]');
         if (cookieBanner) {
@@ -2627,452 +2617,7 @@ details[open] > .header__submenu.list-menu {
 <link href="../cdn/shop/t/690/assets/component-rating.css" rel="stylesheet" type="text/css" media="all" />
 <link href="../cdn/shop/t/690/assets/component-loading-overlay.css" rel="stylesheet" type="text/css" media="all" />
 
-<script>
-if (typeof window._fpProductGiftIsInitated === 'undefined') {
-    window._fpProductGiftIsInitated = false;
-}
-window._fpProductGift = {
-    giftVariantId: 43186799444027,
-    minAllowedQuantity: 1,
-    allowedProducts: '/products',
-    allowedProductIds: ['all'],
-    helpers: {
-        addSingleProductToCart: function(
-            position,
-            variantId,
-            quantity = 1,
-            updateCart = true
-        ) {
-            console.log('gwp: addSingleProductToCart');
-            window._fpProductGift.helpers.loading(true);
-            const cartNotification = document.querySelector('cart-notification');
-            const endpoint = `${routes.cart_add_url}`;
 
-            const config = fetchConfig('javascript');
-            config.headers['X-Requested-With'] = 'XMLHttpRequest';
-            delete config.headers['Content-Type'];
-
-            const form = document.querySelector(
-                'form[action="/cart/add"][id^="product-form-template--"]'
-            );
-            const formData = new FormData(form);
-            formData.append(
-                'sections',
-                cartNotification.getSectionsToRender().map((section) => section.id)
-            );
-            formData.append('sections_url', window.location.pathname);
-            config.body = formData;
-
-            fetch(endpoint, config)
-                .then((response) => response.json())
-                .then((response) => {
-                    updateCart && cartNotification.renderContents(response);
-                    window._fpProductGift.helpers.loading(false);
-                });
-
-            window._fpEvent = window._fpEvent || [];
-            window._fpEvent.push(['eventConversion', {
-                value: 'addToCart'
-            }]);
-            window._fpEvent.push([
-                'eventConversion',
-                {
-                    value: 'addToCartWithoutGift'
-                },
-            ]);
-        },
-        addMultipleToCart: function(
-            position,
-            variantIds,
-            quantity = 1,
-            updateCart = true
-        ) {
-            console.log('gwp: addMultipleToCart');
-            window._fpProductGift.helpers.loading(true);
-            const cartNotification = document.querySelector('cart-notification');
-            const endpoint = `${routes.cart_add_url}.js`;
-            let requestBody = {
-                sections: cartNotification.getSectionsToRender().map((section) => section.id),
-                items: []
-            };
-            variantIds.forEach(id => {
-                const item = {
-                    id: id,
-                    quantity: quantity
-                };
-            
-                if (id === _fpProductGift.giftVariantId) {
-                    item.properties = {
-                        _gift_with_purchase: true
-                    };
-                }
-            
-                requestBody.items.push(item);
-            });
-            const giftRequestOptions = {
-                method: 'POST',
-                cache: 'no-cache',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                referrerPolicy: 'no-referrer',
-                body: JSON.stringify(requestBody),
-            };
-            fetch(endpoint, giftRequestOptions)
-                .then((response) => response.json())
-                .then((response) => {
-                    console.log('gwp: added both, updating cart');
-                    updateCart && cartNotification.renderContents(response);
-                    window._fpProductGift.helpers.loading(false);
-                });
-            window._fpEvent = window._fpEvent || [];
-            window._fpEvent.push(['eventConversion', {
-                value: 'addToCart'
-            }]);
-            window._fpEvent.push(['eventConversion', {
-                value: 'addToCartWithGift'
-            }]);
-        },
-        addBundledProductToCart: function(
-            position,
-            variantIds,
-            quantity = 1,
-            updateCart = true
-        ) {
-            console.log('gwp: addBundledProductToCart');
-            window._fpProductGift.helpers.loading(true);
-            const cartNotification = document.querySelector('cart-notification');
-            const endpoint = `${routes.cart_add_url}.js`;
-            const giftRequestBody = {
-                items: [{
-                    id: _fpProductGift.giftVariantId,
-                    quantity: 1,
-                    properties: {
-                        _gift_with_purchase: true
-                    }
-                }],
-            };
-            const giftRequestOptions = {
-                method: 'POST',
-                cache: 'no-cache',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                referrerPolicy: 'no-referrer',
-                body: JSON.stringify(giftRequestBody),
-            };
-            console.log('gwp: adding main product');
-            fetch(endpoint, giftRequestOptions).then(() => {
-                setTimeout(() => {
-                    const config = fetchConfig('javascript');
-                    config.headers['X-Requested-With'] = 'XMLHttpRequest';
-                    config.headers['Content-Type'] = 'application/json';
-
-                    const form = document.querySelector(
-                        'form[action="/cart/add"][id^="product-form-template--"]'
-                    );
-                    const formData = new FormData(form);
-                    formData.append(
-                        'sections',
-                        cartNotification.getSectionsToRender().map((section) => section.id)
-                    );
-                    formData.append(
-                        'quantity',
-                        quantity
-                    );
-                    formData.append('sections_url', window.location.pathname);
-                    let object = {};
-                    formData.forEach((value, key) => object[key] = value);
-                    config.body = JSON.stringify(object);
-                    console.log('gwp: adding cloth');
-                    fetch(endpoint, config)
-                        .then((response) => response.json())
-                        .then((response) => {
-                            console.log('gwp: added both, updating cart');
-                            updateCart && cartNotification.renderContents(response);
-                            window._fpProductGift.helpers.loading(false);
-                        });
-                }, 100);
-            });
-            window._fpEvent = window._fpEvent || [];
-            window._fpEvent.push(['eventConversion', {
-                value: 'addToCart'
-            }]);
-            window._fpEvent.push(['eventConversion', {
-                value: 'addToCartWithGift'
-            }]);
-        },
-        handleRemoval: function() {
-            console.log('gwp: handleRemoval');
-            const bubble = document.querySelector('#cart-icon-bubble');
-            let observer = new MutationObserver(callback);
-            const observerOptions = {
-                attributes: true,
-                characterData: true,
-                subtree: true,
-                childList: true
-            };
-        
-            function callback(mutations) {
-                console.log('gwp: checking removal of gift');
-                const cartNotification = document.querySelector('cart-notification');
-                const endpoint = '/cart.json';
-        
-                fetch(endpoint)
-                    .then(response => response.json())
-                    .then(response => {
-                        if (response.items.length === 0) return;
-        
-                        // Count allowed products in the cart
-                        const allowedQuantity = response.items.reduce((total, item) => {
-                            const isGift = item.variant_id === _fpProductGift.giftVariantId;
-                            const isAllowedProduct =
-                                _fpProductGift.allowedProductIds[0] === 'all' ||
-                                _fpProductGift.allowedProductIds.includes(item.product_id);
-        
-                            return (!isGift && isAllowedProduct) ? total + item.quantity : total;
-                        }, 0);
-        
-                        const hasEnoughAllowedItems = allowedQuantity >= _fpProductGift.minAllowedQuantity;
-        
-                        if (!hasEnoughAllowedItems) {
-                            const gift = response.items.find(item =>
-                                item.variant_id === _fpProductGift.giftVariantId
-                            );
-                            if (!gift) return;
-        
-                            // Remove the gift from the cart
-                            const payload = {
-                                sections: cartNotification.getSectionsToRender().map(section => section.id),
-                                id: gift.key,
-                                quantity: 0
-                            };
-        
-                            fetch('/cart/change.js', {
-                                method: 'POST',
-                                headers: {
-                                    'Content-Type': 'application/json'
-                                },
-                                body: JSON.stringify(payload)
-                            })
-                                .then(response => response.json())
-                                .then(response => {
-                                    cartNotification.renderContents(response);
-                                });
-                        }
-                    });
-            }
-        
-            observer.observe(bubble, observerOptions);
-        },
-        handleAddToCart: function() {
-            console.log('gwp: handleAddToCart');
-            
-            window._fpProductGift.helpers.handleRemoval();
-          
-            const form = document.querySelector(
-                'form[action="/cart/add"][id^="product-form-template--"]'
-            );
-            const buttonHTML = `<button class="fp__gift-gift-upsell__duplicate-add-to-cart button button--full-width button--primary">
-                ADD TO CART
-            </button>`;
-
-            form.insertAdjacentHTML('beforebegin', buttonHTML);
-
-            const originalButton = document.querySelector(
-                '.product-form__buttons button[name="add"]'
-            );
-            originalButton.style.display = 'none';
-            const originalButtonText = document.querySelector(
-                '.product-form__buttons button[name="add"] span'
-            );
-            const newButton = document.querySelector(
-                '.fp__gift-gift-upsell__duplicate-add-to-cart'
-            );
-            newButton.style.margin = '0px 0px 1rem';
-
-            let observer = new MutationObserver(callback);
-            const observerOptions = {
-                attributes: true,
-                characterData: true,
-                attributeFilter: ['disabled'],
-            };
-
-            function callback(mutations) {
-                // Handle button text change
-                if (originalButtonText.innerText !== newButton.innerText) {
-                    newButton.innerText = originalButtonText.innerText;
-                }
-                // Handle button becoming disabled
-                if (originalButton.getAttribute('disabled') === 'disabled') {
-                    newButton.setAttribute('disabled', 'disabled');
-                } else {
-                    newButton.removeAttribute('disabled');
-                }
-            }
-
-            observer.observe(originalButton, observerOptions);
-
-            newButton.addEventListener('click', () => {
-                if (originalButton.getAttribute('disabled') !== 'disabled') {
-                    console.log('gwp: click happened, button is not disabled');
-                    const productId = parseInt(document.querySelector(
-                        'form[action="/cart/add"][id^="product-form-template--"] input[name="product-id"]'
-                    ).value);
-                    const isAllowedProduct =
-                        _fpProductGift.allowedProductIds[0] === 'all' ||
-                        _fpProductGift.allowedProductIds.includes(productId);
-                    
-                    if (productId && isAllowedProduct) {
-                        fetch('/cart.json')
-                            .then((res) => res.json())
-                            .then((cart) => {
-                                const allowedQuantity = cart.items.reduce((total, item) => {
-                                    const isGift = item.variant_id === _fpProductGift.giftVariantId;
-                                    const isAllowed =
-                                        _fpProductGift.allowedProductIds[0] === 'all' ||
-                                        _fpProductGift.allowedProductIds.includes(item.product_id);
-                    
-                                    return (!isGift && isAllowed) ? total + item.quantity : total;
-                                }, 0);
-                    
-                                const totalAllowedAfterAdd = allowedQuantity + 1;
-                    
-                                if (totalAllowedAfterAdd >= _fpProductGift.minAllowedQuantity) {
-                                    console.log('gwp: adding with the gift');
-                                    _fpProductGift.helpers.popup.popupAddMainProductAndGiftToCart();
-                                } else {
-                                    console.log('gwp: adding without the gift (not enough allowed products yet)');
-                                    _fpProductGift.helpers.popup.addMainProductToCart();
-                                }
-                            });
-                    } else {
-                        console.log('gwp: adding without the gift (not an allowed product)', productId);
-                        _fpProductGift.helpers.popup.addMainProductToCart();
-                    }
-                }
-            });
-        },
-        loading: (status) => {
-            if (status) {
-                const fakeATCbutton = document.querySelector('.fp__gift-gift-upsell__duplicate-add-to-cart');
-                fakeATCbutton.style.display = 'none';
-                const ATCbutton = document.querySelector('.product-form__submit');
-                ATCbutton.style.display = 'block';
-                ATCbutton.classList.add('loading');
-                ATCbutton.setAttribute('aria-disabled', 'true');
-                const ATCloader = document.querySelector('.product-form__submit > .loading-overlay__spinner');
-                ATCloader.classList.remove('hidden');
-            } else {
-                const fakeATCbutton = document.querySelector('.fp__gift-gift-upsell__duplicate-add-to-cart');
-                fakeATCbutton.style.display = 'block';
-                const ATCbutton = document.querySelector('.product-form__submit');
-                ATCbutton.style.display = 'none';
-                ATCbutton.classList.remove('loading');
-                ATCbutton.removeAttribute('aria-disabled');
-                const ATCloader = document.querySelector('.product-form__submit > .loading-overlay__spinner');
-                ATCloader.classList.add('hidden');
-            }
-        },
-        popup: {
-            close: function() {},
-            open: function(variantId) {},
-            addMainProductToCart: function() {
-                const variantId = document.querySelector(
-                    'form[action="/cart/add"][id^="product-form-template--"] input[name="id"]'
-                ).value;
-                if (variantId) {
-                    _fpProductGift.helpers.addSingleProductToCart(1, variantId, 1, true);
-                    _fpProductGift.helpers.popup.close();
-                } else {
-                    console.error('No variant id found.');
-                }
-            },
-            popupAddMainProductAndGiftToCart: function() {
-                const variantId = document.querySelector(
-                    'form[action="/cart/add"][id^="product-form-template--"] input[name="id"]'
-                ).value;
-                if (variantId) {
-                    _fpProductGift.helpers.addMultipleToCart(
-                        1,
-                        [variantId, _fpProductGift.giftVariantId],
-                        1,
-                        true
-                    );
-                } else {
-                    console.error('No variant id found.');
-                }
-            },
-        },
-    },
-};
-
-window.waitForElementToAppear = (s, e, t = 500, n = 2e5, r = document, a) => {
-    let c = Date.now();
-    (function g() {
-        let f = r.querySelectorAll(s);
-        if (f.length) {
-            e.call(f[0], f);
-            return;
-        } else
-            setTimeout(function() {
-                if (n && Date.now() - c > n) {
-                    typeof a == 'function' && a();
-                    return;
-                }
-                g();
-            }, t);
-    })();
-};
-
-window.waitForElementToAppear(
-    '[data-product-container][data-is-sale-product]',
-    () => {
-        if (
-            window.giftWithPurchase === true &&
-            window.localStorage.getItem('special_offer') === 'chain' &&
-            window.location.pathname.startsWith(_fpProductGift.allowedProducts) &&
-            !window.location.pathname.includes('lois') &&
-            window._fpProductGiftIsInitated === false &&
-            document.querySelector('[data-is-sale-product="false"]')
-        ) {
-            console.log('gwp: starting');
-            fetch('/cart.json')
-                .then((res) => res.json())
-                .then((res) => {
-                    if (res.items && res.items.length > 0) {
-                        console.log('gwp: cart not empty');
-                        const hasGift =
-                            typeof res.items.find(
-                                (item) => item.variant_id === window._fpProductGift.giftVariantId
-                            ) === 'object';
-                        if (!hasGift) {
-                            console.log('gwp: cart doesnt have gift');
-                            window._fpProductGiftIsInitated = true;
-                            window.waitForElementToAppear(
-                                '.product-form__buttons button[name="add"]',
-                                _fpProductGift.helpers.handleAddToCart,
-                                50,
-                                1e4
-                            );
-                        }
-                    } else {
-                        console.log('gwp: cart is empty');
-                        window._fpProductUpsellIsInitated = true;
-                        window.waitForElementToAppear(
-                            '.product-form__buttons button[name="add"]',
-                            _fpProductGift.helpers.handleAddToCart,
-                            50,
-                            1e4
-                        );
-                    }
-                });
-        }
-    },
-    25,
-    1000
-);
-</script>
 
 <link rel="stylesheet" href="../cdn/shop/t/690/assets/component-deferred-media.css" media="print" onload="this.media='all'">
 <script type="application/json" id="product-json">{"id":7499893669947,"title":"Abbey Sun Progressives","handle":"abbey-sun-progressives","description":"\u003cstyle type=\"text\/css\"\u003e\u003c!--\ntd {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}\n--\u003e\u003c\/style\u003e\n\u003cp\u003e\u003cmeta charset=\"utf-8\"\u003e\u003cspan style=\"font-weight: 400;\" data-mce-fragment=\"1\" data-mce-style=\"font-weight: 400;\"\u003eAn easy-to-wear, classic shape with understated style, these featherweight frames won't leave an impression; that's all you!\u003c\/span\u003e\u003cbr\u003e\u003c\/p\u003e","published_at":"2026-01-08T16:09:32-05:00","created_at":"2025-11-19T08:07:23-05:00","vendor":"LOOK OPTIC","type":"SUN PROGRESSIVES","tags":["active-product","average","Black","magnification","mens","Narrow","no magnification","no-shipping-label-for-uk-can","ok-for-digtal-ad","round","Sun","Sunglasses","TBYB","Verishop","Virtual Mirror::abbey","women","womens","YGroup_abbey"],"price":10800,"price_min":10800,"price_max":10800,"available":true,"price_varies":false,"compare_at_price":null,"compare_at_price_min":0,"compare_at_price_max":0,"compare_at_price_varies":false,"variants":[{"id":43025006428219,"title":"Sun Progressives \/ Tortoise \/ +1.00","option1":"Sun Progressives","option2":"Tortoise","option3":"+1.00","sku":"AB10XTOR10","requires_shipping":true,"taxable":true,"featured_image":{"id":34585725599803,"product_id":7499893669947,"position":1,"created_at":"2026-01-23T17:00:05-05:00","updated_at":"2026-01-23T17:00:10-05:00","alt":"Abbey Sun Progressives SUN PROGRESSIVES LOOK OPTIC Tortoise +1.00","width":3000,"height":3000,"src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_tortoise_001.png?v=1769205610","variant_ids":[43025006428219,43025006821435,43025006854203,43025006886971]},"available":true,"name":"Abbey Sun Progressives - Sun Progressives \/ Tortoise \/ +1.00","public_title":"Sun Progressives \/ Tortoise \/ +1.00","options":["Sun Progressives","Tortoise","+1.00"],"price":10800,"weight":35,"compare_at_price":null,"inventory_quantity":1,"inventory_management":"shopify","inventory_policy":"deny","barcode":"810188910806","featured_media":{"alt":"Abbey Sun Progressives SUN PROGRESSIVES LOOK OPTIC Tortoise +1.00","id":26316263456827,"position":1,"preview_image":{"aspect_ratio":1.0,"height":3000,"width":3000,"src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_tortoise_001.png?v=1769205610"}},"requires_selling_plan":false,"selling_plan_allocations":[],"quantity_rule":{"min":1,"max":null,"increment":1}},{"id":43025006821435,"title":"Sun Progressives \/ Tortoise \/ +1.50","option1":"Sun Progressives","option2":"Tortoise","option3":"+1.50","sku":"AB10XTOR15","requires_shipping":true,"taxable":true,"featured_image":{"id":34585725599803,"product_id":7499893669947,"position":1,"created_at":"2026-01-23T17:00:05-05:00","updated_at":"2026-01-23T17:00:10-05:00","alt":"Abbey Sun Progressives SUN PROGRESSIVES LOOK OPTIC Tortoise +1.00","width":3000,"height":3000,"src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_tortoise_001.png?v=1769205610","variant_ids":[43025006428219,43025006821435,43025006854203,43025006886971]},"available":false,"name":"Abbey Sun Progressives - Sun Progressives \/ Tortoise \/ +1.50","public_title":"Sun Progressives \/ Tortoise \/ +1.50","options":["Sun Progressives","Tortoise","+1.50"],"price":10800,"weight":35,"compare_at_price":null,"inventory_quantity":0,"inventory_management":"shopify","inventory_policy":"deny","barcode":"810188910813","featured_media":{"alt":"Abbey Sun Progressives SUN PROGRESSIVES LOOK OPTIC Tortoise +1.00","id":26316263456827,"position":1,"preview_image":{"aspect_ratio":1.0,"height":3000,"width":3000,"src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_tortoise_001.png?v=1769205610"}},"requires_selling_plan":false,"selling_plan_allocations":[],"quantity_rule":{"min":1,"max":null,"increment":1}},{"id":43025006854203,"title":"Sun Progressives \/ Tortoise \/ +2.00","option1":"Sun Progressives","option2":"Tortoise","option3":"+2.00","sku":"AB10XTOR20","requires_shipping":true,"taxable":true,"featured_image":{"id":34585725599803,"product_id":7499893669947,"position":1,"created_at":"2026-01-23T17:00:05-05:00","updated_at":"2026-01-23T17:00:10-05:00","alt":"Abbey Sun Progressives SUN PROGRESSIVES LOOK OPTIC Tortoise +1.00","width":3000,"height":3000,"src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_tortoise_001.png?v=1769205610","variant_ids":[43025006428219,43025006821435,43025006854203,43025006886971]},"available":false,"name":"Abbey Sun Progressives - Sun Progressives \/ Tortoise \/ +2.00","public_title":"Sun Progressives \/ Tortoise \/ +2.00","options":["Sun Progressives","Tortoise","+2.00"],"price":10800,"weight":35,"compare_at_price":null,"inventory_quantity":0,"inventory_management":"shopify","inventory_policy":"deny","barcode":"810188910820","featured_media":{"alt":"Abbey Sun Progressives SUN PROGRESSIVES LOOK OPTIC Tortoise +1.00","id":26316263456827,"position":1,"preview_image":{"aspect_ratio":1.0,"height":3000,"width":3000,"src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_tortoise_001.png?v=1769205610"}},"requires_selling_plan":false,"selling_plan_allocations":[],"quantity_rule":{"min":1,"max":null,"increment":1}},{"id":43025006886971,"title":"Sun Progressives \/ Tortoise \/ +2.50","option1":"Sun Progressives","option2":"Tortoise","option3":"+2.50","sku":"AB10XTOR25","requires_shipping":true,"taxable":true,"featured_image":{"id":34585725599803,"product_id":7499893669947,"position":1,"created_at":"2026-01-23T17:00:05-05:00","updated_at":"2026-01-23T17:00:10-05:00","alt":"Abbey Sun Progressives SUN PROGRESSIVES LOOK OPTIC Tortoise +1.00","width":3000,"height":3000,"src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_tortoise_001.png?v=1769205610","variant_ids":[43025006428219,43025006821435,43025006854203,43025006886971]},"available":false,"name":"Abbey Sun Progressives - Sun Progressives \/ Tortoise \/ +2.50","public_title":"Sun Progressives \/ Tortoise \/ +2.50","options":["Sun Progressives","Tortoise","+2.50"],"price":10800,"weight":35,"compare_at_price":null,"inventory_quantity":0,"inventory_management":"shopify","inventory_policy":"deny","barcode":"810188910837","featured_media":{"alt":"Abbey Sun Progressives SUN PROGRESSIVES LOOK OPTIC Tortoise +1.00","id":26316263456827,"position":1,"preview_image":{"aspect_ratio":1.0,"height":3000,"width":3000,"src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_tortoise_001.png?v=1769205610"}},"requires_selling_plan":false,"selling_plan_allocations":[],"quantity_rule":{"min":1,"max":null,"increment":1}},{"id":43025006460987,"title":"Sun Progressives \/ (Shiny Aqua) \/ +1.00","option1":"Sun Progressives","option2":"(Shiny Aqua)","option3":"+1.00","sku":"AB10XSAQ10","requires_shipping":true,"taxable":true,"featured_image":{"id":34585725796411,"product_id":7499893669947,"position":5,"created_at":"2026-01-23T17:00:16-05:00","updated_at":"2026-01-23T17:00:20-05:00","alt":"Abbey Sun Progressives SUN PROGRESSIVES LOOK OPTIC Shiny Aqua +1.00","width":3000,"height":3000,"src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_shiny-aqua_001.png?v=1769205620","variant_ids":[43025006460987,43025006919739,43025006952507,43025006985275]},"available":true,"name":"Abbey Sun Progressives - Sun Progressives \/ (Shiny Aqua) \/ +1.00","public_title":"Sun Progressives \/ (Shiny Aqua) \/ +1.00","options":["Sun Progressives","(Shiny Aqua)","+1.00"],"price":10800,"weight":35,"compare_at_price":null,"inventory_quantity":1,"inventory_management":"shopify","inventory_policy":"deny","barcode":"810188910769","featured_media":{"alt":"Abbey Sun Progressives SUN PROGRESSIVES LOOK OPTIC Shiny Aqua +1.00","id":26316263653435,"position":5,"preview_image":{"aspect_ratio":1.0,"height":3000,"width":3000,"src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_shiny-aqua_001.png?v=1769205620"}},"requires_selling_plan":false,"selling_plan_allocations":[],"quantity_rule":{"min":1,"max":null,"increment":1}},{"id":43025006919739,"title":"Sun Progressives \/ (Shiny Aqua) \/ +1.50","option1":"Sun Progressives","option2":"(Shiny Aqua)","option3":"+1.50","sku":"AB10XSAQ15","requires_shipping":true,"taxable":true,"featured_image":{"id":34585725796411,"product_id":7499893669947,"position":5,"created_at":"2026-01-23T17:00:16-05:00","updated_at":"2026-01-23T17:00:20-05:00","alt":"Abbey Sun Progressives SUN PROGRESSIVES LOOK OPTIC Shiny Aqua +1.00","width":3000,"height":3000,"src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_shiny-aqua_001.png?v=1769205620","variant_ids":[43025006460987,43025006919739,43025006952507,43025006985275]},"available":false,"name":"Abbey Sun Progressives - Sun Progressives \/ (Shiny Aqua) \/ +1.50","public_title":"Sun Progressives \/ (Shiny Aqua) \/ +1.50","options":["Sun Progressives","(Shiny Aqua)","+1.50"],"price":10800,"weight":35,"compare_at_price":null,"inventory_quantity":0,"inventory_management":"shopify","inventory_policy":"deny","barcode":"810188910776","featured_media":{"alt":"Abbey Sun Progressives SUN PROGRESSIVES LOOK OPTIC Shiny Aqua +1.00","id":26316263653435,"position":5,"preview_image":{"aspect_ratio":1.0,"height":3000,"width":3000,"src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_shiny-aqua_001.png?v=1769205620"}},"requires_selling_plan":false,"selling_plan_allocations":[],"quantity_rule":{"min":1,"max":null,"increment":1}},{"id":43025006952507,"title":"Sun Progressives \/ (Shiny Aqua) \/ +2.00","option1":"Sun Progressives","option2":"(Shiny Aqua)","option3":"+2.00","sku":"AB10XSAQ20","requires_shipping":true,"taxable":true,"featured_image":{"id":34585725796411,"product_id":7499893669947,"position":5,"created_at":"2026-01-23T17:00:16-05:00","updated_at":"2026-01-23T17:00:20-05:00","alt":"Abbey Sun Progressives SUN PROGRESSIVES LOOK OPTIC Shiny Aqua +1.00","width":3000,"height":3000,"src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_shiny-aqua_001.png?v=1769205620","variant_ids":[43025006460987,43025006919739,43025006952507,43025006985275]},"available":false,"name":"Abbey Sun Progressives - Sun Progressives \/ (Shiny Aqua) \/ +2.00","public_title":"Sun Progressives \/ (Shiny Aqua) \/ +2.00","options":["Sun Progressives","(Shiny Aqua)","+2.00"],"price":10800,"weight":35,"compare_at_price":null,"inventory_quantity":0,"inventory_management":"shopify","inventory_policy":"deny","barcode":"810188910783","featured_media":{"alt":"Abbey Sun Progressives SUN PROGRESSIVES LOOK OPTIC Shiny Aqua +1.00","id":26316263653435,"position":5,"preview_image":{"aspect_ratio":1.0,"height":3000,"width":3000,"src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_shiny-aqua_001.png?v=1769205620"}},"requires_selling_plan":false,"selling_plan_allocations":[],"quantity_rule":{"min":1,"max":null,"increment":1}},{"id":43025006985275,"title":"Sun Progressives \/ (Shiny Aqua) \/ +2.50","option1":"Sun Progressives","option2":"(Shiny Aqua)","option3":"+2.50","sku":"AB10XSAQ25","requires_shipping":true,"taxable":true,"featured_image":{"id":34585725796411,"product_id":7499893669947,"position":5,"created_at":"2026-01-23T17:00:16-05:00","updated_at":"2026-01-23T17:00:20-05:00","alt":"Abbey Sun Progressives SUN PROGRESSIVES LOOK OPTIC Shiny Aqua +1.00","width":3000,"height":3000,"src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_shiny-aqua_001.png?v=1769205620","variant_ids":[43025006460987,43025006919739,43025006952507,43025006985275]},"available":false,"name":"Abbey Sun Progressives - Sun Progressives \/ (Shiny Aqua) \/ +2.50","public_title":"Sun Progressives \/ (Shiny Aqua) \/ +2.50","options":["Sun Progressives","(Shiny Aqua)","+2.50"],"price":10800,"weight":35,"compare_at_price":null,"inventory_quantity":0,"inventory_management":"shopify","inventory_policy":"deny","barcode":"810188910790","featured_media":{"alt":"Abbey Sun Progressives SUN PROGRESSIVES LOOK OPTIC Shiny Aqua +1.00","id":26316263653435,"position":5,"preview_image":{"aspect_ratio":1.0,"height":3000,"width":3000,"src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_shiny-aqua_001.png?v=1769205620"}},"requires_selling_plan":false,"selling_plan_allocations":[],"quantity_rule":{"min":1,"max":null,"increment":1}}],"images":["\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_tortoise_001.png?v=1769205610","\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_tortoise_002.png?v=1769205615","\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_tortoise_004.jpg?v=1769205615","\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_tortoise_005.jpg?v=1769205615","\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_shiny-aqua_001.png?v=1769205620","\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_shiny-aqua_002.png?v=1769205626","\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_shiny-aqua_004.jpg?v=1769205626","\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_shiny-aqua_005.jpg?v=1769205626"],"featured_image":"\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_tortoise_001.png?v=1769205610","options":["Lens Type","Color","Magnification"],"media":[{"alt":"Abbey Sun Progressives SUN PROGRESSIVES LOOK OPTIC Tortoise +1.00","id":26316263456827,"position":1,"preview_image":{"aspect_ratio":1.0,"height":3000,"width":3000,"src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_tortoise_001.png?v=1769205610"},"aspect_ratio":1.0,"height":3000,"media_type":"image","src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_tortoise_001.png?v=1769205610","width":3000},{"alt":"Abbey Sun Progressives SUN PROGRESSIVES LOOK OPTIC","id":26316263522363,"position":2,"preview_image":{"aspect_ratio":1.0,"height":3000,"width":3000,"src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_tortoise_002.png?v=1769205615"},"aspect_ratio":1.0,"height":3000,"media_type":"image","src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_tortoise_002.png?v=1769205615","width":3000},{"alt":"Abbey Sun Progressives SUN PROGRESSIVES LOOK OPTIC","id":26110035689531,"position":3,"preview_image":{"aspect_ratio":1.0,"height":3000,"width":3000,"src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_tortoise_004.jpg?v=1769205615"},"aspect_ratio":1.0,"height":3000,"media_type":"image","src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_tortoise_004.jpg?v=1769205615","width":3000},{"alt":"Abbey Sun Progressives SUN PROGRESSIVES LOOK OPTIC","id":26110035656763,"position":4,"preview_image":{"aspect_ratio":1.0,"height":3000,"width":3000,"src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_tortoise_005.jpg?v=1769205615"},"aspect_ratio":1.0,"height":3000,"media_type":"image","src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_tortoise_005.jpg?v=1769205615","width":3000},{"alt":"Abbey Sun Progressives SUN PROGRESSIVES LOOK OPTIC Shiny Aqua +1.00","id":26316263653435,"position":5,"preview_image":{"aspect_ratio":1.0,"height":3000,"width":3000,"src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_shiny-aqua_001.png?v=1769205620"},"aspect_ratio":1.0,"height":3000,"media_type":"image","src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_shiny-aqua_001.png?v=1769205620","width":3000},{"alt":"Abbey Sun Progressives SUN PROGRESSIVES LOOK OPTIC","id":26316263784507,"position":6,"preview_image":{"aspect_ratio":1.0,"height":3000,"width":3000,"src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_shiny-aqua_002.png?v=1769205626"},"aspect_ratio":1.0,"height":3000,"media_type":"image","src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_shiny-aqua_002.png?v=1769205626","width":3000},{"alt":"Abbey Sun Progressives SUN PROGRESSIVES LOOK OPTIC","id":26220584108091,"position":7,"preview_image":{"aspect_ratio":1.0,"height":3000,"width":3000,"src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_shiny-aqua_004.jpg?v=1769205626"},"aspect_ratio":1.0,"height":3000,"media_type":"image","src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_shiny-aqua_004.jpg?v=1769205626","width":3000},{"alt":"Abbey Sun Progressives SUN PROGRESSIVES LOOK OPTIC","id":26220584140859,"position":8,"preview_image":{"aspect_ratio":1.0,"height":3000,"width":3000,"src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_shiny-aqua_005.jpg?v=1769205626"},"aspect_ratio":1.0,"height":3000,"media_type":"image","src":"\/\/www.lookoptic.com\/cdn\/shop\/files\/abbey_abbey-sun-progressives_shiny-aqua_005.jpg?v=1769205626","width":3000}],"requires_selling_plan":false,"selling_plan_groups":[],"content":"\u003cstyle type=\"text\/css\"\u003e\u003c!--\ntd {border: 1px solid #ccc;}br {mso-data-placement:same-cell;}\n--\u003e\u003c\/style\u003e\n\u003cp\u003e\u003cmeta charset=\"utf-8\"\u003e\u003cspan style=\"font-weight: 400;\" data-mce-fragment=\"1\" data-mce-style=\"font-weight: 400;\"\u003eAn easy-to-wear, classic shape with understated style, these featherweight frames won't leave an impression; that's all you!\u003c\/span\u003e\u003cbr\u003e\u003c\/p\u003e"}</script>
@@ -6233,31 +5778,7 @@ latest releases & promotions</p><form method="post" action="/contact#ContactFoot
 <ul hidden>
       <li id="a11y-refresh-page-message">Choosing a selection results in a full page refresh.</li>
     </ul>
-    <script>
-      window.shopUrl = 'https://www.lookoptic.com';
-      window.routes = {
-        cart_add_url: '/cart/add',
-        cart_change_url: '/cart/change',
-        cart_update_url: '/cart/update',
-        predictive_search_url: '/search/suggest'
-      };
-
-      window.cartStrings = {
-        error: `There was an error while updating your cart. Please try again.`,
-        quantityError: `You can only add [quantity] of this item to your cart.`
-      }
-
-      window.variantStrings = {
-        addToCart: `Add to cart`,
-        soldOut: `Sold out`,
-        unavailable: `Unavailable`,
-        preorder: `Preorder now`,
-      }
-
-      window.accessibilityStrings = {
-        shareSuccess: `Link copied to clipboard`,
-      }
-    </script><script src="../cdn/shop/t/690/assets/predictive-search.js" defer="defer"></script><!-- "snippets/smile-initializer.liquid" was not rendered, the associated app was uninstalled -->
+    <script src="../cdn/shop/t/690/assets/predictive-search.js" defer="defer"></script><!-- "snippets/smile-initializer.liquid" was not rendered, the associated app was uninstalled -->
     
       <script>
       window.addEventListener('wnw_load', function() {
@@ -6982,39 +6503,256 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-<!-- CLEAN CART DRAWER -->
+
+
+<!-- CART OVERLAY -->
 <div id="cart-overlay" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);z-index:998;cursor:pointer;"></div>
+<!-- CART DRAWER -->
 <div id="cart-drawer" style="position:fixed;top:0;right:0;bottom:0;width:460px;max-width:100vw;background:#fff;z-index:999;transform:translateX(100%);transition:transform 0.25s ease;display:flex;flex-direction:column;overflow:hidden;">
+  <!-- Header -->
   <div style="display:flex;justify-content:space-between;align-items:flex-start;padding:24px 24px 20px;flex-shrink:0;">
     <h2 style="font-family:DIN Condensed,sans-serif;font-size:44px;text-transform:uppercase;letter-spacing:0.3rem;font-weight:500;margin:0;color:#101010;line-height:1;">Your Cart</h2>
     <button id="cart-close" style="background:none;border:1px solid rgba(16,16,16,0.1);cursor:pointer;padding:0;color:rgba(16,16,16,0.55);border-radius:50%;width:40px;height:40px;min-width:40px;display:flex;align-items:center;justify-content:center;margin-top:4px;">
       <svg width="16" height="16" viewBox="0 0 18 17" fill="none"><path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.239a.5.5 0 10-.693-.722L9.025 7.838 1.572.646a.5.5 0 00-.707.708l7.173 6.916-7.173 7.708z" fill="currentColor"/></svg>
     </button>
   </div>
+  <!-- Shipping bar -->
   <div style="background:#d7cfbf;padding:14px 10px;text-align:center;flex-shrink:0;">
     <p style="font-family:Avenir Next,sans-serif;font-size:13px;font-weight:500;text-transform:uppercase;color:#121212;margin:0;line-height:16px;">Free Shipping On Orders Over $120</p>
   </div>
-  <div style="flex:1;padding:20px 24px;overflow-y:auto;">
-    <p style="color:rgba(16,16,16,0.75);font-size:15px;font-weight:400;margin:0;">Your cart is currently empty</p>
+  <!-- Cart content -->
+  <div style="flex:1;overflow-y:auto;padding:0 24px;">
+    <p class="cart-empty-msg" style="color:rgba(16,16,16,0.75);font-size:15px;font-weight:400;margin:16px 0 0;">Your cart is currently empty</p>
+    <div class="cart-items"></div>
   </div>
-  <div style="flex-shrink:0;border-top:1px solid #e0e0e0;padding:1rem 0;text-align:center;">
-    <p style="margin:0;text-transform:uppercase;font-weight:700;font-size:13px;letter-spacing:0.1rem;color:#333;">Orders ship in one business day.</p>
+  <!-- Bottom section (hidden when empty) -->
+  <div class="cart-bottom-section" style="display:none;flex-shrink:0;">
+    <!-- Orders ship -->
+    <div style="border-top:1px solid #e0e0e0;padding:12px 0;text-align:center;">
+      <p style="margin:0;text-transform:uppercase;font-weight:700;font-size:13px;letter-spacing:0.1rem;color:#333;">Orders ship in one business day.</p>
+    </div>
+    <!-- Subtotal -->
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;padding:8px 24px 12px;">
+      <span style="font-weight:700;font-size:16px;color:#101010;">Subtotal</span>
+      <span class="cart-subtotal-value" style="font-weight:500;font-size:16px;color:#101010;">$0.00</span>
+    </div>
+    <!-- Checkout button -->
+    <div style="padding:0 24px 16px;">
+      <a href="#" style="display:flex;justify-content:center;align-items:center;width:100%;padding:14px;background:#435A6F;color:#fff;text-decoration:none;text-transform:uppercase;font-size:15px;font-weight:500;letter-spacing:0.1rem;min-height:45px;">Continue To Checkout</a>
+    </div>
+    <!-- Confidence -->
+    <div style="text-align:center;padding:0 24px 20px;">
+      <p style="margin:0;font-size:12px;color:#666;letter-spacing:0.05rem;">SHOP WITH CONFIDENCE – 90 DAYS EASY RETURNS</p>
+    </div>
   </div>
 </div>
-<script id="cart-drawer-js">
-document.addEventListener('DOMContentLoaded', function() {
-  var overlay = document.getElementById('cart-overlay');
-  var drawer = document.getElementById('cart-drawer');
-  var icon = document.getElementById('cart-icon-bubble');
-  var closeBtn = document.getElementById('cart-close');
-  if (!drawer || !icon) return;
-  function openCart(e) { e.preventDefault(); e.stopPropagation(); drawer.style.transform='translateX(0)'; overlay.style.display='block'; document.body.style.overflow='hidden'; }
-  function closeCart() { drawer.style.transform='translateX(100%)'; overlay.style.display='none'; document.body.style.overflow=''; }
-  icon.addEventListener('click', openCart);
-  closeBtn.addEventListener('click', function(e){ e.preventDefault(); closeCart(); });
-  overlay.addEventListener('click', closeCart);
-  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeCart(); });
+
+<script>
+/* LOOKOPTIC CART SYSTEM */
+(function(){
+  var CART_KEY = 'lookoptic_cart';
+  
+  function getCart(){ try{ return JSON.parse(localStorage.getItem(CART_KEY)) || []; }catch(e){ return []; } }
+  function saveCart(cart){ localStorage.setItem(CART_KEY, JSON.stringify(cart)); }
+  
+  function addToCart(item){
+    var cart = getCart();
+    // Check if same variant already in cart
+    var exists = cart.findIndex(function(c){ return c.variantId === item.variantId; });
+    if(exists > -1){ cart[exists].qty = (cart[exists].qty||1) + 1; }
+    else { item.qty = 1; cart.push(item); }
+    saveCart(cart);
+    renderCart();
+    openCart();
+  }
+  
+  function removeFromCart(variantId){
+    var cart = getCart().filter(function(c){ return c.variantId !== variantId; });
+    saveCart(cart);
+    renderCart();
+  }
+  
+  function getSubtotal(){
+    return getCart().reduce(function(sum, item){
+      return sum + (parseFloat(item.price.replace('$','').replace(',','')) * (item.qty||1));
+    }, 0);
+  }
+  
+  function renderCart(){
+    var cart = getCart();
+    var drawer = document.getElementById('cart-drawer');
+    if(!drawer) return;
+    
+    var itemsEl = drawer.querySelector('.cart-items');
+    var subtotalEl = drawer.querySelector('.cart-subtotal-value');
+    var bottomEl = drawer.querySelector('.cart-bottom-section');
+    var emptyEl = drawer.querySelector('.cart-empty-msg');
+    
+    if(!itemsEl) return;
+    
+    if(cart.length === 0){
+      itemsEl.innerHTML = '';
+      if(emptyEl) emptyEl.style.display = 'block';
+      if(bottomEl) bottomEl.style.display = 'none';
+      return;
+    }
+    
+    if(emptyEl) emptyEl.style.display = 'none';
+    if(bottomEl) bottomEl.style.display = 'block';
+    
+    var html = '';
+    cart.forEach(function(item){
+      html += '<div style="display:flex;gap:16px;padding:16px 0;border-bottom:1px solid #e8e8e8;">';
+      html += '<img src="' + (item.image||'') + '" style="width:110px;height:110px;object-fit:cover;background:#f5f5f5;" alt="">';
+      html += '<div style="flex:1;position:relative;">';
+      html += '<div style="display:flex;justify-content:space-between;align-items:flex-start;">';
+      html += '<div>';
+      html += '<h4 style="font-family:DIN Condensed,sans-serif;font-size:18px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;margin:0;color:#1e1e1e;line-height:19px;">' + (item.name||'') + '</h4>';
+      html += '</div>';
+      html += '<span style="font-size:15px;font-weight:500;color:#101010;white-space:nowrap;">' + (item.price||'') + '</span>';
+      html += '</div>';
+      html += '<div style="display:flex;align-items:center;gap:4px;margin-top:4px;">';
+      html += '<svg width="14" height="14" viewBox="0 0 24 24" fill="#333"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>'.repeat(5);
+      html += ' <span style="font-size:12px;color:#666;margin-left:2px;">' + (item.reviews||'') + ' Reviews</span>';
+      html += '</div>';
+      html += '<p style="margin:6px 0 0;font-size:13px;color:rgba(16,16,16,0.75);"><b>Color:</b> ' + (item.color||'') + '</p>';
+      html += '<p style="margin:2px 0 0;font-size:13px;color:rgba(16,16,16,0.75);"><b>Magnification:</b> ' + (item.magnification||'') + '</p>';
+      html += '<button onclick="window._loCart.remove(\'' + item.variantId + '\')" style="position:absolute;bottom:0;right:0;background:none;border:none;cursor:pointer;padding:4px;color:#999;">';
+      html += '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2m3 0v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6h14zM10 11v6M14 11v6"/></svg>';
+      html += '</button>';
+      html += '</div></div>';
+    });
+    
+    itemsEl.innerHTML = html;
+    
+    var subtotal = getSubtotal();
+    if(subtotalEl) subtotalEl.textContent = '$' + subtotal.toFixed(2);
+  }
+  
+  function openCart(){
+    var drawer = document.getElementById('cart-drawer');
+    var overlay = document.getElementById('cart-overlay');
+    if(drawer) drawer.style.transform = 'translateX(0)';
+    if(overlay) overlay.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+    renderCart();
+  }
+  
+  function closeCart(){
+    var drawer = document.getElementById('cart-drawer');
+    var overlay = document.getElementById('cart-overlay');
+    if(drawer) drawer.style.transform = 'translateX(100%)';
+    if(overlay) overlay.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+  
+  // Expose API
+  window._loCart = {
+    add: addToCart,
+    remove: removeFromCart,
+    open: openCart,
+    close: closeCart,
+    get: getCart,
+    render: renderCart
+  };
+  
+  document.addEventListener('DOMContentLoaded', function(){
+    var icon = document.getElementById('cart-icon-bubble');
+    var closeBtn = document.getElementById('cart-close');
+    var overlay = document.getElementById('cart-overlay');
+    
+    if(icon) icon.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); openCart(); });
+    if(closeBtn) closeBtn.addEventListener('click', function(e){ e.preventDefault(); closeCart(); });
+    if(overlay) overlay.addEventListener('click', closeCart);
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeCart(); });
+    
+    // Update cart count badge
+    var cart = getCart();
+    var badge = document.querySelector('.cart-count-bubble');
+    if(badge && cart.length > 0){
+      var total = cart.reduce(function(s,i){ return s + (i.qty||1); }, 0);
+      badge.textContent = total;
+      badge.style.display = 'flex';
+    }
+    
+    renderCart();
+  });
+})();
+
+</script>
+<script>
+/* ADD TO CART - Product Page Handler */
+document.addEventListener('DOMContentLoaded', function(){
+  // Find the Add to Cart button
+  var addBtn = document.querySelector('.product-form__submit, button[name="add"], .btn-addtocart');
+  if(!addBtn) return;
+  
+  addBtn.addEventListener('click', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    
+    // Get product info from the page
+    var titleEl = document.querySelector('.product__title h1, h1.product__title, .product-single__title');
+    var title = titleEl ? titleEl.textContent.trim() : document.title.split('|')[0].trim();
+    
+    // Get price
+    var priceEl = document.querySelector('.price-item--regular, .price__regular .price-item, .product__price .price-item');
+    var price = priceEl ? priceEl.textContent.trim() : '$0.00';
+    
+    // Get selected color
+    var colorLabel = document.querySelector('[data-color-label]');
+    var color = colorLabel ? colorLabel.textContent.trim() : '';
+    if(!color){
+      var checkedColor = document.querySelector('input[data-input-color]:checked');
+      if(checkedColor) color = checkedColor.getAttribute('data-input-color');
+    }
+    
+    // Get selected magnification
+    var mag = '';
+    var magRadios = document.querySelectorAll('input[type="radio"][name*="Magnification"], input[type="radio"][name*="magnification"]');
+    magRadios.forEach(function(r){ if(r.checked) mag = r.value; });
+    if(!mag){
+      var magSelect = document.querySelector('select[name*="Magnification"], select[name*="magnification"]');
+      if(magSelect) mag = magSelect.value;
+    }
+    // Try fieldset
+    if(!mag){
+      var magFieldset = document.querySelector('fieldset[data-option-name="Magnification"]');
+      if(magFieldset){
+        var checked = magFieldset.querySelector('input:checked');
+        if(checked) mag = checked.value;
+      }
+    }
+    
+    // Get variant ID from URL or form
+    var vid = new URLSearchParams(window.location.search).get('variant') || '';
+    if(!vid){
+      var vidInput = document.querySelector('input[name="id"], select[name="id"]');
+      if(vidInput) vid = vidInput.value;
+    }
+    
+    // Get product image (first active gallery image)
+    var imgEl = document.querySelector('.product__media-item.active img, .product__media-item.first-active img, .product__media-list img');
+    var image = imgEl ? imgEl.src : '';
+    
+    // Get review count
+    var reviewEl = document.querySelector('.junip-product-summary-review-count, .oke-reviewsSummary');
+    var reviews = reviewEl ? reviewEl.textContent.replace(/[^0-9,]/g,'').trim() : '100';
+    
+    if(window._loCart){
+      window._loCart.add({
+        variantId: vid || (Date.now() + ''),
+        name: title,
+        price: price,
+        color: color,
+        magnification: mag || 'N/A',
+        image: image,
+        reviews: reviews
+      });
+    }
+  });
 });
+
 </script>
 </body>
 </html>
