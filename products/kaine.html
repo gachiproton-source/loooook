@@ -1732,7 +1732,7 @@ fieldset[data-option-name="Lens Type"] label.lens-disabled {
   <path d="M24.0426 26.4575V16.883C24.0426 8.42246 30.9012 1.56384 39.3618 1.56384C47.8223 1.56384 54.6809 8.42246 54.6809 16.883V26.4575" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
 </svg>
   
-  <span class="visually-hidden">Cart</span></a>
+  <span class="visually-hidden">Cart</span><span class="cart-count-bubble"></span></a>
       </cart-icon-bubble>
     </div>
   </header>
@@ -10410,6 +10410,15 @@ document.addEventListener('DOMContentLoaded', function() {
   
   function getCart(){ try{ return JSON.parse(localStorage.getItem(CART_KEY)) || []; }catch(e){ return []; } }
   function saveCart(cart){ localStorage.setItem(CART_KEY, JSON.stringify(cart)); }
+  function updateCartBadge(){
+    var cart = getCart();
+    var badges = document.querySelectorAll('.cart-count-bubble');
+    var total = cart.reduce(function(s,i){ return s + (i.qty||1); }, 0);
+    badges.forEach(function(b){
+      if(total > 0){ b.textContent = total; b.style.display = 'flex'; }
+      else { b.textContent = ''; b.style.display = 'none'; }
+    });
+  }
   
   function addToCart(item){
     var cart = getCart();
@@ -10417,7 +10426,7 @@ document.addEventListener('DOMContentLoaded', function() {
     item.qty = 1;
     item.cartId = Date.now() + '_' + Math.random().toString(36).substr(2,5);
     cart.push(item);
-    saveCart(cart);
+    saveCart(cart); updateCartBadge();
     renderCart();
     openCart();
   }
@@ -10426,7 +10435,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var cart = getCart();
     idx = parseInt(idx);
     if(idx >= 0 && idx < cart.length) cart.splice(idx, 1);
-    saveCart(cart);
+    saveCart(cart); updateCartBadge();
     renderCart();
   }
   
@@ -10526,12 +10535,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Update cart count badge
     var cart = getCart();
-    var badge = document.querySelector('.cart-count-bubble');
-    if(badge && cart.length > 0){
-      var total = cart.reduce(function(s,i){ return s + (i.qty||1); }, 0);
-      badge.textContent = total;
-      badge.style.display = 'flex';
-    }
+    updateCartBadge();
     
     renderCart();
     
@@ -10547,7 +10551,7 @@ document.addEventListener('DOMContentLoaded', function() {
           var cart = getCart();
           if(idx >= 0 && idx < cart.length){
             cart.splice(idx, 1);
-            saveCart(cart);
+            saveCart(cart); updateCartBadge();
             renderCart();
           }
         }
