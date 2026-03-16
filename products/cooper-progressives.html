@@ -80,18 +80,9 @@
   window.ShopifyPay.redirectState = null;
 </script>
 <script id="shop-js-analytics" type="application/json">{"pageType":"product"}</script>
-<script type="lazyload2" defer type="module" data-src="//www.lookoptic.com/cdn/shopifycloud/shop-js/modules/v2/loader.init-shop-cart-sync.en.esm.js"></script>
-<script type="module">
-  await import("//www.lookoptic.com/cdn/shopifycloud/shop-js/modules/v2/loader.init-shop-cart-sync.en.esm.js");
 
-  window.Shopify.SignInWithShop?.initShopCartSync?.({"fedCMEnabled":true,"windoidEnabled":true});
 
-</script>
-<script>
-  window.Shopify = window.Shopify || {};
-  if (!window.Shopify.featureAssets) window.Shopify.featureAssets = {};
-  window.Shopify.featureAssets['shop-js'] = {"shop-cart-sync":["modules/v2/loader.shop-cart-sync.en.esm.js"],"shop-login-button":["modules/v2/loader.shop-login-button.en.esm.js"],"init-shop-email-lookup-coordinator":["modules/v2/loader.init-shop-email-lookup-coordinator.en.esm.js"],"init-fed-cm":["modules/v2/loader.init-fed-cm.en.esm.js"],"init-windoid":["modules/v2/loader.init-windoid.en.esm.js"],"shop-cash-offers":["modules/v2/loader.shop-cash-offers.en.esm.js"],"shop-toast-manager":["modules/v2/loader.shop-toast-manager.en.esm.js"],"checkout-modal":["modules/v2/loader.checkout-modal.en.esm.js"],"avatar":["modules/v2/loader.avatar.en.esm.js"],"init-shop-for-new-customer-accounts":["modules/v2/loader.init-shop-for-new-customer-accounts.en.esm.js"],"init-customer-accounts-sign-up":["modules/v2/loader.init-customer-accounts-sign-up.en.esm.js"],"shop-follow-button":["modules/v2/loader.shop-follow-button.en.esm.js"],"init-customer-accounts":["modules/v2/loader.init-customer-accounts.en.esm.js"],"init-shop-cart-sync":["modules/v2/loader.init-shop-cart-sync.en.esm.js"],"pay-button":["modules/v2/loader.pay-button.en.esm.js"],"shop-login":["modules/v2/loader.shop-login.en.esm.js"],"shop-button":["modules/v2/loader.shop-button.en.esm.js"],"lead-capture":["modules/v2/loader.lead-capture.en.esm.js"],"payment-terms":["modules/v2/loader.payment-terms.en.esm.js"]};
-</script>
+
 <script>(function() {
   var isLoaded = false;
   function deferLoad() {
@@ -116,15 +107,11 @@
 <script id="__st">var __st={"a":7977215,"offset":-14400,"reqid":"73bc96f3-ce60-41e8-9bb9-d918b76b9d07-1773452857","pageurl":"www.lookoptic.com\/products\/cooper-progressives","u":"9d6454ebc81a","p":"product","rtyp":"product","rid":7148497076283};</script>
 
 <script id="form-persister">!function(){'use strict';const t='contact',e='new_comment',n=[[t,t],['blogs',e],['comments',e],[t,'customer']],o='password',r='form_key',c=['recaptcha-v3-token','g-recaptcha-response','h-captcha-response',o],s=()=>{try{return window.sessionStorage}catch{return}},i='__shopify_v',u=t=>t.elements[r],a=function(){const t=[...n].map((([t,e])=>`form[action*='/${t}']:not([data-nocaptcha='true']) input[name='form_type'][value='${e}']`)).join(',');var e;return e=t,()=>e?[...document.querySelectorAll(e)].map((t=>t.form)):[]}();function m(t){const e=u(t);a().includes(t)&&(!e||!e.value)&&function(t){try{if(!s())return;!function(t){const e=s();if(!e)return;const n=u(t);if(!n)return;const o=n.value;o&&e.removeItem(o)}(t);const e=Array.from(Array(32),(()=>Math.random().toString(36)[2])).join('');!function(t,e){u(t)||t.append(Object.assign(document.createElement('input'),{type:'hidden',name:r})),t.elements[r].value=e}(t,e),function(t,e){const n=s();if(!n)return;const r=[...t.querySelectorAll(`input[type='${o}']`)].map((({name:t})=>t)),u=[...c,...r],a={};for(const[o,c]of new FormData(t).entries())u.includes(o)||(a[o]=c);n.setItem(e,JSON.stringify({[i]:1,action:t.action,data:a}))}(t,e)}catch(e){console.error('failed to persist form',e)}}(t)}const f=t=>{if('true'===t.dataset.persistBound)return;const e=function(t,e){const n=function(t){return'function'==typeof t.submit?t.submit:HTMLFormElement.prototype.submit}(t).bind(t);return function(){let t;return()=>{t||(t=!0,(()=>{try{e(),n()}catch(t){(t=>{console.error('form submit failed',t)})(t)}})(),setTimeout((()=>t=!1),250))}}()}(t,(()=>{m(t)}));!function(t,e){if('function'==typeof t.submit&&'function'==typeof e)try{t.submit=e}catch{}}(t,e),t.addEventListener('submit',(t=>{t.preventDefault(),e()})),t.dataset.persistBound='true'};!function(){function t(t){const e=(t=>{const e=t.target;return e instanceof HTMLFormElement?e:e&&e.form})(t);e&&m(e)}document.addEventListener('submit',t),document.addEventListener('DOMContentLoaded2',(()=>{const e=a();for(const t of e)f(t);var n;n=document.body,new window.MutationObserver((t=>{for(const e of t)if('childList'===e.type&&e.addedNodes.length)for(const t of e.addedNodes)1===t.nodeType&&'FORM'===t.tagName&&a().includes(t)&&f(t)})).observe(n,{childList:!0,subtree:!0,attributes:!1}),document.removeEventListener('submit',t)}))}()}();</script>
-<script integrity="sha256-4kQ18oKyAcykRKYeNunJcIwy7WH5gtpwJnB7kiuLZ1E=" data-source-attribution="shopify.loadfeatures" type="lazyload2" data-src="//www.lookoptic.com/cdn/shopifycloud/storefront/assets/storefront/load_feature-a0a9edcb.js" crossorigin="anonymous"></script>
-<script crossorigin="anonymous" type="lazyload2" data-src="//www.lookoptic.com/cdn/shopifycloud/storefront/assets/shopify_pay/storefront-65b4c6d7.js?v=20250812"></script>
-<script data-source-attribution="shopify.dynamic_checkout.dynamic.init">var Shopify=Shopify||{};Shopify.PaymentButton=Shopify.PaymentButton||{isStorefrontPortableWallets:!0,init:function(){window.Shopify.PaymentButton.init=function(){};var t=document.createElement("script");t.src="https://www.lookoptic.com/cdn/shopifycloud/portable-wallets/latest/portable-wallets.en.js",t.type="module",document.head.appendChild(t)}};
-</script>
-<script data-source-attribution="shopify.dynamic_checkout.buyer_consent">
-  function portableWalletsHideBuyerConsent(e){var t=document.getElementById("shopify-buyer-consent"),n=document.getElementById("shopify-subscription-policy-button");t&&n&&(t.classList.add("hidden"),t.setAttribute("aria-hidden","true"),n.removeEventListener("click",e))}function portableWalletsShowBuyerConsent(e){var t=document.getElementById("shopify-buyer-consent"),n=document.getElementById("shopify-subscription-policy-button");t&&n&&(t.classList.remove("hidden"),t.removeAttribute("aria-hidden"),n.addEventListener("click",e))}window.Shopify?.PaymentButton&&(window.Shopify.PaymentButton.hideBuyerConsent=portableWalletsHideBuyerConsent,window.Shopify.PaymentButton.showBuyerConsent=portableWalletsShowBuyerConsent);
-</script>
-<script data-source-attribution="shopify.dynamic_checkout.cart.bootstrap">document.addEventListener("DOMContentLoaded2",(function(){function t(){return document.querySelector("shopify-accelerated-checkout-cart, shopify-accelerated-checkout")}if(t())Shopify.PaymentButton.init();else{new MutationObserver((function(e,n){t()&&(Shopify.PaymentButton.init(),n.disconnect())})).observe(document.body,{childList:!0,subtree:!0})}}));
-</script>
+
+
+
+
+
 <script id='scb4127' type='text/javascript' defer='' data-src='https://www.lookoptic.com/cdn/shopifycloud/privacy-banner/storefront-banner.js'></script><link id="shopify-accelerated-checkout-styles" rel="stylesheet" media="screen" href="#" crossorigin="anonymous">
 <style id="shopify-accelerated-checkout-cart">
         #shopify-buyer-consent {
@@ -810,283 +797,7 @@
 
 
 
-  <!-- BEGIN app snippet: customer-hub-data --><script>
-  if (!window.customerHub) {
-    window.customerHub = {};
-  }
-  window.customerHub.storefrontRoutes = {
-    login: "https://www.lookoptic.com/customer_authentication/redirect?locale=en&region_country=US?return_url=%2F%23k-hub",
-    register: "https://account.lookoptic.com?locale=en?return_url=%2F%23k-hub",
-    logout: "/account/logout",
-    profile: "/account",
-    addresses: "/account/addresses",
-  };
-  
-  window.customerHub.userId = null;
-  
-  window.customerHub.storeDomain = "look-optic.myshopify.com";
-
-  
-    window.customerHub.activeProduct = {
-      name: "Cooper Progressives",
-      category: null,
-      imageUrl: "../cdn/shop/files/cooper_cooper-readers_gold_001_dee4a3ed-6965-4dbe-8156-7caa35fe39ce_grande.png",
-      id: "7148497076283",
-      link: "../products/cooper-progressives.html",
-      variants: [
-        
-          {
-            id: "41737391210555",
-            
-            imageUrl: "../cdn/shop/files/cooper_cooper-progressives_gold-pink-tint_001.png",
-            
-            price: "11600",
-            currency: "USD",
-            availableForSale: true,
-            title: "Progressive Reader \/ Gold Pink Tint \/ +1.00",
-          },
-        
-          {
-            id: "41737391243323",
-            
-            imageUrl: "../cdn/shop/files/cooper_cooper-progressives_gold-pink-tint_001.png",
-            
-            price: "11600",
-            currency: "USD",
-            availableForSale: true,
-            title: "Progressive Reader \/ Gold Pink Tint \/ +1.50",
-          },
-        
-          {
-            id: "41737391276091",
-            
-            imageUrl: "../cdn/shop/files/cooper_cooper-progressives_gold-pink-tint_001.png",
-            
-            price: "11600",
-            currency: "USD",
-            availableForSale: true,
-            title: "Progressive Reader \/ Gold Pink Tint \/ +2.00",
-          },
-        
-          {
-            id: "41737391308859",
-            
-            imageUrl: "../cdn/shop/files/cooper_cooper-progressives_gold-pink-tint_001.png",
-            
-            price: "11600",
-            currency: "USD",
-            availableForSale: true,
-            title: "Progressive Reader \/ Gold Pink Tint \/ +2.50",
-          },
-        
-          {
-            id: "41737391341627",
-            
-            imageUrl: "../cdn/shop/files/cooper_cooper-progressives_gold-pink-tint_001.png",
-            
-            price: "11600",
-            currency: "USD",
-            availableForSale: false,
-            title: "Progressive Reader \/ Gold Pink Tint \/ +3.00",
-          },
-        
-          {
-            id: "41737390719035",
-            
-            imageUrl: "../cdn/shop/files/cooper_cooper-readers_gold_001_dee4a3ed-6965-4dbe-8156-7caa35fe39ce.png",
-            
-            price: "11600",
-            currency: "USD",
-            availableForSale: true,
-            title: "Progressive Reader \/ Gold \/ +1.00",
-          },
-        
-          {
-            id: "41737390751803",
-            
-            imageUrl: "../cdn/shop/files/cooper_cooper-readers_gold_001_dee4a3ed-6965-4dbe-8156-7caa35fe39ce.png",
-            
-            price: "11600",
-            currency: "USD",
-            availableForSale: true,
-            title: "Progressive Reader \/ Gold \/ +1.50",
-          },
-        
-          {
-            id: "41737390784571",
-            
-            imageUrl: "../cdn/shop/files/cooper_cooper-readers_gold_001_dee4a3ed-6965-4dbe-8156-7caa35fe39ce.png",
-            
-            price: "11600",
-            currency: "USD",
-            availableForSale: true,
-            title: "Progressive Reader \/ Gold \/ +2.00",
-          },
-        
-          {
-            id: "41737390817339",
-            
-            imageUrl: "../cdn/shop/files/cooper_cooper-readers_gold_001_dee4a3ed-6965-4dbe-8156-7caa35fe39ce.png",
-            
-            price: "11600",
-            currency: "USD",
-            availableForSale: false,
-            title: "Progressive Reader \/ Gold \/ +2.50",
-          },
-        
-          {
-            id: "41737390850107",
-            
-            imageUrl: "../cdn/shop/files/cooper_cooper-readers_gold_001_dee4a3ed-6965-4dbe-8156-7caa35fe39ce.png",
-            
-            price: "11600",
-            currency: "USD",
-            availableForSale: true,
-            title: "Progressive Reader \/ Gold \/ +3.00",
-          },
-        
-          {
-            id: "41737391046715",
-            
-            imageUrl: "../cdn/shop/files/cooper_cooper-readers_silver_001-silver.png",
-            
-            price: "11600",
-            currency: "USD",
-            availableForSale: true,
-            title: "Progressive Reader \/ Silver \/ +1.00",
-          },
-        
-          {
-            id: "41737391079483",
-            
-            imageUrl: "../cdn/shop/files/cooper_cooper-readers_silver_001-silver.png",
-            
-            price: "11600",
-            currency: "USD",
-            availableForSale: true,
-            title: "Progressive Reader \/ Silver \/ +1.50",
-          },
-        
-          {
-            id: "41737391112251",
-            
-            imageUrl: "../cdn/shop/files/cooper_cooper-readers_silver_001-silver.png",
-            
-            price: "11600",
-            currency: "USD",
-            availableForSale: true,
-            title: "Progressive Reader \/ Silver \/ +2.00",
-          },
-        
-          {
-            id: "41737391145019",
-            
-            imageUrl: "../cdn/shop/files/cooper_cooper-readers_silver_001-silver.png",
-            
-            price: "11600",
-            currency: "USD",
-            availableForSale: true,
-            title: "Progressive Reader \/ Silver \/ +2.50",
-          },
-        
-          {
-            id: "41737391177787",
-            
-            imageUrl: "../cdn/shop/files/cooper_cooper-readers_silver_001-silver.png",
-            
-            price: "11600",
-            currency: "USD",
-            availableForSale: true,
-            title: "Progressive Reader \/ Silver \/ +3.00",
-          },
-        
-          {
-            id: "41737390882875",
-            
-            imageUrl: "../cdn/shop/files/cooper_cooper-readers_gunmetal_001..png",
-            
-            price: "11600",
-            currency: "USD",
-            availableForSale: false,
-            title: "Progressive Reader \/ (Gunmetal) \/ +1.00",
-          },
-        
-          {
-            id: "41737390915643",
-            
-            imageUrl: "../cdn/shop/files/cooper_cooper-readers_gunmetal_001..png",
-            
-            price: "11600",
-            currency: "USD",
-            availableForSale: false,
-            title: "Progressive Reader \/ (Gunmetal) \/ +1.50",
-          },
-        
-          {
-            id: "41737390948411",
-            
-            imageUrl: "../cdn/shop/files/cooper_cooper-readers_gunmetal_001..png",
-            
-            price: "11600",
-            currency: "USD",
-            availableForSale: false,
-            title: "Progressive Reader \/ (Gunmetal) \/ +2.00",
-          },
-        
-          {
-            id: "41737390981179",
-            
-            imageUrl: "../cdn/shop/files/cooper_cooper-readers_gunmetal_001..png",
-            
-            price: "11600",
-            currency: "USD",
-            availableForSale: false,
-            title: "Progressive Reader \/ (Gunmetal) \/ +2.50",
-          },
-        
-          {
-            id: "41737391013947",
-            
-            imageUrl: "../cdn/shop/files/cooper_cooper-readers_gunmetal_001..png",
-            
-            price: "11600",
-            currency: "USD",
-            availableForSale: false,
-            title: "Progressive Reader \/ (Gunmetal) \/ +3.00",
-          },
-        
-      ],
-    };
-    window.customerHub.activeProduct.variants.forEach((variant) => {
-        
-        variant.price = `${variant.price.slice(0, -2)}.${variant.price.slice(-2)}`;
-    });
-  
-
-  
-    window.customerHub.storeLocale = {
-        currentLanguage: 'en',
-        currentCountry: 'US',
-        availableLanguages: [
-          
-            {
-              iso_code: 'en',
-              endonym_name: 'English'
-            }
-          
-        ],
-        availableCountries: [
-          
-            {
-              iso_code: 'US',
-              name: 'United States',
-              currency_code: 'USD'
-            }
-          
-        ]
-    };
-  
-</script>
+  <!-- BEGIN app snippet: customer-hub-data -->
 <!-- END app snippet -->
 
 
@@ -7369,26 +7080,6 @@ fieldset[data-option-name="Lens Type"] label.lens-disabled {
 
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    function isIE() {
-      const ua = window.navigator.userAgent;
-      const msie = ua.indexOf('MSIE ');
-      const trident = ua.indexOf('Trident/');
-
-      return (msie > 0 || trident > 0);
-    }
-
-    if (!isIE()) return;
-    const hiddenInput = document.querySelector('#product-form-template--15395983065147__main input[name="id"]');
-    const noScriptInputWrapper = document.createElement('div');
-        noScriptInputWrapper.innerHTML = document.querySelector('.product-form__noscript-wrapper-template--15395983065147__main').textContent;
-    variantSwitcher.outerHTML = noScriptInputWrapper.outerHTML;
-
-    document.querySelector('#Variants-template--15395983065147__main').addEventListener('change', function(event) {
-      hiddenInput.value = event.currentTarget.value;
-    });
-  });
-</script><script>
 
   function toggleAccordions() {
     
@@ -8529,40 +8220,7 @@ fixMissingWidthHeight();
 </script>
     
     <script type="lazyload2" data-src="https://a.klaviyo.com/media/js/onsite/onsite.js"></script>
-    <script type="lazyload2">
-      var klaviyo = klaviyo || [];
-      klaviyo.init({
-        account: "HQd5zH",
-        platform: "shopify"
-      });
-      klaviyo.enable("backinstock",{
-        trigger: {
-          product_page_text: "Be notified when back in stock?",
-          product_page_class: "product-form__bis link",
-          product_page_text_align: "center",
-          product_page_margin: "0",
-          replace_anchor: false
-        },
-          modal: {
-          headline: "{product_name}",
-          body_content: "Our apologies. Due to high demand, this magnification is temporarily out of stock. Please register below to receive notification when this becomes available.",
-          email_field_label: "Email",
-          button_label: "Notify me when available",
-          subscription_success_label: "You're in! We'll let you know when it's back.",
-          footer_content: "",
-          drop_background_color: "#101010",
-          background_color: "#FFFFFF",
-          text_color: "#101010",
-          button_text_color: "#FFFFFF",
-          button_background_color: "#435a6f",
-          close_button_color: "#929ba8",
-          error_background_color: "#fcd6d7",
-          error_text_color: "#C72E2F",
-          success_background_color: "#d3efcd",
-          success_text_color: "#1B9500"
-        }
-      });
-    </script>
+    
     <script>
       window.addEventListener("wnw_load", (event) => {
         const script = document.createElement('script');
@@ -8714,36 +8372,7 @@ fixMissingWidthHeight();
  </div><div id="shopify-block-AVElYbHJnemxjbVVrN__10840395464443086010" class="shopify-block shopify-app-block">
 
 
-<script>
-  console.log("[Alia app extension] v1.0.5");
 
-  const BACKEND_URL = "https://backend.alia-prod.com";
-
-  window.ALIA_SHOPIFY_EXTENSION_INFO = {
-    customerID: "",
-    country: "US",
-    market: "us",
-    language: "en"
-  }
-
-  if (document.readyState !== "loading") {
-    initAlia();
-  } else {
-    document.addEventListener("DOMContentLoaded", () => initAlia(), { once: true });
-  }
-
-  async function initAlia() {
-    if (window.Shopify.designMode) {
-      console.log("[Alia app extension] Not showing in Shopify theme editor");
-      return;
-    }
-    const url = BACKEND_URL + "/public/launcher.js?shop=look-optic.myshopify.com";
-    const script = document.createElement("script");
-    script.src = url;
-    script.async = true;
-    document.head.appendChild(script);
-  }
-</script>
 
 </div><script src="../cdn/shop/t/690/assets/swiper-bundle.min.js"></script>
 <script src="../cdn/shop/t/690/assets/swiper-init.js"></script>
@@ -9141,7 +8770,7 @@ document.addEventListener('DOMContentLoaded', function() {
       html += '</div>';
       html += '<p style="margin:6px 0 0;font-size:13px;color:rgba(16,16,16,0.75);"><b>Color:</b> ' + (item.color||'') + '</p>';
       html += '<p style="margin:2px 0 0;font-size:13px;color:rgba(16,16,16,0.75);"><b>Magnification:</b> ' + (item.magnification||'') + '</p>';
-      html += '<button onclick="window._loCart.remove(' + idx + ')" style="position:absolute;bottom:0;right:0;background:none;border:none;cursor:pointer;padding:4px;color:#999;">';
+      html += '<button type="button" data-remove-idx="' + idx + '" style="position:absolute;bottom:0;right:0;background:none;border:none;cursor:pointer;padding:4px;color:#999;">';
       html += '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2m3 0v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6h14zM10 11v6M14 11v6"/></svg>';
       html += '</button>';
       html += '</div></div>';
@@ -9200,83 +8829,29 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     renderCart();
+    
+    // Event delegation for delete buttons
+    var itemsContainer = document.querySelector('.cart-items');
+    if(itemsContainer){
+      itemsContainer.addEventListener('click', function(e){
+        var btn = e.target.closest('[data-remove-idx]');
+        if(btn){
+          e.preventDefault();
+          e.stopPropagation();
+          var idx = parseInt(btn.getAttribute('data-remove-idx'));
+          var cart = getCart();
+          if(idx >= 0 && idx < cart.length){
+            cart.splice(idx, 1);
+            saveCart(cart);
+            renderCart();
+          }
+        }
+      });
+    }
   });
 })();
 
 </script>
-<script>
-/* ADD TO CART - Product Page Handler */
-document.addEventListener('DOMContentLoaded', function(){
-  // Find the Add to Cart button
-  var addBtn = document.querySelector('.product-form__submit, button[name="add"], .btn-addtocart');
-  if(!addBtn) return;
-  
-  addBtn.addEventListener('click', function(e){
-    e.preventDefault();
-    e.stopPropagation();
-    
-    // Get product info from the page
-    var titleEl = document.querySelector('.product__title h1, h1.product__title, .product-single__title');
-    var title = titleEl ? titleEl.textContent.trim() : document.title.split('|')[0].trim();
-    
-    // Get price
-    var priceEl = document.querySelector('.price-item--regular, .price__regular .price-item, .product__price .price-item');
-    var price = priceEl ? priceEl.textContent.trim() : '$0.00';
-    
-    // Get selected color
-    var colorLabel = document.querySelector('[data-color-label]');
-    var color = colorLabel ? colorLabel.textContent.trim() : '';
-    if(!color){
-      var checkedColor = document.querySelector('input[data-input-color]:checked');
-      if(checkedColor) color = checkedColor.getAttribute('data-input-color');
-    }
-    
-    // Get selected magnification
-    var mag = '';
-    var magRadios = document.querySelectorAll('input[type="radio"][name*="Magnification"], input[type="radio"][name*="magnification"]');
-    magRadios.forEach(function(r){ if(r.checked) mag = r.value; });
-    if(!mag){
-      var magSelect = document.querySelector('select[name*="Magnification"], select[name*="magnification"]');
-      if(magSelect) mag = magSelect.value;
-    }
-    // Try fieldset
-    if(!mag){
-      var magFieldset = document.querySelector('fieldset[data-option-name="Magnification"]');
-      if(magFieldset){
-        var checked = magFieldset.querySelector('input:checked');
-        if(checked) mag = checked.value;
-      }
-    }
-    
-    // Get variant ID from URL or form
-    var vid = new URLSearchParams(window.location.search).get('variant') || '';
-    if(!vid){
-      var vidInput = document.querySelector('input[name="id"], select[name="id"]');
-      if(vidInput) vid = vidInput.value;
-    }
-    
-    // Get product image (first active gallery image)
-    var imgEl = document.querySelector('.product__media-item.active img, .product__media-item.first-active img, .product__media-list img');
-    var image = imgEl ? imgEl.src : '';
-    
-    // Get review count
-    var reviewEl = document.querySelector('.junip-product-summary-review-count, .oke-reviewsSummary');
-    var reviews = reviewEl ? reviewEl.textContent.replace(/[^0-9,]/g,'').trim() : '100';
-    
-    if(window._loCart){
-      window._loCart.add({
-        variantId: vid || (Date.now() + ''),
-        name: title,
-        price: price,
-        color: color,
-        magnification: mag || 'N/A',
-        image: image,
-        reviews: reviews
-      });
-    }
-  });
-});
 
-</script>
 </body>
 </html>

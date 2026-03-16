@@ -3851,7 +3851,7 @@ document.addEventListener('DOMContentLoaded', function() {
       html += '</div>';
       html += '<p style="margin:6px 0 0;font-size:13px;color:rgba(16,16,16,0.75);"><b>Color:</b> ' + (item.color||'') + '</p>';
       html += '<p style="margin:2px 0 0;font-size:13px;color:rgba(16,16,16,0.75);"><b>Magnification:</b> ' + (item.magnification||'') + '</p>';
-      html += '<button onclick="window._loCart.remove(' + idx + ')" style="position:absolute;bottom:0;right:0;background:none;border:none;cursor:pointer;padding:4px;color:#999;">';
+      html += '<button type="button" data-remove-idx="' + idx + '" style="position:absolute;bottom:0;right:0;background:none;border:none;cursor:pointer;padding:4px;color:#999;">';
       html += '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2m3 0v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6h14zM10 11v6M14 11v6"/></svg>';
       html += '</button>';
       html += '</div></div>';
@@ -3910,84 +3910,30 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     renderCart();
+    
+    // Event delegation for delete buttons
+    var itemsContainer = document.querySelector('.cart-items');
+    if(itemsContainer){
+      itemsContainer.addEventListener('click', function(e){
+        var btn = e.target.closest('[data-remove-idx]');
+        if(btn){
+          e.preventDefault();
+          e.stopPropagation();
+          var idx = parseInt(btn.getAttribute('data-remove-idx'));
+          var cart = getCart();
+          if(idx >= 0 && idx < cart.length){
+            cart.splice(idx, 1);
+            saveCart(cart);
+            renderCart();
+          }
+        }
+      });
+    }
   });
 })();
 
 </script>
-<script>
-/* ADD TO CART - Product Page Handler */
-document.addEventListener('DOMContentLoaded', function(){
-  // Find the Add to Cart button
-  var addBtn = document.querySelector('.product-form__submit, button[name="add"], .btn-addtocart');
-  if(!addBtn) return;
-  
-  addBtn.addEventListener('click', function(e){
-    e.preventDefault();
-    e.stopPropagation();
-    
-    // Get product info from the page
-    var titleEl = document.querySelector('.product__title h1, h1.product__title, .product-single__title');
-    var title = titleEl ? titleEl.textContent.trim() : document.title.split('|')[0].trim();
-    
-    // Get price
-    var priceEl = document.querySelector('.price-item--regular, .price__regular .price-item, .product__price .price-item');
-    var price = priceEl ? priceEl.textContent.trim() : '$0.00';
-    
-    // Get selected color
-    var colorLabel = document.querySelector('[data-color-label]');
-    var color = colorLabel ? colorLabel.textContent.trim() : '';
-    if(!color){
-      var checkedColor = document.querySelector('input[data-input-color]:checked');
-      if(checkedColor) color = checkedColor.getAttribute('data-input-color');
-    }
-    
-    // Get selected magnification
-    var mag = '';
-    var magRadios = document.querySelectorAll('input[type="radio"][name*="Magnification"], input[type="radio"][name*="magnification"]');
-    magRadios.forEach(function(r){ if(r.checked) mag = r.value; });
-    if(!mag){
-      var magSelect = document.querySelector('select[name*="Magnification"], select[name*="magnification"]');
-      if(magSelect) mag = magSelect.value;
-    }
-    // Try fieldset
-    if(!mag){
-      var magFieldset = document.querySelector('fieldset[data-option-name="Magnification"]');
-      if(magFieldset){
-        var checked = magFieldset.querySelector('input:checked');
-        if(checked) mag = checked.value;
-      }
-    }
-    
-    // Get variant ID from URL or form
-    var vid = new URLSearchParams(window.location.search).get('variant') || '';
-    if(!vid){
-      var vidInput = document.querySelector('input[name="id"], select[name="id"]');
-      if(vidInput) vid = vidInput.value;
-    }
-    
-    // Get product image (first active gallery image)
-    var imgEl = document.querySelector('.product__media-item.active img, .product__media-item.first-active img, .product__media-list img');
-    var image = imgEl ? imgEl.src : '';
-    
-    // Get review count
-    var reviewEl = document.querySelector('.junip-product-summary-review-count, .oke-reviewsSummary');
-    var reviews = reviewEl ? reviewEl.textContent.replace(/[^0-9,]/g,'').trim() : '100';
-    
-    if(window._loCart){
-      window._loCart.add({
-        variantId: vid || (Date.now() + ''),
-        name: title,
-        price: price,
-        color: color,
-        magnification: mag || 'N/A',
-        image: image,
-        reviews: reviews
-      });
-    }
-  });
-});
 
-</script>
 </body>
 <style>
 .swiper-wrapper--announcement-bar-desktop, .swiper-wrapper--announcement-bar-desktop .announcement-bar, .swiper-wrapper--announcement-bar-mobile, .swiper-wrapper--announcement-bar-mobile .announcement-bar {
