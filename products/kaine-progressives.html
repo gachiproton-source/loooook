@@ -9049,10 +9049,10 @@ document.addEventListener('DOMContentLoaded', function(){
     var magChecked = document.querySelector('input[name="Magnification"]:checked');
     if(magChecked) mag = magChecked.value;
     
-    // Image - get image matching selected color
+    // Image - get first image matching selected color
     var image = '';
-    var colorLower = color.toLowerCase().replace(/[()]/g, '').trim();
-    var colorMediaItem = document.querySelector('.product__media-item[data-color="' + colorLower + '"] img');
+    var colorSlug = color.toLowerCase().replace(/[()]/g, '').trim().replace(/\s+/g, '-');
+    var colorMediaItem = document.querySelector('.product__media-item[data-color="' + colorSlug + '"] img');
     if(colorMediaItem) {
       image = colorMediaItem.src;
     } else {
