@@ -10074,13 +10074,13 @@ document.addEventListener('DOMContentLoaded', function(){
     var priceEl = document.querySelector('.price-item--regular');
     var price = priceEl ? priceEl.textContent.trim() : '$0.00';
     
-    // Color - from the color label or active swatch
+    // Color - from checked Color radio input
     var color = '';
-    var colorSpan = document.querySelector('.product__color-name, [data-color-label]');
-    if(colorSpan) color = colorSpan.textContent.trim();
-    if(!color){
-      var activeSwatch = document.querySelector('.color-swatch input:checked');
-      if(activeSwatch) color = activeSwatch.value || activeSwatch.getAttribute('data-color') || '';
+    var colorInput = document.querySelector('input[name="Color"]:checked');
+    if(colorInput) {
+      color = colorInput.getAttribute('data-input-color') || colorInput.value || '';
+      // Remove parentheses from hidden colors like "(Shiny Pink)"
+      color = color.replace(/[()]/g, '').trim();
     }
     
     // Magnification
